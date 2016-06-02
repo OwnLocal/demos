@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no" />
+    <title>Devices Demo</title>
+    <link rel="shortcut icon" href="http://2oncul2uhyrk1kfigp1oy3sozqf.wpengine.netdna-cdn.com/wp-content/themes/ownlocal/images/favicon.ico" />
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+      html, body { padding: 0; margin: 0; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+      body { background: #F8F9FA; }
+      iframe { border: 0 none; background: white; }
+      .frame { position: fixed; }
+      .browser-dimensions { position: absolute; top: 0; right: 0; line-height: 30px; padding: 0 15px; font-family: sans-serif; font-weight: 300; font-size: 15px; color: rgba(75,89,102,0.3); cursor: default; -webkit-user-select: none; display: none; }
+      .browser-dimensions div { display: inline; }
+      .frame.browser { left: 50px; width: calc(100% - 305px); bottom: 0; height: calc(100% - 50px); max-height: 1200px; box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); background: #D2D2D2; border-radius: 10px 10px 0 0; z-index: 20; transition: all 0.3s ease; }
+      .frame.browser .browser-bar { position: absolute; height: 30px; padding: 10px 0 0 10px; box-sizing: border-box; }
+      .frame.browser .browser-bar span { width: 10px; height: 10px; border-radius: 100px; display: block; float: left; margin: 0 4px; }
+      .frame.browser .browser-bar span.show-dimensions { cursor: pointer; }
+      .frame.browser iframe { position: absolute; top: 30px; left: 0; width: 100%; height: calc(100% - 30px); }      
+      .frame.phone { left: auto; margin: 0; right: 50px; border-radius: 20px 20px 0 0; top: auto; bottom: 0; background: #383838; box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); z-index: 30; width: calc(375px + 40px); height: calc(590px + 60px); max-height: calc(100% - 110px); cursor: s-resize; transition: all 0.3s ease; }
+      .frame.phone .phone-camera { background: rgba(255, 255, 255, 0.1); width: 10px; height: 10px; left: 50%; margin: 27px 0 0 -45px; position: absolute; border-radius: 10px; }
+      .frame.phone .phone-speaker { background: rgba(255, 255, 255, 0.1); width: 14%; height: 8px; left: 50%; margin: 28px 0 0 -7%; position: absolute; border-radius: 10px; }
+      .frame.phone iframe { position: absolute; bottom: 0; left: 15px; width: calc(100% - 30px); height: calc(100% - 60px); }
+      .frame.phone:before { content: ""; top: -50px; position: absolute; width: 100%; height: 50px; pointer-events: none; }
+      body.minimized-phone .frame.phone { bottom: -650px; cursor: n-resize; }
+      body.minimized-phone .frame.phone:hover { bottom: -590px; }
+      body.minimized-phone .frame.phone:before { pointer-events: all; }
+      body.minimized-phone .frame.browser { width: calc(100% - 100px); }
+      @media screen and (min-width: 1920px) {
+        .frame.browser { left: 50%; width: 1610px; margin-left: -910px; }
+        .frame.phone { right: 50%; margin-right: -910px; }
+        body.minimized-phone .frame.browser { width: 1820px; } 
+      }
+      @media screen and (max-width: 1366px) {
+        .frame.browser { left: 20px; width: calc(100% - 85px); }
+        .frame.phone { right: 20px; width: calc(320px + 40px); height: calc(460px + 60px); }
+        body.minimized-phone .frame.browser { width: calc(100% - 40px); }
+        body.minimized-phone .frame.phone { bottom: -520px; }
+        body.minimized-phone .frame.phone:hover { bottom: -460px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="browser" class="frame browser">
+      <div class="browser-dimensions"><div id="browser-width">0</div> x <div id="browser-height">0</div></div>
+      <div class="browser-bar">
+        <span style="background: #E6696D;" class="show-dimensions"></span>
+        <span style="background: #D7B443;"></span>
+        <span style="background: #38D087;"></span>
+      </div>
+      <iframe src="http://mylocal.statesman.com.local.ownlocal.com" scrolling="yes"></iframe>
+    </div>
+    <div id="phone" class="frame phone">
+      <div class="phone-camera"></div>
+      <div class="phone-speaker"></div>
+      <iframe src="http://mylocal.statesman.com.local.ownlocal.com" scrolling="yes"></iframe>
+    </div>
+  </body>
+</html>
