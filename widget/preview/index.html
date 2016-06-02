@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no" />
+    <title>Widget Demo</title>
+    <link rel="shortcut icon" href="http://2oncul2uhyrk1kfigp1oy3sozqf.wpengine.netdna-cdn.com/wp-content/themes/ownlocal/images/favicon.ico" />
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+      html, body { margin: 0; padding: 0; background: #F2F2F2; font-family: sans-serif; }
+      body { padding: 40px; }
+      a { color: #3366CC; transition: all 0.3s ease; text-decoration: none; border-bottom: 1px solid transparent; margin: 0 10px; }
+      p { cursor: default; }
+      a:hover { border-bottom: 1px solid #3366CC; }
+      .ownlocal-widget { box-shadow: 0 0 10px rgba(0,0,0,0.15); display: inline-block; margin: 0 15px; }
+      .code { -webkit-appearance: none; border: 0 none; opacity: 1; white-space: pre-wrap; text-align: center; outline: 0 none; resize: none; transition: all 0.3s ease; width: 300px; margin: 20px 15px 0; padding: 10px; display: inline-block; box-shadow: 0 1px 1px rgba(0,0,0,0.1); background: white; box-sizing: border-box; height: 66px; font-size: 12px; }
+      .code:before { content: "Title"; }
+      .first { display: table; width: 100%; height: 100%; margin: 0 auto; }
+      .second { display: table-cell; vertical-align: middle; text-align: center; }
+      .ui-icon { opacity: 0 !important; }
+      .widget-previews { margin-top: 40px; }
+      h3 { display: inline-block; width: 300px; margin: 20px 20px 0; font-weight: normal; color: #4b5966; }
+    </style>
+    <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+          var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+              sURLVariables = sPageURL.split('&'),
+              sParameterName,
+              i;
+      
+          for (i = 0; i < sURLVariables.length; i++) {
+              sParameterName = sURLVariables[i].split('=');
+      
+              if (sParameterName[0] === sParam) {
+                  return sParameterName[1] === undefined ? true : sParameterName[1];
+              }
+          }
+      };
+      var publisher = getUrlParameter('publisher');
+
+    $(function() {
+      $('.ownlocal-widget.600').html($('.ownlocal-widget.600').html().replace("PLATFORM-URL", publisher));
+      $('.ownlocal-widget.250').html($('.ownlocal-widget.250').html().replace("PLATFORM-URL", publisher));
+      $('.code.600').html($('.code.600').html().replace("PLATFORM-URL", publisher));
+      $('.code.250').html($('.code.250').html().replace("PLATFORM-URL", publisher));
+    });
+
+    </script>
+  </head>
+  <body>
+    <div class="first">
+      <div class="second">
+        <!-- EMBED CODE -->
+        <div class="ownlocal-widget 600" style="width: 300px; height: 600px; min-width: 300px !important; min-height: 154px !important; position: relative;">
+          <iframe src="http://PLATFORM-URL.local.ownlocal.com/embed" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe>
+        </div>
+        <div class="ownlocal-widget 250" style="width: 300px; height: 250px; min-width: 300px !important; min-height: 154px !important; position: relative;">
+          <iframe src="http://PLATFORM-URL.local.ownlocal.com/embed" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe>
+        </div>
+        <br>
+        <textarea class="code 600" onclick="this.focus();this.select()" readonly="readonly">&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" src="http://PLATFORM-URL.local.ownlocal.com/embed.js?h=600"&gt;&lt;/script&gt;&lt;/var&gt;</textarea>        
+        <textarea class="code 250" onclick="this.focus();this.select()" readonly="readonly">&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" src="http://PLATFORM-URL.local.ownlocal.com/embed.js?h=250"&gt;&lt;/script&gt;&lt;/var&gt;</textarea>
+      </div>
+    </div>
+  </body>
+</html>
