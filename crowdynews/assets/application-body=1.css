@@ -11452,7 +11452,7 @@ h3.trending {
   padding: 0;
   background: transparent;
   color: #0c80df;
-  margin: 0 0 7px;
+  margin: 12px 0 5px;
 }
 /* line 477, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .business-card.trending .card-info .name span {
@@ -11460,6 +11460,11 @@ h3.trending {
   line-height: 1.2;
   padding-top: 1px;
   color: rgba(75, 89, 102, 0.9);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: auto;
+  max-width: 100%;
 }
 /* line 478, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .business-card.trending .card-info .address {
@@ -11839,30 +11844,39 @@ body.search #footer span {
 }
 
 /* line 556, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+.cnitem {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+/* line 557, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cnitem.cnitem-wrapper {
   background: white;
   margin: 0 0 15px;
   padding: 15px 15px 5px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.025) inset;
+  width: auto;
+  max-width: none;
 }
 
-/* line 557, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 558, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cnitem-image {
   margin: 0 0 15px;
   overflow: hidden;
 }
 
-/* line 558, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 559, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cnvideo .cnitem-image {
   height: 152px;
 }
 
-/* line 559, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 560, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cnvideo .cnitem-image img {
   margin-top: -26px;
 }
 
-/* line 560, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 561, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cnitem-title {
   font-weight: 500;
   margin: 0 0 10px;
@@ -11872,7 +11886,7 @@ body.search #footer span {
   text-transform: uppercase;
 }
 
-/* line 561, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 562, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cnitem-desc {
   color: #666;
   font-size: 14px;
@@ -11880,7 +11894,7 @@ body.search #footer span {
   margin: 0 0 10px;
 }
 
-/* line 563, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 564, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cn-wrapper a.cntopten-author {
   color: #1a1a1a;
   font-size: 13px;
@@ -11888,7 +11902,7 @@ body.search #footer span {
   font-weight: 500;
   border: 0 none !important;
 }
-/* line 564, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 565, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cn-wrapper a.cntopten-username {
   color: #999;
   font-size: 13px;
@@ -11896,38 +11910,51 @@ body.search #footer span {
   margin: -5px 0 10px;
   border: 0 none !important;
 }
-/* line 565, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 566, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cn-wrapper img.cntwitter-avatar {
   float: left;
   width: 30px;
   height: 30px;
   margin: 0 10px 10px 0;
 }
-/* line 566, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 567, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cn-wrapper .cnitem-footer {
   font-size: 13px;
   display: none;
 }
 
-/* line 568, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 569, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cn-ad {
   text-align: center;
 }
 
-/* line 569, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 570, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cn-branding {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   padding-top: 5px;
   margin-top: 15px;
   text-align: center;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 
-/* line 570, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 571, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+.cn-branding:hover {
+  opacity: 1;
+}
+
+/* line 572, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+.cn-branding a {
+  border: 0 none !important;
+}
+
+/* line 573, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cn-branding img {
   height: 15px;
 }
 
-/* line 571, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 574, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 .cn-branding span {
   color: #666;
   text-transform: uppercase;
@@ -11940,103 +11967,103 @@ body.search #footer span {
 
 /* Over 700px */
 @media screen and (min-width: 701px) {
-  /* line 575, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 578, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .no-full {
     display: none !important;
   }
 }
 /* Under 1064px */
 @media screen and (max-width: 1064px) {
-  /* line 580, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 583, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a {
     width: calc(100% / 11);
   }
-  /* line 581, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 584, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .business-card, body .category-card {
     width: 33.33%;
   }
-  /* line 582, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 585, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.categories .business-card {
     width: 33.33%;
   }
-  /* line 583, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 586, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper {
     padding: 0;
   }
-  /* line 584, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 587, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container {
     width: 100%;
     overflow: visible;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
     margin-bottom: 40px;
   }
-  /* line 585, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 588, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container .promo-card {
     margin: 0;
   }
-  /* line 586, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 589, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-image-wrapper img {
     max-width: calc(100% - 40px);
   }
-  /* line 587, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 590, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promos-index #promos-container .promo-card-wrapper {
     width: 25%;
   }
 }
 /* Under 1024px */
 @media screen and (max-width: 1024px) {
-  /* line 592, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 595, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #home-map {
     pointer-events: none;
   }
-  /* line 593, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 596, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #home-hero h1 {
     font-size: 60px;
   }
-  /* line 594, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 597, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-image-wrapper.no-max-height .blurry-background {
     display: none;
   }
-  /* line 595, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 598, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container .promo-card-wrapper {
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05), 1px 0 0 rgba(0, 0, 0, 0.05);
   }
-  /* line 596, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 599, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .mdl-tooltip {
     display: none !important;
   }
-  /* line 597, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 600, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #home-footer .copyright {
     font-size: 14px;
   }
-  /* line 598, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 601, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #home-footer .links.categories {
     padding: 0 50px 0 0;
   }
 }
 /* Under 1000px */
 @media screen and (max-width: 1000px) {
-  /* line 604, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 607, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container .promo-card-wrapper {
     width: 33.33%;
   }
-  /* line 605, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 608, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container .promo-card-wrapper:nth-child(10) {
     display: none;
   }
-  /* line 606, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 609, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts:before {
     background: rgba(255, 255, 255, 0.05);
   }
-  /* line 607, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 610, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a:nth-child(10) {
     display: none;
   }
-  /* line 608, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 611, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a {
     width: 10%;
   }
-  /* line 609, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 612, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content .individual-coupon {
     width: 100%;
     margin-right: 0;
@@ -12044,27 +12071,27 @@ body.search #footer span {
 }
 /* Under 900px */
 @media screen and (max-width: 900px) {
-  /* line 615, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 618, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #home-hero h1 {
     font-size: 50px;
   }
-  /* line 616, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 619, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #promos-container .promo-card-wrapper {
     width: 33.33%;
   }
-  /* line 617, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 620, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a:nth-child(9) {
     display: none;
   }
-  /* line 618, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 621, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a {
     width: calc(100% / 9);
   }
-  /* line 621, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 624, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #business-info-box {
     height: 100px;
   }
-  /* line 622, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 625, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-image-wrapper {
     overflow: auto;
     position: absolute;
@@ -12078,17 +12105,17 @@ body.search #footer span {
     padding: 15px;
     -webkit-overflow-scrolling: touch;
   }
-  /* line 623, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 626, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-image-wrapper img {
     max-width: calc(100% - 10px);
     max-height: none;
     margin: 0 auto;
   }
-  /* line 624, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 627, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-image-wrapper.no-max-height .vertical-helper {
     display: none;
   }
-  /* line 625, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 628, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-image-wrapper.no-max-height img {
     width: auto;
     height: auto;
@@ -12096,27 +12123,27 @@ body.search #footer span {
     max-height: none;
     margin: 0 auto;
   }
-  /* line 626, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 629, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-image-wrapper .blurry-background {
     display: none;
   }
-  /* line 627, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 630, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-wrapper {
     box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.05);
   }
-  /* line 628, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 631, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-wrapper .container {
     width: 100%;
   }
-  /* line 629, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 632, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-info-box .promo-dates:before {
     display: none;
   }
-  /* line 630, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 633, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-info-box {
     padding-left: 15px;
   }
-  /* line 631, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 634, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #business-info-box .name-and-category {
     float: none;
     position: absolute;
@@ -12127,11 +12154,11 @@ body.search #footer span {
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
     padding: 0 15px;
   }
-  /* line 632, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 635, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #business-info-box .promo-calls-to-action {
     margin: 0;
   }
-  /* line 633, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 636, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #business-info-box .calls-to-action {
     float: none;
     position: absolute;
@@ -12139,50 +12166,50 @@ body.search #footer span {
     right: -1px;
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
   }
-  /* line 634, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 637, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-text-box p {
     padding: 15px 20px;
   }
-  /* line 636, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 639, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.categories .business-card {
     width: 50%;
   }
-  /* line 637, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 640, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.categories .business-card:nth-child(9) {
     display: inherit;
   }
-  /* line 638, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 641, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #footer span {
     display: none;
   }
-  /* line 639, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 642, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #footer .container {
     text-align: center !important;
   }
-  /* line 640, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 643, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promos-index #promos-container .promo-card-wrapper {
     width: 33.33%;
   }
 }
 /* Under 900px - Search */
 @media screen and (max-width: 900px) {
-  /* line 646, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 649, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.search #content {
     margin-top: 50vh;
   }
-  /* line 647, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 650, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.search #content .container {
     max-width: none;
   }
-  /* line 648, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 651, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.search #content .hero-map .leaflet-bar {
     display: none;
   }
-  /* line 649, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 652, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.search .search-results-card {
     background: white;
   }
-  /* line 650, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 653, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.search #content.search-content .hero-map {
     left: 0;
     width: 100%;
@@ -12194,39 +12221,39 @@ body.search #footer span {
     top: 50px;
     z-index: 0;
   }
-  /* line 651, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 654, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.search .search-results-card.see-more-businesses-container {
     text-align: center;
   }
 }
 /* Under 800px */
 @media screen and (max-width: 800px) {
-  /* line 656, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 659, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a:nth-child(8) {
     display: none;
   }
-  /* line 657, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 660, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a {
     width: calc(100% / 8);
   }
-  /* line 658, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 661, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .category-card .card-inner {
     height: 120px;
   }
-  /* line 659, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 662, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .category-card .card-info .name {
     font-size: 20px;
   }
-  /* line 660, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 663, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #home-footer .links {
     width: 100%;
   }
-  /* line 661, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 664, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #home-footer .links.categories {
     padding: 0;
     width: 100%;
   }
-  /* line 662, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 665, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #home-footer .copyright {
     font-size: 12px;
     padding: 10px 0 0;
@@ -12234,36 +12261,36 @@ body.search #footer span {
 }
 /* Under 700px */
 @media screen and (max-width: 700px) {
-  /* line 667, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 670, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .invisible {
     display: none;
   }
-  /* line 668, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 671, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .promo-block {
     display: none;
   }
-  /* line 669, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 672, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .no-responsive {
     display: none !important;
   }
-  /* line 670, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 673, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #header.home {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
   }
-  /* line 671, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 674, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #header a.publisher-logo {
     padding-right: 15px;
     margin-left: -10px;
   }
-  /* line 672, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 675, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #header a.publisher-logo:after, body #header a.publisher-logo.no-logo p span {
     display: none;
   }
-  /* line 673, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 676, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #header a.publisher-logo.no-logo p {
     font-size: 16px;
   }
-  /* line 674, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 677, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #header #header-categories {
     padding: 15px 20px;
     height: calc(100vh - 80px);
@@ -12273,98 +12300,98 @@ body.search #footer span {
     max-height: initial;
     min-height: initial;
   }
-  /* line 675, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 678, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #header #header-categories span {
     width: 100%;
   }
-  /* line 676, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 679, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body h1 {
     font-size: 24px;
     margin-bottom: 0;
   }
-  /* line 677, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 680, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .container {
     width: calc(100% - 30px);
   }
-  /* line 678, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 681, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content {
     margin: 0;
   }
-  /* line 679, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 682, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content .hero-map {
     height: calc(100vh - 285px);
     max-height: 480px;
   }
-  /* line 680, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 683, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content .hero-map.big-map {
     height: calc(100vh - 275px);
   }
-  /* line 681, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 684, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content .hero-map.no-address, body #content .hero-map.no-address.big-map {
     height: 102px;
   }
-  /* line 682, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 685, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content .container {
     margin-top: 15px;
     padding: 20px;
     width: calc(100% - 30px);
   }
-  /* line 683, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 686, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content .column {
     width: 100% !important;
     margin: 0 0 20px;
   }
-  /* line 684, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 687, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .photo-gallery .thumbs img {
     height: 60px;
   }
-  /* line 685, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 688, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .sidengo-promo {
     width: 100% !important;
     height: 0 !important;
     padding: 0 0 83.4% !important;
   }
-  /* line 686, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 689, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top {
     padding: 20px 15px;
     text-align: center;
     margin-top: -82px;
   }
-  /* line 688, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 691, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top h1, body #content #content-top p {
     width: 100%;
   }
-  /* line 689, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 692, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top p {
     font-size: 90%;
     padding: 0;
   }
-  /* line 690, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 693, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top #calls-to-action {
     position: relative;
     top: auto;
     right: auto;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
-  /* line 691, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 694, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top #calls-to-action a {
     margin: 15px 15px 0 15px;
   }
-  /* line 692, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 695, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top #calls-to-action .mdl-tooltip {
     display: none;
   }
-  /* line 693, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 696, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top #cta-share-box {
     display: none;
   }
-  /* line 694, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 697, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top #more-info {
     border: 0 none;
     padding: 15px 0;
     margin: 0;
   }
-  /* line 695, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 698, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top #more-info p {
     margin: 0;
     padding: 0;
@@ -12373,16 +12400,16 @@ body.search #footer span {
     font-size: 15px;
     opacity: 0.7;
   }
-  /* line 696, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 699, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top #more-info p.with-icon:before {
     display: none;
   }
-  /* line 698, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 701, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #home-hero {
     background: -webkit-radial-gradient(circle, rgba(75, 89, 102, 0.4), rgba(255, 255, 255, 0) 70%);
     background: radial-gradient(circle, rgba(75, 89, 102, 0.4), rgba(255, 255, 255, 0) 70%);
   }
-  /* line 699, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 702, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #home-hero h1 {
     font-size: 38px;
     line-height: 1;
@@ -12391,194 +12418,194 @@ body.search #footer span {
     width: 100%;
     max-width: 500px;
   }
-  /* line 700, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 703, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #home-hero h1 span {
     display: initial;
   }
-  /* line 701, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 704, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #home-hero .home-search {
     max-width: 380px;
   }
-  /* line 702, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 705, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #home-hero .home-search input {
     padding: 5px 56px 5px 20px;
     height: 47px;
   }
-  /* line 703, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 706, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #home-hero .home-search button {
     padding: 11px 15px;
   }
-  /* line 704, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 707, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a:nth-child(6) {
     display: none;
   }
-  /* line 705, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 708, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a:nth-child(7) {
     display: none;
   }
-  /* line 706, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 709, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a {
     width: calc(100% / 6);
   }
-  /* line 707, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 710, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .invisible-container {
     padding-top: 20px;
   }
-  /* line 708, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 711, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .invisible-container.invisible-container h3 {
     margin: 0 0 20px;
   }
-  /* line 709, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 712, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .invisible-container.invisible-container h3.trending {
     margin: 20px 0;
   }
-  /* line 710, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 713, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper h3 {
     padding: 0 0 15px;
     margin: 10px auto 0;
   }
-  /* line 711, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 714, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .see-all-promos-link {
     top: 5px;
   }
-  /* line 712, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 715, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .see-more-businesses {
     padding: 30px 0;
   }
-  /* line 713, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 716, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper {
     padding: 10px 0 0;
   }
-  /* line 714, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 717, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container {
     margin-bottom: 25px;
   }
-  /* line 715, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 718, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container .promo-card {
     height: 160px !important;
   }
-  /* line 716, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 719, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container .promo-card-inner {
     padding-bottom: 10px;
   }
-  /* line 717, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 720, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container .promo-card-inner p.with-business-name {
     line-height: 15px;
   }
-  /* line 718, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 721, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container .promo-card-inner p.with-business-name span.business-name {
     display: none;
   }
-  /* line 719, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 722, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #promos-container .promo-card-wrapper {
     width: 33.33% !important;
   }
-  /* line 721, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 724, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content .hero-map .leaflet-bar {
     margin: 15px;
   }
-  /* line 722, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 725, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #sidebar {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     padding: 30px 20px 0;
     margin: 0 -20px;
   }
-  /* line 723, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 726, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #sidebar h1.invisible {
     display: none;
   }
-  /* line 724, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 727, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #promos-container .promo-card-wrapper {
     width: 140px !important;
     min-width: initial;
   }
-  /* line 725, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 728, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #promos-container .promo-card {
     padding: 0 0 30px;
     height: 170px !important;
   }
-  /* line 726, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 729, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #promos-container .promo-card-inner p {
     font-size: 0;
     line-height: 45px;
     height: 45px;
   }
-  /* line 727, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 730, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #promos-container .promo-card-inner p span {
     font-size: 14px;
   }
-  /* line 728, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 731, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #promos-container .promo-card-inner img {
     max-width: 100px;
     max-height: 100px;
   }
-  /* line 729, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 732, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.business-content #promos-container {
     margin: 10px -20px -20px;
     width: calc(100% + 40px);
   }
-  /* line 730, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 733, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #promos-container .promo-card-wrapper:hover {
     background: rgba(75, 89, 102, 0.03);
   }
-  /* line 732, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 735, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promos-index #promos-container .promo-card-wrapper {
     width: 33.33% !important;
   }
-  /* line 734, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 737, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-image-wrapper.render-type-non-image {
     padding: 0;
   }
-  /* line 735, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 738, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-image-wrapper.render-type-non-image .side {
     width: 100%;
     padding: 20px;
     box-shadow: 0 0 0 transparent;
   }
-  /* line 737, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 740, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .categories-hero {
     height: auto;
     margin-bottom: -50px;
   }
-  /* line 738, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 741, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .categories-hero h1 {
     font-size: 40px;
     padding: 60px 20px;
   }
-  /* line 739, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 742, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .category-cards-wrapper {
     margin: 0 -10px;
   }
-  /* line 740, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 743, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .category-card {
     width: 50%;
     padding: 0 10px;
     margin: 0 0 20px;
   }
-  /* line 742, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 745, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #footer {
     margin-top: 20px;
   }
-  /* line 743, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 746, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #footer .container {
     padding: 20px 0 !important;
     font-size: 14px;
   }
-  /* line 744, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 747, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #footer .copyright {
     padding-top: 10px;
     margin-top: 0;
     border: 0 none;
   }
-  /* line 745, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 748, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body body.search #footer .container {
     padding-top: 0 !important;
   }
-  /* line 747, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 750, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #home-footer .container {
     padding: 30px 5px;
   }
-  /* line 748, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 751, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #home-footer .links.categories ul {
     -webkit-columns: 2;
     -moz-columns: 2;
@@ -12586,394 +12613,394 @@ body.search #footer span {
     -o-columns: 2;
     columns: 2;
   }
-  /* line 750, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 753, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .business-cards-wrapper {
     padding: 20px 0 20px 20px;
     margin: 0;
   }
-  /* line 751, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 754, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .business-cards-wrapper.trending {
     padding-bottom: 10px;
   }
-  /* line 752, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 755, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .business-card.featured {
     width: 100% !important;
     height: 180px !important;
   }
-  /* line 753, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 756, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .business-card.trending {
     width: 100%;
   }
-  /* line 754, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 757, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .invisible-container.invisible-container h3.trending {
     margin: 5px 0 10px;
   }
 }
 /* Under 500px */
 @media screen and (max-width: 500px) {
-  /* line 760, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 763, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #header .publisher-logo img {
     max-width: 100%;
   }
-  /* line 761, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 764, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #header .directory-home {
     display: none;
   }
-  /* line 762, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 765, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .home-content h3 {
     font-size: 18px;
   }
-  /* line 763, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 766, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .categories-hero {
     margin: 0;
   }
-  /* line 764, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 767, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.categories .container {
     padding: 0;
     box-shadow: 0 0 0 transparent;
     background: transparent;
   }
-  /* line 765, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 768, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.categories .container h3 {
     font-size: 18px;
   }
-  /* line 766, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 769, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.categories .container br {
     display: none;
   }
-  /* line 767, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 770, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.categories .business-card {
     width: 100%;
   }
-  /* line 768, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 771, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.categories .business-card .card-inner {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.025) inset;
   }
-  /* line 769, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 772, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .category-card .card-inner {
     height: 0;
     padding: 0 0 40%;
   }
-  /* line 771, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 774, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #footer .links a {
     margin: 0 7px;
   }
-  /* line 772, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 775, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #footer .container {
     padding: 5px 0 20px !important;
   }
 }
 /* Under 450px */
 @media screen and (max-width: 450px) {
-  /* line 777, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 780, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .wrapper.nav-on {
     -webkit-transform: translateX(calc(-100% + 60px));
         -ms-transform: translateX(calc(-100% + 60px));
             transform: translateX(calc(-100% + 60px));
   }
-  /* line 778, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 781, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #nav {
     width: calc(100% - 60px);
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
             transform: translateX(100%);
   }
-  /* line 779, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 782, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .hero-map {
     height: 376px;
     max-width: none;
     min-height: initial;
   }
-  /* line 780, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 783, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promo-content #promo-info-box .promo-dates span {
     display: none;
   }
-  /* line 781, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 784, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a:nth-child(5) {
     display: none;
   }
-  /* line 782, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 785, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a {
     width: 20%;
   }
-  /* line 783, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 786, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #promos-container .promo-card-wrapper {
     width: 50% !important;
   }
-  /* line 784, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 787, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #promos-container .promo-card-wrapper:nth-child(15) {
     display: none;
   }
-  /* line 785, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 788, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-promos-wrapper #promos-container .promo-card-wrapper:nth-child(10) {
     display: inline-block;
   }
-  /* line 786, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 789, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .category-card {
     width: 100%;
   }
-  /* line 787, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 790, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body .category-card .card-info .name {
     font-size: 22px;
   }
-  /* line 788, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 791, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.promos-index #promos-container .promo-card-wrapper {
     width: 50% !important;
   }
 }
 /* Under 350px */
 @media screen and (max-width: 350px) {
-  /* line 793, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 796, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content #content-top #calls-to-action a {
     margin: 15px 10px 0 10px;
   }
-  /* line 794, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 797, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content #home-hero h1 {
     font-size: 32px;
   }
-  /* line 795, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 798, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a:nth-child(4) {
     display: none;
   }
-  /* line 796, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 799, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body #content.home-content .home-category-shortcuts a {
     width: 25%;
   }
 }
 /* Hover styles so that they only appear on desktop */
-/* line 801, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 804, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop a:hover, body.desktop .button:hover {
   border-bottom: 1px solid rgba(66, 133, 244, 0.8);
 }
-/* line 802, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 805, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop .mdl-menu a:hover {
   border: 0 none;
 }
-/* line 803, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 806, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop .mdl-button:hover {
   background-color: rgba(158, 158, 158, 0.2);
 }
-/* line 804, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 807, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop .photo-gallery .thumbs img:hover {
   opacity: 1;
 }
-/* line 805, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 808, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #nav ul li a:hover {
   background: rgba(75, 89, 102, 0.05);
 }
-/* line 806, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 809, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #nav ul li.add-business a:hover {
   background: #40C2A8;
 }
-/* line 807, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 810, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #nav .close-button:hover {
   color: rgba(75, 89, 102, 0.8);
 }
-/* line 808, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 811, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #header:hover {
   opacity: 1;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-/* line 810, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 813, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #header a.publisher-logo.no-logo p:hover {
   opacity: 1;
 }
-/* line 811, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 814, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #header .publisher-logo:hover {
   border: 0 none;
   opacity: 0.8;
 }
-/* line 814, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 817, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content #content-top #calls-to-action a:hover, body.desktop #content #calls-to-action .button:hover {
   opacity: 1;
 }
-/* line 815, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 818, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content ul.related-businesses li a:hover {
   border-bottom: 1px solid rgba(75, 89, 102, 0.6);
 }
-/* line 818, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 821, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content #promos-container .promo-card-wrapper:hover {
   background: rgba(75, 89, 102, 0.03);
 }
-/* line 819, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 822, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content #promos-container .promo-card-wrapper:hover .promo-card-inner img {
   opacity: 1;
   box-shadow: 0 2px 10px rgba(75, 89, 102, 0.4);
 }
-/* line 821, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 824, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content #promos-container .promo-card-wrapper:hover .promo-card-inner.render-type-html-and-images img.graphic {
   box-shadow: 0 0 0 transparent;
 }
-/* line 825, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 828, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.business-content #promos-container .promo-card-wrapper:hover {
   background: -webkit-linear-gradient(top, transparent, rgba(75, 89, 102, 0.03));
   background: linear-gradient(top, transparent, rgba(75, 89, 102, 0.03));
 }
-/* line 826, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 829, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.home-content #home-hero .home-search button:hover {
   opacity: 1;
 }
-/* line 827, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 830, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.home-content .see-all-businesses-link:hover, body.desktop #content.home-content .see-all-promos-link:hover {
   border: 1px solid rgba(75, 89, 102, 0.6);
   color: rgba(75, 89, 102, 0.7);
 }
-/* line 828, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 831, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.home-content .home-category-shortcuts a:hover {
   box-shadow: 1px 0 0 rgba(255, 255, 255, 0.05) inset, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   color: white;
 }
-/* line 829, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 832, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.home-content .home-category-shortcuts a:first-child:hover {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   color: white;
 }
-/* line 830, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 833, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.home-content .see-more-businesses a:hover {
   background: #568FCF;
 }
-/* line 831, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 834, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.promos-index #promos-container .promo-card-wrapper:hover {
   background: transparent;
 }
-/* line 832, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 835, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.promos-index #promos-container .promo-card-wrapper:hover .promo-card-inner p {
   opacity: 1;
 }
-/* line 833, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 836, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.promos-index #promos-container .promo-card-wrapper:hover .promo-card-inner img {
   box-shadow: 0 2px 10px rgba(75, 89, 102, 0.5);
 }
-/* line 834, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 837, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.promo-content #promo-info-box .promo-label:hover {
   opacity: 0.9;
 }
-/* line 835, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 838, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.promo-content #business-info-box .calls-to-action a:hover {
   opacity: 1;
 }
-/* line 836, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 839, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #content.promo-content #business-info-box .promo-calls-to-action a.promo-cta:hover {
   border: 0 none;
   color: rgba(75, 89, 102, 0.9);
 }
-/* line 838, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 841, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop .business-cards-wrapper .business-card .card-inner:hover .card-image, body.desktop .business-cards-wrapper .business-card .card-inner:hover .card-map {
   -webkit-transform: scale(1.12);
   -ms-transform: scale(1.12);
   transform: scale(1.12);
 }
-/* line 840, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 843, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop .business-card.featured .card-info:hover .name span {
   border-bottom-color: rgba(75, 89, 102, 0.3);
 }
-/* line 841, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 844, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop .business-card.trending:hover .card-info .name span {
   border-bottom-color: rgba(75, 89, 102, 0.3);
 }
-/* line 842, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 845, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop .business-card .card-footer a.category:hover {
   border-bottom-color: rgba(75, 89, 102, 0.5);
 }
-/* line 843, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 846, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop .business-card .card-footer a.cta:hover {
   opacity: 1;
   color: #4285F4;
 }
-/* line 844, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 847, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop .category-card:hover .card-background {
   -webkit-transform: scale(1.12);
   -ms-transform: scale(1.12);
   transform: scale(1.12);
 }
-/* line 845, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 848, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop .category-card:hover .card-info .name span {
   border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 }
-/* line 846, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 849, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #footer a:hover {
   border-bottom-color: rgba(75, 89, 102, 0.8);
 }
-/* line 847, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 850, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop #home-footer a:hover {
   border-bottom-color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 850, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 853, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop.search .search-results-card:hover {
   border-bottom-color: transparent;
 }
-/* line 851, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 854, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop.search .search-results-card button:hover {
   background: #568FCF;
 }
-/* line 852, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 855, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop.search .search-results-card .search-results-business-name:hover span {
   border-bottom-color: rgba(86, 143, 207, 0.9);
 }
-/* line 853, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 856, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop.search .search-results-card .cta-button:hover {
   border-bottom-color: rgba(86, 143, 207, 0.8);
   color: rgba(86, 143, 207, 0.9);
 }
-/* line 854, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 857, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop.search .popup-inner .business-name:hover {
   background: rgba(0, 0, 0, 0.025);
 }
-/* line 855, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 858, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop.search .popup-inner .business-name:hover span {
   border-bottom-color: rgba(86, 143, 207, 0.8);
 }
-/* line 856, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 859, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.desktop.search .popup-inner .cta-box .cta-button:hover {
   opacity: 1;
 }
 
-/* line 860, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 863, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed {
   background: #F2F2F2;
   overflow: hidden;
   -webkit-user-select: none;
 }
-/* line 862, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 865, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed .profiler-results {
   display: none !important;
 }
-/* line 863, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 866, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed .container {
   max-width: none;
 }
-/* line 864, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 867, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content {
   margin: 0 auto;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   background: #F8F8FA;
 }
-/* line 866, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 869, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .hero-map {
   height: 140px;
   min-height: initial;
   max-height: none;
 }
-/* line 867, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 870, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .hero-map:after {
   background: rgba(38, 45, 51, 0.35);
 }
-/* line 868, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 871, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .hero-map .leaflet-control-container {
   display: none;
 }
-/* line 869, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 872, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .hero-background {
   top: 0;
   height: 100%;
 }
-/* line 870, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 873, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #home-hero {
   padding: 0 15px;
   pointer-events: all;
 }
-/* line 871, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 874, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #home-hero h1 {
   font-size: 22px;
   margin: 0 auto 15px;
@@ -12982,7 +13009,7 @@ body.embed #content.embed-content #home-hero h1 {
   max-width: 360px;
   text-align: left;
 }
-/* line 872, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 875, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .explore-link {
   font-weight: bold;
   color: white;
@@ -12990,71 +13017,71 @@ body.embed #content.embed-content .explore-link {
   pointer-events: all;
   opacity: 0.95;
 }
-/* line 873, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 876, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .explore-link:hover {
   border-bottom-color: white;
   opacity: 1;
 }
-/* line 874, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 877, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #search-toggle, body.embed #content.embed-content .close-button {
   display: none;
 }
-/* line 875, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 878, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #search-toggle.block {
   display: none !important;
 }
-/* line 876, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 879, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #home-hero h1 strong {
   display: initial;
 }
-/* line 877, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 880, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #home-hero h1 span {
   display: initial;
 }
-/* line 878, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 881, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #home-hero .home-search {
   width: 100%;
   max-width: 360px;
 }
-/* line 879, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 882, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #home-hero .home-search input {
   padding: 0 56px 0 10px;
   height: 37px;
   font-size: 14px;
   border-radius: 2px;
 }
-/* line 880, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 883, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #home-hero .home-search button {
   padding: 6px 10px;
 }
-/* line 881, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 884, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #home-hero .home-search button i {
   font-size: 22px;
   margin-top: 1px;
 }
-/* line 882, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 885, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .home-category-shortcuts {
   margin-top: -50px;
   text-align: left;
   display: none;
 }
-/* line 883, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 886, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .home-category-shortcuts a {
   padding: 8px 0;
   font-size: 12px;
   line-height: 0.9;
 }
-/* line 884, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 887, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .home-category-shortcuts a i {
   font-size: 18px;
   margin-bottom: 5px;
 }
-/* line 885, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 888, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .tabs {
   height: 40px;
   padding: 0 10px;
 }
-/* line 886, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 889, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .tabs li {
   width: 33.33%;
   float: left;
@@ -13063,7 +13090,7 @@ body.embed #content.embed-content .tabs li {
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
 }
-/* line 887, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 890, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .tabs li a {
   color: rgba(75, 89, 102, 0.7);
   font-size: 12px;
@@ -13077,17 +13104,17 @@ body.embed #content.embed-content .tabs li a {
   border: 0 none;
   border-bottom: 2px solid transparent;
 }
-/* line 888, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 891, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .tabs li:hover a {
   border-bottom: 2px solid rgba(75, 89, 102, 0.2);
 }
-/* line 889, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 892, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .tabs li a.active {
   color: inherit;
   color: rgba(75, 89, 102, 0.9);
   border-bottom: 2px solid rgba(75, 89, 102, 0.8);
 }
-/* line 890, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 893, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .embed-wrapper {
   height: calc(100% - 181px);
   margin-top: 1px;
@@ -13097,18 +13124,18 @@ body.embed #content.embed-content .embed-wrapper {
   position: relative;
   -webkit-overflow-scrolling: touch;
 }
-/* line 891, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 894, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .embed-wrapper::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 6px;
   height: 6px;
   background: rgba(75, 89, 102, 0.05);
 }
-/* line 892, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 895, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .embed-wrapper::-webkit-scrollbar-thumb {
   background: rgba(75, 89, 102, 0.5);
 }
-/* line 893, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 896, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .business-cards-wrapper {
   position: absolute;
   top: 10px;
@@ -13119,118 +13146,118 @@ body.embed #content.embed-content .business-cards-wrapper {
   width: auto;
   height: auto;
 }
-/* line 894, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 897, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .business-card {
   height: calc(20% - 5px);
   padding: 0 5px;
   margin: 0 0 5px;
   display: block;
 }
-/* line 895, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 898, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .business-card .card-info {
   right: 10px;
 }
-/* line 896, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 899, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .business-card .card-info .name {
   white-space: normal;
   font-size: 14px;
   padding-bottom: 1px;
 }
-/* line 897, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 900, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .business-card .card-info .name span {
   display: inline;
 }
-/* line 898, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 901, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .see-more-businesses {
   display: none;
 }
-/* line 899, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 902, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .see-more-businesses a {
   text-align: center;
 }
-/* line 900, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 903, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content #footer .container {
   text-align: left;
 }
-/* line 901, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 904, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .home-promos-wrapper {
   padding: 0;
 }
-/* line 902, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 905, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .home-promos-wrapper #promos-container {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 903, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 906, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .home-promos-wrapper #promos-container .promo-card-wrapper {
   display: inline-block;
 }
-/* line 904, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 907, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .home-promos-wrapper #promos-container .promo-card-wrapper:nth-child(n+15) {
   display: none;
 }
-/* line 905, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 908, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .invisible-container {
   padding-top: 10px;
   position: static;
 }
-/* line 906, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 909, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .invisible-container.invisible-container h3 {
   font-size: 16px;
   line-height: 26px;
   margin-bottom: 15px;
 }
-/* line 907, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 910, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .category-cards-wrapper {
   margin: 15px 10px 5px;
 }
-/* line 908, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 911, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .category-card {
   width: 50%;
   padding: 0 5px;
   margin: 0 0 10px;
 }
-/* line 909, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 912, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .category-card .card-inner {
   height: 51px;
   padding: 0;
 }
-/* line 910, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 913, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .category-card .card-info .name {
   font-size: 13px;
   line-height: 1.2;
   padding: 5px;
 }
-/* line 911, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+/* line 914, /vagrant/app/assets/stylesheets/global.css.scss.erb */
 body.embed #content.embed-content .category-card .card-info .name span {
   border-bottom-width: 1px !important;
 }
 
 /* Widget Under 600px height */
 @media screen and (max-height: 599px) {
-  /* line 918, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 921, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card {
     height: calc(25% - 5px);
   }
-  /* line 919, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 922, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card:nth-child(n+5) {
     display: none !important;
   }
 }
 /* Widget Under 500px height */
 @media screen and (max-height: 499px) {
-  /* line 926, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 929, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content #search-toggle {
     position: absolute;
     top: 50%;
     right: 10px;
     margin: -17px 0 0;
   }
-  /* line 927, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 930, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content #search-toggle.block {
     display: block !important;
   }
-  /* line 928, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 931, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .close-button {
     position: absolute;
     right: 10px;
@@ -13240,7 +13267,7 @@ body.embed #content.embed-content .category-card .card-info .name span {
     top: 50%;
     margin: -14px -50px 0 0;
   }
-  /* line 929, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 932, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content #home-hero .home-search {
     position: absolute;
     top: 50%;
@@ -13250,35 +13277,35 @@ body.embed #content.embed-content .category-card .card-info .name span {
     width: calc(100% - 60px);
     display: none;
   }
-  /* line 931, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 934, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content #home-hero .home-search input {
     height: 30px;
     margin-top: 4px;
     line-height: 29px;
     border: 0 none;
   }
-  /* line 932, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 935, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content #home-hero .home-search button {
     padding: 7px 8px;
   }
-  /* line 934, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 937, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content #home-hero h1 {
     margin: 0;
     font-size: 20px;
     width: calc(100% - 35px);
   }
-  /* line 935, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 938, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .hero-map {
     height: 70px;
   }
-  /* line 936, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 939, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .embed-wrapper {
     height: calc(100% - 110px);
   }
 }
 /* Widget Under 430px height */
 @media screen and (max-height: 429px) {
-  /* line 943, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 946, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card .card-info .name {
     line-height: 1;
     white-space: nowrap;
@@ -13286,26 +13313,26 @@ body.embed #content.embed-content .category-card .card-info .name span {
 }
 /* Widget Under 400px height */
 @media screen and (max-height: 399px) {
-  /* line 950, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 953, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .hero-map {
     height: 50px;
   }
-  /* line 951, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 954, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content #home-hero h1 {
     font-size: 17px;
   }
-  /* line 952, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 955, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .embed-wrapper {
     height: calc(100% - 90px);
   }
-  /* line 953, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 956, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .category-card .card-inner {
     height: calc(50vh - 63px);
   }
 }
 /* Widget Under 350px height */
 @media screen and (max-height: 349px) {
-  /* line 960, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 963, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-cards-wrapper {
     top: 7px;
     right: 10px;
@@ -13313,32 +13340,32 @@ body.embed #content.embed-content .category-card .card-info .name span {
     left: 10px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.025) inset;
   }
-  /* line 961, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 964, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card {
     height: 33.33%;
     margin: 0;
     padding: 0;
   }
-  /* line 962, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 965, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card:nth-child(n+4) {
     display: none !important;
   }
-  /* line 963, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 966, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card .card-inner {
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05) inset;
   }
-  /* line 964, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 967, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card .card-image-wrapper {
     width: 50px;
   }
-  /* line 965, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 968, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card .card-info {
     left: 72px;
     top: 9px;
     right: 12px;
     overflow: visible;
   }
-  /* line 966, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 969, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card .card-info .address {
     margin-top: 2px;
     font-size: 11px;
@@ -13347,27 +13374,27 @@ body.embed #content.embed-content .category-card .card-info .name span {
 }
 /* Widget Under 280px height */
 @media screen and (max-width: 279px) {
-  /* line 973, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 976, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .home-promos-wrapper #promos-container .promo-card-wrapper {
     width: 100% !important;
   }
-  /* line 974, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 977, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card .card-image-wrapper {
     width: 55px;
   }
-  /* line 975, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 978, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .business-card .card-info {
     left: 75px;
   }
-  /* line 976, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 979, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content #home-hero h1 {
     font-size: 20px;
   }
-  /* line 977, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 980, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .category-card {
     width: 100%;
   }
-  /* line 978, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 981, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   body.embed #content.embed-content .tabs li a {
     font-size: 11px;
   }
@@ -13448,41 +13475,41 @@ body.embed #content.embed-content .category-card .card-info .name span {
 
 /* ANIMATIONS */
 @-webkit-keyframes homeoverlay {
-  /* line 998, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 1001, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   0%,100% {
     background: rgba(75, 89, 102, 0.1);
   }
 
-  /* line 999, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 1002, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   25%, 75% {
     background: rgba(75, 89, 102, 0.3);
   }
 
-  /* line 1000, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 1003, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   50% {
     background: rgba(75, 89, 102, 0.5);
   }
 }
 
 @keyframes homeoverlay {
-  /* line 1016, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 1019, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   0%,100% {
     background: rgba(75, 89, 102, 0.1);
   }
 
-  /* line 1017, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 1020, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   25%, 75% {
     background: rgba(75, 89, 102, 0.3);
   }
 
-  /* line 1018, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 1021, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   50% {
     background: rgba(75, 89, 102, 0.5);
   }
 }
 
 @-webkit-keyframes glow {
-  /* line 1021, /vagrant/app/assets/stylesheets/global.css.scss.erb */
+  /* line 1024, /vagrant/app/assets/stylesheets/global.css.scss.erb */
   to {
     opacity: 0;
   }
