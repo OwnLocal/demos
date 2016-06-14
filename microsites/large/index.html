@@ -26,7 +26,13 @@
     
     <style>
       * { pointer-events: none !important; }
-      .sidengo iframe { pointer-events: all !important; }
+      .sidengo-container { padding: 0; height: 560px; position: relative; }
+      .sidengo { width: 100%; height: 100%; border: 0 none; overflow: auto; position: absolute; top: 0; left: 0; }
+      .sidengo iframe { pointer-events: all !important; border: 0 none; width: 100%; height: 100%; }
+      @media screen and (max-width: 900px) {
+        .sidengo-container { height: 50vh; }
+      }
+
     </style>
     
   </head>
@@ -136,101 +142,8 @@
 </div>
 
 
-  <div class="container">
-  
-
-    <div id="main-column" class="column">
-
-      
-        <h3>About</h3>
-        <p>Mighty Fine is a modern day take on the classic Texas burger.</p>
-        <p>Being from Austin, the bar for quality is set extremely high. We wouldn’t want it any other way. We are 110% high quality, from our open kitchen to our personalized bags, and from our blue-checkered tablecloths to our world-class service. See for yourself at one of our four Austin-area Locations.</p>
-        <p>Our managing organization has been awarded nationally – by the U.S. President! Yep, K&N Management is the recipient of the Malcolm Baldrige National Quality Award: the nation’s highest presidential honor for performance excellence.</p>
-      
-
-      
-        <h3>Business Hours</h3>
-
-        <div id="hours">
-          <p>
-            <span class="day">Monday</span>
-            <span class="time">11:00 AM — 9:00 PM</span>
-          </p>
-          <p>
-            <span class="day">Tuesday</span>
-            <span class="time">11:00 AM — 9:00 PM</span>
-          </p>
-          <p>
-            <span class="day">Wednesday</span>
-            <span class="time">11:00 AM — 9:00 PM</span>
-          </p>
-          <p>
-            <span class="day">Thursday</span>
-            <span class="time">11:00 AM — 9:00 PM</span>
-          </p>
-          <p>
-            <span class="day">Friday</span>
-            <span class="time">11:00 AM — 9:30 PM</span>
-          </p>
-          <p>
-            <span class="day">Saturday</span>
-            <span class="time">11:00 AM — 9:30 PM</span>
-          </p>
-          <p>
-             <span class="day">Sunday</span>
-            <span class="time">11:00 AM — 9:00 PM</span>
-          </p>
-        </div>
-      
-
-      
-
-    </div>
-
-  
-  <div id="sidebar" class="column">
-
-  
-<div class="sidengo" style="width: 100%; max-width: 420px; height: 250px; border: 0 none; box-shadow: 0 1px 1px rgba(0,0,0,0.2),0 -1px 0 rgba(0,0,0,0.05); overflow: auto;"><iframe src="http://sidengo.com/mightyfineburgers" style="border: 0 none; width: 100%; height: 100%;"></iframe></div>
-  
-
-  
-  <h3>Related Businesses</h3>
-  <div class="helpful-links">
-    
-    <span><a href="weinerschnitzel-512-491-7888.html">Weinerschnitzel</a></span>
-    
-    <span><a href="mcdonalds-512-454-9394.html">McDonald's</a></span>
-    
-    <span><a href="bello-monte-restaurant-512-719-5556.html">Bello Monte Restaurant</a></span>
-    
-    <span><a href="wendys-512-425-0587.html">Wendy's</a></span>
-    
-    <span><a href="sonic-drive-in-of-austin-512-444-9519.html">Sonic Drive-In of Austin</a></span>
-    
-  </div>
-  
-
-  
-  <h3>Follow Us</h3>
-  <div class="facebook-box">
-    <iframe src='https://www.facebook.com/v2.5/plugins/page.php?adapt_container_width=true&width=300&hide_cover=false&href=https%3A%2F%2Ffacebook.com%2FMightyFineBurgersFriesAndShakes%2F&show_facepile=true'></iframe>
-  </div>
-  
-
-  
-
-  
-
-</div>
-
-<div class="clear"></div>
-
-
-    
-
-    
-
+  <div class="container sidengo-container">
+    <div class="sidengo"><iframe src="http://sidengo.com/mightyfineburgers"></iframe></div>
   </div>
 
 </div>
