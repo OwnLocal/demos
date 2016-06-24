@@ -23,18 +23,27 @@
   <meta content="BB0BE4187A4204AEF60555AA93819E84" name="msvalidate.01"><!-- STYLES -->
 
   <style>
-    h3 { font-size: 20px; }
+    h3 { font-size: 19px; }
     #content .ad-wrapper { background: black; }
     #content .ad-wrapper .container { padding: 0; background: transparent; margin: 0 auto 20px; width: 100%; }
     #content .ad-wrapper .video-wrapper { width: 100%; height: 0; padding: 0 0 56.25%; display: block; position: relative; margin: 0; }
     #content .ad-wrapper .video-wrapper iframe { width: 100%; height: 100%; border: 0 none; position: absolute; top: 0; left: 0; }
-    #content #content-top { margin: 0 auto; margin-top: 0 !important; }
+    #content #content-top { margin: 0 auto; padding-top: 0; margin-top: 0 !important; }
+    #content #content-top #more-info p.ad-date { padding: 0; }
+    #content #content-top #more-info p.ad-date span { color: #666666; }
+    #content #content-top #more-info p.ad-status { position: absolute; font: bold 11px/1 'Proxima Nova'; text-transform: uppercase; background: rgba(0, 166, 81, 0.8); padding: 5px 6px; border-radius: 3px; color: white; margin: 3px 0 0 15px; cursor: default; outline: 0 none; opacity: 0.8; transition: all 0.3s ease; }
     #content #content-top h1 a { color: rgba(75, 89, 102, 0.8); font-size: 26px; font-weight: 300; }
     #content #content-top h1 a:hover { border-bottom-color: rgba(75, 89, 102, 0.5); }
+    #content #content-top #calls-to-action { top: auto; bottom: 20px; }
+    #content #content-top #more-info { margin: 0 -30px 15px; padding: 15px 30px; border-bottom: 1px solid rgba(0, 0, 0, 0.05); border-top: 0 none; }
     @media screen and (max-width: 700px) {
       p { letter-spacing: -0.2px; }
+      body #content #content-top #calls-to-action { bottom: 0; margin-top: 20px; }
       body #content #content-top #calls-to-action a { width: 60px; }
-      body #content #content-top #more-info p { font-size: 14px; }
+      body #content #content-top #more-info { padding: 0 0 15px; border-bottom: 1px solid rgba(0,0,0,0.05); margin-bottom: 20px; }
+      body #content #content-top #more-info p { width: auto; }
+      #content #content-top #more-info p.ad-date { margin-left: -66px; }
+      #content #content-top p.category { margin-top: 5px; }
     }
   </style>
 </head>
@@ -98,14 +107,14 @@
       </div>
       
       <div class="container" id="content-top">
+        <div id="more-info">
+          <p class="ad-date"><span>Date:</span> June 23, 2016</p>
+          <p class="ad-status">Active Ad</p>
+        </div>
         <h1><a>Sheehan Buick GMC</a></h1>
         <p class="category"><a>Auto</a> / <a>Auto Dealers</a></p>
-        <div id="more-info">
-          <p class="with-icon address">2800 N Federal Highway, Pampano, FL 33064</p>
-          <p class="with-icon phone no-responsive">(877) 460-8542</p>
-        </div>
         <div id="calls-to-action">
-          <a class="call-button no-full" data-phone="877-460-8542" href="tel:8774608542" id="cta-call-button">Call</a>
+          <a class="call-button" data-phone="877-460-8542" href="tel:8774608542" id="cta-call-button">Call</a>
           <div class="mdl-tooltip mdl-tooltip--large">
             Call 877-460-8542
           </div><a class="directions-button" href="https://maps.google.com?daddr=2800%20N%20Federal%20Highway+Pampano+FL+33064" id="cta-directions-button" target="_blank">Directions</a>
