@@ -25,11 +25,11 @@
   <style>
     h3 { font-size: 19px; }
     #header .publisher-logo img { max-height: calc(100% - 36px); }
-    #content .ad-wrapper { background: transparent; margin: 20px 0; }
-    #content .ad-wrapper .container { padding: 0; background: transparent; margin: 0 auto 20px; width: 100%;  }
-    #content .ad-wrapper .video-wrapper { width: 100%; height: 0; padding: 0 0 56.25%; display: block; position: relative; margin: 0; }
+    #content .ad-wrapper { background: white; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(0, 0, 0, 0.05) inset; }
+    #content .ad-wrapper .container { padding: 0; background: transparent; margin: 0 auto 20px; width: 100%; box-shadow: 0 0 0 transparent; }
+    #content .ad-wrapper .video-wrapper { width: 100%; height: 0; padding: 0 0 56.25%; display: block; position: relative; margin: 0 0 20px; overflow: hidden; }
     #content .ad-wrapper .video-wrapper iframe { width: 100%; height: 100%; border: 0 none; position: absolute; top: 0; left: 0; }
-    #content .ad-wrapper .video-wrapper video { width: 100%; height: 100%; border: 0 none; position: absolute; top: 0; left: 0; }
+    #content .ad-wrapper .video-wrapper video { width: calc(100% + 4px); height: calc(100% + 4px); border: 0 none; position: absolute; top: -2px; left: -2px; }
     #content #content-top { margin: 0 auto; padding-top: 0; margin-top: 0 !important; }
     #content #content-top #more-info p { cursor: default; }
     #content #content-top #more-info p.ad-date { padding: 0; }
