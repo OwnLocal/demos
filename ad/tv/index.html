@@ -23,7 +23,19 @@
   <meta content="BB0BE4187A4204AEF60555AA93819E84" name="msvalidate.01"><!-- STYLES -->
 
   <style>
+    h3 { font-size: 20px; }
+    #content .ad-wrapper { background: black; }
+    #content .ad-wrapper .container { padding: 0; background: transparent; margin: 0 auto 20px; width: 100%; }
+    #content .ad-wrapper .video-wrapper { width: 100%; height: 0; padding: 0 0 56.25%; display: block; position: relative; margin: 0; }
+    #content .ad-wrapper .video-wrapper iframe { width: 100%; height: 100%; border: 0 none; position: absolute; top: 0; left: 0; }
     #content #content-top { margin: 0 auto; margin-top: 0 !important; }
+    #content #content-top h1 a { color: rgba(75, 89, 102, 0.8); font-size: 26px; font-weight: 300; }
+    #content #content-top h1 a:hover { border-bottom-color: rgba(75, 89, 102, 0.5); }
+    @media screen and (max-width: 700px) {
+      p { letter-spacing: -0.2px; }
+      body #content #content-top #calls-to-action a { width: 60px; }
+      body #content #content-top #more-info p { font-size: 14px; }
+    }
   </style>
 </head>
 <body data-publisher-id="8fd7e5a6-d514-4c50-b469-a93c27980b27">
@@ -76,15 +88,17 @@
       </div>
     </div>
     <div class="business-content" data-business-id="0e830d72-0021-4d1f-ba2c-199a30cc4502" id="content">
-      <div style="background: black;">
-        <div class="container" style="padding: 0; background: transparent; margin: 0 auto 20px; width: 100%;">
-          <div style="width: 100%; height: 0; padding: 0 0 56.25%; display: block; position: relative; margin: 0;">
-            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/M4w2TuEhzas?rel=0&showinfo=0&controls=1&playsinline=1&showinfo=0&autohide=1" style="width: 100%;height: 100%;border: 0 none;position: absolute;top: 0;left: 0;"></iframe>
+      
+      <div class="ad-wrapper video">
+        <div class="container">
+          <div class="video-wrapper">
+            <iframe allowfullscreen="" src="https://www.youtube.com/embed/M4w2TuEhzas?rel=0&showinfo=0&controls=1&playsinline=1&showinfo=0&autohide=1"></iframe>
           </div>
         </div>
       </div>
+      
       <div class="container" id="content-top">
-        <h1>Sheehan Buick GMC</h1>
+        <h1><a>Sheehan Buick GMC</a></h1>
         <p class="category"><a>Auto</a> / <a>Auto Dealers</a></p>
         <div id="more-info">
           <p class="with-icon address">2800 N Federal Highway, Pampano, FL 33064</p>
@@ -126,6 +140,7 @@
       </div>
       <div class="container">
         <div class="column" id="main-column">
+
           <h3>Ad Text</h3>
           <p>Honesty and integrity, that's what it takes to be Florida's largest Buick GMC dealer. Because Sheehan Buick GMC is Florida's largest, it offers the most complete selection.</p>
           <p>You get choices and more of them. Choose Enclave or Encore for an unbelievable $89/month or choose Arcadia or Terrain for the same unbelievable $89/month.</p>
