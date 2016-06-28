@@ -44,29 +44,8 @@ $(document).on('blur', '#header-search input', function(){
 });
 
 // Toggle promo max height
-$(document).on('click', '#content.promo-content #promo-image-wrapper img', function(){
-  $('#promo-image-wrapper').toggleClass('no-max-height');
-});
-
-// Toggle promo text
-$(document).on('click', '#promo-cta-view-text', function(){
-  $('#promo-text-box').toggleClass('block');
-  $('#other-promos-box').removeClass('block');
-  $('a.promo-cta.promo-box-close').addClass('block');
-});
-
-// Toggle other promos
-$(document).on('click', '#promo-cta-other-promos', function(){
-  $('#other-promos-box').toggleClass('block');
-  $('#promo-text-box').removeClass('block');
-  $('a.promo-cta.promo-box-close').addClass('block');
-});
-
-// Close promo text and other promos
-$(document).on('click', 'a.promo-cta.promo-box-close', function(){
-  $('#promo-text-box').removeClass('block');
-  $('#other-promos-box').removeClass('block');
-  $('a.promo-cta.promo-box-close').removeClass('block');
+$(document).on('click', '#content.promo-content .promo-wrapper img.render-type-image', function(){
+  $(this).toggleClass('enlarged');
 });
 
 // Go to top link in footer
@@ -82,7 +61,7 @@ $(document).on('click', '.hero-to-content', function(){
 
 // Large promo images now load in a nicer way
 $(window).load(function() {
-  $('#content.promo-content #promo-image-wrapper img').addClass('loaded');
+  $('#content.promo-content .promo-wrapper img.render-type-image').addClass('loaded');
 });
 
 // Show truncated text
