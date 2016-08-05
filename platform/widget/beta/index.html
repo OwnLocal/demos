@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no"></meta>
+    <title>Responsive Widget Demo</title>
+    <style>
+      html, body { margin: 0; padding: 0; }
+      .sizes { text-align: center; margin: 0 0 20px; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 20px; }
+      .button { outline: 0 none; cursor: pointer; font-size: 12px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+      $(document).on('click', '.button', function(){
+        var width = (this).dataset.width;
+        var height = (this).dataset.height;
+        $('.ownlocal-widget').css("width", width).css("height", height);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="sizes">
+      <button class="button" data-width="300" data-height="600">300x600</button>
+      <button class="button" data-width="728" data-height="600">728x600</button>
+      <button class="button" data-width="980" data-height="600">980x600</button>
+      <button class="button" data-width="600" data-height="480">600x480</button>
+      <button class="button" data-width="300" data-height="250">300x250</button>
+      <button class="button" data-width="728" data-height="90">728x90</button>
+      <button class="button" data-width="300" data-height="50">300x50</button>
+    </div>
+    <var id="ownlocal"><div class="ownlocal-widget" style="width: 300px; height: 600px; position: relative; box-shadow: 0 0 10px rgba(0,0,0,0.15); margin: 0 auto 20px; transition: all 0.2s ease;"><iframe src="./example.html?adcentric" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe></div></var>
+  </body>
+</html>
