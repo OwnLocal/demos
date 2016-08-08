@@ -4,31 +4,141 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no"></meta>
     <title>Responsive Widget Demo</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="http://2oncul2uhyrk1kfigp1oy3sozqf.wpengine.netdna-cdn.com/wp-content/themes/ownlocal/images/favicon.ico" />
     <style>
-      html, body { margin: 0; padding: 0; }
-      .sizes { text-align: center; margin: 0 0 20px; border-bottom: 1px solid rgba(0,0,0,0.05); padding: 20px; }
-      .button { outline: 0 none; cursor: pointer; font-size: 12px; }
+      html, body { margin: 0; padding: 0; text-align: center; -webkit-font-smoothing: antialiased; font-family: 'Roboto'; color: #333333; }
+      .options { text-align: center; margin: 0 0 30px; box-shadow: 0 1px 0 rgba(0,0,0,0.05); padding: 0 20px; background: rgba(0,0,0,0.015); font-size: 15px; line-height: 50px; box-sizing: border-box; }
+      .button { cursor: pointer; display: inline-block; border: 0 none; margin: 0 15px; border-bottom: 2px solid transparent; opacity: 0.6; line-height: 1.5; transition: all 0.3s ease; }
+      .button:hover { opacity: 1; }
+      .button.active { opacity: 1; border-bottom-color: black; }
+      .options-area { display: inline-block; padding-left: 20px; border-left: 1px solid rgba(0,0,0,0.05); }
+      .options-area span { opacity: 0.8; padding-right: 5px; }
+      .widget-container { opacity: 1; }
+      #ownlocal { width: 300px; display: inline-block; position: relative; }
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
+      // Resize buttons
       $(document).on('click', '.button', function(){
         var width = (this).dataset.width;
         var height = (this).dataset.height;
         $('.ownlocal-widget').css("width", width).css("height", height);
+        $('.old-ownlocal-widget').css("width", width).css("height", height);
+        $('#ownlocal').css("width", "auto");
+        $(this).addClass('active');
+        $('.button').not(this).removeClass('active');
       });
+
+      var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
+        for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split('=');
+      
+          if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+          }
+        }
+      };
+      
+      var publisher = getUrlParameter('publisher');
+
+      // Populate widgets
+      $(function() {
+        $('.ownlocal-widget').html($('.ownlocal-widget').html().replace("PLATFORM-URL", publisher));
+        $('.code').html($('.code.600').html().replace("PLATFORM-URL", publisher));
+        $('#set-publisher').val(publisher);
+      });
+      
     </script>
   </head>
   <body>
-    <div class="sizes">
-      <button class="button" data-width="300" data-height="600">300x600</button>
-      <button class="button" data-width="728" data-height="600">728x600</button>
-      <button class="button" data-width="980" data-height="600">980x600</button>
-      <button class="button" data-width="600" data-height="480">600x480</button>
-      <button class="button" data-width="300" data-height="250">300x250</button>
-      <button class="button" data-width="728" data-height="90">728x90</button>
-      <button class="button" data-width="300" data-height="50">300x50</button>
+    
+    <div class="options">
+      <div data-width="300" data-height="600" class="button active">300x600</div>
+      <div data-width="728" data-height="600" class="button">728x600</div>
+      <div data-width="980" data-height="600" class="button">980x600</div>
+      <div data-width="600" data-height="480" class="button">600x480</div>
+      <div data-width="720" data-height="300"  class="button">720x300</div>
+      <div data-width="300" data-height="250" class="button">300x250</div>
+      <div data-width="728" data-height="90"  class="button">728x90</div>
+      <div data-width="300" data-height="50"  class="button">300x50</div>
+<!--
+      
+      <div class="options-area">
+        <span>Publisher:</span>
+        <input id="set-publisher" type="url" placeholder="http://mylocal.sun-sentinel.com" val="hello world"></option>
+      </div>
+
+      <div class="options-area">
+        <span>Default view:</span>
+        <select>
+          <option selected>Businesses</option>
+          <option>Ads</option>
+        </select>
+      </div>
+      
+-->
     </div>
-    <var id="ownlocal"><div class="ownlocal-widget" style="width: 300px; height: 600px; position: relative; box-shadow: 0 0 10px rgba(0,0,0,0.15); margin: 0 auto 20px; transition: all 0.2s ease;"><iframe src="./example.html?adcentric" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe></div></var>
+
+    <div id="ownlocal">
+      <div class="ownlocal-widget" style="width: 100%; min-width: 200px; max-width: 1280px; height: 600px; min-height: 50px; max-height: 600px; height: .jspx; position: relative; box-shadow: 0 0 10px rgba(0,0,0,0.15); margin: 0 auto 20px;">
+        <iframe src="./example.html" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe>
+      </div>
+      <!-- <script async id="ownlocal-script" src="http://mylocal.sun-sentinel.com.local.dev.ownlocal.com:3001/embed.js" data-active="businesses"></script> -->
+    </div>
+    
   </body>
 </html>
+
+
+<!--
+.ownlocal-widget { box-shadow: 0 0 10px rgba(0,0,0,0.15); display: inline-block; margin: 0 15px; }
+.code { -webkit-appearance: none; border: 0 none; opacity: 1; white-space: pre-wrap; text-align: center; outline: 0 none; resize: none; transition: all 0.3s ease; width: 300px; margin: 20px 15px 0; padding: 10px; display: inline-block; box-shadow: 0 1px 1px rgba(0,0,0,0.1); background: white; box-sizing: border-box; height: 66px; font-size: 12px; }
+.code:before { content: "Title"; }
+.first { display: table; width: 100%; height: 100%; margin: 0 auto; }
+.second { display: table-cell; vertical-align: middle; text-align: center; }
+.ui-icon { opacity: 0 !important; }
+.widget-previews { margin-top: 40px; }
+h3 { display: inline-block; width: 300px; margin: 20px 20px 0; font-weight: normal; color: #4b5966; }
+
+    <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+          var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+              sURLVariables = sPageURL.split('&'),
+              sParameterName,
+              i;
+      
+          for (i = 0; i < sURLVariables.length; i++) {
+              sParameterName = sURLVariables[i].split('=');
+      
+              if (sParameterName[0] === sParam) {
+                  return sParameterName[1] === undefined ? true : sParameterName[1];
+              }
+          }
+      };
+      var publisher = getUrlParameter('publisher');
+
+    $(function() {
+      $('.ownlocal-widget.600').html($('.ownlocal-widget.600').html().replace("PLATFORM-URL", publisher));
+      $('.code.600').html($('.code.600').html().replace("PLATFORM-URL", publisher));
+    });
+
+    </script>
+  </head>
+  <body>
+    <div class="first">
+      <div class="second">
+        <div class="ownlocal-widget 600" style="width: 300px; height: 600px; min-width: 300px !important; min-height: 154px !important; position: relative;">
+          <iframe src="http://PLATFORM-URL.local.ownlocal.com/embed" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe>
+        </div>
+        <br>
+        <textarea class="code 600" onclick="this.focus();this.select()" readonly="readonly">&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" src="http://PLATFORM-URL.local.ownlocal.com/embed.js?h=600"&gt;&lt;/script&gt;&lt;/var&gt;</textarea>        
+      </div>
+    </div>
+  </body>
+</html>
+-->
