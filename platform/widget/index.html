@@ -1,65 +1,170 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no" />
-    <title>Widget Demo</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no"></meta>
+    <title>Responsive Widget Demo</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="http://2oncul2uhyrk1kfigp1oy3sozqf.wpengine.netdna-cdn.com/wp-content/themes/ownlocal/images/favicon.ico" />
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-      html, body { margin: 0; padding: 0; background: #F2F2F2; font-family: sans-serif; }
-      body { padding: 40px; }
-      a { color: #3366CC; transition: all 0.3s ease; text-decoration: none; border-bottom: 1px solid transparent; margin: 0 10px; }
-      p { cursor: default; }
-      a:hover { border-bottom: 1px solid #3366CC; }
-      .ownlocal-widget { box-shadow: 0 0 10px rgba(0,0,0,0.15); display: inline-block; margin: 0 15px; }
-      .code { -webkit-appearance: none; border: 0 none; opacity: 1; white-space: pre-wrap; text-align: center; outline: 0 none; resize: none; transition: all 0.3s ease; width: 300px; margin: 20px 15px 0; padding: 10px; display: inline-block; box-shadow: 0 1px 1px rgba(0,0,0,0.1); background: white; box-sizing: border-box; height: 80px; font-size: 12px; }
-      .code:before { content: "Title"; }
-      .first { display: table; width: 100%; height: 100%; margin: 0 auto; }
-      .second { display: table-cell; vertical-align: middle; text-align: center; }
-      .ui-icon { opacity: 0 !important; }
-      .widget-previews { margin-top: 40px; }
-      h3 { display: inline-block; width: 300px; margin: 20px 20px 0; font-weight: normal; color: #4b5966; }
+      html, body { margin: 0; padding: 0; text-align: center; -webkit-font-smoothing: antialiased; font-family: 'Roboto'; color: #333333; background: #F8F8F8; }
+      .header { text-align: center; margin: 0 0 30px; box-shadow: 0 1px 0 rgba(0,0,0,0.05); padding: 0 20px; background: white; font-size: 15px; line-height: 50px; box-sizing: border-box; }
+      .header span { display: inline-block; font-weight: 500; border-left: 1px solid rgba(0,0,0,0.05); padding-left: 15px; margin-left: 15px; }
+      .header span:first-child { border-left: 0 none; padding-left: 0; margin-left: 0; }
+      .dropdown { width: auto; position: relative; width: 100px; height: 50px; cursor: pointer; display: inline-block; }
+      .dropdown.default-view-dropdown { width: 105; text-align: left; padding-left: 15px; }
+      .dropdown .selection { padding-right: 7px; }
+      .dropdown .selection:after { content: '\E313'; position: absolute; top: 0; right: 0; font-family: 'Material Icons'; font-size: 120%; }
+      .dropdown ul { position: absolute; margin: 0; padding: 0; top: 50px; left: 0; height: auto; max-height: 0; overflow: hidden; background: white; box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 rgba(0,0,0,0.05) inset; z-index: 1000; width: 100%; transition: all 0.3s ease; }
+      .dropdown:hover ul { max-height: none; }
+      .dropdown ul li.button { cursor: pointer; display: block; border: 0 none; padding: 15px; opacity: 0.6; line-height: 1.5; transition: all 0.3s ease; }
+      .dropdown ul li.button:hover { opacity: 1; }
+      .dropdown ul li.button.active { opacity: 1; text-decoration: underline; }      
+      input { display: inline-block; margin-left: 10px; -webkit-appearance: none; border: 1px solid rgba(0,0,0,0.1); font-size: 14px; line-height: 30px; width: 50px; text-align: center; outline: 0 none; }
+      .options-area { display: inline-block; padding-left: 20px; border-left: 1px solid rgba(0,0,0,0.05); }
+      .options-area span { opacity: 0.8; padding-right: 5px; }
+      .ownlocal-widget { width: 100%; min-width: 200px; max-width: 1280px; height: 250px; min-height: 50px; max-height: 600px; position: relative; box-shadow: 0 0 10px rgba(0,0,0,0.15); margin: 0 auto 30px; }
+      .ownlocal-widget iframe { border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+      .code { -webkit-appearance: none; border: 0 none; opacity: 1; white-space: pre-wrap; text-align: center; outline: 0 none; resize: none; transition: all 0.3s ease; width: 100%; max-width:  600px; margin: 0 auto 30px; padding: 10px; display: block; box-shadow: 0 1px 3px rgba(0,0,0,0.15); background: white; box-sizing: border-box; font-size: 14px; }
+      .widget-container { opacity: 1; }
+      #ownlocal { width: 300px; display: inline-block; position: relative; }
+      #default-view .selection { text-transform: capitalize; }
     </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
+
       var getUrlParameter = function getUrlParameter(sParam) {
-          var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-              sURLVariables = sPageURL.split('&'),
-              sParameterName,
-              i;
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
+        for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split('=');
       
-          for (i = 0; i < sURLVariables.length; i++) {
-              sParameterName = sURLVariables[i].split('=');
-      
-              if (sParameterName[0] === sParam) {
-                  return sParameterName[1] === undefined ? true : sParameterName[1];
-              }
+          if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
           }
+        }
       };
+      
       var publisher = getUrlParameter('publisher');
+      var width = 300;
+      var height = 600;
+      var defaultView = 'businesses';
+      var adcentric = 'false';
+      
+      function updateIframeSrc() {
+        $('.ownlocal-widget iframe').attr( 'src', 'http://' + publisher + '.local.dev.ownlocal.com:3001/embed?adcentric=' + adcentric );
+      }
+      
+      function updateEmbedCode() {
+        $('.code').html('&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" data-active="' + defaultView + '" src="http://' + publisher + '/embed.js?h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+      }
 
-    $(function() {
-      $('.ownlocal-widget.600').html($('.ownlocal-widget.600').html().replace("PLATFORM-URL", publisher));
-      $('.ownlocal-widget.250').html($('.ownlocal-widget.250').html().replace("PLATFORM-URL", publisher));
-      $('.code.600').html($('.code.600').html().replace("PLATFORM-URL", publisher));
-      $('.code.250').html($('.code.250').html().replace("PLATFORM-URL", publisher));
-    });
+      $(document).ready(function() {
+        updateIframeSrc();
+        $('#custom-width').val(width);
+        $('#custom-height').val(height);
+        $('#widget-size .selection').html(width + 'x' + height);
+      });
 
+      $(document).on('click', '.dropdown.widget-size-dropdown .button', function(){
+        width = (this).dataset.width;
+        height = (this).dataset.height;
+        $('.ownlocal-widget').css("width", width).css("height", height);
+        $('#ownlocal').css("width", "auto");
+        $(this).addClass('active');
+        $('.dropdown.widget-size-dropdown .button').not(this).removeClass('active');
+        $('#widget-size .selection').html(width + 'x' + height);
+        $('input#custom-width').val(width);
+        $('input#custom-height').val(height);
+        updateEmbedCode();
+      });
+
+      $(document).on('keyup', 'input#custom-width', function(){
+        width = $(this).val();
+        $('.ownlocal-widget').css("width", width);
+        $('#ownlocal').css("width", "auto");
+        $('#widget-size .selection').html('Custom');
+        $('.dropdown.widget-size-dropdown .button').removeClass('active');
+        updateEmbedCode();
+      });
+
+      $(document).on('keyup', 'input#custom-height', function(){
+        height = $(this).val();
+        $('.ownlocal-widget').css("height", height);
+        $('#widget-size .selection').html('Custom');
+        $('.dropdown.widget-size-dropdown .button').removeClass('active');
+        updateEmbedCode();
+      });
+
+      $(document).on('click', '.dropdown.default-view-dropdown .button', function(){
+        selection = (this).dataset.selection;
+        $(this).addClass('active');
+        $('.dropdown.default-view-dropdown .button').not(this).removeClass('active');
+        $('#default-view .selection').html(selection);
+        updateEmbedCode();
+      });
+
+      $(document).on('click', '.default-ads-button', function(){
+        defaultView = 'ads';
+        adcentric = 'true';
+        updateEmbedCode();    
+        updateIframeSrc();
+      });
+      $(document).on('click', '.default-businesses-button', function(){
+        defaultView = 'businesses';
+        adcentric = 'false';
+        updateEmbedCode();       
+        updateIframeSrc();
+      });
+
+      // Populate widgets
+      $(function() {
+        $('.ownlocal-widget').html($('.ownlocal-widget').html().replace("PLATFORM-URL", publisher));
+        updateEmbedCode();
+      });
+      
     </script>
   </head>
   <body>
-    <div class="first">
-      <div class="second">
-        <!-- EMBED CODE -->
-        <div class="ownlocal-widget 600" style="width: 300px; height: 600px; min-width: 300px !important; min-height: 154px !important; position: relative;">
-          <iframe src="http://PLATFORM-URL.local.ownlocal.com/embed" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe>
-        </div>
-        <div class="ownlocal-widget 250" style="width: 300px; height: 250px; min-width: 300px !important; min-height: 154px !important; position: relative;">
-          <iframe src="http://PLATFORM-URL.local.ownlocal.com/embed" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe>
-        </div>
-        <br>
-        <textarea class="code 600" onclick="this.focus();this.select()" readonly="readonly">&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" src="http://PLATFORM-URL/embed.js?h=600" data-active="businesses"&gt;&lt;/script&gt;&lt;/var&gt;</textarea>        
-        <textarea class="code 250" onclick="this.focus();this.select()" readonly="readonly">&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" src="http://PLATFORM-URL/embed.js?h=250" data-active="businesses"&gt;&lt;/script&gt;&lt;/var&gt;</textarea>
+    
+    <div class="header">
+      <span>Preview Size:</span>
+      <div id="widget-size" class="dropdown widget-size-dropdown">
+        <div class="selection"></div>
+        <ul class="sizes">
+          <li data-width="300" data-height="250" class="button active">300x250</li>
+          <li data-width="300" data-height="600" class="button">300x600</li>
+          <li data-width="728" data-height="600" class="button">728x600</li>
+          <li data-width="980" data-height="600" class="button">980x600</li>
+          <li data-width="600" data-height="480" class="button">600x480</li>
+          <li data-width="720" data-height="300" class="button">720x300</li>
+          <li data-width="728" data-height="090"  class="button">728x90</li>
+          <li data-width="300" data-height="050"  class="button">300x50</li>          
+        </ul>
+      </div>
+      <span>Width:</span>
+        <input id="custom-width" type="text">
+      <span>Height:</span>
+        <input id="custom-height" type="text">
+      <span>Default View: </span>
+      <div id="default-view" class="dropdown default-view-dropdown">
+        <div class="selection">Businesses</div>
+        <ul class="sizes">
+          <li data-selection="businesses" class="button default-businesses-button active">Businesses</li>
+          <li data-selection="ads" class="button default-ads-button">Ads</li>
+        </ul>
       </div>
     </div>
+    
+    <div id="ownlocal">
+      <div class="ownlocal-widget">
+        <iframe src=""></iframe>
+      </div>
+    </div>
+
+    <div class="code" readonly="readonly" contenteditable="true" onclick="document.execCommand('selectAll',false,null)" spellcheck="false"></div>
   </body>
 </html>
