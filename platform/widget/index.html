@@ -2,14 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no"></meta>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=1024, user-scalable=yes"></meta>
     <title>Responsive Widget Demo</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="http://2oncul2uhyrk1kfigp1oy3sozqf.wpengine.netdna-cdn.com/wp-content/themes/ownlocal/images/favicon.ico" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-      html, body { margin: 0; padding: 0; text-align: center; -webkit-font-smoothing: antialiased; font-family: 'Roboto'; color: #333333; background: #F8F8F8; }
+      html, body { margin: 0; padding: 0; text-align: center; -webkit-font-smoothing: antialiased; font-family: 'Roboto'; color: #4A475A; background: #F8F8F8; }
       .header { text-align: center; margin: 0 0 30px; box-shadow: 0 1px 0 rgba(0,0,0,0.05); padding: 0 20px; background: white; font-size: 15px; line-height: 50px; white-space: nowrap; box-sizing: border-box; }
+      .demos-logo { display: inline-block; font-weight: 500; text-transform: uppercase; position: relative; color: #4A475A; padding-left: 45px; opacity: 0.85; transition: all 0.3s ease; cursor: pointer; font-size: 16px; text-decoration: none; }
+      .demos-logo:before { content: ""; position: absolute; width: 30px; height: calc(100% - 20px); background: url('http://demos.ownlocal.com/pixel-tree.png') no-repeat; background-size: auto 100%; top: 8px; left: 0; }
+      .demos-logo:hover { opacity: 1; }
       .header span { display: inline-block; font-weight: 500; border-left: 1px solid rgba(0,0,0,0.05); padding-left: 15px; margin-left: 15px; }
       .header span:first-child { border-left: 0 none; padding-left: 0; margin-left: 0; }
       .dropdown { width: auto; position: relative; width: 100px; height: 50px; cursor: pointer; display: inline-block; }
@@ -21,9 +24,9 @@
       .dropdown ul li.button { cursor: pointer; display: block; border: 0 none; padding: 15px; opacity: 0.6; line-height: 1.5; transition: all 0.3s ease; }
       .dropdown ul li.button:hover { opacity: 1; }
       .dropdown ul li.button.active { opacity: 1; text-decoration: underline; }      
-      input { display: inline-block; margin-left: 10px; -webkit-appearance: none; border: 1px solid rgba(0,0,0,0.1); font-size: 14px; line-height: 30px; width: 50px; text-align: center; outline: 0 none; }
+      input { display: inline-block; margin-left: 10px; -webkit-appearance: none; border: 1px solid rgba(0,0,0,0.1); font-size: 14px; line-height: 30px; width: 50px; text-align: center; outline: 0 none; color: #4A475A; }
       input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { opacity: 1; }
-      input#platform-url { box-sizing: border-box; padding: 0 10px; width: 210px; text-overflow: ellipsis; }
+      input#platform-url { box-sizing: border-box; padding: 0 10px; width: 180px; text-overflow: ellipsis; }
       .options-area { display: inline-block; padding-left: 20px; border-left: 1px solid rgba(0,0,0,0.05); }
       .options-area span { opacity: 0.8; padding-right: 5px; }
       .ownlocal-widget { width: 100%; min-width: 200px; max-width: 1280px; height: 600px; min-height: 50px; max-height: 600px; position: relative; box-shadow: 0 0 10px rgba(0,0,0,0.15); margin: 0 auto 30px; }
@@ -32,6 +35,11 @@
       .widget-container { opacity: 1; }
       #ownlocal { width: 300px; display: inline-block; position: relative; }
       #default-view .selection { text-transform: capitalize; }
+      
+      @media screen and (max-width: 1170px) {
+        .hide-first { display: none !important; }
+      }
+
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script>
@@ -147,10 +155,11 @@
   <body>
     
     <div class="header">
-      <span>Platform URL:</span>
+      <a href="http://demos.ownlocal.com" class="demos-logo">Widget</a>
+      <span>Publisher:</span>
       <input id="platform-url" type="text">
-      <span>Preview Size:</span>
-      <div id="widget-size" class="dropdown widget-size-dropdown">
+      <span class="hide-first">Preview Size:</span>
+      <div id="widget-size" class="dropdown widget-size-dropdown hide-first">
         <div class="selection"></div>
         <ul class="sizes">
           <li data-width="300" data-height="250" class="button active">300x250</li>
@@ -167,7 +176,7 @@
       <input id="custom-width" type="number" min="200" max="1280">
       <span>Height:</span>
       <input id="custom-height" type="number" min="50" max="600">
-      <span>Default View: </span>
+      <span>Default:</span>
       <div id="default-view" class="dropdown default-view-dropdown">
         <div class="selection">Businesses</div>
         <ul class="sizes">
