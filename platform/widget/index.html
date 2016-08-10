@@ -101,6 +101,13 @@
         $('.ownlocal-widget').css("width", width).css("height", height);
         $('#ownlocal').css("width", "auto");
         $('#widget-size .selection').html(width + 'x' + height);
+        if ( getUrlParameter('adcentric') === 'true' ) {
+          $('#default-view .selection').html('Ads');
+          $('.default-ads-button').addClass('active');
+        } else { 
+          $('#default-view .selection').html('Businesses');
+          $('.default-businesses-button').addClass('active');
+        };
       });
 
       $(document).on('click', '.dropdown.widget-size-dropdown .button', function(){
