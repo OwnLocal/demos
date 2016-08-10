@@ -28,7 +28,7 @@
       input:hover { border-color: rgba(0,0,0,0.2); }
       input:focus { border-color: rgba(66,133,244,0.8); }
       input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { opacity: 1; }
-      input#platform-url { box-sizing: border-box; padding: 0 10px; width: calc(100% - 950px); text-align: left; text-overflow: ellipsis; }
+      input#platform-url { box-sizing: border-box; padding: 0 10px; width: calc(100% - 960px); text-align: left; text-overflow: ellipsis; }
       .options-area { display: inline-block; padding-left: 20px; border-left: 1px solid rgba(0,0,0,0.05); }
       .options-area span { opacity: 0.8; padding-right: 5px; }
       .ownlocal-widget { width: 100%; min-width: 200px; max-width: 1280px; min-height: 50px; max-height: 600px; position: relative; box-shadow: 0 0 10px rgba(0,0,0,0.15); margin: 0 auto 30px; }
@@ -65,17 +65,19 @@
         var publisher = 'mylocal.sun-sentinel.com';
       } else { 
         var publisher = getUrlParameter('publisher');
-      }
-      if ( getUrlParameter('w') === undefined ) {
+      };
+      
+      if ( getUrlParameter('width') === undefined ) {
         var width = '300';
       } else { 
-        var width = getUrlParameter('w');
-      }      
-      if ( getUrlParameter('h') === undefined ) {
+        var width = getUrlParameter('width');
+      };
+            
+      if ( getUrlParameter('height') === undefined ) {
         var height = '600';
       } else { 
-        var height = getUrlParameter('h');
-      }
+        var height = getUrlParameter('height');
+      };
 
       if ( getUrlParameter('adcentric') === 'true' ) {
         var defaultView = 'ads';
@@ -83,15 +85,15 @@
       } else { 
         var defaultView = 'businesses';
         var adcentric = 'false';
-      }
+      };
       
       function updateIframeSrc() {
         $('.ownlocal-widget iframe').attr( 'src', 'http://' + publisher + '/embed?adcentric=' + adcentric );
-      }
+      };
       
       function updateEmbedCode() {
         $('.code').html('&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" data-active="' + defaultView + '" src="http://' + publisher + '/embed.js?h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
-      }
+      };
 
       $(document).ready(function() {
         updateIframeSrc();
@@ -100,13 +102,22 @@
         $('#custom-height').val(height);
         $('.ownlocal-widget').css("width", width).css("height", height);
         $('#ownlocal').css("width", "auto");
-        $('#widget-size .selection').html(width + 'x' + height);
         if ( getUrlParameter('adcentric') === 'true' ) {
           $('#default-view .selection').html('Ads');
           $('.default-ads-button').addClass('active');
         } else { 
           $('#default-view .selection').html('Businesses');
           $('.default-businesses-button').addClass('active');
+        };
+        if ( getUrlParameter('width') === undefined ) {
+          $('#widget-size .selection').html(width + 'x' + height);
+        } else { 
+          $('#widget-size .selection').html('Custom');
+        };
+        if ( getUrlParameter('height') === undefined ) {
+          $('#widget-size .selection').html(width + 'x' + height);
+        } else { 
+          $('#widget-size .selection').html('Custom');
         };
       });
 
@@ -183,7 +194,7 @@
       <a href="http://demos.ownlocal.com" class="demos-logo" tabindex="-1">Widget</a>
       <span>Publisher:</span>
       <input id="platform-url" type="text">
-      <span class="hide-first">Preview Size:</span>
+      <span class="hide-first">Popular Sizes:</span>
       <div id="widget-size" class="dropdown widget-size-dropdown hide-first">
         <div class="selection"></div>
         <ul class="sizes">
