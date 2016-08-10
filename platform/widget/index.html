@@ -22,6 +22,7 @@
       .dropdown ul li.button:hover { opacity: 1; }
       .dropdown ul li.button.active { opacity: 1; text-decoration: underline; }      
       input { display: inline-block; margin-left: 10px; -webkit-appearance: none; border: 1px solid rgba(0,0,0,0.1); font-size: 14px; line-height: 30px; width: 50px; text-align: center; outline: 0 none; }
+      input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { opacity: 1; }
       .options-area { display: inline-block; padding-left: 20px; border-left: 1px solid rgba(0,0,0,0.05); }
       .options-area span { opacity: 0.8; padding-right: 5px; }
       .ownlocal-widget { width: 100%; min-width: 200px; max-width: 1280px; height: 600px; min-height: 50px; max-height: 600px; position: relative; box-shadow: 0 0 10px rgba(0,0,0,0.15); margin: 0 auto 30px; }
@@ -82,7 +83,7 @@
         updateEmbedCode();
       });
 
-      $(document).on('keyup', 'input#custom-width', function(){
+      $(document).on('keyup keydown click blur change', 'input#custom-width', function(){
         width = $(this).val();
         $('.ownlocal-widget').css("width", width);
         $('#ownlocal').css("width", "auto");
@@ -91,7 +92,7 @@
         updateEmbedCode();
       });
 
-      $(document).on('keyup', 'input#custom-height', function(){
+      $(document).on('keyup keydown click blur change', 'input#custom-height', function(){
         height = $(this).val();
         $('.ownlocal-widget').css("height", height);
         $('#widget-size .selection').html('Custom');
@@ -146,9 +147,9 @@
         </ul>
       </div>
       <span>Width:</span>
-        <input id="custom-width" type="text">
+        <input id="custom-width" type="number" min="200" max="1280">
       <span>Height:</span>
-        <input id="custom-height" type="text">
+        <input id="custom-height" type="number" min="50" max="600">
       <span>Default View: </span>
       <div id="default-view" class="dropdown default-view-dropdown">
         <div class="selection">Businesses</div>
