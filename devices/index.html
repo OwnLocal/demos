@@ -1,28 +1,63 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no" />
-    <title>Devices Demo</title>
+    <title>OwnLocal Platform Demo</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="http://2oncul2uhyrk1kfigp1oy3sozqf.wpengine.netdna-cdn.com/wp-content/themes/ownlocal/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <style>
-      html, body { padding: 0; margin: 0; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-      body { background: #F8F9FA; }
+      html, body { padding: 0; margin: 0; text-align: center; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+      body { background: #F8F9FA; font-family: 'Roboto'; color: #4A475A; }
+      .header { text-align: left; margin: 0 0 30px; box-shadow: 0 1px 0 rgba(0,0,0,0.05); padding: 0 0 0 15px; background: white; font-size: 15px; line-height: 50px; white-space: nowrap; box-sizing: border-box; position: absolute; width: 100%; top: 0; left: 0; transition: all 0.3s ease; }
+      body.hidden-header .header { opacity: 0; }
+      body.hidden-header .header:hover { opacity: 1; background: transparent; box-shadow: 0 0 0 transparent; }
+      body.hidden-header .not-in-fullscreen { display: none; }
+      .demos-logo { display: inline-block; font-weight: 500; text-transform: uppercase; position: relative; color: #4A475A; padding-left: 45px; opacity: 0.85; transition: all 0.3s ease; cursor: pointer; font-size: 16px; text-decoration: none; outline: 0 none; }
+      .demos-logo:before { content: ""; position: absolute; width: 30px; height: calc(100% - 20px); background: url('http://demos.ownlocal.com/pixel-tree.png') no-repeat; background-size: auto 100%; top: 8px; left: 0; }
+      .demos-logo:hover { opacity: 1; }
+      .header span { display: inline-block; font-weight: 500; border-left: 1px solid rgba(0,0,0,0.05); padding-left: 15px; margin-left: 15px; }
+      .header span:first-child { border-left: 0 none; padding-left: 0; margin-left: 0; }
+      .dropdown { width: auto; position: relative; width: 85px; height: 50px; cursor: pointer; padding-left: 15px; display: inline-block; }
+      .dropdown.default-view-dropdown { width: 105px; }
+      .dropdown .selection { padding-right: 7px; }
+      .dropdown .selection:after { content: '\E313'; position: absolute; top: 0; right: 0; font-family: 'Material Icons'; font-size: 120%; }
+      .dropdown ul { position: absolute; margin: 0; padding: 0; top: 50px; left: 0; height: auto; max-height: 0; overflow: hidden; background: white; box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 rgba(0,0,0,0.05) inset; z-index: 1000; width: 100%; transition: all 0.3s ease; }
+      .dropdown:hover ul { max-height: none; }
+      .dropdown ul li.button { cursor: pointer; display: block; border: 0 none; padding: 15px; opacity: 0.6; line-height: 1.5; transition: all 0.3s ease; }
+      .dropdown ul li.button:hover { opacity: 1; }
+      .dropdown ul li.button.active { opacity: 1; text-decoration: underline; }      
+      input { display: inline-block; margin-left: 10px; -webkit-appearance: none; border: 1px solid rgba(0,0,0,0.1); font-size: 14px; line-height: 30px; width: 50px; text-align: center; outline: 0 none; color: #4A475A; transition: all 0.3s ease; }
+      input:hover { border-color: rgba(0,0,0,0.2); }
+      input:focus { border-color: rgba(66,133,244,0.8); }
+      input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { opacity: 1; }
+      input#platform-url { box-sizing: border-box; padding: 0 10px; width: calc(100% - 960px); max-width: 300px; text-align: left; text-overflow: ellipsis; }
+      .options-area { display: inline-block; padding-left: 20px; border-left: 1px solid rgba(0,0,0,0.05); }
+      .options-area span { opacity: 0.8; padding-right: 5px; }
+      
+      .icon-button { display: inline-block; width: 50px; height: 50px; position: relative; float: right; cursor: pointer; transition: all 0.3s ease; opacity: 0.5; }
+      .icon-button.active { opacity: 1 !important; }
+      .icon-button:hover { opacity: 0.7; }
+      .icon-button i { position: absolute; top: 50%; left: 50%; margin: -12px 0 0 -12px; }
+
       iframe { border: 0 none; background: white; }
       .frame { position: fixed; }
       .browser-dimensions { position: absolute; top: 0; right: 0; line-height: 30px; padding: 0 15px; font-family: sans-serif; font-weight: 300; font-size: 15px; color: rgba(75,89,102,0.3); cursor: default; -webkit-user-select: none; display: none; }
       .browser-dimensions div { display: inline; }
-      .frame.browser { left: 50px; width: calc(100% - 305px); bottom: 0; height: calc(100% - 50px); max-height: 1200px; box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); background: #D2D2D2; border-radius: 10px 10px 0 0; z-index: 20; transition: all 0.3s ease; }
+      .frame.browser { left: 50px; width: calc(100% - 305px); bottom: 0; height: calc(100% - 80px); max-height: 1200px; box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); background: #D2D2D2; border-radius: 10px 10px 0 0; z-index: 20; transition: all 0.3s ease; }
+      body.hidden-header .frame.browser { height: calc(100% - 30px); }
       .frame.browser .browser-bar { position: absolute; height: 30px; padding: 10px 0 0 10px; box-sizing: border-box; }
       .frame.browser .browser-bar span { width: 10px; height: 10px; border-radius: 100px; display: block; float: left; margin: 0 4px; }
       .frame.browser .browser-bar span.show-dimensions { cursor: pointer; }
       .frame.browser iframe { position: absolute; top: 30px; left: 0; width: 100%; height: calc(100% - 30px); }      
-      .frame.phone { left: auto; margin: 0; right: 50px; border-radius: 20px 20px 0 0; top: auto; bottom: 0; background: #383838; box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); z-index: 30; width: calc(375px + 40px); height: calc(590px + 60px); max-height: calc(100% - 110px); cursor: s-resize; transition: all 0.3s ease; }
+      .frame.phone { left: auto; margin: 0; right: 50px; border-radius: 20px 20px 0 0; top: auto; bottom: 0; background: #383838; box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); z-index: 30; width: calc(375px + 40px); height: calc(590px + 60px); max-height: calc(100% - 110px); transition: all 0.3s ease; }
       .frame.phone .phone-camera { background: rgba(255, 255, 255, 0.1); width: 10px; height: 10px; left: 50%; margin: 27px 0 0 -45px; position: absolute; border-radius: 10px; }
       .frame.phone .phone-speaker { background: rgba(255, 255, 255, 0.1); width: 14%; height: 8px; left: 50%; margin: 28px 0 0 -7%; position: absolute; border-radius: 10px; }
       .frame.phone iframe { position: absolute; bottom: 0; left: 15px; width: calc(100% - 30px); height: calc(100% - 60px); }
       .frame.phone:before { content: ""; top: -50px; position: absolute; width: 100%; height: 50px; pointer-events: none; }
-      body.minimized-phone .frame.phone { bottom: -650px; cursor: n-resize; }
+      body.minimized-phone .frame.phone { bottom: -650px; }
       body.minimized-phone .frame.phone:hover { bottom: -590px; }
       body.minimized-phone .frame.phone:before { pointer-events: all; }
       body.minimized-phone .frame.browser { width: calc(100% - 100px); }
@@ -39,8 +74,117 @@
         body.minimized-phone .frame.phone:hover { bottom: -460px; }
       }
     </style>
+    <script>
+      // Load URL depending on parameter
+      var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
+        for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split('=');
+          if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+          }
+        }
+      };
+  
+      if ( getUrlParameter('website') === undefined ) {
+        var website = 'local.tennessean.com';
+      } else { 
+        var website = getUrlParameter('website');
+      };
+      
+      if ( getUrlParameter('fullscreen') === true ) {
+        var fullscreen = 'true';
+      } else { 
+        var fullscreen = 'false';
+      };
+
+      if ( getUrlParameter('desktop-only') === true ) {
+        var phoneless = 'true';
+      } else { 
+        var phoneless = 'false';
+      };
+  
+      function fullscreenToggle() {
+        $('body').toggleClass('hidden-header');
+        $('.fullscreen').toggleClass('active');        
+      };
+     
+      function updateIframeSrc() {
+        $('iframe').attr( 'src', 'http://' + website );  
+      };
+      
+      function desktopView() {
+        $('body').addClass('minimized-phone');
+        $('.desktop-view').addClass('active');
+        $('.devices-view').removeClass('active');        
+      }
+
+      function devicesView() {
+        $('body').removeClass('minimized-phone');
+        $('.devices-view').addClass('active');
+        $('.desktop-view').removeClass('active');        
+      }
+  
+      $(document).ready(function() {
+        updateIframeSrc();
+        $('#platform-url').val(website);
+  
+        if ( getUrlParameter('fullscreen') === 'true' ) {
+          fullscreenToggle();
+        };
+
+        if ( getUrlParameter('desktop-only') === 'true' ) {
+          desktopView();
+        };
+  
+      });
+  
+      $(document).on('keyup keydown', 'input#platform-url', function(){
+        website = $(this).val();
+        updateIframeSrc();
+      });
+
+      $(document).on('click', '.fullscreen', function(){
+        fullscreenToggle();
+      });
+  
+      $(document).on('click', '.desktop-view', function(){
+        desktopView();
+      });
+
+      $(document).on('click', '.devices-view', function(){
+        devicesView();
+      });
+      
+      //Show Dimensions
+      $(document).on('click', '.show-dimensions', function(){
+        $('.browser-dimensions').toggle();
+      });
+      // Change browser dimensions on resize
+      function jsUpdateSize() {
+        var width = document.getElementById('browser').offsetWidth;
+        var height = document.getElementById('browser').offsetHeight - 30;
+        document.getElementById('browser-width').innerHTML = width;
+        document.getElementById('browser-height').innerHTML = height;
+      };
+      window.onload = jsUpdateSize;
+      window.onresize = jsUpdateSize;
+      window  .onclick = jsUpdateSize;
+    </script>
   </head>
   <body>
+    <div class="header">
+      <a href="http://demos.ownlocal.com" class="demos-logo not-in-fullscreen" tabindex="-1">Preview</a>
+      <span class="not-in-fullscreen">Website:</span>
+      <input id="platform-url" type="text" class="not-in-fullscreen">
+      <div class="icon-button fullscreen fullscreen-off"><i class="material-icons">fullscreen</i></div>
+      <div class="icon-button view-selection desktop-view not-in-fullscreen"><i class="material-icons">laptop_mac</i></div>
+      <div class="icon-button view-selection devices-view active not-in-fullscreen"><i class="material-icons">devices</i></div>
+      <div class="clear"></div>
+    </div>
     <div id="browser" class="frame browser">
       <div class="browser-dimensions"><div id="browser-width">0</div> x <div id="browser-height">0</div></div>
       <div class="browser-bar">
@@ -48,50 +192,12 @@
         <span style="background: #D7B443;"></span>
         <span style="background: #38D087;"></span>
       </div>
-      <iframe src="http://URL" scrolling="yes"></iframe>
+      <iframe src="" scrolling="yes"></iframe>
     </div>
     <div id="phone" class="frame phone">
       <div class="phone-camera"></div>
       <div class="phone-speaker"></div>
-      <iframe src="http://URL" scrolling="yes"></iframe>
+      <iframe src="" scrolling="yes"></iframe>
     </div>
   </body>
-  <script>
-    // Load URL depending on parameter
-    var getUrlParameter = function getUrlParameter(sParam) {
-      var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-      for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] === sParam) {
-          return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-      }
-    };
-    var url = getUrlParameter('url');
-    $(function() {
-      $('.frame.browser').html($('.frame.browser').html().replace("URL", url));
-      $('.frame.phone').html($('.frame.phone').html().replace("URL", url));
-    });
-    // Minimize phone on click
-    $(document).on('click', '.frame.phone', function(){
-      $('body').toggleClass('minimized-phone');
-    });
-    //Show Dimensions
-    $(document).on('click', '.show-dimensions', function(){
-      $('.browser-dimensions').toggle();
-    });
-    // Change browser dimensions on resize
-    function jsUpdateSize() {
-      var width = document.getElementById('browser').offsetWidth;
-      var height = document.getElementById('browser').offsetHeight - 30;
-      document.getElementById('browser-width').innerHTML = width;
-      document.getElementById('browser-height').innerHTML = height;
-    };
-    window.onload = jsUpdateSize;
-    window.onresize = jsUpdateSize;
-    window  .onclick = jsUpdateSize;
-  </script>
 </html>
