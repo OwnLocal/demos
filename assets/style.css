@@ -1,11 +1,21 @@
 * { box-sizing: border-box; }
 html, body { padding: 0; margin: 0; }
 body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; background: #F8F9FA; font-family: 'Roboto'; color: #4A475A; }
+a { text-decoration: none; color: #15c; }
 .container { margin: 0 auto; width: 100%; max-width: 1024px; padding: 0; position: relative; }
 .opacity-transition { opacity: 0.8; transition: all 0.3s ease; }
 .opacity-transition:hover { opacity: 1; }
 
 .header { box-shadow: 0 1px 0 rgba(0,0,0,0.05); background: white; height: 50px; }
-.pixel-tree { display: inline-block; height: 50px; padding: 10px 15px; border-right: 1px solid rgba(0,0,0,0.05); }
+.header a { color: #4A475A; opacity: 0.8; }
+.header-element { float: left; line-height: 50px; padding-right: 15px; margin-right: 15px; border-right: 1px solid rgba(0,0,0,0.05); height: 50px; position: relative; }
+.pixel-tree { padding: 10px 15px; }
 .pixel-tree img { width: auto; height: 100%; display: block; }
+.navigation { cursor: pointer; padding-right: 35px; height: 50px; line-height: 52px; }
+.navigation span { font-weight: 500; text-transform: uppercase; }
+.header ul { position: absolute; margin: 0; left: -15px; padding: 0; background: white; box-shadow: 0 1px 1px rgba(0,0,0,0.1); margin-top: -1px; min-width: calc(100% + 15px); max-/* height: 0; */ overflow: hidden; transition: max-height 0.5s ease; }
+.header .navigation:hover ul { max-height: 500px; }
+.header ul li { display: block; padding: 15px; line-height: 1; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.header ul li:last-child { border-bottom: 0 none; }
+.navigation:after { content: '\E313'; font-family: 'Material Icons'; position: absolute; top: 0; right: 10px; }
 .clear { clear: both; }
