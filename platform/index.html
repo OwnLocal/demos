@@ -11,9 +11,9 @@
     <style>
       html, body { padding: 0; margin: 0; text-align: center; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
       body { background: #F8F9FA; font-family: 'Roboto'; color: #4A475A; }
-      .header { text-align: left; margin: 0 0 30px; box-shadow: 0 1px 0 rgba(0,0,0,0.05); padding: 0 0 0 15px; background: white; font-size: 15px; line-height: 50px; white-space: nowrap; box-sizing: border-box; position: absolute; width: 100%; top: 0; left: 0; transition: all 0.3s ease; }
-      body.hidden-header .header { opacity: 0; }
-      body.hidden-header .header:hover { opacity: 1; background: transparent; box-shadow: 0 0 0 transparent; }
+      .header { text-align: left; margin: 0 0 30px; box-shadow: 0 1px 0 rgba(0,0,0,0.05); padding: 0 0 0 15px; background: white; font-size: 15px; line-height: 50px; white-space: nowrap; box-sizing: border-box; position: absolute; width: 100%; top: 0; left: 0; transition: opacity 0.3s ease; z-index: 1000; }
+      body.hidden-header .header { opacity: 0; background: transparent; box-shadow: 0 0 0 transparent; }
+      body.hidden-header .header:hover { opacity: 1; }
       body.hidden-header .not-in-fullscreen { display: none; }
       .demos-logo { display: inline-block; font-weight: 500; text-transform: uppercase; position: relative; color: #4A475A; padding-left: 45px; opacity: 0.85; transition: all 0.3s ease; cursor: pointer; font-size: 16px; text-decoration: none; outline: 0 none; }
       .demos-logo:before { content: ""; position: absolute; width: 30px; height: calc(100% - 20px); background: url('/assets/images/pixel-tree.png') no-repeat; background-size: auto 100%; top: 8px; left: 0; }
@@ -41,38 +41,53 @@
       .icon-button.active { opacity: 1 !important; }
       .icon-button:hover { opacity: 0.7; }
       .icon-button i { position: absolute; top: 50%; left: 50%; margin: -12px 0 0 -12px; }
+      
+      .wrapper { position: fixed; top: 50px; bottom: 0; left: 0; width: 100%; }
+      body.hidden-header .wrapper { top: 0; }
 
       iframe { border: 0 none; background: white; }
-      .frame { position: fixed; }
+      .frame { position: absolute; }
       .browser-dimensions { position: absolute; top: 0; right: 0; line-height: 30px; padding: 0 15px; font-family: sans-serif; font-weight: 300; font-size: 15px; color: rgba(75,89,102,0.3); cursor: default; -webkit-user-select: none; display: none; }
       .browser-dimensions div { display: inline; }
-      .frame.browser { left: 50px; width: calc(100% - 305px); bottom: 0; height: calc(100% - 80px); max-height: 1200px; box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); background: #D2D2D2; border-radius: 10px 10px 0 0; z-index: 20; transition: all 0.3s ease; }
-      body.hidden-header .frame.browser { height: calc(100% - 30px); }
+      .frame.browser { top: 50%; left: 50%; margin: -440px 0 0 calc(-1636px / 2); width: 1366px; height: 880px; max-height: 1200px; box-shadow: 0 0 40px rgba(0, 0, 0, 0.1); background: #D2D2D2; border-radius: 10px; overflow: hidden; z-index: 20; transition: all 0.3s ease; }
       .frame.browser .browser-bar { position: absolute; height: 30px; padding: 10px 0 0 10px; box-sizing: border-box; }
       .frame.browser .browser-bar span { width: 10px; height: 10px; border-radius: 100px; display: block; float: left; margin: 0 4px; }
       .frame.browser .browser-bar span.show-dimensions { cursor: pointer; }
       .frame.browser iframe { position: absolute; top: 30px; left: 0; width: 100%; height: calc(100% - 30px); }      
-      .frame.phone { left: auto; margin: 0; right: 50px; border-radius: 20px 20px 0 0; top: auto; bottom: 0; background: #383838; box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); z-index: 30; width: calc(375px + 40px); height: calc(590px + 60px); max-height: calc(100% - 110px); transition: all 0.3s ease; }
+      .frame.phone { bottom: 50%; right: 50%; margin: 0 calc(-1636px / 2) -440px 0; border-radius: 20px; background: #383838; box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); z-index: 30; width: 406px; height: 680px; transition: all 0.3s ease; }
       .frame.phone .phone-camera { background: rgba(255, 255, 255, 0.1); width: 10px; height: 10px; left: 50%; margin: 27px 0 0 -45px; position: absolute; border-radius: 10px; }
       .frame.phone .phone-speaker { background: rgba(255, 255, 255, 0.1); width: 14%; height: 8px; left: 50%; margin: 28px 0 0 -7%; position: absolute; border-radius: 10px; }
-      .frame.phone iframe { position: absolute; bottom: 0; left: 15px; width: calc(100% - 30px); height: calc(100% - 60px); }
+      .frame.phone iframe { position: absolute; bottom: 30px; left: 14px; width: calc(100% - 28px); height: calc(100% - 90px); }
       .frame.phone:before { content: ""; top: -50px; position: absolute; width: 100%; height: 50px; pointer-events: none; }
-      body.minimized-phone .frame.phone { bottom: -650px; }
-      body.minimized-phone .frame.phone:hover { bottom: -590px; }
-      body.minimized-phone .frame.phone:before { pointer-events: all; }
-      body.minimized-phone .frame.browser { width: calc(100% - 100px); }
-      @media screen and (min-width: 1920px) {
-        .frame.browser { left: 50%; width: 1610px; margin-left: -910px; }
-        .frame.phone { right: 50%; margin-right: -910px; }
-        body.minimized-phone .frame.browser { width: 1820px; } 
+      body.minimized-phone .frame.phone { display: none; }
+      body.minimized-phone .frame.browser { margin-left: calc(-1366px / 2); }
+      
+      @media screen and (max-width: 1700px), screen and (max-height: 1000px) {
+        .wrapper { transform: scale(0.9); }
       }
-      @media screen and (max-width: 1366px) {
-        .frame.browser { left: 20px; width: calc(100% - 85px); }
-        .frame.phone { right: 20px; width: calc(320px + 40px); height: calc(460px + 60px); }
-        body.minimized-phone .frame.browser { width: calc(100% - 40px); }
-        body.minimized-phone .frame.phone { bottom: -520px; }
-        body.minimized-phone .frame.phone:hover { bottom: -460px; }
+      @media screen and (max-width: 1560px), screen and (max-height: 950px) {
+        .wrapper { transform: scale(0.75); }
       }
+      @media screen and (max-width: 1279px), screen and (max-height: 800px) {
+        .wrapper { transform: scale(0.6); }
+      }
+      @media screen and (max-width: 1020px), screen and (max-height: 660px) {
+        .wrapper { transform: scale(0.5); }
+      }
+      
+      @media screen and (max-width: 880px) {
+        .wrapper { transform: scale(0.4); }
+      }
+
+
+      @media screen and (max-width: 700px) {
+        .wrapper { transform: scale(0.25); }
+      }
+
+      @media screen and (max-width: 460px) {
+        .wrapper { transform: scale(0.2); }
+      }
+
     </style>
     <script>
       // Load URL depending on parameter
@@ -185,19 +200,21 @@
       <div class="icon-button view-selection devices-view active not-in-fullscreen"><i class="material-icons">devices</i></div>
       <div class="clear"></div>
     </div>
-    <div id="browser" class="frame browser">
-      <div class="browser-dimensions"><div id="browser-width">0</div> x <div id="browser-height">0</div></div>
-      <div class="browser-bar">
-        <span style="background: #E6696D;" class="show-dimensions"></span>
-        <span style="background: #D7B443;"></span>
-        <span style="background: #38D087;"></span>
+    <div class="wrapper">
+      <div id="browser" class="frame browser">
+        <div class="browser-dimensions"><div id="browser-width">0</div> x <div id="browser-height">0</div></div>
+        <div class="browser-bar">
+          <span style="background: #E6696D;" class="show-dimensions"></span>
+          <span style="background: #D7B443;"></span>
+          <span style="background: #38D087;"></span>
+        </div>
+        <iframe src="" scrolling="yes"></iframe>
       </div>
-      <iframe src="" scrolling="yes"></iframe>
-    </div>
-    <div id="phone" class="frame phone">
-      <div class="phone-camera"></div>
-      <div class="phone-speaker"></div>
-      <iframe src="" scrolling="yes"></iframe>
+      <div id="phone" class="frame phone">
+        <div class="phone-camera"></div>
+        <div class="phone-speaker"></div>
+        <iframe src="" scrolling="yes"></iframe>
+      </div>
     </div>
   </body>
 </html>
