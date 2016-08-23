@@ -4,6 +4,7 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 a { text-decoration: none; color: #008CDD; }
 .container { margin: 0 auto; width: calc(100% - 50px); max-width: 1024px; padding: 0; position: relative; }
 .opacity-transition { opacity: 0.8; transition: all 0.3s ease; }
+.opacity-transition-nine { opacity: 0.9; }
 .opacity-transition:hover { opacity: 1; }
 
 .header { box-shadow: 0 1px 0 rgba(0,0,0,0.05); background: white; height: 50px; }

@@ -9,7 +9,7 @@ title: Home
   <div class="home-grid grid">
 
     {% for product in site.products %}
-      <a href="{{ product.target_path }}" class="grid-item opacity-transition">
+      <a href="{{ product.target_path }}" class="grid-item opacity-transition opacity-transition-nine">
         <div class="grid-image" style="background-image: url('{{ product.image_path }}')"></div>
         <div class="grid-content">
           <h3>{{ product.title }}</h3>
