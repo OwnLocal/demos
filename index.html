@@ -17,8 +17,9 @@ title: Home
       <h2>Meet our<br>SEO machine.</h2>
       <p>Introducing the OwnLocal Platform — the first truly automated digital ad platform for local media.</p>
       <div class="hero-buttons">
-        <a href="/platform?website=local.tennessean.com&fullscreen=false&desktop-only=false"><span>See Demo</span></a>
-        <a class="minimal hero-to-content" href="#"><span>More Demos</span></a>
+        <a class="desktop-only" href="/platform?website=local.tennessean.com&fullscreen=false&desktop-only=false"><span>See Demo</span></a>
+        <a class="mobile-only" href="http://local.tennessean.com" target="_blank"><span>See Demo</span></a>
+        <a class="minimal hero-to-content"><span>More Demos</span></a>
         <div class="clear"></div>
       </div>    
     </div>
@@ -30,7 +31,13 @@ title: Home
   <div class="home-grid grid">
 
     {% for product in site.products %}
-      <a href="{{ product.target_path }}" class="grid-item opacity-transition opacity-transition-nine">
+      <a href="{{ product.devices_path }}" class="grid-item opacity-transition opacity-transition-nine desktop-only">
+        <div class="grid-image" style="background-image: url('{{ product.image_path }}')"></div>
+        <div class="grid-content">
+          <h3>{{ product.title }}</h3>
+        </div>
+      </a>
+      <a href="{{ product.target_path }}" class="grid-item opacity-transition opacity-transition-nine mobile-only" target="_blank">
         <div class="grid-image" style="background-image: url('{{ product.image_path }}')"></div>
         <div class="grid-content">
           <h3>{{ product.title }}</h3>

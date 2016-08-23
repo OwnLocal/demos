@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 html, body { padding: 0; margin: 0; }
 body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; background: white; font-family: -apple-system, BlinkMacSystemFont, 'Roboto'; letter-spacing: -0.2px; color: #4A475A; position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
-a { text-decoration: none; color: #008CDD; }
+a { text-decoration: none; color: #008CDD; cursor: pointer; }
 .container { margin: 0 auto; width: calc(100% - 50px); max-width: 1024px; padding: 0; position: relative; }
 .opacity-transition { opacity: 0.8; transition: all 0.3s ease; }
 .opacity-transition-nine { opacity: 0.9; }
@@ -10,6 +10,7 @@ a { text-decoration: none; color: #008CDD; }
 .table-cell-top { display: table-cell; vertical-align: bottom; }
 .table-cell-middle { display: table-cell; vertical-align: middle; }
 .table-cell-bottom { display: table-cell; vertical-align: bottom; }
+.mobile-only { display: none !important; }
 
 .header { box-shadow: 0 1px 0 rgba(0,0,0,0.05); background: white; height: 50px; }
 .header .container { width: 100%; }
@@ -33,7 +34,7 @@ a { text-decoration: none; color: #008CDD; }
 .homepage-ol-home { position: absolute; right: 0; top: 5px; line-height: 30px; display: inline-block; border: 1px solid white; padding: 0 10px; text-transform: uppercase; color: white; font-size: 12px; font-weight: 700; transition: all 0.3s ease; }
 .homepage-ol-home:hover { background: white; color: rgba(75,89,102,0.8); }
 
-.homepage-hero { background-image: url('/assets/images/products/platform/demo-02.jpg'); background-size: cover; background-position: center; color: white;/*  max-height: 600px; */  }
+.homepage-hero { background-image: url('/assets/images/products/platform/demo-02.jpg'); background-size: cover; background-position: center; color: white; }
 .homepage-hero .table-cell-middle { background: rgba(75,89,102,0.4); }
 .homepage-hero h2 { font-weight: 700; font-size: 68px; line-height: 1; text-transform: uppercase; max-width: 500px; margin: 30px 0; }
 .homepage-hero p { line-height: 1.3; max-width: 500px; font-weight: 300; font-size: 21px; font-family: 'Roboto'; margin: 0 0 40px; }
@@ -51,6 +52,11 @@ a { text-decoration: none; color: #008CDD; }
 .grid-content { margin: 0; }
 .grid-content h3 { font-size: 14px; font-weight: 600; text-transform: uppercase; margin: 15px 0 0; font-family: -apple-system, BlinkMacSystemFont, 'Montserrat'; display: inline-block; opacity: 0.8; border-bottom: 1px solid transparent; transition: all 0.3s ease; }
 .grid-item:hover .grid-content h3 { border-bottom-color: rgba(47,70,84,0.8); }
+
+@media screen and (max-width: 1024px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+}
 
 @media screen and (max-width: 980px) {
   .grid-item { width: calc(50% - 25px); }
