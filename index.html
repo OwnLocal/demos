@@ -28,16 +28,18 @@ title: Home
 
 <div class="container">
   
-  <div class="home-grid grid">
+  <div id="products" class="home-grid grid">
+    
+    <h2><span>Product Demos</span></h2>
 
     {% for product in site.products %}
-      <a href="{{ product.devices_path }}" class="grid-item opacity-transition opacity-transition-nine desktop-only">
+      <a href="{{ product.devices_path }}" class="grid-item opacity-transition opacity-transition-nine desktop-only {{ product.class }}">
         <div class="grid-image" style="background-image: url('{{ product.image_path }}')"></div>
         <div class="grid-content">
           <h3>{{ product.title }}</h3>
         </div>
       </a>
-      <a href="{{ product.target_path }}" class="grid-item opacity-transition opacity-transition-nine mobile-only" target="_blank">
+      <a href="{{ product.target_path }}" class="grid-item opacity-transition opacity-transition-nine mobile-only {{ product.class }}" target="_blank">
         <div class="grid-image" style="background-image: url('{{ product.image_path }}')"></div>
         <div class="grid-content">
           <h3>{{ product.title }}</h3>
@@ -46,6 +48,12 @@ title: Home
     {% endfor %}
 
     <div class="clear"></div>
+  </div>
+  
+  <div class="footer">
+    <div class="container">
+      © {{ 'now' | date: '%Y' }} <a href="http://ownlocal.com" target="_blank"><span>OwnLocal</span></a>, Inc.
+    </div>
   </div>
   
 </div>

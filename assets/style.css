@@ -2,6 +2,8 @@
 html, body { padding: 0; margin: 0; }
 body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; background: white; font-family: -apple-system, BlinkMacSystemFont, 'Roboto'; letter-spacing: -0.2px; color: #4A475A; position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
 a { text-decoration: none; color: #008CDD; cursor: pointer; }
+a span { border-bottom: 1px solid transparent; transition: all 0.3s ease; }
+a:hover span { border-bottom-color: #008CDD; }
 .container { margin: 0 auto; width: calc(100% - 50px); max-width: 1024px; padding: 0; position: relative; }
 .opacity-transition { opacity: 0.8; transition: all 0.3s ease; }
 .opacity-transition-nine { opacity: 0.9; }
@@ -47,11 +49,18 @@ a { text-decoration: none; color: #008CDD; cursor: pointer; }
 .homepage-hero .hero-buttons a.minimal:hover span { border-bottom: 1px solid white; }
 
 .grid { margin: 0 -25px 0; padding: 40px 0 0 25px; }
-.grid-item { float: left; width: calc(33.33% - 25px); background: white; margin: 0 25px 40px 0; color: #2f4654; cursor: pointer; position: relative; text-align: center; }
-.grid-image { height: 210px; background-size: calc(100% - 40px) auto; background-repeat: no-repeat; background-position: center center; background-color: #F4F4F4; }
-.grid-content { margin: 0; }
-.grid-content h3 { font-size: 14px; font-weight: 600; text-transform: uppercase; margin: 15px 0 0; font-family: -apple-system, BlinkMacSystemFont, 'Montserrat'; display: inline-block; opacity: 0.8; border-bottom: 1px solid transparent; transition: all 0.3s ease; }
+.grid h2 { margin: 0 0 30px; font-weight: 400; color: rgba(75,89,102,0.9); font-size: 22px; line-height: 1; cursor: default; }
+.grid h2 span { opacity: 1; }
+.grid-item { float: left; width: calc(33.33% - 25px); background: white; margin: 0 25px 40px 0; color: #2f4654; cursor: pointer; position: relative; text-align: center; transition: all 0.3s ease; }
+.grid-image { height: 210px; background-size: calc(100% - 40px) auto; background-repeat: no-repeat; background-position: center center; background-color: #F4F4F4; opacity: 0.9; transition: all 0.3s ease; }
+.grid-content h3 { font-size: 14px; font-weight: 600; text-transform: uppercase; font-family: -apple-system, BlinkMacSystemFont, 'Montserrat'; display: inline-block; border-bottom: 1px solid transparent; position: absolute; left: 0; bottom: 0; padding: 10px; margin: 15px; background: white; color: rgba(75,89,102,0.9); transition: all 0.3s ease; }
+.grid-item:hover { box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+.grid-item:hover .grid-image { opacity: 1; }
 .grid-item:hover .grid-content h3 { border-bottom-color: rgba(47,70,84,0.8); }
+
+.grid-item.widget .grid-image { background-size: auto 270%; background-position: center -40px; }
+
+.footer .container { padding: 30px 20px 40px; border-top: 1px solid rgba(0,0,0,0.1); width: 100%; text-align: center; cursor: default; }
 
 @media screen and (max-width: 1024px) {
   .desktop-only { display: none !important; }
@@ -68,4 +77,8 @@ a { text-decoration: none; color: #008CDD; cursor: pointer; }
   .homepage-hero h2 { font-size: 40px; }
   .homepage-hero p { font-size: 20px; }
   .homepage-hero .table-cell-middle { vertical-align: bottom; padding-bottom: 30px; }
+}
+
+@media screen and (min-height: 851px) {
+  .homepage-hero { height: calc(100% - 330px); min-height: 600px; }
 }
