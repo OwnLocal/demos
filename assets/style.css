@@ -34,11 +34,11 @@ a:hover span { border-bottom-color: #008CDD; }
 .homepage-header-logo { background-image: url('http://www.ownlocal.com/hubfs/OwnLocal_April2016/images/logo.png');  width: 40px; height: 40px; display: block; background-size: auto 100%; background-position: right center; background-repeat: no-repeat; position: relative; }
 .homepage-header-logo:after { content: "Demos"; position: absolute; right: -108px; line-height: 1; color: white; font-size: 24px; text-transform: uppercase; font-family: 'Montserrat'; padding-bottom: 2px; border-bottom: 2px solid transparent; top: 9px; transition: all 0.3s ease; }
 .homepage-header-logo:hover:after { border-bottom: 2px solid white; }
-.homepage-ol-home { position: absolute; right: 0; top: 5px; line-height: 30px; display: inline-block; border: 1px solid white; padding: 0 10px; text-transform: uppercase; color: white; font-size: 12px; border-radius: 3px; font-weight: 700; transition: all 0.3s ease; }
+.homepage-ol-home { position: absolute; right: 0; top: 5px; line-height: 30px; display: inline-block; border: 1px solid white; padding: 0 10px; text-transform: uppercase; color: white; font-size: 12px; border-radius: 2px; font-weight: 700; transition: all 0.3s ease; display: none; }
 .homepage-ol-home span { border-bottom: 0 none; transition: none; }
 .homepage-ol-home:hover { background: white; color: rgba(75,89,102,0.8); }
 
-.homepage-hero { background-image: url('/assets/images/products/platform/demo-02.jpg'); background-size: cover; background-position: center; color: white; }
+.homepage-hero { background-image: url('/assets/images/products/platform/demo-02.jpg'); background-size: cover; background-position: center; color: white; max-height: 600px; }
 .homepage-hero .table-cell-middle { background: rgba(75,89,102,0.5); }
 .homepage-hero h2 { font-weight: 700; font-size: 66px; line-height: 1; text-transform: uppercase; max-width: 500px; margin: 30px 0; }
 .homepage-hero p { line-height: 1.3; max-width: 500px; font-weight: 300; font-size: 21px; font-family: 'Roboto'; margin: 0 0 40px; }
