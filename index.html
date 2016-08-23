@@ -31,6 +31,8 @@ title: Home
   <div id="products" class="home-grid grid">
     
     <h2><span>Product Demos</span></h2>
+    
+    <img class="share-image" src="{{ site.products.first.image_path }}">
 
     {% for product in site.products %}
       <a href="{{ product.devices_path }}" class="grid-item opacity-transition opacity-transition-nine desktop-only {{ product.class }}">

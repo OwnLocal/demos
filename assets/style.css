@@ -13,6 +13,7 @@ a:hover span { border-bottom-color: #008CDD; }
 .table-cell-middle { display: table-cell; vertical-align: middle; }
 .table-cell-bottom { display: table-cell; vertical-align: bottom; }
 .mobile-only { display: none !important; }
+.share-image { display: none; }
 
 .header { box-shadow: 0 1px 0 rgba(0,0,0,0.05); background: white; height: 50px; }
 .header .container { width: 100%; }
