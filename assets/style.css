@@ -34,12 +34,13 @@ a:hover span { border-bottom-color: #008CDD; }
 .homepage-header-logo { background-image: url('http://www.ownlocal.com/hubfs/OwnLocal_April2016/images/logo.png');  width: 40px; height: 40px; display: block; background-size: auto 100%; background-position: right center; background-repeat: no-repeat; position: relative; }
 .homepage-header-logo:after { content: "Demos"; position: absolute; right: -108px; line-height: 1; color: white; font-size: 24px; text-transform: uppercase; font-family: 'Montserrat'; padding-bottom: 2px; border-bottom: 2px solid transparent; top: 9px; transition: all 0.3s ease; }
 .homepage-header-logo:hover:after { border-bottom: 2px solid white; }
-.homepage-ol-home { position: absolute; right: 0; top: 5px; line-height: 30px; display: inline-block; border: 1px solid white; padding: 0 10px; text-transform: uppercase; color: white; font-size: 12px; font-weight: 700; transition: all 0.3s ease; }
+.homepage-ol-home { position: absolute; right: 0; top: 5px; line-height: 30px; display: inline-block; border: 1px solid white; padding: 0 10px; text-transform: uppercase; color: white; font-size: 12px; border-radius: 3px; font-weight: 700; transition: all 0.3s ease; }
+.homepage-ol-home span { border-bottom: 0 none; transition: none; }
 .homepage-ol-home:hover { background: white; color: rgba(75,89,102,0.8); }
 
 .homepage-hero { background-image: url('/assets/images/products/platform/demo-02.jpg'); background-size: cover; background-position: center; color: white; }
 .homepage-hero .table-cell-middle { background: rgba(75,89,102,0.5); }
-.homepage-hero h2 { font-weight: 700; font-size: 68px; line-height: 1; text-transform: uppercase; max-width: 500px; margin: 30px 0; }
+.homepage-hero h2 { font-weight: 700; font-size: 66px; line-height: 1; text-transform: uppercase; max-width: 500px; margin: 30px 0; }
 .homepage-hero p { line-height: 1.3; max-width: 500px; font-weight: 300; font-size: 21px; font-family: 'Roboto'; margin: 0 0 40px; }
 .homepage-hero .hero-buttons { opacity: 1; }
 .homepage-hero .hero-buttons a { display: inline-block; padding: 15px 20px; line-height: 1; background: white; text-transform: uppercase; font-family: 'Montserrat'; font-weight: 400; font-size: 14px; color: rgba(75, 89, 102, 0.8); float: left; transition: all 0.3s ease; }
@@ -61,11 +62,13 @@ a:hover span { border-bottom-color: #008CDD; }
 
 .grid-item.widget .grid-image { background-size: auto 270%; background-position: center -40px; }
 
-.footer .container { padding: 30px 20px 40px; border-top: 1px solid rgba(0,0,0,0.1); width: 100%; text-align: center; cursor: default; opacity: 0.8; }
+.footer .container { padding: 30px 20px 70px; border-top: 1px solid rgba(0,0,0,0.1); width: 100%; text-align: center; cursor: default; opacity: 0.8; }
 
 @media screen and (max-width: 1024px) {
   .desktop-only { display: none !important; }
   .mobile-only { display: block !important; }
+  .homepage-hero .table-cell-middle { vertical-align: bottom; padding-bottom: 30px; }
+  .footer .container { padding-bottom: 30px; }
 }
 
 @media screen and (max-width: 980px) {
@@ -77,9 +80,10 @@ a:hover span { border-bottom-color: #008CDD; }
   .grid-item { width: calc(100% - 25px); }
   .homepage-hero h2 { font-size: 40px; }
   .homepage-hero p { font-size: 20px; }
-  .homepage-hero .table-cell-middle { vertical-align: bottom; padding-bottom: 30px; }
 }
 
+/*
 @media screen and (min-height: 851px) {
   .homepage-hero { height: calc(100% - 350px); min-height: 600px; }
 }
+*/
