@@ -1,6 +1,6 @@
 * { box-sizing: border-box; }
 html, body { padding: 0; margin: 0; }
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; background: white; font-family: 'Roboto'; color: #4A475A; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; background: white; font-family: -apple-system, BlinkMacSystemFont, 'Roboto'; color: #4A475A; }
 a { text-decoration: none; color: #008CDD; }
 .container { margin: 0 auto; width: calc(100% - 50px); max-width: 1024px; padding: 0; position: relative; }
 .opacity-transition { opacity: 0.8; transition: all 0.3s ease; }
@@ -24,7 +24,7 @@ a { text-decoration: none; color: #008CDD; }
 .grid-item { float: left; width: calc(33.33% - 25px); background: white; margin: 0 25px 25px 0; color: #2f4654; cursor: pointer; position: relative; text-align: center; }
 .grid-image { height: 210px; background-size: calc(100% - 40px) auto; background-repeat: no-repeat; background-position: center center; background-color: #f8f9fb; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
 .grid-content { margin: 0; }
-.grid-content h3 { font-size: 14px; font-weight: 400; text-transform: uppercase; margin: 25px 0 0; font-family: 'Montserrat'; display: inline-block; border-bottom: 1px solid transparent; transition: all 0.3s ease; }
+.grid-content h3 { font-size: 14px; font-weight: 600; text-transform: uppercase; margin: 25px 0 0; font-family: -apple-system, BlinkMacSystemFont, 'Montserrat'; display: inline-block; border-bottom: 1px solid transparent; transition: all 0.3s ease; }
 .grid-item:hover .grid-content h3 { border-bottom-color: rgba(47,70,84,0.8); }
 
 @media screen and (max-width: 980px) {
