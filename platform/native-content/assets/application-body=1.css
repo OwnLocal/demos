@@ -11626,7 +11626,6 @@ h3.trending {
   background-position: center center;
   width: 100%;
   height: calc(100vh - 435px);
-  min-height: 500px;
   position: relative;
 }
 /* line 512, /vagrant/app/assets/stylesheets/global.css.scss.erb */
