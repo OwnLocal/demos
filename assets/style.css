@@ -1,6 +1,6 @@
 * { box-sizing: border-box; outline: 0 none; }
 html, body { padding: 0; margin: 0; }
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; background: white; font-family: -apple-system, BlinkMacSystemFont, 'Roboto'; letter-spacing: -0.2px; color: #4A475A; position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; background: white; font-family: -apple-system, BlinkMacSystemFont, 'Roboto'; letter-spacing: -0.2px; color: #4A475A; position: absolute; top: 0; right: 0; bottom: 0; left: 0; animation: fadein 2s; }
 a { text-decoration: none; color: #008CDD; cursor: pointer; }
 a span { border-bottom: 1px solid transparent; transition: all 0.3s ease; }
 a:hover span { border-bottom-color: #008CDD; }
@@ -38,7 +38,7 @@ a:hover span { border-bottom-color: #008CDD; }
 .homepage-ol-home span { border-bottom: 0 none; transition: none; }
 .homepage-ol-home:hover { background: white; color: rgba(75,89,102,0.8); }
 
-.homepage-hero { background-image: url('/assets/images/products/platform/demo-02.jpg'); background-size: cover; background-position: center; color: white; max-height: 630px; }
+.homepage-hero { background-size: cover; background-position: center; color: white; max-height: 630px; }
 .homepage-hero .table-cell-middle { background: rgba(75,89,102,0.5); }
 .homepage-hero h2 { font-weight: 700; font-size: 66px; line-height: 1; text-transform: uppercase; max-width: 500px; margin: 30px 0; }
 .homepage-hero p { line-height: 1.3; max-width: 500px; font-weight: 300; font-size: 21px; font-family: 'Roboto'; margin: 0 0 40px; }
@@ -63,6 +63,11 @@ a:hover span { border-bottom-color: #008CDD; }
 .grid-item.widget .grid-image { background-size: auto 270%; background-position: center -40px; }
 
 .footer .container { padding: 30px 20px 70px; border-top: 1px solid rgba(0,0,0,0.1); width: 100%; text-align: center; cursor: default; opacity: 0.8; }
+
+@keyframes fadein {
+  from { opacity:0; }
+  to { opacity:1; }
+}
 
 @media screen and (max-width: 1024px) {
   .desktop-only { display: none !important; }
