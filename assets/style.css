@@ -38,7 +38,7 @@ a:hover span { border-bottom-color: #008CDD; }
 .homepage-ol-home span { border-bottom: 0 none; transition: none; }
 .homepage-ol-home:hover { background: white; color: rgba(75,89,102,0.8); }
 
-.homepage-hero { background-image: url('/assets/images/products/platform/demo-02.jpg'); background-size: cover; background-position: center; color: white; max-height: 610px; }
+.homepage-hero { background-image: url('/assets/images/products/platform/demo-02.jpg'); background-size: cover; background-position: center; color: white; max-height: 630px; }
 .homepage-hero .table-cell-middle { background: rgba(75,89,102,0.5); }
 .homepage-hero h2 { font-weight: 700; font-size: 66px; line-height: 1; text-transform: uppercase; max-width: 500px; margin: 30px 0; }
 .homepage-hero p { line-height: 1.3; max-width: 500px; font-weight: 300; font-size: 21px; font-family: 'Roboto'; margin: 0 0 40px; }
