@@ -87,8 +87,6 @@ a:hover span { border-bottom-color: #008CDD; }
   .homepage-hero p { font-size: 20px; }
 }
 
-/*
 @media screen and (min-height: 851px) {
-  .homepage-hero { height: calc(100% - 350px); min-height: 600px; }
+  .homepage-hero { height: calc(100% - 605px); min-height: 630px; max-height: none; }
 }
-*/
