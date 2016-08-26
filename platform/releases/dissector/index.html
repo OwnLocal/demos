@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>OwnLocal – Homepage Dissector Release Text</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1024, user-scalable=yes"></meta>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="http://2oncul2uhyrk1kfigp1oy3sozqf.wpengine.netdna-cdn.com/wp-content/themes/ownlocal/images/favicon.ico" />
+    <style>
+      body, html { padding: 0; margin: 0; }
+      body { -webkit-font-smoothing: antialiased; font-family: -apple-system, BlinkMacSystemFont, 'Roboto'; line-height: 1.5; overflow-x: hidden; color: #444444; background: #FAFAFA; }
+      h2 { font-weight: 500; }
+      h3 { font-weight: 500; }
+      .wrapper { margin: 20px auto; width: calc(100% - 40px); max-width: 800px; padding: 10px 30px; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); box-sizing: border-box; }
+      .wrapper p { margin: 0 0 20px; font-size: 16px; }
+      .wrapper p img { width: auto; max-width: 100%; }
+      .centered { text-align: center; }
+      .code { background-color: rgba(0,0,0,0.04); border-radius: 3px; display: inline-block; font-family: monospace; padding: 0 6px; }
+      a { color: #3366CC; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.3s ease; opacity: 0.8; }
+      a:hover { border-bottom-color: #3366CC; }
+      hr { height: 4px; padding: 0; margin: 0; background-color: #e7e7e7; border: 0; }
+      .no-margin { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Homepage Dissector Release Text</h2>
+      <p>This release introduces a new feature that will make on-boarding and support easier for LocalFusion sites! This is the ability to get more information about a certain publisher by simply adding the following parameter to the end of any new platform URL:</p>
+      <p><span class="code">?dissector=true</span></p>
+      <hr>
+      <h3>Walkthrough</h3>
+      <p>This is how a platform homepage <a href="http://local.indystar.com" target="_blank">looks normally</a>:</p>
+      <p class="centered no-margin"><a href="https://cloud.githubusercontent.com/assets/977062/17981521/abd29688-6ac9-11e6-8c05-f92182095fba.jpg" target="_blank"><img src="https://cloud.githubusercontent.com/assets/977062/17981521/abd29688-6ac9-11e6-8c05-f92182095fba.jpg"></a></p>
+      <p>If we add the <span class="code">?dissector=true</span> parameter, we now <a href="http://local.indystar.com/?dissector=true" target="_blank">see a sidebar</a> on the left side. This gives us a bunch of handy information with links to settings:</p>
+      <p class="centered no-margin"><a href="https://cloud.githubusercontent.com/assets/977062/17981523/abd66808-6ac9-11e6-9ca9-e72a821ae637.jpg" target="_blank"><img src="https://cloud.githubusercontent.com/assets/977062/17981523/abd66808-6ac9-11e6-9ca9-e72a821ae637.jpg"></a></p>
+      <p>It also displays the map's zoom controls and tracks any latitude, longitude and zoom changes:</p>
+      <p class="centered no-margin"><a href="https://cloud.githubusercontent.com/assets/977062/17981522/abd36982-6ac9-11e6-9bff-ef3b1dd8376e.jpg" target="_blank"><img src="https://cloud.githubusercontent.com/assets/977062/17981522/abd36982-6ac9-11e6-9bff-ef3b1dd8376e.jpg"></a></p>
+      <p>This is super handy because, at this moment, it's a hassle to determine the best lat/lon/zoom levels for each publisher. By knowing the exact values needed in the MP Admin settings, on-boarding will have a much easier time getting a site looking at its best.</p>
+      <p>This feature will only work on homepages at this moment.</p>
+    </div>
+  </body>
+</html>
