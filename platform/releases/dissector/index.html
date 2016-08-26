@@ -13,12 +13,12 @@
       .wrapper { margin: 20px auto; width: calc(100% - 40px); max-width: 800px; padding: 10px 30px; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); box-sizing: border-box; }
       .wrapper p { margin: 0 0 20px; font-size: 16px; }
       .wrapper p img { width: auto; max-width: 100%; }
-      .centered { text-align: center; }
       .code { background-color: rgba(0,0,0,0.04); border-radius: 3px; display: inline-block; font-family: monospace; padding: 0 6px; }
       a { color: #3366CC; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.3s ease; opacity: 0.8; }
       a:hover { border-bottom-color: #3366CC; }
       hr { height: 4px; padding: 0; margin: 0; background-color: #e7e7e7; border: 0; }
-      .no-margin { margin: 0; }
+      .image { margin: 0 0 10px !important; }
+      .image a { display: block; opacity: 1; border: 0 none; text-align: center; }
     </style>
   </head>
   <body>
@@ -29,11 +29,11 @@
       <hr>
       <h3>Walkthrough</h3>
       <p>This is how a platform homepage <a href="http://local.indystar.com" target="_blank">looks normally</a>:</p>
-      <p class="centered no-margin"><a href="https://cloud.githubusercontent.com/assets/977062/17981521/abd29688-6ac9-11e6-8c05-f92182095fba.jpg" target="_blank"><img src="https://cloud.githubusercontent.com/assets/977062/17981521/abd29688-6ac9-11e6-8c05-f92182095fba.jpg"></a></p>
+      <p class="image"><a href="https://cloud.githubusercontent.com/assets/977062/17981521/abd29688-6ac9-11e6-8c05-f92182095fba.jpg" target="_blank"><img src="https://cloud.githubusercontent.com/assets/977062/17981521/abd29688-6ac9-11e6-8c05-f92182095fba.jpg"></a></p>
       <p>If we add the <span class="code">?dissector=true</span> parameter, we now <a href="http://local.indystar.com/?dissector=true" target="_blank">see a sidebar</a> on the left side. This gives us a bunch of handy information with links to settings:</p>
-      <p class="centered no-margin"><a href="https://cloud.githubusercontent.com/assets/977062/17981523/abd66808-6ac9-11e6-9ca9-e72a821ae637.jpg" target="_blank"><img src="https://cloud.githubusercontent.com/assets/977062/17981523/abd66808-6ac9-11e6-9ca9-e72a821ae637.jpg"></a></p>
+      <p class="image"><a href="https://cloud.githubusercontent.com/assets/977062/17981523/abd66808-6ac9-11e6-9ca9-e72a821ae637.jpg" target="_blank"><img src="https://cloud.githubusercontent.com/assets/977062/17981523/abd66808-6ac9-11e6-9ca9-e72a821ae637.jpg"></a></p>
       <p>It also displays the map's zoom controls and tracks any latitude, longitude and zoom changes:</p>
-      <p class="centered no-margin"><a href="https://cloud.githubusercontent.com/assets/977062/17981522/abd36982-6ac9-11e6-9bff-ef3b1dd8376e.jpg" target="_blank"><img src="https://cloud.githubusercontent.com/assets/977062/17981522/abd36982-6ac9-11e6-9bff-ef3b1dd8376e.jpg"></a></p>
+      <p class="image"><a href="https://cloud.githubusercontent.com/assets/977062/17981522/abd36982-6ac9-11e6-9bff-ef3b1dd8376e.jpg" target="_blank"><img src="https://cloud.githubusercontent.com/assets/977062/17981522/abd36982-6ac9-11e6-9bff-ef3b1dd8376e.jpg"></a></p>
       <p>This is super handy because, at this moment, it's a hassle to determine the best lat/lon/zoom levels for each publisher. By knowing the exact values needed in the MP Admin settings, on-boarding will have a much easier time getting a site looking at its best.</p>
       <p>This feature will only work on homepages at this moment.</p>
     </div>
