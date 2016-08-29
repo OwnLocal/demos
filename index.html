@@ -28,10 +28,10 @@ layout: layout
 <div class="container">
   
   <div id="products" class="home-grid grid">
+
+    <img class="share-image" src="/assets/images/products/platform/share-image-small.jpg">
     
     <h2><span>Product Demos</span></h2>
-    
-    <img class="share-image" src="/assets/images/products/platform/share-image-small.jpg">
 
     {% for product in site.products %}
       <a href="{{ product.devices_path }}" class="grid-item opacity-transition opacity-transition-nine desktop-only {{ product.class }}">
@@ -49,6 +49,26 @@ layout: layout
     {% endfor %}
 
     <div class="clear"></div>
+
+    <h2><span>Prototypes</span></h2>
+
+    {% for prototype in site.prototypes %}
+      <a href="{{ prototype.devices_path }}" class="grid-item opacity-transition opacity-transition-nine desktop-only {{ prototype.class }}">
+        <div class="grid-image" style="background-image: url('{{ prototype.image_path }}')"></div>
+        <div class="grid-content">
+          <h3>{{ prototype.title }}</h3>
+        </div>
+      </a>
+      <a href="{{ prototype.target_path }}" class="grid-item opacity-transition opacity-transition-nine mobile-only {{ prototype.class }}" target="_blank">
+        <div class="grid-image" style="background-image: url('{{ prototype.image_path }}')"></div>
+        <div class="grid-content">
+          <h3>{{ prototype.title }}</h3>
+        </div>
+      </a>
+    {% endfor %}
+
+    <div class="clear"></div>
+
   </div>
   
   <div class="footer">
