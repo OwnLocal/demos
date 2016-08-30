@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="localFusionApp" uses-smart-categories="">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no" name="viewport">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Demo – Homepage (German)</title>
+  <link href="./assets/style.css" media="all" rel="stylesheet" type="text/css">
+  <meta content="authenticity_token" name="csrf-param">
+  <meta content="Hxdan3H/kBXGT0yFu3W103ez4ieWNaq8sxghJhBda6xLfRy0IPSswT3AlzlqZnMLD6sQwv8uZdKuGeoVtFObNw==" name="csrf-token">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="Directory" name="apple-mobile-web-app-title">
+  <meta content="default" name="apple-mobile-web-app-status-bar-style"><!--[if lte IE 9]>
+    <meta HTTP-EQUIV="REFRESH" content="0; url=/upgrade">
+    <![endif]-->
+  <link href="./assets/ios-icon@2x-b2cfc84c20633fa161e14404905c9a41.png" rel="apple-touch-icon">
+  <link href="./assets/favicon@2x-c47354067a19ed50dcf4808b0f7e735c.png" rel="shortcut icon">
+</head>
+<body data-publisher-id="09ef6307-1db8-49a2-b49a-57d64aad91e9">
+  <div id="nav">
+    <div class="close-button">
+      <i class="material-icons">close</i>
+    </div>
+    <ul class="header-links">
+      <li class="directory-home">
+        <a href="./" class="with-icon"><i class="material-icons">home</i>Verzeichnis Startseite</a>
+      </li>
+      <li>
+        <a href="./business" class="with-icon"><i class="material-icons">business</i>Geschäfte</a>
+      </li>
+      <li>
+        <a href="./ad" class="with-icon"><i class="material-icons">picture_in_picture</i>Anzeigen</a>
+      </li>
+      <li>
+        <a class="with-icon"><i class="material-icons">layers</i>Kategorien</a>
+      </li>
+      <li class="publisher-url open-in-new-tab">
+        <a href="http://haz.de" target="_blank">Hannoversche Allgemeine Zeitung Startseite</a>
+      </li>
+      <li class="login-url open-in-new-tab">
+        <a><span class="translation_missing" title="translation missing: en.admin_login">Admin Anmelden</span></a>
+      </li>
+      <li class="add-business">
+        <a class="with-icon"><i class="material-icons">add</i>Geschäft</a>
+      </li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="wrapper">
+    <div class="home" id='header'>
+      <div class="container">
+        <div class="logo-area">
+          <a class="publisher-logo" id="publisher-logo" href="./">
+          <div class="vertical-helper"></div><img alt="Hannoversche Allgemeine Zeitung" src="./assets/logo.png"></a>
+          <div class="directory-home">
+            <a data-hover-text="Zurück zum Hannoversche Allgemeine Zeitung" href="http://haz.de" id="directory-home" target="_blank">Verzeichnis</a>
+          </div>
+        </div><button class="mdl-button mdl-js-button mdl-button--icon" id="nav-toggle"><i class="material-icons">menu</i></button> <button class="mdl-button mdl-js-button mdl-button--icon" id="search-toggle"><i class="material-icons">search</i></button>
+        <div id='header-search'>
+          <form action="/businesses" role='search'>
+            <div class="mdl-button mdl-js-button mdl-button--icon button close-button">
+              <i class="material-icons">close</i>
+            </div><button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">search</i></button> <input autofocus='' class='form-control search-form-header' name="q" placeholder='Suche fur Geschäfte' type='text'>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="home-content" id="content">
+      <div class="hero-map" style=" height: 100% !important; max-height: none !important; min-height: initial !important; min-height: auto !important;">
+        <div id="home-map" latitude="52.3613369" longitude="9.7399719" ol-widgets-map="" style="width:100%; height:100%" tile-layer="http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}&s=Ga&scale=3" zoom="16"></div>
+        <div class="home-hero-wrapper">
+          <div id="home-hero">
+            <h1>Finden Sie die <strong>besten</strong> <span> Plätze in Hannover.</span></h1>
+            <div class="hero-to-businesses"></div>
+            <div class="home-search">
+              <form action="/businesses">
+                <input class="search" id="searchBox" name="q" type="text"> <button><i class="material-icons">search</i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="home-category-shortcuts">
+          <a class="hero-to-content"><i class="material-icons">explore</i>Erforschen</a>
+          <a><i class="material-icons">local_dining</i>Essen</a>
+          <a><i class="material-icons">local_mall</i>Einkaufen</a>
+          <a><i class="material-icons">build</i>Werkzeuge</a>
+          <a><i class="material-icons">nature</i>Rasen</a>
+          <a><i class="material-icons">directions_car</i>Auto</a>
+          <a><i class="material-icons">local_hospital</i>Medizinisch</a>
+          <a><i class="material-icons">local_mall</i>Kleidung</a>
+          <a><i class="material-icons">local_bar</i>Nachtleben</a>
+          <a><i class="material-icons">home</i>Immobilien</a>
+          <a><i class="material-icons">more_horiz</i>Mehr</a>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/application-564a75ac252ad216f8b7789298ebea37.js">
+  </script>
+</body>
+</html>
