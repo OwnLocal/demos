@@ -84,12 +84,14 @@ a:hover span { border-bottom-color: #008CDD; }
 @media screen and (max-width: 980px) {
   .grid-item { width: calc(50% - 25px); }
   .homepage-hero h2 { font-size: 56px; }
+  .flags a { width: 50%; margin-right: 0; }
 }
 
 @media screen and (max-width: 450px) {
   .grid-item { width: calc(100% - 25px); }
   .homepage-hero h2 { font-size: 40px; }
   .homepage-hero p { font-size: 20px; }
+  .flags a { width: 100%; }
 }
 
 @media screen and (min-height: 851px) {
