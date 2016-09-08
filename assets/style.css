@@ -91,7 +91,6 @@ a:hover span { border-bottom-color: #008CDD; }
   .grid-item { width: calc(100% - 25px); }
   .homepage-hero h2 { font-size: 40px; }
   .homepage-hero p { font-size: 20px; }
-  .flags a { width: 100%; }
 }
 
 @media screen and (min-height: 851px) {
