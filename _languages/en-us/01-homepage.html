@@ -1,0 +1,46 @@
+---
+
+layout: platform
+title: Homepage – English (United States)
+permalink: /en-us/
+home: true
+
+---
+
+<div class="home-content" id="content">
+  <div class="hero-map">
+    <div id="home-map" style="width:100%; height:100%" ol-widgets-map latitude="30.263556" longitude="-97.744316" tile-layer="http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}&s=Ga&scale=3" zoom="16"></div>
+    <div class="home-hero-wrapper">
+      <div id="home-hero">
+        <h1>Find the <strong>best places</strong> <span>in Austin</span></h1>
+        <div class="hero-to-businesses"></div>
+        <div class="home-search">
+          <form action="/businesses">
+            <input class="search" data-suggested-searches="Restaurants,Beauty salons,General contractors,Legal services" id="searchBox" name="q" type="text"> <button type="submit"><i class="material-icons">search</i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="home-category-shortcuts">
+      <a class="hero-to-content"><i class="material-icons">explore</i>Explore</a>
+      <a><i class="material-icons">local_dining</i>Food</a>
+      <a><i class="material-icons">local_mall</i>Shopping</a>
+      <a><i class="material-icons">build</i>Utilities</a>
+      <a><i class="material-icons">nature</i>Lawn</a>
+      <a><i class="material-icons">directions_car</i>Auto</a>
+      <a><i class="material-icons">local_hospital</i>Medical</a>
+      <a><i class="material-icons">local_mall</i>Clothing</a>
+      <a><i class="material-icons">local_bar</i>Nightlife</a>
+      <a><i class="material-icons">home</i>Real Estate</a>
+      <a><i class="material-icons">more_horiz</i>More</a>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+body #content.home-content .hero-map {
+  height: 100% !important;
+  max-height: none !important;
+}
+</style>

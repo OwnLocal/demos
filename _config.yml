@@ -29,3 +29,5 @@ theme: minima
 collections:
   products:
   prototypes:
+  languages:
+    output: true

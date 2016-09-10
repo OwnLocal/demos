@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="localFusionApp">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no" name="viewport">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Demo: {% if page.title %}{{ page.title }}{% endif %}</title>
+  <link href="/assets/application.css" media="all" rel="stylesheet" type="text/css">
+  <script src="/assets/application.js"></script>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="Directory" name="apple-mobile-web-app-title">
+  <meta content="default" name="apple-mobile-web-app-status-bar-style"><!--[if lte IE 9]>
+  <meta HTTP-EQUIV="REFRESH" content="0; url=/upgrade">
+  <![endif]-->
+  <link href="/assets/ios-icon.png" rel="apple-touch-icon">
+  <link href="/assets/favicon.png" rel="shortcut icon">
+</head>
+<body>
+  <div id="nav">
+    <div class="close-button">
+      <i class="material-icons">close</i>
+    </div>
+    <ul class="header-links">
+      <li class="directory-home">
+        <a class="with-icon" {% if page.home %}href="./"{% else %}href="../"{% endif %}><i class="material-icons">home</i>Directory Home</a>
+      </li>
+      <li>
+        <a class="with-icon" {% if page.home %}href="./business"{% else %}href="../business"{% endif %}><i class="material-icons">business</i>Businesses</a>
+      </li>
+      <li>
+        <a class="with-icon" {% if page.home %}href="./ad"{% else %}href="../ad"{% endif %}><i class="material-icons">picture_in_picture</i>Ads</a>
+      </li>
+      <li>
+        <a class="with-icon"><i class="material-icons">layers</i>Categories</a>
+      </li>
+      <li class="publisher-url open-in-new-tab">
+        <a href="http://statesman.com" target="_blank">Back to statesman.com</a>
+      </li>
+      <li class="login-url open-in-new-tab">
+        <a><span class="translation_missing" title="translation missing: en.admin_login">Admin Login</span></a>
+      </li>
+      <li class="add-business">
+        <a class="with-icon"><i class="material-icons">add</i>Add Business</a>
+      </li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="wrapper">
+    <div id='header' {% if page.home %}class='home'{% endif %}>
+      <div class="container">
+        <div class="logo-area">
+          <a class="publisher-logo" href="http://statesman.com" id="publisher-logo" target="_blank">
+          <div class="vertical-helper"></div><img alt="Austin American Statesman" src="http://s3.amazonaws.com/ownlocal.adforge.production/publishers/902/original_logos.png"></a>
+          <div class="directory-home"><a id="directory-home" {% if page.home %}href="./"{% else %}href="../"{% endif %}>Directory</a></div>
+        </div>
+        <div class="mdl-tooltip" for="publisher-logo"><span>Back to statesman.com</span></div>
+        <button class="mdl-button mdl-js-button mdl-button--icon" id="nav-toggle"><i class="material-icons">menu</i></button> <button class="mdl-button mdl-js-button mdl-button--icon" id="search-toggle" title="Search for businesses"><i class="material-icons">search</i></button>
+        <div id='header-search'>
+          <form action="/businesses" role='search'>
+            <div class="mdl-button mdl-js-button mdl-button--icon button close-button">
+              <i class="material-icons">close</i>
+            </div><button class="mdl-button mdl-js-button mdl-button--icon" type='submit'><i class="material-icons">search</i></button> <input autofocus='' class='form-control search-form-header' name="q" placeholder="Search for businesses" type='text'>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    {{ content }}
+
+    <div id='footer'>
+      <div class="container">
+        <div class="links">
+          <a href="../../../index.html">Home</a>|<a href="../../../terms.html">Terms of Service</a>|<a href="../../../privacy.html">Privacy Policy</a>|<a class="back-to-top">Go To Top</a>
+        </div>
+        <div class="copyright">
+          © 2016 <a href="http://statesman.com">Austin American Statesman</a>. Powered by <a class="bold-link" href="http://ownlocal.com" target="_blank">OwnLocal</a> <span>– helping local media with innovative <a href="http://ownlocal.com/platform" target="_blank">print to web</a> and directory software</span>.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
