@@ -1,9 +1,3 @@
----
-layout: platform
-title: Business – English (United States)
-permalink: /en-us/business/
----
-
 <div id="content" class="business-content">
   <div class="hero-map">
     <div ol-widgets-map id="business-map" no-zoom-to-markers="true" style="width:100%; height:100%" tile-layer="https://igexternal-a.akamaihd.net/map_tile.php?x={x}&y={y}&z={z}&size=512&ppi=250" zoom="12"            latitude="41.0754" longitude="-81.5146">
@@ -11,18 +5,18 @@ permalink: /en-us/business/
     </div>
   </div>
   <div class="container" id="content-top">
-    <h1><a>Ticketmaster</a></h1>
-    <p class="category"><a>Arts and Entertainment</a> / <a>Arts and Entertainment</a></p>
+    <h1><a>{{ site.countries[page.country].business_name }}</a></h1>
+    <p class="category"><a>{{ site.countries[page.country].business_category }}</a> / <a>{{ site.countries[page.country].business_subcategory }}</a></p>
     <div id="more-info">
-      <p class="with-icon address">303 Carroll<span class="no-responsive">,</span> <span class="no-full"><br></span> Akron, OH 44325</p>
-      <p class="with-icon phone no-responsive">(330) 945-4386</p>
+      <p class="with-icon address">{{ site.countries[page.country].business_address_one }}<span class="no-responsive">,</span> <span class="no-full"><br></span> {{ site.countries[page.country].business_address_two }}</p>
+      <p class="with-icon phone no-responsive">{{ site.countries[page.country].business_phone }}</p>
     </div>
     <div id="calls-to-action">
       <a id="cta-call-button" class="call-button no-full" data-phone="3309454386" href="tel:3309454386">Call</a>
-      <div class="mdl-tooltip" for="cta-call-button">Call 330-945-4386</div>
-      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr=303%20Carroll+Akron+OH+44325" target="_blank">Directions</a>
+      <div class="mdl-tooltip" for="cta-call-button">{{ site.locales[page.locale].call }} {{ site.countries[page.country].business_phone }}</div>
+      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr={{ site.countries[page.country].business_address_one }}+{{ site.countries[page.country].business_address_two }}" target="_blank">Directions</a>
       <div class="mdl-tooltip" for="cta-directions-button">Get directions to this<br>location on Google Maps.</div>
-      <a class="website-button" href="http://www.ticketmaster.com" id="cta-website-button" target="_blank">Website</a>
+      <a class="website-button" href="http://{{ site.countries[page.country].business_website }}" id="cta-website-button" target="_blank">Website</a>
       <div class="mdl-tooltip" for="cta-website-button">Open website<br>in new tab.</div>
       <a class="share-button" id="cta-share-box">Share</a>
       <div class="mdl-tooltip" for="cta-share-box">Share this business<br>on social media.</div>

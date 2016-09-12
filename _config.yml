@@ -31,3 +31,62 @@ collections:
   prototypes:
   languages:
     output: true
+    
+locales:
+  en:
+    directory_home: Directory Home
+    businesses: Businesses
+    ads: Ads
+    categories: Categories
+    back_to: Back to
+    admin_login: Admin Login
+    add_business: Add Business
+    directory: Directory
+    search_for_businesses: Search for businesses
+    home: Home
+    terms_of_service: Terms of Service
+    privacy_policy: Privacy Policy
+    go_to_top: Go To Top
+    powered_by: Powered by
+    footer_text: <span>– helping local media with innovative <a href="http://ownlocal.com/platform" target="_blank">print to web</a> and directory software</span>
+    call: Call
+    homepage:
+      hero_text: Find the <strong>best places</strong> <span>in
+      suggested_searches: Restaurants,Beauty salons,General contractors,Legal services
+      explore: Explore
+      food: Food
+      shopping: Shopping
+      utilities: Utilities
+      lawn: Lawn
+      auto: Auto
+      medical: Medical
+      clothing: Clothing
+      nightlife: Nightlife
+      real_estate: Real Estate
+      more: More
+    business:
+    ad:
+    
+countries:
+  us:
+    publisher_name: Austin American Statesman
+    publisher_url: statesman.com
+    publisher_logo: /images/publishers/statesman/logo.png
+    publisher_city: Austin
+    publisher_state: TX
+    publisher_lat: 30.263556
+    publisher_lon: -97.744316
+    publisher_zoom: 16
+    business_name: Toy Joy
+    business_address_one: 403 W 2nd St
+    business_address_two: Austin, TX 78701
+    business_city: Austin
+    business_state: TX
+    business_lat: 0
+    business_lon: 0
+    business_zip: 78701
+    business_phone: (512) 320-0090
+    business_website: toyjoy.com
+    business_category: Shopping
+    business_subcategory: Game & Toy Stores
+    business_description: <p>An Austin original, Toy Joy has been keeping Austin fun since 1987. Know for it's floor to ceiling (including the ceiling!) eclectic collection of the fun, collectible, nostalgic and "a little bit weird" toys and gifts, Toy Joy has been serving locals and worldwide visitors for over 28 years. We have gifts and toys for "kids" of all ages and in all price ranges. While we are a less than typical children's retailer you can find gifts here from newborns to the adult young-at-heart.</p>
