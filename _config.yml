@@ -467,9 +467,9 @@ countries:
     business_helpful_link_three_text: Spas in Pattensen
     business_helpful_link_three_url: cosmetic-institut.de/produkte/66days.html
     business_facebook_username: Cosmetic-Institut-Pattensen-132831263537021
-    business_coupon_title: 30 Jahre Jubiläumsrabatt
-    business_coupon_description: "Siehe Website für Details."
-    business_coupon_expiration: "Läuft aus am: 31.07.16"
+    # business_coupon_title: 30 Jahre Jubiläumsrabatt
+    # business_coupon_description: "Siehe Website für Details."
+    # business_coupon_expiration: "Läuft aus am: 31.07.16"
     business_ad_date_one: 30.06.16
     business_ad_date_two: 25.06.16
     business_ad_date_three: 22.06.16
