@@ -28,6 +28,8 @@ collections:
   prototypes:
   languages:
     output: true
+
+################################################################################
     
 locales:
 
@@ -171,6 +173,78 @@ locales:
       share_this_ad_on: Comparta este anuncio en
       text: Texto
 
+  # DEUTSCH
+  de:
+    directory_home: Verzeichnis Startseite
+    businesses: Geschäfte
+    ads: Anzeigen
+    categories: Kategorien
+    back_to: Zurück zum
+    admin_login: Admin Anmelden
+    add_business: Geschäft
+    directory: Verzeichnis
+    search_for_businesses: Suche fur Geschäfte
+    home: Startseite
+    terms_of_service: AGB
+    privacy_policy: Datenschutz
+    go_to_top: Seitenanfang
+    powered_by: Ein Produkt von
+    footer_text: <span>– Unterstützung lokaler Medien mit innovativen <a href="http://ownlocal.com/platform" target="_blank">Print zu Web</a> und Verzeichnis Software</span>
+    call: Rufen
+    directions: Routenplaner
+    website: Webseite
+    share: Teilen
+    directions_tooltip: Route auf Google Maps.
+    website_tooltip: Webseite in einem<br>neuem Tab öffnen.
+    email: Email
+    print_ads: Gedruckte Anzeigen
+    valid: Gültig
+    homepage:
+      hero_text: Finden Sie die <strong>besten</strong> <span> Plätze in
+      suggested_searches: Restaurants,Schönheitssalons,Bauunternehmer,Rechtsberatung
+      explore: Erforschen
+      food: Essen
+      shopping: Einkaufen
+      utilities: Werkzeuge
+      lawn: Rasen
+      auto: Auto
+      medical: Medizinisch
+      clothing: Kleidung
+      nightlife: Nachtleben
+      real_estate: Immobilien
+      more: Mehr
+    business:
+      share_tooltip: Teilen im<br>Soziale Medien.
+      share_this_business_on: Teile dieses Geschäft auf
+      about: Über uns
+      business_hours: Öffnungszeiten
+      monday: Montag
+      tuesday: Dienstag
+      wednesday: Mittwoch
+      thursday: Donnerstag
+      friday: Freitag
+      saturday: Samstag
+      sunday: Sonntag
+      testimonials: Bewertungen
+      video: Video
+      helpful_links: Nützliche Links
+      follow_us: Gefält mir
+      coupon: Coupon
+      question_or_comment: "Kontaktieren Sie uns"
+      name: Name
+      message: Ihr Anliegen
+      submit: Absenden
+      photos: Fotos
+    ad:
+      date: Datum
+      active_ad: Gültige Anzeige
+      full_profile: Vollständiges Profil
+      download: Herunterladen
+      share_this_ad_on: Teile diese Anzeige auf
+      text: Text
+
+
+################################################################################
     
 countries:
 
@@ -347,3 +421,61 @@ countries:
     ad_date: "16 de agosto, 2016"
     expires_on_text: "Este anuncio está vigente <br>hasta el 16 de septiembre, 2016."
     ad_text: "Precios Super Bajos. SN828 – 175/70R13 – $37.99. SN828 – 185/65R14 – $41.99. DZ102 – 205/55R16 – $62.99. WhatsApp 7919-9999. Dunlop. Falken. Los Héroes 2225-0000 • La Rábida 2235-4038 • Merlot 2278-4525 • Santa Tecla 2229-5566 • Santa Ana 2240-1914/9138/5811/2455-2120 • San Miguel 2669-5920. Restricciones aplican. Precios válidos hasta el 31 de agosto 2016. No aplica promoción sobre promoción. Incluye instalación, válvulas y balanceo."
+
+  # DEUTSCHLAND
+  de:
+    publisher_name: Hannoversche Allgemeine Zeitung
+    publisher_folder_name: haz
+    publisher_url: haz.de
+    publisher_city: Hannover
+    publisher_state: DE
+    publisher_lat: 52.3613369
+    publisher_lon: 9.7399719
+    publisher_zoom: 16
+    business_name: "Cosmetic-Institut Pattensen"
+    business_address_one: Steinstraße 21
+    business_address_two: 30982 Pattensen
+    business_city: Pattensen
+    business_state: DE
+    business_lat: 52.2633586
+    business_lon: 9.7616637
+    # business_zoom: 12
+    business_zip: 30982
+    business_phone: +49 5101 15111
+    business_phone_stripped: +49510115111
+    business_website: cosmetic-institut.de
+    business_category: Schönheit
+    business_subcategory: Körperpflege
+    business_description: "<p>Ständiges Weiterbilden, flexibles und innovatives Arbeiten im Dienste der Schönheit und der Gesunderhaltung der Haut ist unser höchstes Ziel. Buchen Sie jetzt Ihren Termin bei Cosmetic-Institut, Ihrem gesuchten Kosmetikstudio!</p>"
+    business_monday_hours: Geschlossen
+    business_tuesday_hours: 8 – 18 Uhr
+    business_wednesday_hours: 8 – 18 Uhr
+    business_thursday_hours: 8 – 18 Uhr
+    business_friday_hours: 8 – 18 Uhr
+    business_saturday_hours: Geschlossen
+    business_sunday_hours: Geschlossen
+    business_testimonial_one_text: "Wirklich toll! Sie haben den besten Service und jeder ist sehr freundlich!"
+    business_testimonial_one_name: Maria (02.06.16)
+    business_testimonial_two_text: "Freundliches Personal und eine tolle Atmosphäre. Ich werde auf jeden Fall bald wieder kommen!"
+    business_testimonial_two_name: Doris (28.05.16)
+    business_youtube_id: L90CNTvWTfI
+    business_sidengo_url: sidengo.com/CosmeticInstitut  
+    business_helpful_link_one_text: Schönheit in Pattensen
+    business_helpful_link_one_url: cosmetic-institut.de/cosmetic-institut-pattensen/auszeit-nehmen.html
+    business_helpful_link_two_text: Körperpflege in Pattensen
+    business_helpful_link_two_url: cosmetic-institut.de/klassische-behandlung/anti-tox.html
+    business_helpful_link_three_text: Spas in Pattensen
+    business_helpful_link_three_url: cosmetic-institut.de/produkte/66days.html
+    business_facebook_username: Cosmetic-Institut-Pattensen-132831263537021
+    business_coupon_title: 30 Jahre Jubiläumsrabatt
+    business_coupon_description: "Siehe Website für Details."
+    business_coupon_expiration: "Läuft aus am: 31.07.16"
+    business_ad_date_one: 30.06.16
+    business_ad_date_two: 25.06.16
+    business_ad_date_three: 22.06.16
+    business_ad_date_four: 19.06.16
+    business_ad_date_five: 16.06.16
+    business_ad_date_six: 12.06.16
+    ad_date: "30. Juni 2016"
+    expires_on_text: "Diese anzeige läufft <br>bis am 30. Juli 2016"
+    ad_text: "Unser highlight im Juli! 30-Jahre 1986–2016. Nun wird gefeiert! Lassen Sie mit uns die Korken knallen! Viele Highlights, großartige Momente und spannende Aktionen erwarten Sie. LAssen Sie sich überraschen. Feiern Sie mit uns. Wir freuen uns auf Sie! Kirsten Leifheit & Dorios Genschow mit dem gesamten Team. Am 02.07.2016 feiern wir 30 Jahre Cosmetic-Institut Pattensen. Cosmetic-Institut • Steinstraße 21 • 30982 Pattensen • 0 51 01-15111 • www.cosmetic-institut.de"
