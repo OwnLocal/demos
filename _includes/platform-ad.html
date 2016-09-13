@@ -1,18 +1,18 @@
 <div class="promo-content" id="content">
   <div class="promo-wrapper">
     <div class="container">
-      <img class="render-type-image" src="http://s3.amazonaws.com/ownlocal.adforge.production/ads/3824086/original_images.jpg">
+      <img class="render-type-image" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad.jpg">
     </div>
   </div>
   <div class="container" id="content-top">
     <div class="promo-info">
-      <p class="promo-date"><span>Date:</span> August 11, 2016</p>
+      <p class="promo-date"><span>Date:</span> September 12, 2016</p>
       <p class="promo-status valid" id="promo-status-valid">Active Ad</p>
-      <div class="mdl-tooltip mdl-tooltip--large" for="promo-status-valid">Expires on<br>September 10, 2016 (1 days)</div>
+      <div class="mdl-tooltip mdl-tooltip--large" for="promo-status-valid">Expires on<br>October 12, 2016 (30 days)</div>
       <a id="promo-info-popup"><i class="material-icons">more_vert</i></a>
       <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect actions-box" for="promo-info-popup">
-        <li class="mdl-menu__item"><a href="#">Full Profile</a></li>
-        <li class="mdl-menu__item"><a href="#" target="_blank">Download</a></li>
+        <li class="mdl-menu__item"><a href="../business">Full Profile</a></li>
+        <li class="mdl-menu__item"><a href="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad.pdf" target="_blank">Download</a></li>
         <li class="mdl-menu__item"><a id="promo-cta-share">Share</a></li>
       </ul>
       <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect share-box" for="promo-cta-share">
@@ -23,31 +23,59 @@
         <li class="mdl-menu__item"><a><i class="material-icons">email</i>Email</a></li>
       </ul>
     </div>
-    <h1><a>Mueller Incorporated</a></h1>
-    <p class="category"><a>Manufacturing</a> / <a>Metal and Coal</a></p>
+    <h1><a href="../business">{{ site.countries[page.country].business_name }}</a></h1>
+    <p class="category"><a>{{ site.countries[page.country].business_category }}</a> / <a>{{ site.countries[page.country].business_subcategory }}</a></p>
     <div id="calls-to-action">
-      <a id="cta-call-button" class="call-button no-full" href="tel:9158863383">Call</a>
-      <div class="mdl-tooltip" for="cta-call-button">Call 915-886-3383</div>
-      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr=8810%20S%20Desert%20Blvd+Anthony+TX+79821" target="_blank">Directions</a>
+      <a id="cta-call-button" class="call-button no-full" href="tel:{{ site.countries[page.country].business_phone_stripped }}">Call</a>
+      <div class="mdl-tooltip" for="cta-call-button">Call {{ site.countries[page.country].business_phone }}</div>
+      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr={{ site.countries[page.country].business_address_one }}+{{ site.countries[page.country].business_address_two }}" target="_blank">Directions</a>
       <div class="mdl-tooltip" for="cta-directions-button">Get directions to this<br>location on Google Maps.</div>
-      <a id="cta-website-button" class="website-button" href="http://www.muellerinc.com" target="_blank">Website</a>
+      <a id="cta-website-button" class="website-button" href="http://{{ site.countries[page.country].business_website }}" target="_blank">Website</a>
       <div class="mdl-tooltip" for="cta-website-button">Open website<br>in new tab.</div>
     </div>
   </div>
   <div class="container">
     <div class="column" id="main-column">
       <h3 class="promo-text-toggle"><span>Text</span></h3>
-      <p class="promo-text">FIESTA DE REGRESO A CLASES Ven al Hangar Browning para celebrar el nuevo ano escolar. Disfruta de juegos, actividades, bocadilos, y manualidades para toda la familia. Habran oportunidades para ganar fabulosos premios y uties escolares. Sabado, 13 de agosto de 10 AM a 12 PM MUELLER</p>
+      <p class="promo-text">JUST THE SIGHT OF THEM MAKES BUTTER MELT. WHOLE MAINE LOBSTER $16.95 SEPTEMBER WHILE SUPPLIES LAST. MONTHLY Clyde's SPECIALS www.clydes.com CHEVY CHASE • COLUMBIA • GALLERY PLACE • GEORGETOWN • MARK CENTER RESTON • TOWER OAKS LODGE • TYSONS CORNER • WILLOW CREEK FARM</p>
     </div>
     <div class="clear"></div>
     <h3 class="ads-container-title">Other Ads</h3>
     <div id="promos-container">
       <div class="promo-card-wrapper">
-        <div class="promo-card" data-promo-id="fc7193d7-c049-43f0-acc5-00cf964b6970">
-          <a class="promo-card-inner">
-            <img src="http://s3.amazonaws.com/ownlocal.adforge.production/ads/3824086/hover_images.jpg">
-            <p>Aug-11-16 | <span class="valid-info">1 days left</span></p>
-          </a>
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-01-thumb.jpg">
+          <p>Sep-12-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-02-thumb.jpg">
+          <p>Sep-08-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-03-thumb.jpg">
+          <p>Sep-05-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-04-thumb.jpg">
+          <p>Sep-02-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-05-thumb.jpg">
+          <p>Sep-01-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-06-thumb.jpg">
+          <p>Aug-30-16 | <span class="valid-info">Valid</span></p></a>
         </div>
       </div>
       <div class="clear"></div>
