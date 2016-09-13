@@ -41,8 +41,8 @@ locales:
     directory: Directory
     search_for_businesses: Search for businesses
     home: Home
-    terms_of_service: Terms of Service
-    privacy_policy: Privacy Policy
+    terms_of_service: Terms
+    privacy_policy: Privacy
     go_to_top: Go To Top
     powered_by: Powered by
     footer_text: <span>– helping local media with innovative <a href="http://ownlocal.com/platform" target="_blank">print to web</a> and directory software</span>
