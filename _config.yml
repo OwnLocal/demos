@@ -30,6 +30,7 @@ collections:
     output: true
     
 locales:
+
   # ENGLISH
   en:
     directory_home: Directory Home
@@ -99,6 +100,77 @@ locales:
       download: Download
       share_this_ad_on: Share this ad on
       text: Text
+
+  # ESPAÑOL
+  es:
+    directory_home: Portada de directorio
+    businesses: Negocios
+    ads: Anuncios
+    categories: Categorías
+    back_to: Regresar a
+    admin_login: Entrar como administrador
+    add_business: Agregar negocio
+    directory: Directorio
+    search_for_businesses: Search for businesses
+    home: Portada
+    terms_of_service: Términos
+    privacy_policy: Privacidad
+    go_to_top: Regresar arriba
+    powered_by: Un producto de
+    footer_text: <span>– ayudando a los medios de comunicación locales con <a href="http://ownlocal.com/platform" target="_blank">software de publicidad</a></span>
+    call: Llamar
+    directions: Direcciones
+    website: Sitio web
+    share: Compartir
+    directions_tooltip: Direcciones en Google Maps.
+    website_tooltip: Abrir sitio web<br>en una pestaña nueva.
+    email: Correo electrónico
+    print_ads: Anuncios impresos
+    valid: Vigente
+    homepage:
+      hero_text: Encuentra <strong>lo mejor</strong> <span> en
+      suggested_searches: Restaurantes,Salones de belleza,Contratistas,Servicios legales
+      explore: Explorar
+      food: Comida
+      shopping: Compras
+      utilities: Utilidades
+      lawn: Jardín
+      auto: Auto
+      medical: Salud
+      clothing: Ropa
+      nightlife: Bares
+      real_estate: Inmuebles
+      more: Más
+    business:
+      share_tooltip: Comparta este negocio<br>en las redes sociales.
+      share_this_business_on: Comparta este negocio en
+      about: Información
+      business_hours: Horario de operación
+      monday: Lunes
+      tuesday: Martes
+      wednesday: Miércoles
+      thursday: Jueves
+      friday: Viernes
+      saturday: Sábado
+      sunday: Domingo
+      testimonials: Testimonios
+      video: Video
+      helpful_links: Ligas útiles
+      follow_us: Síganos en Facebook
+      coupon: Cupón
+      question_or_comment: "Contáctenos"
+      name: Nombre
+      message: Mensaje
+      submit: Enviar
+      photos: Fotos
+    ad:
+      date: Fecha
+      active_ad: Anuncio vigente
+      full_profile: Perfil completo
+      download: Descargar
+      share_this_ad_on: Comparta este anuncio en
+      text: Texto
+
     
 countries:
 
