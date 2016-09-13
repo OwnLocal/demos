@@ -354,7 +354,7 @@ countries:
     business_testimonial_two_text: "Great classy atmosphere, loved the Salmon burger, and once you're done enjoying your food, you've got the lakefront right next door to enjoy!"
     business_testimonial_two_name: Hugh (8/14/16)
     business_youtube_id: r5FdXKs8ats
-    business_sidengo_username: clydes  
+    # business_sidengo_username: clydes  
     business_helpful_link_one_text: Restaurants in Columbia MD
     business_helpful_link_one_url: clydes.com/columbia#About
     business_helpful_link_two_text: American Food in Columbia MD
@@ -411,7 +411,7 @@ countries:
     business_testimonial_one_name: Fernando (30/08/16)
     business_testimonial_two_text: "El mejor lugar para comer carnes en Monterrey les súper recomiendo la alcachofa los frijoles el chicharrón bueno todo, los postres son riquísimos recomiendo mucho el de nuez. Vale la pena lo que se paga."
     business_testimonial_two_name: Daniela (10/08/16)
-    business_youtube_id: 20DeJr6U6aI
+    # business_youtube_id: 20DeJr6U6aI
     business_sidengo_username: lanacional
     business_helpful_link_one_text: Restaurantes en Monterrey NL
     business_helpful_link_one_url: lanacional.net/mobile/index2.php?tipo=0
@@ -420,9 +420,9 @@ countries:
     business_helpful_link_three_text: Bares en Monterrey NL
     business_helpful_link_three_url: lanacional.net/mobile/elmenu.php
     business_facebook_username: lanacionalmx
-    business_coupon_title: ¡2x1 en cervezas nacionales!
-    business_coupon_description: "De lunes a jueves antes de las 5pm."
-    business_coupon_expiration: "Válido hasta el 30/09/16"
+    # business_coupon_title: ¡2x1 en cervezas nacionales!
+    # business_coupon_description: "De lunes a jueves antes de las 5pm."
+    # business_coupon_expiration: "Válido hasta el 30/09/16"
     business_ad_date_one: "31/08/16"
     business_ad_date_two: "26/08/16"
     business_ad_date_three: "23/08/16"
