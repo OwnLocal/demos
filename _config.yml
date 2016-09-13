@@ -243,6 +243,75 @@ locales:
       share_this_ad_on: Teile diese Anzeige auf
       text: Text
 
+  # ČEŠTINA
+  cs:
+    directory_home: Adresář omovský
+    businesses: Podniky
+    ads: Inzeráty
+    categories: Kategorie
+    back_to: Zpět na
+    admin_login: Přihlášení správce
+    add_business: Přidat podnik
+    directory: Adresář
+    search_for_businesses: Vyhledat podniky
+    home: Adresář domovský
+    terms_of_service: Podmínky
+    privacy_policy: Soukromí
+    go_to_top: Přejít nahoru
+    powered_by: Obsah na web píše
+    footer_text: <span>– pomáháme místním inovativním sdělovacím prostředkům <a href="http://ownlocal.com/platform" target="_blank">využívat internet</a></span>
+    call: Volat
+    directions: Pokyny
+    website: Webová
+    share: Sdílet
+    directions_tooltip: 
+    website_tooltip: 
+    email: Email
+    print_ads: Inzeráty
+    valid: Aktivní
+    homepage:
+      hero_text: Najít <strong>nejlepší místa</strong> <span> v
+      suggested_searches: Restaurace,Kosmetické salony,Dodavatelé,Legální služby
+      explore: Prozkoumat
+      food: Jídlo
+      shopping: Nakupování
+      utilities: Služby
+      lawn: Trávník
+      auto: Auto
+      medical: Lékařský
+      clothing: Oblečení
+      nightlife: Bary
+      real_estate: Nemovitosti
+      more: Více
+    business:
+      share_tooltip: 
+      share_this_business_on: Sdílet tento podnik na
+      about: Informace
+      business_hours: Otevírací doba
+      monday: pondělí
+      tuesday: úterý
+      wednesday: středa
+      thursday: čtvrtek
+      friday: pátek
+      saturday: sobota
+      sunday: neděle
+      testimonials: Posudky
+      video: Video
+      helpful_links: Užitečné odkazy
+      follow_us: Sledujte nás na Facebooku
+      coupon: Poukaz
+      question_or_comment: "Kontaktujte nás"
+      name: Jméno
+      message: Zpráva
+      submit: Odeslat
+      photos: Fotky
+    ad:
+      date: Datum
+      active_ad: Aktivní inzerát
+      full_profile: Celý profil
+      download: Stáhnout
+      share_this_ad_on: Sdílet tento inzerát na
+      text: Text
 
 ################################################################################
     
@@ -537,3 +606,61 @@ countries:
     ad_date: "30. August 2016"
     expires_on_text: "Diese anzeige läufft <br>bis am 30. September 2016."
     ad_text: "MS EUROPA | MS EUROPA 2 EINE KLASSE FÜR SICH. „Keine anderen Schiffe erreichen zurzeit die hohen Standards, die MS EUROPA und MS EUROPA 2 und ihre Crews setzen.“ - Douglas Ward, Berlitz Cruise Guide. Wir nehmen uns gerne Zeit und beraten Sie zu Ihrer Kreuzfahrt mit Hapag-Lloyd Cruises: 0180 955 595 60 ruefa.at/hl-cruises ruefa Hapag Lloyd Cruises."
+    
+  # ČESKÁ REPUBLIKA
+  cz:
+    publisher_name: Pražský deník
+    publisher_folder_name: denik
+    publisher_url: prazsky.denik.cz
+    publisher_city: Praha
+    publisher_state: CZ
+    publisher_lat: 50.0872137
+    publisher_lon: 14.4115546
+    publisher_zoom: 18
+    business_name: "Penny Market"
+    business_address_one: 724, Revoluční 724/7
+    business_address_two: 110 00 Praha
+    business_city: Praha
+    business_state: CZ
+    business_lat: 50.0903929
+    business_lon: 14.4265654
+    business_zoom: 15
+    business_zip: 110 00
+    business_phone: +420 800 202 220
+    business_phone_stripped: +420800202220
+    business_website: penny.cz
+    business_category: Nákupy
+    business_subcategory: Smíšené zboží
+    business_description: "<p>Společnost PENNY Market působí na českém trhu od roku 1997 a zaměstnává více než 6000 zaměstnanců. Je dceřinou společností mezinárodního obchodního řetězce REWE, který je jednou z největších světových obchodních společností.</p><p>V České republice je více jak 350 prodejen Penny Market. Jsme tu pro vás vždy od 7 - 20 hodin. Naleznete u nás výrobky, které Češi milují za super ceny.</p>"
+    business_monday_hours: 7:00 až 22:00
+    business_tuesday_hours: 7:00 až 22:00
+    business_wednesday_hours: 7:00 až 22:00
+    business_thursday_hours: 7:00 až 22:00
+    business_friday_hours: 7:00 až 22:00
+    business_saturday_hours: 7:00 až 22:00
+    business_sunday_hours: 7:00 až 22:00
+    business_testimonial_one_text: "Přístupný supermarket z jižní spojky. Lze docela rychle nakoupit. Ochotný personál."
+    business_testimonial_one_name: Jindřich (30. 8. 2016)
+    business_testimonial_two_text: "Klasický supermarket. Občas však bývá otevřena jen jedna pokladna, a tak se často tvoří fronty. K dispozici parkoviště, které snad vždy poskytuje mnoho volných parkovacích míst."
+    business_testimonial_two_name: Tomáš (10. 8. 2016)
+    business_youtube_id: 3DdYzTu_qpo
+    # business_sidengo_url: sidengo.com/mightyfineburgers  
+    business_helpful_link_one_text: Nakupování v Praha
+    business_helpful_link_one_url: penny.cz/Nab%C3%ADdka/Nab%C3%ADdka__/pe_DefaultContent1.aspx
+    business_helpful_link_two_text: Obchody v Praha
+    business_helpful_link_two_url: penny.cz/Sortiment/Sortiment/pe_DefaultContent1.aspx
+    business_helpful_link_three_text: Jídlo v Praha
+    business_helpful_link_three_url: penny.cz/Slu%C5%BEby/Slu%C5%BEby_/pe_DefaultContent1.aspx
+    business_facebook_username: PennyMarket
+    business_coupon_title: SUPER VÍKEND
+    business_coupon_description: "Mléko trvanlivé -33%!"
+    business_coupon_expiration: "Od čtvrtka 8. 9. do nedêle 11. 9."
+    business_ad_date_one: "31. 8. 2016"
+    business_ad_date_two: "26. 8. 2016"
+    business_ad_date_three: "23. 8. 2016"
+    business_ad_date_four: "18. 8. 2016"
+    business_ad_date_five: "16. 8. 2016"
+    business_ad_date_six: "15. 8. 2016"
+    ad_date: "31. srpna 2016"
+    expires_on_text: "Vyprší dne: 30. září 2016."
+    ad_text: "DĚKUJEME všem zaměstnancům za skvěle odvedenou práci. Od 1. 8. 2016 proto pokladním zvyšujeme mzdy o 2 300 Kč měsíčně a vedoucím prodejen a jejich zástupcům o 1 000 Kč měsíčně. Chcete se i vy stát součástí PENNY a čerpat všechny výhody? Přidejte se k nám. Více na www.penny.jobs.cz, nabor@penny.cz"
