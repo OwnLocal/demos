@@ -101,12 +101,12 @@ locales:
       text: Text
     
 countries:
+
   # UNITED STATES
   us:
     publisher_name: Baltimore Sun
     publisher_folder_name: baltimoresun
     publisher_url: baltimoresun.com
-    publisher_logo: /images/publishers/statesman/logo.png
     publisher_city: Baltimore
     publisher_state: MD
     publisher_lat: 39.285168
@@ -119,6 +119,7 @@ countries:
     business_state: MD
     business_lat: 39.215334
     business_lon: -76.856056
+    # business_zoom: 12
     business_zip: 21044
     business_phone: (410) 730-2829
     business_phone_stripped: +14107302829
@@ -158,3 +159,61 @@ countries:
     ad_date: "September 12, 2016"
     expires_on_text: "Expires on<br>October 12, 2016 (30 days)"
     ad_text: "JUST THE SIGHT OF THEM MAKES BUTTER MELT. WHOLE MAINE LOBSTER $16.95 SEPTEMBER WHILE SUPPLIES LAST. MONTHLY Clyde's SPECIALS www.clydes.com CHEVY CHASE • COLUMBIA • GALLERY PLACE • GEORGETOWN • MARK CENTER RESTON • TOWER OAKS LODGE • TYSONS CORNER • WILLOW CREEK FARM"
+  
+  # MEXICO
+  mx:
+    publisher_name: El Norte
+    publisher_folder_name: elnorte
+    publisher_url: elnorte.com
+    publisher_city: Monterrey
+    publisher_state: NL
+    publisher_lat: 25.6718502
+    publisher_lon: -100.3054479
+    publisher_zoom: 18
+    business_name: La Nacional
+    business_address_one: Ave. San Jerónimo 1106, Colonia Miravalle
+    business_address_two: Monterrey, NL 64634
+    business_city: Monterrey
+    business_state: NL
+    business_lat: 25.674095
+    business_lon: -100.366193
+    business_zoom: 15
+    business_zip: 64634
+    business_phone: +52 (81) 8347 9205
+    business_phone_stripped: +528183479205
+    business_website: lanacional.net
+    business_category: Restaurantes
+    business_subcategory: Comida Mexicana
+    business_description: "<p>La Nacional nace en el 2003 con la firme intención de rescatar las tradiciones de la gastronomía local y las recetas de los pueblos de México, es una oportunidad para deleitar a nuestros comensales con lo que siempre se ha comido en éste hermoso país.</p><p>Dentro del Concepto de Cantina Mexicana hemos procurado dar todas las opciones de bebidas, es por eso que vendemos todos los productos de Grupo Modelo y Cervecería Cuauhtémoc Moctezuma.</p>"
+    business_monday_hours: 12:30 PM - 1:00 AM
+    business_tuesday_hours: 12:30 PM - 1:00 AM
+    business_wednesday_hours: 12:30 PM - 1:00 AM
+    business_thursday_hours: 12:30 PM - 1:00 AM
+    business_friday_hours: 12:30 PM - 2:00 AM
+    business_saturday_hours: 12:30 PM - 2:00 AM
+    business_sunday_hours: 12:30 PM - 12:00 AM
+    business_testimonial_one_text: "Anoche fuimos a cenar y desde que entramos fue excelente el trato, nuestro mecero nos hiso varias observaciones que sin duda ayudaron a que nuestra elección fuera la mejor. El rib eye, el chicharron... los jarritos todo delicioso, sin duda debemos volver por mas."
+    business_testimonial_one_name: Fernando (30/08/16)
+    business_testimonial_two_text: "El mejor lugar para comer carnes en Monterrey les súper recomiendo la alcachofa los frijoles el chicharrón bueno todo, los postres son riquísimos recomiendo mucho el de nuez. Vale la pena lo que se paga."
+    business_testimonial_two_name: Daniela (10/08/16)
+    business_youtube_id: 20DeJr6U6aI
+    business_sidengo_url: sidengo.com/lanacional  
+    business_helpful_link_one_text: Restaurantes en Monterrey NL
+    business_helpful_link_one_url: lanacional.net/mobile/index2.php?tipo=0
+    business_helpful_link_two_text: Cantinas en Monterrey NL
+    business_helpful_link_two_url: lanacional.net/mobile/concepto.php
+    business_helpful_link_three_text: Bares en Monterrey NL
+    business_helpful_link_three_url: lanacional.net/mobile/elmenu.php
+    business_facebook_username: lanacionalmx
+    business_coupon_title: ¡2x1 en cervezas nacionales!
+    business_coupon_description: "De lunes a jueves antes de las 5pm."
+    business_coupon_expiration: "Válido hasta el 30/09/16"
+    business_ad_date_one: "31/08/16"
+    business_ad_date_two: "26/08/16"
+    business_ad_date_three: "23/08/16"
+    business_ad_date_four: "18/08/16"
+    business_ad_date_five: "15/08/16"
+    business_ad_date_six: "09/08/16"
+    ad_date: "31 de agosto, 2016"
+    expires_on_text: "Este anuncio está vigente <br>hasta el 30 de septiembre, 2016."
+    ad_text: "Barbacoa de arrachera – Ave. San Jerónimo 1106 Colonia Miravalle. Reserva +52 (81) 8347 9205 @lanacionalmx"

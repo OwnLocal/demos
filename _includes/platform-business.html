@@ -1,6 +1,6 @@
 <div id="content" class="business-content">
   <div class="hero-map">
-    <div ol-widgets-map id="business-map" no-zoom-to-markers="true" style="width:100%; height:100%" tile-layer="https://igexternal-a.akamaihd.net/map_tile.php?x={x}&y={y}&z={z}&size=512&ppi=250" zoom="12"            latitude="{{ site.countries[page.country].business_lat }}" longitude="{{ site.countries[page.country].business_lon }}">
+    <div ol-widgets-map id="business-map" no-zoom-to-markers="true" style="width:100%; height:100%" tile-layer="https://igexternal-a.akamaihd.net/map_tile.php?x={x}&y={y}&z={z}&size=512&ppi=250" zoom="{% if site.countries[page.country].business_zoom %}{{ site.countries[page.country].business_zoom }}{% else %}12{% endif %}"            latitude="{{ site.countries[page.country].business_lat }}" longitude="{{ site.countries[page.country].business_lon }}">
       <ol-widgets-map-marker latitude="{{ site.countries[page.country].business_lat }}" longitude="{{ site.countries[page.country].business_lon }}"></ol-widgets-map-marker>
     </div>
   </div>
