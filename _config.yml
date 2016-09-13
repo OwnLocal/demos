@@ -50,6 +50,11 @@ locales:
     directions: Directions
     website: Website
     share: Share
+    directions_tooltip: Get directions to this<br>location on Google Maps.
+    website_tooltip: Open website<br>in new tab.
+    email: Email
+    print_ads: Print Ads
+    valid: Valid
     homepage:
       hero_text: Find the <strong>best places</strong> <span>in
       suggested_searches: Restaurants,Beauty salons,General contractors,Legal services
@@ -65,6 +70,8 @@ locales:
       real_estate: Real Estate
       more: More
     business:
+      share_tooltip: Share this business<br>on social media.
+      share_this_business_on: Share this business on
       about: About
       business_hours: Business Hours
       monday: Monday
@@ -74,7 +81,23 @@ locales:
       friday: Friday
       saturday: Saturday
       sunday: Sunday
+      testimonials: Testimonials
+      video: Video
+      helpful_links: Helpful Links
+      follow_us: Follow Us
+      coupon: Coupon
+      question_or_comment: "Question or Comment?"
+      name: Name
+      message: Message
+      submit: Submit
+      photos: Photos
     ad:
+      date: Date
+      active_ad: Active Ad
+      full_profile: Full Profile
+      download: Download
+      share_this_ad_on: Share this ad on
+      text: Text
     
 countries:
   us:
@@ -88,7 +111,7 @@ countries:
     publisher_lon: -76.617256
     publisher_zoom: 17
     business_name: "Clyde's"
-    business_address_one: 10221 Wincopin Cir
+    business_address_one: 10221 Wincopin Circle
     business_address_two: Columbia, MD 21044
     business_city: Columbia
     business_state: MD
@@ -121,3 +144,15 @@ countries:
     business_helpful_link_three_text: Bar and Grill Restaurants in Columbia MD
     business_helpful_link_three_url: clydes.com/columbia#Events
     business_facebook_username: ClydesRestaurant
+    business_coupon_title: September Lobster Special
+    business_coupon_description: "Whole Main Lobster: $16.95"
+    business_coupon_expiration: "Valid until 9/30/16"
+    business_ad_date_one: "Sep-12-16"
+    business_ad_date_two: "Sep-08-16"
+    business_ad_date_three: "Sep-05-16"
+    business_ad_date_four: "Sep-02-16"
+    business_ad_date_five: "Sep-01-16"
+    business_ad_date_six: "Aug-30-16"
+    ad_date: "September 12, 2016"
+    expires_on_text: "Expires on<br>October 12, 2016 (30 days)"
+    ad_text: "JUST THE SIGHT OF THEM MAKES BUTTER MELT. WHOLE MAINE LOBSTER $16.95 SEPTEMBER WHILE SUPPLIES LAST. MONTHLY Clyde's SPECIALS www.clydes.com CHEVY CHASE • COLUMBIA • GALLERY PLACE • GEORGETOWN • MARK CENTER RESTON • TOWER OAKS LODGE • TYSONS CORNER • WILLOW CREEK FARM"
