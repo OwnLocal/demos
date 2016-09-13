@@ -293,57 +293,57 @@ countries:
   # EL SALVADOR
   sv:
     publisher_name: El Diario de Hoy
-    publisher_folder_name: elsavador
+    publisher_folder_name: elsalvador
     publisher_url: elsalvador.com
     publisher_city: San Salvador
     publisher_state: SV
     publisher_lat: 13.6985651
     publisher_lon: -89.2131213
     publisher_zoom: 11
-    business_name: La Nacional
-    business_address_one: Ave. San Jerónimo 1106, Colonia Miravalle
-    business_address_two: Monterrey, NL 64634
-    business_city: Monterrey
-    business_state: NL
-    business_lat: 25.674095
-    business_lon: -100.366193
-    business_zoom: 15
+    business_name: Unillantas
+    business_address_one: Blvd. Los Héroes entre 23 y 25 Calle Pte
+    business_address_two: San Salvador
+    business_city: San Salvador
+    business_state: SV
+    business_lat: 13.712867
+    business_lon: -89.205362
+    # business_zoom: 12
     business_zip: 64634
-    business_phone: +52 (81) 8347 9205
-    business_phone_stripped: +528183479205
-    business_website: lanacional.net
-    business_category: Restaurantes
-    business_subcategory: Comida Mexicana
-    business_description: "<p>La Nacional nace en el 2003 con la firme intención de rescatar las tradiciones de la gastronomía local y las recetas de los pueblos de México, es una oportunidad para deleitar a nuestros comensales con lo que siempre se ha comido en éste hermoso país.</p><p>Dentro del Concepto de Cantina Mexicana hemos procurado dar todas las opciones de bebidas, es por eso que vendemos todos los productos de Grupo Modelo y Cervecería Cuauhtémoc Moctezuma.</p>"
-    business_monday_hours: 12:30 PM - 1:00 AM
-    business_tuesday_hours: 12:30 PM - 1:00 AM
-    business_wednesday_hours: 12:30 PM - 1:00 AM
-    business_thursday_hours: 12:30 PM - 1:00 AM
-    business_friday_hours: 12:30 PM - 2:00 AM
-    business_saturday_hours: 12:30 PM - 2:00 AM
-    business_sunday_hours: 12:30 PM - 12:00 AM
-    business_testimonial_one_text: "Anoche fuimos a cenar y desde que entramos fue excelente el trato, nuestro mecero nos hiso varias observaciones que sin duda ayudaron a que nuestra elección fuera la mejor. El rib eye, el chicharron... los jarritos todo delicioso, sin duda debemos volver por mas."
-    business_testimonial_one_name: Fernando (30/08/16)
-    business_testimonial_two_text: "El mejor lugar para comer carnes en Monterrey les súper recomiendo la alcachofa los frijoles el chicharrón bueno todo, los postres son riquísimos recomiendo mucho el de nuez. Vale la pena lo que se paga."
-    business_testimonial_two_name: Daniela (10/08/16)
-    business_youtube_id: 20DeJr6U6aI
-    business_sidengo_url: sidengo.com/lanacional  
-    business_helpful_link_one_text: Restaurantes en Monterrey NL
-    business_helpful_link_one_url: lanacional.net/mobile/index2.php?tipo=0
-    business_helpful_link_two_text: Cantinas en Monterrey NL
-    business_helpful_link_two_url: lanacional.net/mobile/concepto.php
-    business_helpful_link_three_text: Bares en Monterrey NL
-    business_helpful_link_three_url: lanacional.net/mobile/elmenu.php
-    business_facebook_username: lanacionalmx
-    business_coupon_title: ¡2x1 en cervezas nacionales!
-    business_coupon_description: "De lunes a jueves antes de las 5pm."
+    business_phone: "+503 2225-0000"
+    business_phone_stripped: +50322250000
+    business_website: unillantas.com.sv
+    business_category: Autos
+    business_subcategory: Llanteras
+    business_description: "<p>Unillantas es un distribuidor exclusivo de las marcas de llantas Dunlop y Falken en El Salvador. Contamos con 9 centros de servicios en San Salvador, Santa Ana y San Miguel.</p><p>Nuestra misión es ofrecer al consumidor salvadoreño la gama de productos más completa y de mejor calidad que se ajuste a sus necesidades y brindar un servicio de calidad y amabilidad para mantener la fidelidad y confianza de nuestros clientes.</p>"
+    business_monday_hours: 8 AM - 5 PM
+    business_tuesday_hours: 8 AM - 5 PM
+    business_wednesday_hours: 8 AM - 5 PM
+    business_thursday_hours: 8 AM - 5 PM
+    business_friday_hours: 8 AM - 5 PM
+    business_saturday_hours: 8 AM - 3 PM
+    business_sunday_hours: 8 AM - 3 PM
+    business_testimonial_one_text: "Súper recomendados! Hicieron un trabajo excelente y me gusta que tienen precios muy accesibles."
+    business_testimonial_one_name: María (02/08/16)
+    business_testimonial_two_text: "Los empleados son muy amigables. ¡Estoy contento el servicio que recibí!"
+    business_testimonial_two_name: Pedro (10/08/16)
+    business_youtube_id: ab1njMuYIlQ
+    # business_sidengo_url: sidengo.com/lanacional  
+    business_helpful_link_one_text: Autos en San Salvador
+    business_helpful_link_one_url: unillantas.com.sv/quienes-somos
+    business_helpful_link_two_text: Llanter en San Salvador
+    business_helpful_link_two_url: unillantas.com.sv/productos
+    business_helpful_link_three_text: Talleres en San Salvador
+    business_helpful_link_three_url: unillantas.com.sv/servicios
+    business_facebook_username: unillantaselsalvador
+    business_coupon_title: "¡30% de descuento este otoño!"
+    business_coupon_description: "Visite nuestro sitio web para obtener más información."
     business_coupon_expiration: "Válido hasta el 30/09/16"
-    business_ad_date_one: "31/08/16"
-    business_ad_date_two: "26/08/16"
-    business_ad_date_three: "23/08/16"
-    business_ad_date_four: "18/08/16"
-    business_ad_date_five: "15/08/16"
-    business_ad_date_six: "09/08/16"
-    ad_date: "31 de agosto, 2016"
-    expires_on_text: "Este anuncio está vigente <br>hasta el 30 de septiembre, 2016."
-    ad_text: "Barbacoa de arrachera – Ave. San Jerónimo 1106 Colonia Miravalle. Reserva +52 (81) 8347 9205 @lanacionalmx"
+    business_ad_date_one: "16/08/16"
+    business_ad_date_two: "14/08/16"
+    business_ad_date_three: "12/08/16"
+    business_ad_date_four: "09/08/16"
+    business_ad_date_five: "05/08/16"
+    business_ad_date_six: "04/08/16"
+    ad_date: "16 de agosto, 2016"
+    expires_on_text: "Este anuncio está vigente <br>hasta el 16 de septiembre, 2016."
+    ad_text: "Precios Super Bajos. SN828 – 175/70R13 – $37.99. SN828 – 185/65R14 – $41.99. DZ102 – 205/55R16 – $62.99. WhatsApp 7919-9999. Dunlop. Falken. Los Héroes 2225-0000 • La Rábida 2235-4038 • Merlot 2278-4525 • Santa Tecla 2229-5566 • Santa Ana 2240-1914/9138/5811/2455-2120 • San Miguel 2669-5920. Restricciones aplican. Precios válidos hasta el 31 de agosto 2016. No aplica promoción sobre promoción. Incluye instalación, válvulas y balanceo."
