@@ -1,7 +1,7 @@
 <div id="content" class="business-content">
   <div class="hero-map">
-    <div ol-widgets-map id="business-map" no-zoom-to-markers="true" style="width:100%; height:100%" tile-layer="https://igexternal-a.akamaihd.net/map_tile.php?x={x}&y={y}&z={z}&size=512&ppi=250" zoom="12"            latitude="41.0754" longitude="-81.5146">
-      <ol-widgets-map-marker latitude="41.0754" longitude="-81.5146"></ol-widgets-map-marker>
+    <div ol-widgets-map id="business-map" no-zoom-to-markers="true" style="width:100%; height:100%" tile-layer="https://igexternal-a.akamaihd.net/map_tile.php?x={x}&y={y}&z={z}&size=512&ppi=250" zoom="12"            latitude="{{ site.countries[page.country].business_lat }}" longitude="{{ site.countries[page.country].business_lon }}">
+      <ol-widgets-map-marker latitude="{{ site.countries[page.country].business_lat }}" longitude="{{ site.countries[page.country].business_lon }}"></ol-widgets-map-marker>
     </div>
   </div>
   <div class="container" id="content-top">
@@ -12,45 +12,183 @@
       <p class="with-icon phone no-responsive">{{ site.countries[page.country].business_phone }}</p>
     </div>
     <div id="calls-to-action">
-      <a id="cta-call-button" class="call-button no-full" data-phone="3309454386" href="tel:3309454386">Call</a>
+      <a id="cta-call-button" class="call-button no-full" data-phone="{{ site.countries[page.country].business_phone_stripped }}" href="tel:{{ site.countries[page.country].business_phone_stripped }}">{{ site.locales[page.locale].call }}</a>
       <div class="mdl-tooltip" for="cta-call-button">{{ site.locales[page.locale].call }} {{ site.countries[page.country].business_phone }}</div>
-      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr={{ site.countries[page.country].business_address_one }}+{{ site.countries[page.country].business_address_two }}" target="_blank">Directions</a>
+      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr={{ site.countries[page.country].business_address_one }}+{{ site.countries[page.country].business_address_two }}" target="_blank">{{ site.locales[page.locale].directions }}</a>
       <div class="mdl-tooltip" for="cta-directions-button">Get directions to this<br>location on Google Maps.</div>
-      <a class="website-button" href="http://{{ site.countries[page.country].business_website }}" id="cta-website-button" target="_blank">Website</a>
+      <a class="website-button" href="http://{{ site.countries[page.country].business_website }}" id="cta-website-button" target="_blank">{{ site.locales[page.locale].website }}</a>
       <div class="mdl-tooltip" for="cta-website-button">Open website<br>in new tab.</div>
-      <a class="share-button" id="cta-share-box">Share</a>
+      <a class="share-button" id="cta-share-box">{{ site.locales[page.locale].share }}</a>
       <div class="mdl-tooltip" for="cta-share-box">Share this business<br>on social media.</div>
       <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect share-box" for="cta-share-box">
         <li class="mdl-menu__item" disabled>Share this business on:</li>
         <li class="mdl-menu__item">
-          <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"><i class="material-icons social-icons facebook"></i>Facebook</a>
+          <a class="share-facebook"><i class="material-icons social-icons facebook"></i>Facebook</a>
         </li>
         <li class="mdl-menu__item">
-          <a class="share-twitter" href="https://twitter.com/intent/tweet?text=Check%20out%20Ticketmaster%20in%20Akron%20-%20" target="_blank"><i class="material-icons social-icons twitter"></i>Twitter</a>
+          <a class="share-twitter"><i class="material-icons social-icons twitter"></i>Twitter</a>
         </li>
         <li class="mdl-menu__item">
-          <a class="share-email" href="mailto:?subject=Check%20out%20Ticketmaster%20in%20Akron&amp;body=" target="_blank"><i class="material-icons">email</i>Email</a>
+          <a class="share-email"><i class="material-icons">email</i>Email</a>
         </li>
       </ul>
     </div>
   </div>
   <div class="container">
+    
     <div id="main-column" class="column">
-      <h3>About</h3>
-      <p>At Ticketmaster, we strive to put fans first. Every day we're listening to your feedback and working to improve your experience before, during, and after events. In 2010, Ticketmaster and Live Nation merged to create Live Nation Entertainment. Now you have more options than ever to enjoy live events, and things are only getting better.</p>
-    </div>
-    <div id="sidebar" class="column">
-      <h3>Related Businesses</h3>
-      <div class="helpful-links">
-        <span><a href="#">Bastrop Opera House</a></span>
-        <span><a href="#">Bridge Center of Austin</a></span>
-        <span><a href="#">One World Theatre</a></span>
-        <span><a href="#">The Shen Yun Orchestra</a></span>
-        <span><a href="#">Esthers Follies</a></span>
+      
+      <h3>{{ site.locales[page.locale].business.about }}</h3>
+      {{ site.countries[page.country].business_description }}
+      
+      {% if site.countries[page.country].business_monday_hours %}
+      <h3>{{ site.locales[page.locale].business.business_hours }}</h3>
+      <div id="hours">
+        <p>
+          <span class="day">{{ site.locales[page.locale].business.monday }}</span>
+          <span class="time">{{ site.countries[page.country].business_monday_hours }}</span>
+        </p>
+        <p>
+          <span class="day">{{ site.locales[page.locale].business.tuesday }}</span>
+          <span class="time">{{ site.countries[page.country].business_tuesday_hours }}</span>
+        </p>
+        <p>
+          <span class="day">{{ site.locales[page.locale].business.wednesday }}</span>
+          <span class="time">{{ site.countries[page.country].business_wednesday_hours }}</span>
+        </p>
+        <p>
+          <span class="day">{{ site.locales[page.locale].business.thursday }}</span>
+          <span class="time">{{ site.countries[page.country].business_thursday_hours }}</span>
+        </p>
+        <p>
+          <span class="day">{{ site.locales[page.locale].business.friday }}</span>
+          <span class="time">{{ site.countries[page.country].business_friday_hours }}</span>
+        </p>
+        <p>
+          <span class="day">{{ site.locales[page.locale].business.saturday }}</span>
+          <span class="time">{{ site.countries[page.country].business_saturday_hours }}</span>
+        </p>
+        <p>
+           <span class="day">{{ site.locales[page.locale].business.sunday }}</span>
+          <span class="time">{{ site.countries[page.country].business_sunday_hours }}</span>
+        </p>
+      </div>      
+      {% endif %}
+      
+      {% if site.countries[page.country].business_testimonial_one_text %}
+      <h3>Testimonials</h3>
+      <div class="business-testimonials">
+        <p><i class="material-icons">comment</i><span>{{ site.countries[page.country].business_testimonial_one_text }}</span><span class="comment-info">— {{ site.countries[page.country].business_testimonial_one_name }}</span></p>
+        <p><i class="material-icons">comment</i><span>{{ site.countries[page.country].business_testimonial_two_text }}</span><span class="comment-info">— {{ site.countries[page.country].business_testimonial_two_name }}</span></p>
       </div>
+      {% endif %}
+      
+      {% if site.countries[page.country].business_youtube_id %}
+      <h3>Video</h3>
+      <div class="video-wrapper"><iframe src="http://www.youtube.com/embed/{{ site.countries[page.country].business_youtube_id }}?rel=0&amp;showinfo=0" allowfullscreen=""></iframe></div>
+      {% endif %}
+      
+    </div>
+    
+    <div id="sidebar" class="column">
+      
+      {% if site.countries[page.country].business_sidengo_url %}
+      <div style="position: relative;height: 0;padding: 0 0 83.33%; box-shadow: 0 0 8px rgba(0,0,0,0.15);"><iframe src="http://{{ site.countries[page.country].business_sidengo_url }}?hide_builder=1" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe></div>
+      {% endif %}
+      
+      <h3>Helpful Links</h3>
+      <div class="helpful-links">
+        <span><a href="http://{{ site.countries[page.country].business_helpful_link_one_url }}" class="helpful-link" target="_blank">{{ site.countries[page.country].business_helpful_link_one_text }}</a></span>
+        <span><a href="http://{{ site.countries[page.country].business_helpful_link_two_url }}" class="helpful-link" target="_blank">{{ site.countries[page.country].business_helpful_link_two_text }}</a></span>
+        <span><a href="http://{{ site.countries[page.country].business_helpful_link_three_url }}" class="helpful-link" target="_blank">{{ site.countries[page.country].business_helpful_link_three_text }}</a></span>
+      </div>
+      
+      {% if site.countries[page.country].business_facebook_username %}
       <h3>Follow Us</h3>
-      <div class="facebook-box"><iframe src='https://www.facebook.com/v2.5/plugins/page.php?adapt_container_width=true&width=300&hide_cover=false&href=https%3A%2F%2Ffacebook.com%2FTicketmaster%2F&show_facepile=true'></iframe></div>
+      <div class="facebook-box"><iframe src='https://www.facebook.com/v2.5/plugins/page.php?adapt_container_width=true&width=300&hide_cover=false&href=https%3A%2F%2Ffacebook.com%2F{{ site.countries[page.country].business_facebook_username }}%2F&show_facepile=true'></iframe></div>
+      {% endif %}
+      
+      <h3>Coupon</h3>
+      <div class="business-coupons"> 
+        <div class="individual-coupon" style="padding: 17px; margin-top: 6px;">
+          <div class="title">September Lobster Special</div>
+          <div class="description">Whole Main Lobster: $16.95</div>
+          <div class="expiration">Valid until 9/30/16</div>
+        </div>
+        <div class="clear"></div>
+      </div>
+  
+      <h3>Question or comment?</h3>
+      <form class="form" id="contact-form">
+        <input placeholder="Name" type="text">
+        <input placeholder="E-mail address" type="email">
+        <textarea placeholder="Message" rows="5"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    
     </div>
     <div class="clear"></div>
+    
+    <h3 class="ads-container-title">Photos</h3>
+    <div class="photo-gallery">
+      <div class="active-image">
+        <div class="photo-gallery-close">x</div>
+        <div class="active-image-inner-one">
+          <div class="active-image-inner-two"><img></div>
+        </div>
+      </div>
+      <div class="thumbs">
+        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-01.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-01-thumb.jpg">
+        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-02.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-02-thumb.jpg">
+        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-03.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-03-thumb.jpg">
+        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-04.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-04-thumb.jpg">
+        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-05.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-05-thumb.jpg">
+        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-06.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-06-thumb.jpg">
+      </div>
+    </div>
+    <div class="clear"></div>
+    
+    <h3 class="ads-container-title">Print Ads</h3>
+    <div id="promos-container">
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-01-thumb.jpg">
+          <p>Sep-12-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-02-thumb.jpg">
+          <p>Sep-08-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-03-thumb.jpg">
+          <p>Sep-05-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-04-thumb.jpg">
+          <p>Sep-02-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-05-thumb.jpg">
+          <p>Sep-01-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="promo-card-wrapper">
+        <div class="promo-card">
+          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-06-thumb.jpg">
+          <p>Aug-30-16 | <span class="valid-info">Valid</span></p></a>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    
   </div>
 </div>

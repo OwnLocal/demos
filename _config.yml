@@ -18,9 +18,6 @@ email: jorge@ownlocal.com
 description: > # this means to ignore newlines until "baseurl:"
   A place to showcase our wonderful products.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
-twitter_username: ownlocal
-github_username:  gonzalezmedina
 
 # Build settings
 markdown: kramdown
@@ -50,6 +47,9 @@ locales:
     powered_by: Powered by
     footer_text: <span>– helping local media with innovative <a href="http://ownlocal.com/platform" target="_blank">print to web</a> and directory software</span>
     call: Call
+    directions: Directions
+    website: Website
+    share: Share
     homepage:
       hero_text: Find the <strong>best places</strong> <span>in
       suggested_searches: Restaurants,Beauty salons,General contractors,Legal services
@@ -65,28 +65,59 @@ locales:
       real_estate: Real Estate
       more: More
     business:
+      about: About
+      business_hours: Business Hours
+      monday: Monday
+      tuesday: Tuesday
+      wednesday: Wednesday
+      thursday: Thursday
+      friday: Friday
+      saturday: Saturday
+      sunday: Sunday
     ad:
     
 countries:
   us:
-    publisher_name: Austin American Statesman
-    publisher_url: statesman.com
+    publisher_name: Baltimore Sun
+    publisher_folder_name: baltimoresun
+    publisher_url: baltimoresun.com
     publisher_logo: /images/publishers/statesman/logo.png
-    publisher_city: Austin
-    publisher_state: TX
-    publisher_lat: 30.263556
-    publisher_lon: -97.744316
-    publisher_zoom: 16
-    business_name: Toy Joy
-    business_address_one: 403 W 2nd St
-    business_address_two: Austin, TX 78701
-    business_city: Austin
-    business_state: TX
-    business_lat: 0
-    business_lon: 0
-    business_zip: 78701
-    business_phone: (512) 320-0090
-    business_website: toyjoy.com
-    business_category: Shopping
-    business_subcategory: Game & Toy Stores
-    business_description: <p>An Austin original, Toy Joy has been keeping Austin fun since 1987. Know for it's floor to ceiling (including the ceiling!) eclectic collection of the fun, collectible, nostalgic and "a little bit weird" toys and gifts, Toy Joy has been serving locals and worldwide visitors for over 28 years. We have gifts and toys for "kids" of all ages and in all price ranges. While we are a less than typical children's retailer you can find gifts here from newborns to the adult young-at-heart.</p>
+    publisher_city: Baltimore
+    publisher_state: MD
+    publisher_lat: 39.285168
+    publisher_lon: -76.617256
+    publisher_zoom: 17
+    business_name: "Clyde's"
+    business_address_one: 10221 Wincopin Cir
+    business_address_two: Columbia, MD 21044
+    business_city: Columbia
+    business_state: MD
+    business_lat: 39.215334
+    business_lon: -76.856056
+    business_zip: 21044
+    business_phone: (410) 730-2829
+    business_phone_stripped: 4107302829
+    business_website: clydes.com/columbia
+    business_category: Restaurants
+    business_subcategory: American Food
+    business_description: "<p>Whether you live in or are visiting Washington, DC, Virginia or Maryland, Clyde's Restaurants are where you'll find a home away from home. Clyde's is a family of restaurants born from a sincere belief that great dining begins with fresh ingredients, friendly people and an unforgettable atmosphere.</p><p>We were one of the first in Washington to feature locally-raised and sustainable foods. In addition to our local and farm-grown produce, our legendary burgers are made using hormone-free, farm-raised beef sourced in the area and our chicken is antibiotic-free and hormone-free. Visit us and taste to believe.</p>"
+    business_monday_hours: 11:00 AM - 2:00 AM
+    business_tuesday_hours: 11:00 AM - 2:00 AM
+    business_wednesday_hours: 11:00 AM - 2:00 AM
+    business_thursday_hours: 11:00 AM - 2:00 AM
+    business_friday_hours: 11:00 AM - 2:00 AM
+    business_saturday_hours: 10:00 AM - 2:00 AM
+    business_sunday_hours: 10:00 AM - 2:00 AM
+    business_testimonial_one_text: "Been coming to this location for years.  A great spot to come before a Merriweather concert.  There's a great selection of draft beer and the menu has something for everyone."
+    business_testimonial_one_name: Daniel (9/10/16)
+    business_testimonial_two_text: "Great classy atmosphere, loved the Salmon burger, and once you're done enjoying your food, you've got the lakefront right next door to enjoy!"
+    business_testimonial_two_name: Hugh (8/14/16)
+    business_youtube_id: r5FdXKs8ats
+    # business_sidengo_url: sidengo.com/mightyfineburgers  
+    business_helpful_link_one_text: Restaurants in Columbia MD
+    business_helpful_link_one_url: clydes.com/columbia#About
+    business_helpful_link_two_text: American Food in Columbia MD
+    business_helpful_link_two_url: clydes.com/columbia#Menus
+    business_helpful_link_three_text: Bar and Grill Restaurants in Columbia MD
+    business_helpful_link_three_url: clydes.com/columbia#Events
+    business_facebook_username: ClydesRestaurant

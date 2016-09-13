@@ -6,7 +6,7 @@
         <h1>{{ site.locales[page.locale].homepage.hero_text }} {{ site.countries[page.country].publisher_city }}</span></h1>
         <div class="hero-to-businesses"></div>
         <div class="home-search">
-          <form action="/businesses">
+          <form>
             <input class="search" data-suggested-searches="{{ site.locales[page.locale].homepage.suggested_searches }}" id="searchBox" name="q" type="text"> <button type="submit"><i class="material-icons">search</i></button>
           </form>
         </div>
@@ -30,8 +30,5 @@
 </div>
 
 <style>
-body #content.home-content .hero-map {
-  height: 100% !important;
-  max-height: none !important;
-}
+body #content.home-content .hero-map { height: 100% !important; max-height: none !important; }
 </style>

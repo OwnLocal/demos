@@ -7,7 +7,6 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <title>Demo: {% if page.title %}{{ page.title }}{% endif %}</title>
   <link href="/assets/application.css" media="all" rel="stylesheet" type="text/css">
-  <script src="/assets/application.js"></script>
   <meta content="yes" name="apple-mobile-web-app-capable">
   <meta content="Directory" name="apple-mobile-web-app-title">
   <meta content="default" name="apple-mobile-web-app-status-bar-style">
@@ -49,7 +48,7 @@
       <div class="container">
         <div class="logo-area">
           <a class="publisher-logo" href="http://{{ site.countries[page.country].publisher_url }}" id="publisher-logo" target="_blank">
-          <div class="vertical-helper"></div><img src="{{ site.countries[page.country].publisher_logo }}"></a>
+          <div class="vertical-helper"></div><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/logo.png"></a>
           <div class="directory-home"><a id="directory-home" {% if page.home %}href="./"{% else %}href="../"{% endif %}>{{ site.locales[page.locale].directory }}</a></div>
         </div>
         <div class="mdl-tooltip" for="publisher-logo"><span>{{ site.locales[page.locale].back_to }} {{ site.countries[page.country].publisher_url }}</span></div>
@@ -75,5 +74,6 @@
       </div>
     </div>
   </div>
+  <script src="/assets/application.js"></script>
 </body>
 </html>
