@@ -354,7 +354,7 @@ countries:
     business_testimonial_two_text: "Great classy atmosphere, loved the Salmon burger, and once you're done enjoying your food, you've got the lakefront right next door to enjoy!"
     business_testimonial_two_name: Hugh (8/14/16)
     business_youtube_id: r5FdXKs8ats
-    business_sidengo_url: clydes.brochuredemo.com  
+    business_sidengo_username: clydes  
     business_helpful_link_one_text: Restaurants in Columbia MD
     business_helpful_link_one_url: clydes.com/columbia#About
     business_helpful_link_two_text: American Food in Columbia MD
@@ -412,7 +412,7 @@ countries:
     business_testimonial_two_text: "El mejor lugar para comer carnes en Monterrey les súper recomiendo la alcachofa los frijoles el chicharrón bueno todo, los postres son riquísimos recomiendo mucho el de nuez. Vale la pena lo que se paga."
     business_testimonial_two_name: Daniela (10/08/16)
     business_youtube_id: 20DeJr6U6aI
-    business_sidengo_url: lanacional.brochuredemo.com
+    business_sidengo_username: lanacional
     business_helpful_link_one_text: Restaurantes en Monterrey NL
     business_helpful_link_one_url: lanacional.net/mobile/index2.php?tipo=0
     business_helpful_link_two_text: Cantinas en Monterrey NL
@@ -470,7 +470,7 @@ countries:
     business_testimonial_two_text: "Los empleados son muy amigables. ¡Estoy contento el servicio que recibí!"
     business_testimonial_two_name: Pedro (10/08/16)
     business_youtube_id: ab1njMuYIlQ
-    # business_sidengo_url: sidengo.com/lanacional  
+    # business_sidengo_username: lanacional  
     business_helpful_link_one_text: Autos en San Salvador
     business_helpful_link_one_url: unillantas.com.sv/quienes-somos
     business_helpful_link_two_text: Llanter en San Salvador
@@ -528,7 +528,7 @@ countries:
     business_testimonial_two_text: "Freundliches Personal und eine tolle Atmosphäre. Ich werde auf jeden Fall bald wieder kommen!"
     business_testimonial_two_name: Doris (28.05.16)
     business_youtube_id: L90CNTvWTfI
-    business_sidengo_url: sidengo.com/CosmeticInstitut  
+    business_sidengo_username: CosmeticInstitut  
     business_helpful_link_one_text: Schönheit in Pattensen
     business_helpful_link_one_url: cosmetic-institut.de/cosmetic-institut-pattensen/auszeit-nehmen.html
     business_helpful_link_two_text: Körperpflege in Pattensen
@@ -586,7 +586,7 @@ countries:
     business_testimonial_two_text: "Ich wollte auf diesem Wege ein ganz großes Lob an Fr. Maderner von der Filiale am Stephansplatz aussprechen. Mein Freund und ich fliegen Ende Juli nach Bali - so eine kompetente und freundliche Beratung habe ich noch nie erlebt. Sie war wirklich sehr bemüht um uns und macht ihren Job wirklich gut. Vielen Dank dafür! Wir freuen uns schon seeeehr auf unseren Urlaub!!"
     business_testimonial_two_name: Melanie (13.06.15)
     business_youtube_id: IRrRqPnERC4
-    # business_sidengo_url: sidengo.com/CosmeticInstitut  
+    # business_sidengo_username: CosmeticInstitut  
     business_helpful_link_one_text: Reisen in Wien
     business_helpful_link_one_url: ruefa.at/reisebueros/wien/
     business_helpful_link_two_text: Pauschalreisen in Wien
@@ -644,7 +644,7 @@ countries:
     business_testimonial_two_text: "Klasický supermarket. Občas však bývá otevřena jen jedna pokladna, a tak se často tvoří fronty. K dispozici parkoviště, které snad vždy poskytuje mnoho volných parkovacích míst."
     business_testimonial_two_name: Tomáš (10. 8. 2016)
     business_youtube_id: 3DdYzTu_qpo
-    # business_sidengo_url: sidengo.com/mightyfineburgers  
+    # business_sidengo_username: mightyfineburgers  
     business_helpful_link_one_text: Nakupování v Praha
     business_helpful_link_one_url: penny.cz/Nab%C3%ADdka/Nab%C3%ADdka__/pe_DefaultContent1.aspx
     business_helpful_link_two_text: Obchody v Praha
