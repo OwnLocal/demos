@@ -337,7 +337,7 @@ countries:
     # business_zoom: 12
     business_zip: 21044
     business_phone: (410) 730-2829
-    business_phone_stripped: +14107302829
+    business_phone_stripped: "+14107302829"
     business_website: clydes.com/columbia
     business_category: Restaurants
     business_subcategory: American Food
@@ -395,7 +395,7 @@ countries:
     business_zoom: 15
     business_zip: 64634
     business_phone: +52 (81) 8347 9205
-    business_phone_stripped: +528183479205
+    business_phone_stripped: "+528183479205"
     business_website: lanacional.net
     business_category: Restaurantes
     business_subcategory: Comida Mexicana
@@ -453,7 +453,7 @@ countries:
     # business_zoom: 12
     business_zip: 64634
     business_phone: "+503 2225-0000"
-    business_phone_stripped: +50322250000
+    business_phone_stripped: "+50322250000"
     business_website: unillantas.com.sv
     business_category: Autos
     business_subcategory: Llanteras
@@ -511,7 +511,7 @@ countries:
     # business_zoom: 12
     business_zip: 30982
     business_phone: +49 5101 15111
-    business_phone_stripped: +49510115111
+    business_phone_stripped: "+49510115111"
     business_website: cosmetic-institut.de
     business_category: Schönheit
     business_subcategory: Körperpflege
@@ -569,7 +569,7 @@ countries:
     business_zoom: 14
     business_zip: 1010
     business_phone: +43 1 5134524
-    business_phone_stripped: +4315134524
+    business_phone_stripped: "+4315134524"
     business_website: ruefa.at
     business_category: Reise
     business_subcategory: Reisebüros
@@ -627,7 +627,7 @@ countries:
     business_zoom: 15
     business_zip: 110 00
     business_phone: +420 800 202 220
-    business_phone_stripped: +420800202220
+    business_phone_stripped: "+420800202220"
     business_website: penny.cz
     business_category: Nákupy
     business_subcategory: Smíšené zboží

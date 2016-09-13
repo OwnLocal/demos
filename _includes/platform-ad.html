@@ -28,7 +28,7 @@
     <div id="calls-to-action">
       <a id="cta-call-button" class="call-button no-full" href="tel:{{ site.countries[page.country].business_phone_stripped }}">{{ site.locales[page.locale].call }}</a>
       <div class="mdl-tooltip" for="cta-call-button">{{ site.countries[page.country].business_phone }}</div>
-      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr={{ site.countries[page.country].business_address_one }}+{{ site.countries[page.country].business_address_two }}" target="_blank">{{ site.locales[page.locale].directions }}</a>
+      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr={{ site.countries[page.country].business_name }}+{{ site.countries[page.country].business_address_one }}+{{ site.countries[page.country].business_address_two }}" target="_blank">{{ site.locales[page.locale].directions }}</a>
       <div class="mdl-tooltip" for="cta-directions-button">{{ site.locales[page.locale].directions_tooltip }}</div>
       <a id="cta-website-button" class="website-button" href="http://{{ site.countries[page.country].business_website }}" target="_blank">{{ site.locales[page.locale].website }}</a>
       <div class="mdl-tooltip" for="cta-website-button">{{ site.locales[page.locale].website_tooltip }}</div>
