@@ -30,6 +30,7 @@ collections:
     output: true
     
 locales:
+  # ENGLISH
   en:
     directory_home: Directory Home
     businesses: Businesses
@@ -100,6 +101,7 @@ locales:
       text: Text
     
 countries:
+  # UNITED STATES
   us:
     publisher_name: Baltimore Sun
     publisher_folder_name: baltimoresun
