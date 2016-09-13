@@ -479,3 +479,61 @@ countries:
     ad_date: "30. Juni 2016"
     expires_on_text: "Diese anzeige läufft <br>bis am 30. Juli 2016"
     ad_text: "Unser highlight im Juli! 30-Jahre 1986–2016. Nun wird gefeiert! Lassen Sie mit uns die Korken knallen! Viele Highlights, großartige Momente und spannende Aktionen erwarten Sie. LAssen Sie sich überraschen. Feiern Sie mit uns. Wir freuen uns auf Sie! Kirsten Leifheit & Dorios Genschow mit dem gesamten Team. Am 02.07.2016 feiern wir 30 Jahre Cosmetic-Institut Pattensen. Cosmetic-Institut • Steinstraße 21 • 30982 Pattensen • 0 51 01-15111 • www.cosmetic-institut.de"
+    
+  # ÖSTERREICH
+  at:
+    publisher_name: Die Presse
+    publisher_folder_name: diepresse
+    publisher_url: diepresse.com
+    publisher_city: Wien
+    publisher_state: AT
+    publisher_lat: 48.213621
+    publisher_lon: 16.3799615
+    publisher_zoom: 17
+    business_name: "Ruefa Stephansplatz"
+    business_address_one: Stephansplatz 10
+    business_address_two: 1010 Wien
+    business_city: Wien
+    business_state: AT
+    business_lat: 48.208605
+    business_lon: 16.371848
+    business_zoom: 14
+    business_zip: 1010
+    business_phone: +43 1 5134524
+    business_phone_stripped: +4315134524
+    business_website: ruefa.at
+    business_category: Reise
+    business_subcategory: Reisebüros
+    business_description: "<p>Die Ruefa Reisen GmbH ist ein Tochterunternehmen der Österreichisches Verkehrsbüro AG. Das Unternehmen führt über 100 Reisebüros in ganz Österreich unter der Marke Ruefa. Der Unternehmenssitz liegt im 2. Wiener Gemeindebezirk.</p><p>Auf Wunsch werden die Reisen komplett von Flugtickets, Nächtigungen, Transfers, Restaurantbesuche, Besichtigungsprogramm und Reiseleitung organisiert.</p><p>Der Name Ruefa entstand 1951 und ist ein Akronym für „Reise Urlaub Erholung für alle“.</p>"
+    business_monday_hours: 9 – 18:30 Uhr
+    business_tuesday_hours: 9 – 18:30 Uhr
+    business_wednesday_hours: 9 – 18:30 Uhr
+    business_thursday_hours: 9 – 18:30 Uhr
+    business_friday_hours: 9 – 18:30 Uhr
+    business_saturday_hours: Geschlossen
+    business_sunday_hours: Geschlossen
+    business_testimonial_one_text: "Vielen Dank liebes Ruefa Team für diesen wahnsinnigen Gewinn 👍"
+    business_testimonial_one_name: Verena (05.08.16)
+    business_testimonial_two_text: "Ich wollte auf diesem Wege ein ganz großes Lob an Fr. Maderner von der Filiale am Stephansplatz aussprechen. Mein Freund und ich fliegen Ende Juli nach Bali - so eine kompetente und freundliche Beratung habe ich noch nie erlebt. Sie war wirklich sehr bemüht um uns und macht ihren Job wirklich gut. Vielen Dank dafür! Wir freuen uns schon seeeehr auf unseren Urlaub!!"
+    business_testimonial_two_name: Melanie (13.06.15)
+    business_youtube_id: IRrRqPnERC4
+    # business_sidengo_url: sidengo.com/CosmeticInstitut  
+    business_helpful_link_one_text: Reisen in Wien
+    business_helpful_link_one_url: ruefa.at/reisebueros/wien/
+    business_helpful_link_two_text: Pauschalreisen in Wien
+    business_helpful_link_two_url: ruefa.at/reisen/pauschalreisen/
+    business_helpful_link_three_text: Kreuzfahrten in Wien
+    business_helpful_link_three_url: ruefa.at/angebote/list/Kreuzfahrten/Hapag-Lloyd/RR-CR/RR_CRHAL
+    business_facebook_username: ruefa
+    business_coupon_title: 20 Jahre Jubiläumsrabatt
+    business_coupon_description: "Siehe Website für Details."
+    business_coupon_expiration: "Läuft aus am: 30.09.16"
+    business_ad_date_one: 30.08.16
+    business_ad_date_two: 25.08.16
+    business_ad_date_three: 22.08.16
+    business_ad_date_four: 19.08.16
+    business_ad_date_five: 16.08.16
+    business_ad_date_six: 12.08.16
+    ad_date: "30. August 2016"
+    expires_on_text: "Diese anzeige läufft <br>bis am 30. September 2016."
+    ad_text: "MS EUROPA | MS EUROPA 2 EINE KLASSE FÜR SICH. „Keine anderen Schiffe erreichen zurzeit die hohen Standards, die MS EUROPA und MS EUROPA 2 und ihre Crews setzen.“ - Douglas Ward, Berlitz Cruise Guide. Wir nehmen uns gerne Zeit und beraten Sie zu Ihrer Kreuzfahrt mit Hapag-Lloyd Cruises: 0180 955 595 60 ruefa.at/hl-cruises ruefa Hapag Lloyd Cruises."
