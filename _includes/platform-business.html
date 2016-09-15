@@ -95,7 +95,7 @@
     <div id="sidebar" class="column">
       
       {% if site.countries[page.country].business_sidengo_username %}
-      <div style="position: relative;height: 0;padding: 0 0 83.33%; box-shadow: 0 0 8px rgba(0,0,0,0.15);"><iframe src="http://sidengo.com/{{ site.countries[page.country].business_sidengo_username }}?hide_builder=1&embedded=1" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe></div>
+      <div style="position: relative; margin: 0 auto; width: 100%; height: 0; padding: 0 0 83.33%; box-shadow: 0 0 8px rgba(0,0,0,0.15); overflow-y: auto; -webkit-overflow-scrolling: touch;"><iframe src="http://sidengo.com/{{ site.countries[page.country].business_sidengo_username }}?hide_builder=1&embed=true" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe></div>
       {% endif %}
       
       <h3>{{ site.locales[page.locale].business.helpful_links }}</h3>
