@@ -1,9 +1,11 @@
 * { box-sizing: border-box; outline: 0 none; }
 html, body { padding: 0; margin: 0; }
 body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; background: white; font-family: -apple-system, BlinkMacSystemFont, 'Roboto'; letter-spacing: -0.2px; color: #4A475A; position: absolute; top: 0; right: 0; bottom: 0; left: 0; animation: fadein 2s; }
+body.preview { background: #F8F9FA; color: #4A475A; overflow: hidden; text-align: center; }
 a { text-decoration: none; color: #008CDD; cursor: pointer; }
 a span { border-bottom: 1px solid transparent; transition: all 0.3s ease; }
 a:hover span { border-bottom-color: #008CDD; }
+
 .container { margin: 0 auto; width: calc(100% - 50px); max-width: 1024px; padding: 0; position: relative; }
 .opacity-transition { opacity: 0.8; transition: all 0.3s ease; }
 .opacity-transition-nine { opacity: 0.9; }
