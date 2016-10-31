@@ -84,6 +84,7 @@ a:hover span { border-bottom-color: #008CDD; }
 }
 
 @media screen and (max-width: 980px) {
+  .not-in-tablet { display: none !important; }
   .grid-item { width: calc(50% - 25px); }
   .homepage-hero h2 { font-size: 56px; }
   .flags a { width: 50%; margin-right: 0; }
