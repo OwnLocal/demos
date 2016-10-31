@@ -51,29 +51,48 @@ $(document).ready(function() {
     desktopView();
   };
 
+  $('input#platform-url').keydown(function (e){
+    if(e.keyCode == 13){
+      website = $(this).val();
+      updateIframeSrc();
+      $('.bookmarks').removeClass('active');
+    }
+  })
+
+  $('input#platform-url').on('focus', function(){
+    $('.bookmarks').addClass('active');
+  });
+  
+  $('.bookmark').on('click', function(){
+    $('input#platform-url').val($(this).attr('data-url'));
+    website = $(this).attr('data-url');
+    updateIframeSrc();
+    $('.bookmarks').removeClass('active');
+  });
+  
+  $('.logo, .preview-icons, .wrapper').on('click', function(){
+    $('.bookmarks').removeClass('active');
+  });
+  
+  $('.fullscreen').on('click', function(){
+    fullscreenToggle();
+  });
+  
+  $('.desktop-view').on('click', function(){
+    desktopView();
+  });
+  
+  $('.devices-view').on('click', function(){
+    devicesView();
+  });
+  
+  //Show Dimensions
+  $('.show-dimensions').on('click', function(){
+    $('.browser-dimensions').toggle();
+  });
+
 });
 
-$(document).on('keyup keydown', 'input#platform-url', function(){
-  website = $(this).val();
-  updateIframeSrc();
-});
-
-$(document).on('click', '.fullscreen', function(){
-  fullscreenToggle();
-});
-
-$(document).on('click', '.desktop-view', function(){
-  desktopView();
-});
-
-$(document).on('click', '.devices-view', function(){
-  devicesView();
-});
-
-//Show Dimensions
-$(document).on('click', '.show-dimensions', function(){
-  $('.browser-dimensions').toggle();
-});
 // Change browser dimensions on resize
 function jsUpdateSize() {
   var width = document.getElementById('browser').offsetWidth;

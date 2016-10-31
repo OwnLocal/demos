@@ -6,9 +6,14 @@ title: Preview
 
 <div class="header">
   <a href="/" class="logo not-in-tablet" tabindex="-1"><i class="pixel-tree"></i><span>Demos</span></a>
-  
-  <div class="website-input"><input id="platform-url" type="text" class="not-in-fullscreen"></div>
-  
+  <div class="website-input">
+    <input id="platform-url" type="text" class="not-in-fullscreen">
+    <div class="bookmarks">
+      {% for product in site.products %}
+      <div class="bookmark {{ product.class }}" data-url="{{ product.target_path | remove: 'http://' }}"><i class="material-icons">bookmark</i><span>{{ product.title }}</span></div>
+      {% endfor %}
+    </div>
+  </div>
   <div class="preview-icons not-in-tablet">
     <div class="icon-button fullscreen fullscreen-off"><i class="material-icons">fullscreen</i></div>
     <div class="icon-button view-selection desktop-view"><i class="material-icons">laptop_mac</i></div>
