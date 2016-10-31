@@ -32,39 +32,10 @@ body.hidden-header .not-in-fullscreen { display: none; }
 .icon-button:hover { opacity: 0.7; }
 .icon-button i { position: absolute; top: 50%; left: 50%; margin: -12px 0 0 -12px; }
 
+.outer-wrapper { position: absolute; top: 60px; left: 0; width: 100%; height: calc(100% - 60px); }
+.wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-/*
-.header span { display: inline-block; font-weight: 500; padding-left: 15px; margin-left: 15px; }
-.header span:first-child { border-left: 0 none; padding-left: 0; margin-left: 0; }
-
-.demos-logo { display: inline-block; font-weight: 500; text-transform: uppercase; position: relative; color: #4A475A; padding-left: 40px; opacity: 0.85; transition: all 0.3s ease; cursor: pointer; font-size: 16px; text-decoration: none; outline: 0 none; width: 0px; color: transparent; margin-right: -15px; float: left; }
-.demos-logo:before { content: ""; position: absolute; width: 32px; height: calc(100% - 20px); background: url('/images/pixel-tree.png') no-repeat; background-size: auto 100%; top: 8px; left: 0; }
-.demos-logo:hover { opacity: 1; }
-.demos-logo:hover span { border-bottom: 1px solid rgba(74, 71, 90, 0.4); }
-.demos-logo span:first-child { display: inline; padding-bottom: 2px; }
-
-.dropdown { width: auto; position: relative; width: 85px; height: 50px; cursor: pointer; padding-left: 15px; display: inline-block; }
-.dropdown.default-view-dropdown { width: 105px; }
-.dropdown .selection { padding-right: 7px; }
-.dropdown .selection:after { content: '\E313'; position: absolute; top: 0; right: 0; font-family: 'Material Icons'; font-size: 120%; }
-.dropdown ul { position: absolute; margin: 0; padding: 0; top: 50px; left: 0; height: auto; max-height: 0; overflow: hidden; background: white; box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 rgba(0,0,0,0.05) inset; z-index: 1000; width: 100%; transition: all 0.3s ease; }
-.dropdown:hover ul { max-height: none; }
-.dropdown ul li.button { cursor: pointer; display: block; border: 0 none; padding: 15px; opacity: 0.6; line-height: 1.5; transition: all 0.3s ease; }
-.dropdown ul li.button:hover { opacity: 1; }
-.dropdown ul li.button.active { opacity: 1; text-decoration: underline; }      
-input { display: inline-block; margin-left: 10px; -webkit-appearance: none; border: 1px solid rgba(0,0,0,0.1); font-size: 14px; line-height: 30px; width: 50px; text-align: center; outline: 0 none; color: #4A475A; transition: all 0.3s ease; }
-input:hover { border-color: rgba(0,0,0,0.2); }
-input:focus { border-color: rgba(66,133,244,0.8); }
-input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { opacity: 1; }
-input#platform-url { box-sizing: border-box; padding: 0 10px; width: calc(100% - 205px); max-width: 300px; text-align: left; text-overflow: ellipsis; }
-.options-area { display: inline-block; padding-left: 20px; border-left: 1px solid rgba(0,0,0,0.05); }
-.options-area span { opacity: 0.8; padding-right: 5px; }
-
-*/
-
-.wrapper { position: absolute; top: 60px; bottom: 0; left: 0; width: 100%; }
-
-body.hidden-header .wrapper { top: 0; }
+body.hidden-header .outer-wrapper { top: 0; height: 100%; }
 body.hidden-header .logo { display: none; }
 body.hidden-header .website-input { display: none; }
 

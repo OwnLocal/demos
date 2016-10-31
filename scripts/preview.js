@@ -70,7 +70,7 @@ $(document).ready(function() {
     $('.bookmarks').removeClass('active');
   });
   
-  $('.logo, .preview-icons, .wrapper').on('click', function(){
+  $('.outer-wrapper, .preview-icons, iframe').on('click', function(){
     $('.bookmarks').removeClass('active');
   });
   
