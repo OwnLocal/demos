@@ -1,13 +1,6 @@
-.header { text-align: left; margin: 0 0 30px; box-shadow: 0 1px 0 rgba(0,0,0,0.05); background: white; font-size: 15px; height: 60px; line-height: 60px; white-space: nowrap; box-sizing: border-box; position: absolute; width: 100%; top: 0; left: 0; transition: opacity 0.3s ease; z-index: 1000; }
 body.hidden-header .header { opacity: 0; background: transparent; box-shadow: 0 0 0 transparent; }
 body.hidden-header .header:hover { opacity: 1; }
 body.hidden-header .not-in-fullscreen { display: none; }
-
-.logo { position: relative; display: inline-block; font-family: 'Montserrat'; position: absolute; top: 0; left: 0; border-right: 1px solid rgba(0,0,0,0.05); padding: 0 20px 0 60px; }
-a.logo:after { content: attr(data-text); position: absolute; left: 100%; padding-left: 20px; text-transform: uppercase; font-weight: 300; opacity: 0.6; pointer-events: none; }
-.logo i { background: url('/images/pixel-tree.png') no-repeat; background-size: auto 100%; width: 28px; height: 28px; display: block; position: absolute; top: 50%; left: 20px; margin: -16px 0 0; }
-.logo span { display: inline-block; line-height: 1; font-size: 17px; text-transform: uppercase; letter-spacing: 0.2px; padding-bottom: 2px; }
-.logo:hover span { border-bottom-color: #4A475A; }
 
 .website-input { width: calc(100% - 20px); max-width: 460px; height: 36px; margin: 0 auto; top: 12px; text-align: center; position: relative; background: #F2F2F2; box-shadow: 0 0 2px rgba(0,0,0,0.2); border-radius: 2px; transition: all 0.3s ease; }
 .website-input:hover { background: #E9E9E9; }
@@ -21,6 +14,7 @@ a.logo:after { content: attr(data-text); position: absolute; left: 100%; padding
 .bookmark.widget { display: none; }
 .bookmark.platform span { color: transparent; }
 .bookmark.platform span:before { content: "OwnLocal Platform"; color: #4A475A; }
+.bookmark.platform span:after { content: "Live"; text-transform: uppercase; color: #4A475A; position: absolute; right: 0; background: #4CAF50; line-height: 1; padding: 5px 10px 6px; border-radius: 3px; color: white; font-size: 10px; font-weight: bold; top: 50%; margin: -10px 15px 0 0; }
 .bookmark:hover span { opacity: 1; }
 .bookmark.no-border { border-bottom: 0 none; }
 .bookmark i { position: absolute; top: 0; left: 0; font-size: 16px; opacity: 0.8; width: 42px; text-align: center; line-height: 46px; }

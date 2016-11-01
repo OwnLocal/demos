@@ -36,7 +36,7 @@ function devicesView() {
   $('body').removeClass('minimized-phone');
   $('.devices-view').addClass('active');
   $('.desktop-view').removeClass('active');        
-  $('.wrapper').addClass('scaled');        
+  $('.wrapper').addClass('scaled');
 }
 
 $(document).ready(function() {

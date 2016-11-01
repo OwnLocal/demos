@@ -17,7 +17,7 @@ a:hover span { border-bottom-color: #008CDD; }
 .mobile-only { display: none !important; }
 .share-image { display: none; }
 
-.header { box-shadow: 0 1px 0 rgba(0,0,0,0.05); background: white; height: 50px; }
+.header { text-align: left; margin: 0 0 30px; box-shadow: 0 1px 0 rgba(0,0,0,0.05); background: white; font-size: 15px; height: 60px; line-height: 60px; white-space: nowrap; box-sizing: border-box; position: absolute; width: 100%; top: 0; left: 0; transition: opacity 0.3s ease; z-index: 1000; }
 .header .container { width: 100%; }
 .header a { color: #4A475A; opacity: 0.8; }
 .header-element { float: left; line-height: 50px; padding-right: 15px; margin-right: 15px; border-right: 1px solid rgba(0,0,0,0.05); height: 50px; position: relative; }
@@ -31,6 +31,12 @@ a:hover span { border-bottom-color: #008CDD; }
 .header ul li:last-child { border-bottom: 0 none; }
 .navigation:after { content: '\E313'; font-family: 'Material Icons'; position: absolute; top: 0; right: 10px; }
 .clear { clear: both; }
+
+.logo { position: relative; display: inline-block; font-family: 'Montserrat'; position: absolute; top: 0; left: 0; border-right: 1px solid rgba(0,0,0,0.05); padding: 0 20px 0 60px; }
+a.logo:after { content: attr(data-text); position: absolute; left: 100%; padding-left: 20px; text-transform: uppercase; font-weight: 300; opacity: 0.6; pointer-events: none; }
+.logo i { background: url('/images/pixel-tree.png') no-repeat; background-size: auto 100%; width: 28px; height: 28px; display: block; position: absolute; top: 50%; left: 20px; margin: -16px 0 0; }
+.logo span { display: inline-block; line-height: 1; font-size: 17px; text-transform: uppercase; letter-spacing: 0.2px; padding-bottom: 2px; }
+.logo:hover span { border-bottom-color: #4A475A; }
 
 .homepage-header { position: absolute; width: 100%; padding: 30px 0; }
 .homepage-header-logo { background-image: url('http://www.ownlocal.com/hubfs/OwnLocal_April2016/images/logo.png');  width: 40px; height: 40px; display: block; background-size: auto 100%; background-position: right center; background-repeat: no-repeat; position: relative; }
