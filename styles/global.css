@@ -38,6 +38,25 @@ a.logo:after { content: attr(data-text); position: absolute; left: 100%; padding
 .logo span { display: inline-block; line-height: 1; font-size: 17px; text-transform: uppercase; letter-spacing: 0.2px; padding-bottom: 2px; }
 .logo:hover span { border-bottom-color: #4A475A; }
 
+.website-input { width: calc(100% - 20px); max-width: 460px; height: 36px; margin: 0 auto; top: 12px; text-align: center; position: relative; background: #F2F2F2; box-shadow: 0 0 2px rgba(0,0,0,0.2); border-radius: 2px; transition: all 0.3s ease; }
+.website-input:hover { background: #E9E9E9; }
+.website-input:before { content: attr(data-icon-code); font-family: 'Material Icons'; position: absolute; left: 10px; z-index: 100000; font-size: 22px; line-height: 36px; pointer-events: none; }
+.website-input input { position: absolute; width: 100%; height: 100%; top: -1px; left: 0; padding: 0 10px 0 42px; text-overflow: ellipsis; font-size: 15px; opacity: 0.6; outline: 0 none; border: 0 none; border-radius: 2px; }
+
+.bookmarks { position: absolute; top: 40px; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.15); width: 100%; border-radius: 2px; opacity: 0; pointer-events: none; transition: all 0.3s ease; }
+.bookmarks.active { opacity: 1; pointer-events: all; }
+.bookmark { position: relative; text-align: left; padding: 0 15px 0 42px; border-bottom: 1px solid rgba(0,0,0,0.05); line-height: 46px; cursor: pointer; }
+.bookmark span { opacity: 0.8; transition: all 0.3s ease; }
+.bookmark.widget { display: none; }
+.bookmark.platform span { color: transparent; }
+.bookmark.platform span:before { content: "OwnLocal Platform"; color: #4A475A; }
+.bookmark.platform span:after { content: "Live"; text-transform: uppercase; color: #4A475A; position: absolute; right: 0; background: #4CAF50; line-height: 1; padding: 5px 10px 6px; border-radius: 3px; color: white; font-size: 10px; font-weight: bold; top: 50%; margin: -10px 15px 0 0; }
+.bookmark:hover span { opacity: 1; }
+.bookmark.no-border { border-bottom: 0 none; }
+.bookmark i { position: absolute; top: 0; left: 0; font-size: 16px; opacity: 0.8; width: 42px; text-align: center; line-height: 46px; }
+.bookmark:last-child { border: 0 none; }
+
+
 .homepage-header { position: absolute; width: 100%; padding: 30px 0; }
 .homepage-header-logo { background-image: url('http://www.ownlocal.com/hubfs/OwnLocal_April2016/images/logo.png');  width: 40px; height: 40px; display: block; background-size: auto 100%; background-position: right center; background-repeat: no-repeat; position: relative; }
 .homepage-header-logo:after { content: "Demos"; position: absolute; right: -108px; line-height: 1; color: white; font-size: 24px; text-transform: uppercase; font-family: 'Montserrat'; padding-bottom: 2px; border-bottom: 2px solid transparent; top: 9px; transition: all 0.3s ease; }

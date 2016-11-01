@@ -1,0 +1,95 @@
+---
+layout: widget
+permalink: /platform/widget/
+title: Responsive Widget
+---
+
+<div class="options-sidebar">
+
+  <div class="header">
+    <a href="/" class="logo" tabindex="-1" data-text="Widget"><i class="pixel-tree"></i><span>Demos</span></a>
+  </div>
+
+<!--
+  <div class="label">Widget Type</div>
+  <div id="widget-type" class="dropdown widget-type-dropdown">
+    <div class="selection"></div>
+    <ul class="sizes">
+      <li data-selection="standard" class="button standard-widget-button">Standard</li>
+      <li data-selection="secure" class="button secure-widget-button">Secure</li>
+    </ul>
+  </div>
+-->
+
+  <div class="label">Platform URL</div>
+  <div class="input-wrapper">
+    <input id="platform-url" type="text" placeholder="mylocal.sun-sentinel.com">
+  </div>
+  
+  <div class="label">Popular Sizes</div>
+  <div id="widget-size" class="dropdown widget-size-dropdown">
+    <div class="selection"></div>
+    <ul class="sizes">
+      <li data-width="300" data-height="600" class="button active">300x600</li>
+      <li data-width="728" data-height="600" class="button">728x600</li>
+      <li data-width="600" data-height="480" class="button">600x480</li>
+      <li data-width="720" data-height="300" class="button">720x300</li>
+      <li data-width="300" data-height="250" class="button">300x250</li>
+      <li data-width="728" data-height="090"  class="button">728x90</li>
+      <li data-width="300" data-height="050"  class="button">300x50</li>          
+    </ul>
+  </div>
+  
+  <div class="twins">
+    <div class="twin">
+      <div class="label">Width</div>
+      <div class="input-wrapper">
+        <input id="custom-width" type="number" min="200" max="1280">
+      </div>
+    </div>
+    <div class="twin">
+      <div class="label">Height</div>
+      <div class="input-wrapper">
+        <input id="custom-height" type="number" min="50" max="600">
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+  <div class="label">Default View</div>
+  <div id="default-view" class="dropdown default-view-dropdown">
+    <div class="selection"></div>
+    <ul class="sizes">
+      <li data-selection="businesses" class="button default-businesses-button">Businesses</li>
+      <li data-selection="ads" class="button default-ads-button">Ads</li>
+    </ul>
+  </div>
+
+<!--
+  <div class="label">Filter Businesses</div>
+  <div id="widget-type" class="dropdown filter-businesses-dropdown">
+    <div class="selection"></div>
+    <ul class="sizes">
+      <li data-selection="show-all-businesses" class="button show-all-business-button">Show all businesses</li>
+      <li data-selection="show-featured-level-three-and-above" class="button show-featured-level-three-and-above-button">Featured level 3 and above</li>
+      <li data-selection="show-featured-level-two-and-above" class="button show-featured-level-two-and-above-button">Featured level 2 and above</li>
+      <li data-selection="show-featured-level-one-and-above" class="button show-featured-level-one-and-above-button">Featured level 1 and above</li>
+    </ul>
+  </div>
+
+  <div class="label">Filter Categories</div>
+  <div class="input-wrapper">
+    <input id="categories-to-show" type="text" placeholder="mexican-food,sushi">
+  </div>
+-->
+  
+</div>
+
+<div class="outer-wrapper">
+  <div id="ownlocal">
+    <div class="ownlocal-widget">
+      <iframe src="" tabindex="-1"></iframe>
+    </div>
+  </div>
+  <div class="code" readonly="readonly" contenteditable="true" onclick="document.execCommand('selectAll',false,null)" spellcheck="false"></div>
+</div>
