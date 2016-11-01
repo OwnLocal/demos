@@ -1,45 +1,63 @@
-if ( getUrlParameter('website') === undefined ) {
-  var website = 'local.tennessean.com';
-} else { 
-  var website = getUrlParameter('website');
-};
-
-if ( getUrlParameter('fullscreen') === true ) {
-  var fullscreen = 'true';
-} else { 
-  var fullscreen = 'false';
-};
-
-if ( getUrlParameter('desktop-only') === true ) {
-  var phoneless = 'true';
-} else { 
-  var phoneless = 'false';
-};
-
-function fullscreenToggle() {
-  $('body').toggleClass('hidden-header');
-  $('.fullscreen').toggleClass('active');        
-};
-
-function updateIframeSrc() {
-  $('iframe').attr( 'src', 'http://' + website );  
-};
-
-function desktopView() {
-  $('body').addClass('minimized-phone');
-  $('.desktop-view').addClass('active');
-  $('.devices-view').removeClass('active');
-  $('.wrapper').removeClass('scaled');        
-}
-
-function devicesView() {
-  $('body').removeClass('minimized-phone');
-  $('.devices-view').addClass('active');
-  $('.desktop-view').removeClass('active');        
-  $('.wrapper').addClass('scaled');
-}
-
 $(document).ready(function() {
+
+  if ( getUrlParameter('website') === undefined ) {
+    var website = 'local.tennessean.com';
+  } else { 
+    var website = getUrlParameter('website');
+  };
+  
+  if ( getUrlParameter('fullscreen') === 'true' ) {
+    var fullscreen = 'true';
+  } else { 
+    var fullscreen = 'false';
+  };
+  
+  if ( getUrlParameter('desktop-only') === 'true' ) {
+    var phoneless = 'true';
+  } else { 
+    var phoneless = 'false';
+  };
+
+  function updateBrowserURL() {
+    window.history.replaceState(null, null, "?website=" + website + "&fullscreen=" + fullscreen + "&desktop-only=" + phoneless);    
+  }
+
+  if( window.location.href.indexOf("?") > -1 ) {
+  } else {
+    updateBrowserURL();
+  };
+  
+  function fullscreenToggle() {
+    $('body').toggleClass('hidden-header');
+    $('.fullscreen').toggleClass('active');
+    if ( fullscreen === 'false' ){
+      fullscreen = 'true';
+    } else {
+      fullscreen = 'false';      
+    }
+  };
+  
+  function updateIframeSrc() {
+    $('iframe').attr( 'src', 'http://' + website );  
+    updateBrowserURL();
+  };
+  
+  function desktopView() {
+    $('body').addClass('minimized-phone');
+    $('.desktop-view').addClass('active');
+    $('.devices-view').removeClass('active');
+    $('.wrapper').removeClass('scaled');
+    phoneless = 'true';
+  }
+  
+  function devicesView() {
+    $('body').removeClass('minimized-phone');
+    $('.devices-view').addClass('active');
+    $('.desktop-view').removeClass('active');        
+    $('.wrapper').addClass('scaled');
+    phoneless = 'false';
+  }
+
   updateIframeSrc();
   $('#platform-url').val(website);
 
@@ -76,19 +94,17 @@ $(document).ready(function() {
   
   $('.fullscreen').on('click', function(){
     fullscreenToggle();
+    updateBrowserURL();
   });
   
   $('.desktop-view').on('click', function(){
     desktopView();
+    updateBrowserURL();
   });
   
   $('.devices-view').on('click', function(){
     devicesView();
-  });
-  
-  //Show Dimensions
-  $('.show-dimensions').on('click', function(){
-    $('.browser-dimensions').toggle();
+    updateBrowserURL();
   });
 
 });
