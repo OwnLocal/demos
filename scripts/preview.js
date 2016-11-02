@@ -69,7 +69,7 @@ $(document).ready(function() {
     desktopView();
   };
 
-  $('input#platform-url').keydown(function (e){
+  $('input#platform-url').keydown(function(e){
     if(e.keyCode == 13){
       website = $(this).val();
       updateIframeSrc();
