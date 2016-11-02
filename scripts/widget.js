@@ -56,6 +56,17 @@ $(document).ready(function() {
   } else { 
     $('#widget-size .selection').html('Custom');
   };
+
+  $('.dropdown').on('click', function(){
+    $(this).toggleClass('active');
+    $('.dropdown').not(this).removeClass('active');
+  });
+  
+  $('.outer-wrapper, input').on('click', function(){
+    $('.dropdown').removeClass('active');
+  });
+
+
 });
 
 $(document).on('click', '.dropdown.widget-size-dropdown .button', function(){

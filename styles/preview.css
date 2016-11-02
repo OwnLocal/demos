@@ -2,6 +2,8 @@ body.hidden-header .header { opacity: 0; background: transparent; box-shadow: 0 
 body.hidden-header .header:hover { opacity: 1; }
 body.hidden-header .not-in-fullscreen { display: none; }
 
+.logo span:after, .logo:after { display: none; }
+
 .preview-icons { position: absolute; top: 0; right: 2px; }
 .icon-button { display: inline-block; width: 50px; height: 60px; position: relative; float: right; user-select: none; cursor: pointer; transition: all 0.3s ease; opacity: 0.5; }
 .icon-button.active { opacity: 1 !important; }
