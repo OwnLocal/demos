@@ -4,10 +4,10 @@ if ( getUrlParameter('publisher') === undefined ) {
   var publisher = getUrlParameter('publisher');
 };
 
-if ( getUrlParameter('PID') === undefined ) {
-  var publisherID = '8fd7e5a6-d514-4c50-b469-a93c27980b27';
+if ( getUrlParameter('partner') === undefined ) {
+  var partner = '8fd7e5a6-d514-4c50-b469-a93c27980b27';
 } else { 
-  var publisherID = getUrlParameter('PID');
+  var partner = getUrlParameter('partner');
 };
 
 if ( getUrlParameter('width') === undefined ) {
