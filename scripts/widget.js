@@ -1,32 +1,11 @@
-if ( getUrlParameter('type') === undefined ) {
-  var type = 'standard';
-} else {
-  var type = getUrlParameter('type');
-};
-
-if ( getUrlParameter('publisher') === undefined ) {
-  var publisher = 'mylocal.statesman.com';
-} else {
-  var publisher = getUrlParameter('publisher');
-};
-
-if ( getUrlParameter('partner') === undefined ) {
-  var partner = 'be65ee41-1997-4ab3-8f12-0b0f5a183ef2';
-} else {
-  var partner = getUrlParameter('partner');
-};
-
-if ( getUrlParameter('width') === undefined ) {
-  var width = '300';
-} else {
-  var width = getUrlParameter('width');
-};
-
-if ( getUrlParameter('height') === undefined ) {
-  var height = '600';
-} else {
-  var height = getUrlParameter('height');
-};
+var type = getUrlParameter('type') || 'standard',
+    publisher = getUrlParameter('publisher') || 'mylocal.statesman.com',
+    partner = getUrlParameter('partner') || 'be65ee41-1997-4ab3-8f12-0b0f5a183ef2',
+    width = getUrlParameter('width') || '300',
+    height = getUrlParameter('height') || '600',
+    minFeaturedLevel = getUrlParameter('min-featured-level') || '0',
+    category = getUrlParameter('category') || 'all',
+    subcategory = getUrlParameter('subcategory') || 'all';
 
 if ( getUrlParameter('adcentric') === 'true' ) {
   var defaultView = 'ads';
@@ -34,39 +13,6 @@ if ( getUrlParameter('adcentric') === 'true' ) {
 } else {
   var defaultView = 'businesses';
   var adcentric = 'false';
-};
-
-if ( getUrlParameter('min-featured-level') === undefined ) {
-  var minFeaturedLevel = '0';
-};
-if ( getUrlParameter('min-featured-level') === '0' ) {
-  var minFeaturedLevel = '0';
-};
-if ( getUrlParameter('min-featured-level') === '1' ) {
-  var minFeaturedLevel = '1';
-};
-if ( getUrlParameter('min-featured-level') === '2' ) {
-  var minFeaturedLevel = '2';
-};
-if ( getUrlParameter('min-featured-level') === '3' ) {
-  var minFeaturedLevel = '3';
-};
-
-if ( getUrlParameter('category') === undefined ) {
-  var category = 'all';
-} else {
-  var category = getUrlParameter('category');
-  $(document).ready(function() {
-    $('#category').val(category);
-  });
-};
-if ( getUrlParameter('subcategory') === undefined ) {
-  var subcategory = 'all';
-} else {
-  var subcategory = getUrlParameter('subcategory');
-  $(document).ready(function() {
-    $('#subcategory').val(subcategory);
-  });
 };
 
 function updateBrowserURL() {
@@ -99,6 +45,9 @@ $(document).ready(function() {
   } else {
     updateBrowserURL();
   };
+
+  $('#category').val(category);
+  $('#subcategory').val(subcategory);
 
   updateIframeSrc();
   updateSecureIframeSrc();
