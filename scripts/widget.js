@@ -7,7 +7,7 @@ var type = getUrlParameter('type') || 'standard',
     category = getUrlParameter('category') || 'all',
     subcategory = getUrlParameter('subcategory') || 'all';
 
-if ( getUrlParameter('adcentric') === 'true' ) {
+if (getUrlParameter('adcentric') === 'true') {
   var defaultView = 'ads';
   var adcentric = 'true';
 } else {
@@ -16,32 +16,29 @@ if ( getUrlParameter('adcentric') === 'true' ) {
 };
 
 function updateBrowserURL() {
-  if(type === 'secure') {
-    window.history.replaceState(null, null, "?type=" + type + "&partner=" + partner + "&width=" + width + "&height=" + height + "&adcentric=" + adcentric + "&min-featured-level=" + minFeaturedLevel + "&category=" + category + "&subcategory=" + subcategory);
-  } else {
-    window.history.replaceState(null, null, "?type=" + type + "&publisher=" + publisher + "&width=" + width + "&height=" + height + "&adcentric=" + adcentric + "&min-featured-level=" + minFeaturedLevel + "&category=" + category + "&subcategory=" + subcategory);
-  };
+  var publisherOrPartner = (type === 'secure') ? `&partner=${partner}` : `&publisher=${publisher}`;
+  window.history.replaceState(null, null, `?type=${type}${publisherOrPartner}&width=${width}&height=${height}&adcentric=${adcentric}&min-featured-level=${minFeaturedLevel}&category=${category}&subcategory=${subcategory}`);
 };
 
 function updateIframeSrc() {
-  $('.ownlocal-widget.standard iframe').attr( 'src', 'http://' + publisher + '/embed?adcentric=' + adcentric + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory );
+  $('.ownlocal-widget.standard iframe').attr('src', `http://${publisher}/embed?adcentric=${adcentric}&min_featured_level=${minFeaturedLevel}&category=${category}&subcategory=${subcategory}` );
 };
 
 function updateSecureIframeSrc() {
-  $('.ownlocal-widget.secure iframe').attr( 'src', 'https://widget.secure.ownlocal.com/embed/' + partner + '?adcentric=' + adcentric + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory );
+  $('.ownlocal-widget.secure iframe').attr('src', `https://widget.secure.ownlocal.com/embed/${partner}?adcentric=${adcentric}&min_featured_level=${minFeaturedLevel}&category=${category}&subcategory=${subcategory}`);
 };
 
 function updateEmbedCode() {
-  $('.code').html('&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" data-active="' + defaultView + '" src="http://' + publisher + '/embed.js?h=' + height + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code').html(`&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" data-active="${defaultView}" src="http://${publisher}/embed.js?h=${height}&min_featured_level=${minFeaturedLevel}&category=${category}&subcategory=${subcategory}"&gt;&lt;/script&gt;&lt;/var&gt;`);
 };
 
 function updateSecureEmbedCode() {
-  $('.code.secure').html('&lt;var id="ownlocal"&gt;&lt;script async id="ownlocal-script" data-active="' + defaultView + '" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&?h=' + height + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code.secure').html(`&lt;var id="ownlocal"&gt;&lt;script async id="ownlocal-script" data-active="${defaultView}" src="https://widget.secure.ownlocal.com/embed.js?uuid=${partner }&?h=${height}&min_featured_level=${minFeaturedLevel}&category=${category}&subcategory=${subcategory}"&gt;&lt;/script&gt;&lt;/var&gt;`);
 };
 
 $(document).ready(function() {
 
-  if( window.location.href.indexOf("?") > -1 ) {
+  if(window.location.href.indexOf("?") > -1) {
   } else {
     updateBrowserURL();
   };
@@ -58,7 +55,7 @@ $(document).ready(function() {
   $('.ownlocal-widget').css("width", width).css("height", height);
   $('#ownlocal').css("width", "auto");
 
-  if ( getUrlParameter('type') === 'secure' ) {
+  if (getUrlParameter('type') === 'secure') {
     $('#widget-type .selection').html('Secure');
     $('.secure-widget-button').addClass('active');
     $('body').addClass('secure-widget');
@@ -70,40 +67,40 @@ $(document).ready(function() {
     $('body').removeClass('secure-widget');
   };
 
-  if ( getUrlParameter('width') === undefined ) {
+  if (getUrlParameter('width') === undefined) {
     $('#widget-size .selection').html(width + 'x' + height);
   } else {
     $('#widget-size .selection').html('Popular Sizes');
   };
-  if ( getUrlParameter('height') === undefined ) {
+  if (getUrlParameter('height') === undefined) {
     $('#widget-size .selection').html(width + 'x' + height);
   } else {
     $('#widget-size .selection').html('Popular Sizes');
   };
-  if ( getUrlParameter('adcentric') === 'true' ) {
+  if (getUrlParameter('adcentric') === 'true') {
     $('#default-view .selection').html('Ads');
     $('.default-ads-button').addClass('active');
   } else {
     $('#default-view .selection').html('Businesses');
     $('.default-businesses-button').addClass('active');
   };
-  if ( getUrlParameter('min-featured-level') === undefined ) {
+  if (getUrlParameter('min-featured-level') === undefined) {
     $('#min-featured-level .selection').html('None');
     $('.no-min-featured-level-button').addClass('active');
   }
-  if ( getUrlParameter('min-featured-level') === '0' ) {
+  if (getUrlParameter('min-featured-level') === '0') {
     $('#min-featured-level .selection').html('None');
     $('.no-min-featured-level-button').addClass('active');
   }
-  if ( getUrlParameter('min-featured-level') === '1' ) {
+  if (getUrlParameter('min-featured-level') === '1') {
     $('#min-featured-level .selection').html('Level 1');
     $('.min-featured-level-one-button').addClass('active');
   }
-  if ( getUrlParameter('min-featured-level') === '2' ) {
+  if (getUrlParameter('min-featured-level') === '2') {
     $('#min-featured-level .selection').html('Level 2');
     $('.min-featured-level-two-button').addClass('active');
   }
-  if ( getUrlParameter('min-featured-level') === '3' ) {
+  if (getUrlParameter('min-featured-level') === '3') {
     $('#min-featured-level .selection').html('Level 3');
     $('.min-featured-level-three-button').addClass('active');
   }
@@ -309,7 +306,7 @@ $(document).ready(function() {
   $('#custom-css-preview').on('click', function() {
     $('style').remove();
     var customCss = $('#custom-css').val();
-    $('<style>' + customCss + '</style>').appendTo(document.head);
+    $(`<style>${customCss}</style>`).appendTo(document.head);
   });
 
 });
