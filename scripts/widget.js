@@ -358,8 +358,9 @@ $(document).ready(function() {
   });
 
   $('#custom-css-preview').on('click', function() {
+    $('style').remove();
     var customCss = $('#custom-css').val();
-    console.log(customCss);
+    $('<style>' + customCss + '</style>').appendTo(document.head);
   });
 
 });
