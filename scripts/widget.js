@@ -1,37 +1,37 @@
 if ( getUrlParameter('type') === undefined ) {
   var type = 'standard';
-} else { 
+} else {
   var type = getUrlParameter('type');
 };
 
 if ( getUrlParameter('publisher') === undefined ) {
   var publisher = 'mylocal.statesman.com';
-} else { 
+} else {
   var publisher = getUrlParameter('publisher');
 };
 
 if ( getUrlParameter('partner') === undefined ) {
   var partner = 'be65ee41-1997-4ab3-8f12-0b0f5a183ef2';
-} else { 
+} else {
   var partner = getUrlParameter('partner');
 };
 
 if ( getUrlParameter('width') === undefined ) {
   var width = '300';
-} else { 
+} else {
   var width = getUrlParameter('width');
 };
-      
+
 if ( getUrlParameter('height') === undefined ) {
   var height = '600';
-} else { 
+} else {
   var height = getUrlParameter('height');
 };
 
 if ( getUrlParameter('adcentric') === 'true' ) {
   var defaultView = 'ads';
   var adcentric = 'true';
-} else { 
+} else {
   var defaultView = 'businesses';
   var adcentric = 'false';
 };
@@ -54,7 +54,7 @@ if ( getUrlParameter('min-featured-level') === '3' ) {
 
 if ( getUrlParameter('category') === undefined ) {
   var category = 'all';
-} else { 
+} else {
   var category = getUrlParameter('category');
   $(document).ready(function() {
     $('#category').val(category);
@@ -62,7 +62,7 @@ if ( getUrlParameter('category') === undefined ) {
 };
 if ( getUrlParameter('subcategory') === undefined ) {
   var subcategory = 'all';
-} else { 
+} else {
   var subcategory = getUrlParameter('subcategory');
   $(document).ready(function() {
     $('#subcategory').val(subcategory);
@@ -71,9 +71,9 @@ if ( getUrlParameter('subcategory') === undefined ) {
 
 function updateBrowserURL() {
   if(type === 'secure') {
-    window.history.replaceState(null, null, "?type=" + type + "&partner=" + partner + "&width=" + width + "&height=" + height + "&adcentric=" + adcentric + "&min-featured-level=" + minFeaturedLevel + "&category=" + category + "&subcategory=" + subcategory);    
+    window.history.replaceState(null, null, "?type=" + type + "&partner=" + partner + "&width=" + width + "&height=" + height + "&adcentric=" + adcentric + "&min-featured-level=" + minFeaturedLevel + "&category=" + category + "&subcategory=" + subcategory);
   } else {
-    window.history.replaceState(null, null, "?type=" + type + "&publisher=" + publisher + "&width=" + width + "&height=" + height + "&adcentric=" + adcentric + "&min-featured-level=" + minFeaturedLevel + "&category=" + category + "&subcategory=" + subcategory);    
+    window.history.replaceState(null, null, "?type=" + type + "&publisher=" + publisher + "&width=" + width + "&height=" + height + "&adcentric=" + adcentric + "&min-featured-level=" + minFeaturedLevel + "&category=" + category + "&subcategory=" + subcategory);
   };
 };
 
@@ -114,7 +114,7 @@ $(document).ready(function() {
     $('.secure-widget-button').addClass('active');
     $('body').addClass('secure-widget');
     $('body').removeClass('standard-widget');
-  } else { 
+  } else {
     $('#widget-type .selection').html('Standard');
     $('.standard-widget-button').addClass('active');
     $('body').addClass('standard-widget');
@@ -123,18 +123,18 @@ $(document).ready(function() {
 
   if ( getUrlParameter('width') === undefined ) {
     $('#widget-size .selection').html(width + 'x' + height);
-  } else { 
+  } else {
     $('#widget-size .selection').html('Popular Sizes');
   };
   if ( getUrlParameter('height') === undefined ) {
     $('#widget-size .selection').html(width + 'x' + height);
-  } else { 
+  } else {
     $('#widget-size .selection').html('Popular Sizes');
   };
   if ( getUrlParameter('adcentric') === 'true' ) {
     $('#default-view .selection').html('Ads');
     $('.default-ads-button').addClass('active');
-  } else { 
+  } else {
     $('#default-view .selection').html('Businesses');
     $('.default-businesses-button').addClass('active');
   };
@@ -176,9 +176,9 @@ $(document).ready(function() {
     $('.dropdown.widget-size-dropdown .button').not(this).removeClass('active');
     $('input#custom-width').val(width);
     $('input#custom-height').val(height);
-    updateEmbedCode();   
-    updateSecureEmbedCode();   
-    updateBrowserURL(); 
+    updateEmbedCode();
+    updateSecureEmbedCode();
+    updateBrowserURL();
   });
 
   $('input#platform-url').on('keydown', function(e){
@@ -187,7 +187,7 @@ $(document).ready(function() {
       updateIframeSrc();
       updateSecureIframeSrc();
       updateEmbedCode();
-      updateSecureEmbedCode();   
+      updateSecureEmbedCode();
       updateBrowserURL();
     }
   });
@@ -198,7 +198,7 @@ $(document).ready(function() {
       updateIframeSrc();
       updateSecureIframeSrc();
       updateEmbedCode();
-      updateSecureEmbedCode();   
+      updateSecureEmbedCode();
       updateBrowserURL();
     }
   });
@@ -230,7 +230,7 @@ $(document).ready(function() {
       if(categoryValue === '') {
         category = 'all';
       } else {
-        category = categoryValue;        
+        category = categoryValue;
       };
       updateIframeSrc();
       updateSecureIframeSrc();
@@ -246,7 +246,7 @@ $(document).ready(function() {
       if(subCategoryValue === '') {
         subcategory = 'all';
       } else {
-        subcategory = subCategoryValue;        
+        subcategory = subCategoryValue;
       };
       updateIframeSrc();
       updateSecureIframeSrc();
@@ -268,7 +268,7 @@ $(document).ready(function() {
     type = 'standard';
     $('body').addClass('standard-widget');
     $('body').removeClass('secure-widget');
-    $('#widget-type .selection').html('Standard'); 
+    $('#widget-type .selection').html('Standard');
     $('.dropdown.widget-type-dropdown .button').not(this).removeClass('active');
     updateEmbedCode();
     updateSecureEmbedCode();
@@ -283,8 +283,8 @@ $(document).ready(function() {
     $('body').removeClass('standard-widget');
     $('#widget-type .selection').html('Secure');
     $('.dropdown.widget-type-dropdown .button').not(this).removeClass('active');
-    updateEmbedCode();    
-    updateSecureEmbedCode();    
+    updateEmbedCode();
+    updateSecureEmbedCode();
     updateIframeSrc();
     updateSecureIframeSrc();
     updateBrowserURL();
@@ -295,8 +295,8 @@ $(document).ready(function() {
     adcentric = 'true';
     $('#default-view .selection').html('Ads');
     $('.dropdown.default-view-dropdown .button').not(this).removeClass('active');
-    updateEmbedCode();    
-    updateSecureEmbedCode();    
+    updateEmbedCode();
+    updateSecureEmbedCode();
     updateIframeSrc();
     updateSecureIframeSrc();
     updateBrowserURL();
@@ -307,8 +307,8 @@ $(document).ready(function() {
     adcentric = 'false';
     $('#default-view .selection').html('Businesses');
     $('.dropdown.default-view-dropdown .button').not(this).removeClass('active');
-    updateEmbedCode();       
-    updateSecureEmbedCode();       
+    updateEmbedCode();
+    updateSecureEmbedCode();
     updateIframeSrc();
     updateSecureIframeSrc();
   });
@@ -317,8 +317,8 @@ $(document).ready(function() {
     minFeaturedLevel = '0';
     $('#min-featured-level .selection').html('None');
     $('.dropdown.min-featured-level-dropdown .button').not(this).removeClass('active');
-    updateEmbedCode();       
-    updateSecureEmbedCode();       
+    updateEmbedCode();
+    updateSecureEmbedCode();
     updateIframeSrc();
     updateSecureIframeSrc();
     updateBrowserURL();
@@ -328,8 +328,8 @@ $(document).ready(function() {
     minFeaturedLevel = '1';
     $('#min-featured-level .selection').html('Level 1');
     $('.dropdown.min-featured-level-dropdown .button').not(this).removeClass('active');
-    updateEmbedCode();       
-    updateSecureEmbedCode();       
+    updateEmbedCode();
+    updateSecureEmbedCode();
     updateIframeSrc();
     updateSecureIframeSrc();
     updateBrowserURL();
@@ -339,8 +339,8 @@ $(document).ready(function() {
     minFeaturedLevel = '2';
     $('#min-featured-level .selection').html('Level 2');
     $('.dropdown.min-featured-level-dropdown .button').not(this).removeClass('active');
-    updateEmbedCode();       
-    updateSecureEmbedCode();       
+    updateEmbedCode();
+    updateSecureEmbedCode();
     updateIframeSrc();
     updateSecureIframeSrc();
     updateBrowserURL();
@@ -350,11 +350,16 @@ $(document).ready(function() {
     minFeaturedLevel = '3';
     $('#min-featured-level .selection').html('Level 3');
     $('.dropdown.min-featured-level-dropdown .button').not(this).removeClass('active');
-    updateEmbedCode();       
-    updateSecureEmbedCode();       
+    updateEmbedCode();
+    updateSecureEmbedCode();
     updateIframeSrc();
     updateSecureIframeSrc();
     updateBrowserURL();
+  });
+
+  $('#custom-css-preview').on('click', function() {
+    var customCss = $('#custom-css').val();
+    console.log(customCss);
   });
 
 });
