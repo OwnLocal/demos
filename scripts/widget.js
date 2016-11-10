@@ -309,7 +309,7 @@ $(document).ready(function() {
   // apply custom styling
   $('#custom-css-preview').on('click', function() {
     plainTextCss = $('#custom-css').val();
-    customCss = plainTextCss.replace(new RegExp(';', 'g'), ",");
+    customCss = encodeURIComponent(plainTextCss);
     whiteSpaceStrippedCss = plainTextCss.replace(/\n/g, "");
     updateEmbedCode();
     updateSecureEmbedCode();
