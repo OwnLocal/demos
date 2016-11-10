@@ -303,6 +303,7 @@ $(document).ready(function() {
     updateBrowserURL();
   });
 
+  // apply custom styling
   $('#custom-css-preview').on('click', function() {
     $('style').remove();
     var customCss = $('#custom-css').val();

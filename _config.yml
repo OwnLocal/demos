@@ -29,7 +29,7 @@ collections:
     output: true
 
 ################################################################################
-    
+
 locales:
 
   # ENGLISH
@@ -58,6 +58,7 @@ locales:
     email: Email
     print_ads: Print Ads
     valid: Valid
+    preview_custom_styles: Preview custom styles
     homepage:
       hero_text: Find the <strong>best places</strong> <span>in
       suggested_searches: Restaurants,Beauty salons,General contractors,Legal services
@@ -128,6 +129,7 @@ locales:
     email: Correo electrónico
     print_ads: Anuncios impresos
     valid: Vigente
+    preview_custom_styles: Probar estilos personalizados
     homepage:
       hero_text: Encuentre <strong>lo mejor</strong> <span> en
       suggested_searches: Restaurantes,Salones de belleza,Contratistas,Servicios legales
@@ -197,6 +199,7 @@ locales:
     website_tooltip: Webseite in einem<br>neuem Tab öffnen.
     email: Email
     print_ads: Gedruckte Anzeigen
+    preview_custom_styles: Vorschau benutzerdefinierte stile
     valid: Gültig
     homepage:
       hero_text: Finden Sie die <strong>besten</strong> <span> Plätze in
@@ -263,8 +266,8 @@ locales:
     directions: Pokyny
     website: Webová
     share: Sdílet
-    directions_tooltip: 
-    website_tooltip: 
+    directions_tooltip:
+    website_tooltip:
     email: Email
     print_ads: Inzeráty
     valid: Aktivní
@@ -283,7 +286,7 @@ locales:
       real_estate: Nemovitosti
       more: Více
     business:
-      share_tooltip: 
+      share_tooltip:
       share_this_business_on: Sdílet tento podnik na
       about: Informace
       business_hours: Otevírací doba
@@ -313,7 +316,7 @@ locales:
       text: Text
 
 ################################################################################
-    
+
 countries:
 
   # UNITED STATES
@@ -353,7 +356,7 @@ countries:
     business_testimonial_two_text: "Great classy atmosphere, loved the Salmon burger, and once you're done enjoying your food, you've got the lakefront right next door to enjoy!"
     business_testimonial_two_name: Hugh (8/14/16)
     business_youtube_id: r5FdXKs8ats
-    business_sidengo_username: clydes  
+    business_sidengo_username: clydes
     business_helpful_link_one_text: Restaurants in Columbia MD
     business_helpful_link_one_url: clydes.com/columbia#About
     business_helpful_link_two_text: American Food in Columbia MD
@@ -373,7 +376,7 @@ countries:
     ad_date: "September 12, 2016"
     expires_on_text: "Expires on<br>October 12, 2016 (30 days)"
     ad_text: "JUST THE SIGHT OF THEM MAKES BUTTER MELT. WHOLE MAINE LOBSTER $16.95 SEPTEMBER WHILE SUPPLIES LAST. MONTHLY Clyde's SPECIALS www.clydes.com CHEVY CHASE • COLUMBIA • GALLERY PLACE • GEORGETOWN • MARK CENTER RESTON • TOWER OAKS LODGE • TYSONS CORNER • WILLOW CREEK FARM"
-  
+
   # MEXICO
   mx:
     publisher_name: El Norte
@@ -431,7 +434,7 @@ countries:
     ad_date: "31 de agosto, 2016"
     expires_on_text: "Este anuncio está vigente <br>hasta el 30 de septiembre, 2016."
     ad_text: "Barbacoa de arrachera – Ave. San Jerónimo 1106 Colonia Miravalle. Reserva +52 (81) 8347 9205 @lanacionalmx"
-    
+
   # EL SALVADOR
   sv:
     publisher_name: El Diario de Hoy
@@ -469,7 +472,7 @@ countries:
     business_testimonial_two_text: "Los empleados son muy amigables. ¡Estoy contento el servicio que recibí!"
     business_testimonial_two_name: Pedro (10/08/16)
     business_youtube_id: ab1njMuYIlQ
-    # business_sidengo_username: lanacional  
+    # business_sidengo_username: lanacional
     business_helpful_link_one_text: Autos en San Salvador
     business_helpful_link_one_url: unillantas.com.sv/quienes-somos
     business_helpful_link_two_text: Llanter en San Salvador
@@ -527,7 +530,7 @@ countries:
     business_testimonial_two_text: "Freundliches Personal und eine tolle Atmosphäre. Ich werde auf jeden Fall bald wieder kommen!"
     business_testimonial_two_name: Doris (28.05.16)
     business_youtube_id: L90CNTvWTfI
-    business_sidengo_username: CosmeticInstitut  
+    business_sidengo_username: CosmeticInstitut
     business_helpful_link_one_text: Schönheit in Pattensen
     business_helpful_link_one_url: cosmetic-institut.de/cosmetic-institut-pattensen/auszeit-nehmen.html
     business_helpful_link_two_text: Körperpflege in Pattensen
@@ -547,7 +550,7 @@ countries:
     ad_date: "30. Juni 2016"
     expires_on_text: "Diese anzeige läufft <br>bis am 30. Juli 2016"
     ad_text: "Unser highlight im Juli! 30-Jahre 1986–2016. Nun wird gefeiert! Lassen Sie mit uns die Korken knallen! Viele Highlights, großartige Momente und spannende Aktionen erwarten Sie. LAssen Sie sich überraschen. Feiern Sie mit uns. Wir freuen uns auf Sie! Kirsten Leifheit & Dorios Genschow mit dem gesamten Team. Am 02.07.2016 feiern wir 30 Jahre Cosmetic-Institut Pattensen. Cosmetic-Institut • Steinstraße 21 • 30982 Pattensen • 0 51 01-15111 • www.cosmetic-institut.de"
-    
+
   # ÖSTERREICH
   at:
     publisher_name: Die Presse
@@ -585,7 +588,7 @@ countries:
     business_testimonial_two_text: "Ich wollte auf diesem Wege ein ganz großes Lob an Fr. Maderner von der Filiale am Stephansplatz aussprechen. Mein Freund und ich fliegen Ende Juli nach Bali - so eine kompetente und freundliche Beratung habe ich noch nie erlebt. Sie war wirklich sehr bemüht um uns und macht ihren Job wirklich gut. Vielen Dank dafür! Wir freuen uns schon seeeehr auf unseren Urlaub!!"
     business_testimonial_two_name: Melanie (13.06.15)
     business_youtube_id: IRrRqPnERC4
-    # business_sidengo_username: CosmeticInstitut  
+    # business_sidengo_username: CosmeticInstitut
     business_helpful_link_one_text: Reisen in Wien
     business_helpful_link_one_url: ruefa.at/reisebueros/wien/
     business_helpful_link_two_text: Pauschalreisen in Wien
@@ -605,7 +608,7 @@ countries:
     ad_date: "30. August 2016"
     expires_on_text: "Diese anzeige läufft <br>bis am 30. September 2016."
     ad_text: "MS EUROPA | MS EUROPA 2 EINE KLASSE FÜR SICH. „Keine anderen Schiffe erreichen zurzeit die hohen Standards, die MS EUROPA und MS EUROPA 2 und ihre Crews setzen.“ - Douglas Ward, Berlitz Cruise Guide. Wir nehmen uns gerne Zeit und beraten Sie zu Ihrer Kreuzfahrt mit Hapag-Lloyd Cruises: 0180 955 595 60 ruefa.at/hl-cruises ruefa Hapag Lloyd Cruises."
-    
+
   # ČESKÁ REPUBLIKA
   cz:
     publisher_name: Pražský deník
@@ -643,7 +646,7 @@ countries:
     business_testimonial_two_text: "Klasický supermarket. Občas však bývá otevřena jen jedna pokladna, a tak se často tvoří fronty. K dispozici parkoviště, které snad vždy poskytuje mnoho volných parkovacích míst."
     business_testimonial_two_name: Tomáš (10. 8. 2016)
     business_youtube_id: 3DdYzTu_qpo
-    # business_sidengo_username: mightyfineburgers  
+    # business_sidengo_username: mightyfineburgers
     business_helpful_link_one_text: Nakupování v Praha
     business_helpful_link_one_url: penny.cz/Nab%C3%ADdka/Nab%C3%ADdka__/pe_DefaultContent1.aspx
     business_helpful_link_two_text: Obchody v Praha
