@@ -58,7 +58,6 @@ locales:
     email: Email
     print_ads: Print Ads
     valid: Valid
-    preview_custom_styles: Preview custom styles
     homepage:
       hero_text: Find the <strong>best places</strong> <span>in
       suggested_searches: Restaurants,Beauty salons,General contractors,Legal services
@@ -129,7 +128,6 @@ locales:
     email: Correo electrónico
     print_ads: Anuncios impresos
     valid: Vigente
-    preview_custom_styles: Probar estilos personalizados
     homepage:
       hero_text: Encuentre <strong>lo mejor</strong> <span> en
       suggested_searches: Restaurantes,Salones de belleza,Contratistas,Servicios legales
@@ -199,7 +197,6 @@ locales:
     website_tooltip: Webseite in einem<br>neuem Tab öffnen.
     email: Email
     print_ads: Gedruckte Anzeigen
-    preview_custom_styles: Vorschau benutzerdefinierte stile
     valid: Gültig
     homepage:
       hero_text: Finden Sie die <strong>besten</strong> <span> Plätze in
