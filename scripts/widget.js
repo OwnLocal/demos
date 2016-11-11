@@ -6,7 +6,7 @@ var type = getUrlParameter('type') || 'standard',
     minFeaturedLevel = getUrlParameter('min-featured-level') || '0',
     category = getUrlParameter('category') || 'all',
     subcategory = getUrlParameter('subcategory') || 'all',
-    customCss = $('#custom-css').val() || '',
+    customCss = '',
     plainTextCss = '';
 
 if (getUrlParameter('adcentric') === 'true') {
