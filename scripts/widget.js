@@ -38,10 +38,6 @@ function updateSecureEmbedCode() {
   $('.code.secure').html('&lt;var id="ownlocal"&gt;&lt;script async id="ownlocal-script" data-active="' + defaultView + '" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&?h=' + height + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
-function toggleAdvancedOptions() {
-  $('#advanced-options').toggle();
-}
-
 $(document).ready(function() {
 
   if(window.location.href.indexOf("?") > -1) {
@@ -316,6 +312,10 @@ $(document).ready(function() {
     updateIframeSrc();
     updateSecureIframeSrc();
   });
+
+  $('#toggle').on('click', function() {
+    $('#advanced-options').toggle();
+  })
 
 });
 
