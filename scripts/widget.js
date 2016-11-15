@@ -68,12 +68,7 @@ $(document).ready(function() {
     $('body').removeClass('secure-widget');
   };
 
-  if (getUrlParameter('width') === undefined) {
-    $('#widget-size .selection').html(width + 'x' + height);
-  } else {
-    $('#widget-size .selection').html('Popular Sizes');
-  };
-  if (getUrlParameter('height') === undefined) {
+  if (!width || !height) {
     $('#widget-size .selection').html(width + 'x' + height);
   } else {
     $('#widget-size .selection').html('Popular Sizes');
@@ -85,23 +80,19 @@ $(document).ready(function() {
     $('#default-view .selection').html('Businesses');
     $('.default-businesses-button').addClass('active');
   };
-  if (getUrlParameter('min-featured-level') === undefined) {
+  if (!minFeaturedLevel || minFeaturedLevel === '0') {
     $('#min-featured-level .selection').html('None');
     $('.no-min-featured-level-button').addClass('active');
   }
-  if (getUrlParameter('min-featured-level') === '0') {
-    $('#min-featured-level .selection').html('None');
-    $('.no-min-featured-level-button').addClass('active');
-  }
-  if (getUrlParameter('min-featured-level') === '1') {
+  if (minFeaturedLevel === '1') {
     $('#min-featured-level .selection').html('Level 1');
     $('.min-featured-level-one-button').addClass('active');
   }
-  if (getUrlParameter('min-featured-level') === '2') {
+  if (minFeaturedLevel === '2') {
     $('#min-featured-level .selection').html('Level 2');
     $('.min-featured-level-two-button').addClass('active');
   }
-  if (getUrlParameter('min-featured-level') === '3') {
+  if (minFeaturedLevel === '3') {
     $('#min-featured-level .selection').html('Level 3');
     $('.min-featured-level-three-button').addClass('active');
   }
@@ -173,12 +164,7 @@ $(document).ready(function() {
 
   $('input#category').on('keydown', function(e){
     if(e.keyCode == 13){
-      categoryValue = $(this).val();
-      if(categoryValue === '') {
-        category = 'all';
-      } else {
-        category = categoryValue;
-      };
+      category = $(this).val() || 'all';
       updateIframeSrc();
       updateSecureIframeSrc();
       updateEmbedCode();
@@ -189,12 +175,7 @@ $(document).ready(function() {
 
   $('input#subcategory').on('keydown', function(e){
     if(e.keyCode == 13){
-      subCategoryValue = $(this).val();
-      if(subCategoryValue === '') {
-        subcategory = 'all';
-      } else {
-        subcategory = subCategoryValue;
-      };
+      subcategory = $(this).val() || 'all';
       updateIframeSrc();
       updateSecureIframeSrc();
       updateEmbedCode();
@@ -260,49 +241,17 @@ $(document).ready(function() {
     updateSecureIframeSrc();
   });
 
-  $('.no-min-featured-level-button').on('click', function(){
-    minFeaturedLevel = '0';
-    $('#min-featured-level .selection').html('None');
+  $('.min-featured-level').on('click', function(event) {
+    minFeaturedLevel = $(event.target).attr('data-featured');
+    var displayFeaturedLevel = (minFeaturedLevel == '0') ? 'None' : 'Level ' + minFeaturedLevel;
+    $('#min-featured-level .selection').html(displayFeaturedLevel);
     $('.dropdown.min-featured-level-dropdown .button').not(this).removeClass('active');
     updateEmbedCode();
     updateSecureEmbedCode();
     updateIframeSrc();
     updateSecureIframeSrc();
     updateBrowserURL();
-  });
-
-  $('.min-featured-level-one-button').on('click', function(){
-    minFeaturedLevel = '1';
-    $('#min-featured-level .selection').html('Level 1');
-    $('.dropdown.min-featured-level-dropdown .button').not(this).removeClass('active');
-    updateEmbedCode();
-    updateSecureEmbedCode();
-    updateIframeSrc();
-    updateSecureIframeSrc();
-    updateBrowserURL();
-  });
-
-  $('.min-featured-level-two-button').on('click', function(){
-    minFeaturedLevel = '2';
-    $('#min-featured-level .selection').html('Level 2');
-    $('.dropdown.min-featured-level-dropdown .button').not(this).removeClass('active');
-    updateEmbedCode();
-    updateSecureEmbedCode();
-    updateIframeSrc();
-    updateSecureIframeSrc();
-    updateBrowserURL();
-  });
-
-  $('.min-featured-level-three-button').on('click', function(){
-    minFeaturedLevel = '3';
-    $('#min-featured-level .selection').html('Level 3');
-    $('.dropdown.min-featured-level-dropdown .button').not(this).removeClass('active');
-    updateEmbedCode();
-    updateSecureEmbedCode();
-    updateIframeSrc();
-    updateSecureIframeSrc();
-    updateBrowserURL();
-  });
+  })
 
   // apply custom styling
   $('#custom-css-preview').on('click', function() {
