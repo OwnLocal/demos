@@ -25,12 +25,12 @@ theme: minima
 
 collections:
   products:
-  languages:
+  lf_examples:
     output: true
 
 ################################################################################
 
-locales:
+languages:
 
   # ENGLISH
   en:
@@ -314,12 +314,12 @@ locales:
 
 ################################################################################
 
-countries:
+examples:
 
   # UNITED STATES
-  us:
+  us_01:
     publisher_name: Baltimore Sun
-    publisher_folder_name: baltimoresun
+    publisher_folder_name: us_01
     publisher_url: baltimoresun.com
     publisher_city: Baltimore
     publisher_state: MD
@@ -375,9 +375,9 @@ countries:
     ad_text: "JUST THE SIGHT OF THEM MAKES BUTTER MELT. WHOLE MAINE LOBSTER $16.95 SEPTEMBER WHILE SUPPLIES LAST. MONTHLY Clyde's SPECIALS www.clydes.com CHEVY CHASE • COLUMBIA • GALLERY PLACE • GEORGETOWN • MARK CENTER RESTON • TOWER OAKS LODGE • TYSONS CORNER • WILLOW CREEK FARM"
 
   # MEXICO
-  mx:
+  mx_01:
     publisher_name: El Norte
-    publisher_folder_name: elnorte
+    publisher_folder_name: mx_01
     publisher_url: elnorte.com
     publisher_city: Monterrey
     publisher_state: NL
@@ -433,9 +433,9 @@ countries:
     ad_text: "Barbacoa de arrachera – Ave. San Jerónimo 1106 Colonia Miravalle. Reserva +52 (81) 8347 9205 @lanacionalmx"
 
   # EL SALVADOR
-  sv:
+  sv_01:
     publisher_name: El Diario de Hoy
-    publisher_folder_name: elsalvador
+    publisher_folder_name: sv_01
     publisher_url: elsalvador.com
     publisher_city: San Salvador
     publisher_state: SV
@@ -491,9 +491,9 @@ countries:
     ad_text: "Precios Super Bajos. SN828 – 175/70R13 – $37.99. SN828 – 185/65R14 – $41.99. DZ102 – 205/55R16 – $62.99. WhatsApp 7919-9999. Dunlop. Falken. Los Héroes 2225-0000 • La Rábida 2235-4038 • Merlot 2278-4525 • Santa Tecla 2229-5566 • Santa Ana 2240-1914/9138/5811/2455-2120 • San Miguel 2669-5920. Restricciones aplican. Precios válidos hasta el 31 de agosto 2016. No aplica promoción sobre promoción. Incluye instalación, válvulas y balanceo."
 
   # DEUTSCHLAND
-  de:
+  de_01:
     publisher_name: Hannoversche Allgemeine Zeitung
-    publisher_folder_name: haz
+    publisher_folder_name: de_01
     publisher_url: haz.de
     publisher_city: Hannover
     publisher_state: DE
@@ -549,9 +549,9 @@ countries:
     ad_text: "Unser highlight im Juli! 30-Jahre 1986–2016. Nun wird gefeiert! Lassen Sie mit uns die Korken knallen! Viele Highlights, großartige Momente und spannende Aktionen erwarten Sie. LAssen Sie sich überraschen. Feiern Sie mit uns. Wir freuen uns auf Sie! Kirsten Leifheit & Dorios Genschow mit dem gesamten Team. Am 02.07.2016 feiern wir 30 Jahre Cosmetic-Institut Pattensen. Cosmetic-Institut • Steinstraße 21 • 30982 Pattensen • 0 51 01-15111 • www.cosmetic-institut.de"
 
   # ÖSTERREICH
-  at:
+  at_01:
     publisher_name: Die Presse
-    publisher_folder_name: diepresse
+    publisher_folder_name: at_01
     publisher_url: diepresse.com
     publisher_city: Wien
     publisher_state: AT
@@ -607,9 +607,9 @@ countries:
     ad_text: "MS EUROPA | MS EUROPA 2 EINE KLASSE FÜR SICH. „Keine anderen Schiffe erreichen zurzeit die hohen Standards, die MS EUROPA und MS EUROPA 2 und ihre Crews setzen.“ - Douglas Ward, Berlitz Cruise Guide. Wir nehmen uns gerne Zeit und beraten Sie zu Ihrer Kreuzfahrt mit Hapag-Lloyd Cruises: 0180 955 595 60 ruefa.at/hl-cruises ruefa Hapag Lloyd Cruises."
 
   # ČESKÁ REPUBLIKA
-  cz:
+  cz_01:
     publisher_name: Pražský deník
-    publisher_folder_name: denik
+    publisher_folder_name: cz_01
     publisher_url: prazsky.denik.cz
     publisher_city: Praha
     publisher_state: CZ

@@ -1,27 +1,27 @@
 <div id="content" class="business-content">
   <div class="hero-map">
-    <div ol-widgets-map id="business-map" no-zoom-to-markers="true" style="width:100%; height:100%" tile-layer="https://igexternal-a.akamaihd.net/map_tile.php?x={x}&y={y}&z={z}&size=512&ppi=250" zoom="{% if site.countries[page.country].business_zoom %}{{ site.countries[page.country].business_zoom }}{% else %}12{% endif %}"            latitude="{{ site.countries[page.country].business_lat }}" longitude="{{ site.countries[page.country].business_lon }}">
-      <ol-widgets-map-marker latitude="{{ site.countries[page.country].business_lat }}" longitude="{{ site.countries[page.country].business_lon }}"></ol-widgets-map-marker>
+    <div ol-widgets-map id="business-map" no-zoom-to-markers="true" style="width:100%; height:100%" tile-layer="https://igexternal-a.akamaihd.net/map_tile.php?x={x}&y={y}&z={z}&size=512&ppi=250" zoom="{% if site.examples[page.example].business_zoom %}{{ site.examples[page.example].business_zoom }}{% else %}12{% endif %}"            latitude="{{ site.examples[page.example].business_lat }}" longitude="{{ site.examples[page.example].business_lon }}">
+      <ol-widgets-map-marker latitude="{{ site.examples[page.example].business_lat }}" longitude="{{ site.examples[page.example].business_lon }}"></ol-widgets-map-marker>
     </div>
   </div>
   <div class="container" id="content-top">
-    <h1><a>{{ site.countries[page.country].business_name }}</a></h1>
-    <p class="category"><a>{{ site.countries[page.country].business_category }}</a> / <a>{{ site.countries[page.country].business_subcategory }}</a></p>
+    <h1><a>{{ site.examples[page.example].business_name }}</a></h1>
+    <p class="category"><a>{{ site.examples[page.example].business_category }}</a> / <a>{{ site.examples[page.example].business_subcategory }}</a></p>
     <div id="more-info">
-      <p class="with-icon address">{{ site.countries[page.country].business_address_one }}<span class="no-responsive">,</span> <span class="no-full"><br></span> {{ site.countries[page.country].business_address_two }}</p>
-      <p class="with-icon phone no-responsive">{{ site.countries[page.country].business_phone }}</p>
+      <p class="with-icon address">{{ site.examples[page.example].business_address_one }}<span class="no-responsive">,</span> <span class="no-full"><br></span> {{ site.examples[page.example].business_address_two }}</p>
+      <p class="with-icon phone no-responsive">{{ site.examples[page.example].business_phone }}</p>
     </div>
     <div id="calls-to-action">
-      <a id="cta-call-button" class="call-button no-full" data-phone="{{ site.countries[page.country].business_phone_stripped }}" href="tel:{{ site.countries[page.country].business_phone_stripped }}">{{ site.locales[page.locale].call }}</a>
+      <a id="cta-call-button" class="call-button no-full" data-phone="{{ site.examples[page.example].business_phone_stripped }}" href="tel:{{ site.examples[page.example].business_phone_stripped }}">{{ site.languages[page.language].call }}</a>
       <div class="mdl-tooltip" for="cta-call-button">{{ site.countries[page.country].business_phone }}</div>
-      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr={{ site.countries[page.country].business_name }}+{{ site.countries[page.country].business_address_one }}+{{ site.countries[page.country].business_address_two }}" target="_blank">{{ site.locales[page.locale].directions }}</a>
-      <div class="mdl-tooltip" for="cta-directions-button">{{ site.locales[page.locale].directions_tooltip }}</div>
-      <a class="website-button" href="http://{{ site.countries[page.country].business_website }}" id="cta-website-button" target="_blank">{{ site.locales[page.locale].website }}</a>
-      <div class="mdl-tooltip" for="cta-website-button">{{ site.locales[page.locale].website_tooltip }}</div>
-      <a class="share-button" id="cta-share-box">{{ site.locales[page.locale].share }}</a>
-      <div class="mdl-tooltip" for="cta-share-box">{{ site.locales[page.locale].business.share_tooltip }}</div>
+      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr={{ site.examples[page.example].business_name }}+{{ site.examples[page.example].business_address_one }}+{{ site.examples[page.example].business_address_two }}" target="_blank">{{ site.languages[page.language].directions }}</a>
+      <div class="mdl-tooltip" for="cta-directions-button">{{ site.languages[page.language].directions_tooltip }}</div>
+      <a class="website-button" href="http://{{ site.examples[page.example].business_website }}" id="cta-website-button" target="_blank">{{ site.languages[page.language].website }}</a>
+      <div class="mdl-tooltip" for="cta-website-button">{{ site.languages[page.language].website_tooltip }}</div>
+      <a class="share-button" id="cta-share-box">{{ site.languages[page.language].share }}</a>
+      <div class="mdl-tooltip" for="cta-share-box">{{ site.languages[page.language].business.share_tooltip }}</div>
       <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect share-box" for="cta-share-box">
-        <li class="mdl-menu__item" disabled>{{ site.locales[page.locale].business.share_this_business_on }}:</li>
+        <li class="mdl-menu__item" disabled>{{ site.languages[page.language].business.share_this_business_on }}:</li>
         <li class="mdl-menu__item">
           <a class="share-facebook"><i class="material-icons social-icons facebook"></i>Facebook</a>
         </li>
@@ -29,7 +29,7 @@
           <a class="share-twitter"><i class="material-icons social-icons twitter"></i>Twitter</a>
         </li>
         <li class="mdl-menu__item">
-          <a class="share-email"><i class="material-icons">email</i>{{ site.locales[page.locale].email }}</a>
+          <a class="share-email"><i class="material-icons">email</i>{{ site.languages[page.language].email }}</a>
         </li>
       </ul>
     </div>
@@ -38,55 +38,55 @@
     
     <div id="main-column" class="column">
       
-      {% if site.countries[page.country].business_description %}
-      <h3>{{ site.locales[page.locale].business.about }}</h3>
-      {{ site.countries[page.country].business_description }}
+      {% if site.examples[page.example].business_description %}
+      <h3>{{ site.languages[page.language].business.about }}</h3>
+      {{ site.examples[page.example].business_description }}
       {% endif %}
       
-      {% if site.countries[page.country].business_monday_hours %}
-      <h3>{{ site.locales[page.locale].business.business_hours }}</h3>
+      {% if site.examples[page.example].business_monday_hours %}
+      <h3>{{ site.languages[page.language].business.business_hours }}</h3>
       <div id="hours">
         <p>
-          <span class="day">{{ site.locales[page.locale].business.monday }}</span>
-          <span class="time">{{ site.countries[page.country].business_monday_hours }}</span>
+          <span class="day">{{ site.languages[page.language].business.monday }}</span>
+          <span class="time">{{ site.examples[page.example].business_monday_hours }}</span>
         </p>
         <p>
-          <span class="day">{{ site.locales[page.locale].business.tuesday }}</span>
-          <span class="time">{{ site.countries[page.country].business_tuesday_hours }}</span>
+          <span class="day">{{ site.languages[page.language].business.tuesday }}</span>
+          <span class="time">{{ site.examples[page.example].business_tuesday_hours }}</span>
         </p>
         <p>
-          <span class="day">{{ site.locales[page.locale].business.wednesday }}</span>
-          <span class="time">{{ site.countries[page.country].business_wednesday_hours }}</span>
+          <span class="day">{{ site.languages[page.language].business.wednesday }}</span>
+          <span class="time">{{ site.examples[page.example].business_wednesday_hours }}</span>
         </p>
         <p>
-          <span class="day">{{ site.locales[page.locale].business.thursday }}</span>
-          <span class="time">{{ site.countries[page.country].business_thursday_hours }}</span>
+          <span class="day">{{ site.languages[page.language].business.thursday }}</span>
+          <span class="time">{{ site.examples[page.example].business_thursday_hours }}</span>
         </p>
         <p>
-          <span class="day">{{ site.locales[page.locale].business.friday }}</span>
-          <span class="time">{{ site.countries[page.country].business_friday_hours }}</span>
+          <span class="day">{{ site.languages[page.language].business.friday }}</span>
+          <span class="time">{{ site.examples[page.example].business_friday_hours }}</span>
         </p>
         <p>
-          <span class="day">{{ site.locales[page.locale].business.saturday }}</span>
-          <span class="time">{{ site.countries[page.country].business_saturday_hours }}</span>
+          <span class="day">{{ site.languages[page.language].business.saturday }}</span>
+          <span class="time">{{ site.examples[page.example].business_saturday_hours }}</span>
         </p>
         <p>
-           <span class="day">{{ site.locales[page.locale].business.sunday }}</span>
-          <span class="time">{{ site.countries[page.country].business_sunday_hours }}</span>
+           <span class="day">{{ site.languages[page.language ].business.sunday }}</span>
+          <span class="time">{{ site.examples[page.example].business_sunday_hours }}</span>
         </p>
       </div>      
       {% endif %}
       
-      {% if site.countries[page.country].business_testimonial_one_text %}
-      <h3>{{ site.locales[page.locale].business.testimonials }}</h3>
+      {% if site.examples[page.example].business_testimonial_one_text %}
+      <h3>{{ site.languages[page.language].business.testimonials }}</h3>
       <div class="business-testimonials">
-        <p><i class="material-icons">comment</i><span>{{ site.countries[page.country].business_testimonial_one_text }}</span><span class="comment-info">— {{ site.countries[page.country].business_testimonial_one_name }}</span></p>
-        <p><i class="material-icons">comment</i><span>{{ site.countries[page.country].business_testimonial_two_text }}</span><span class="comment-info">— {{ site.countries[page.country].business_testimonial_two_name }}</span></p>
+        <p><i class="material-icons">comment</i><span>{{ site.examples[page.example].business_testimonial_one_text }}</span><span class="comment-info">— {{ site.examples[page.example].business_testimonial_one_name }}</span></p>
+        <p><i class="material-icons">comment</i><span>{{ site.examples[page.example].business_testimonial_two_text }}</span><span class="comment-info">— {{ site.examples[page.example].business_testimonial_two_name }}</span></p>
       </div>
       {% endif %}
       
-      {% if site.countries[page.country].business_youtube_id %}
-      <h3>{{ site.locales[page.locale].business.video }}</h3>
+      {% if site.examples[page.example].business_youtube_id %}
+      <h3>{{ site.languages[page.language].business.video }}</h3>
       <div class="video-wrapper"><iframe src="http://www.youtube.com/embed/{{ site.countries[page.country].business_youtube_id }}?rel=0&amp;showinfo=0" allowfullscreen=""></iframe></div>
       {% endif %}
       
@@ -94,46 +94,46 @@
     
     <div id="sidebar" class="column">
       
-      {% if site.countries[page.country].business_sidengo_username %}
-      <div style="position: relative; margin: 0 auto; width: 100%; height: 0; padding: 0 0 83.33%; box-shadow: 0 0 8px rgba(0,0,0,0.15); overflow-y: auto; -webkit-overflow-scrolling: touch;"><iframe src="http://sidengo.com/{{ site.countries[page.country].business_sidengo_username }}?hide_builder=1&embed=true" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe></div>
+      {% if site.examples[page.example].business_sidengo_username %}
+      <div style="position: relative; margin: 0 auto; width: 100%; height: 0; padding: 0 0 83.33%; box-shadow: 0 0 8px rgba(0,0,0,0.15); overflow-y: auto; -webkit-overflow-scrolling: touch;"><iframe src="http://sidengo.com/{{ site.examples[page.example].business_sidengo_username }}?hide_builder=1&embed=true" style="border: 0 none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"></iframe></div>
       {% endif %}
       
-      <h3>{{ site.locales[page.locale].business.helpful_links }}</h3>
+      <h3>{{ site.languages[page.language].business.helpful_links }}</h3>
       <div class="helpful-links">
-        <span><a href="http://{{ site.countries[page.country].business_helpful_link_one_url }}" class="helpful-link" target="_blank">{{ site.countries[page.country].business_helpful_link_one_text }}</a></span>
-        <span><a href="http://{{ site.countries[page.country].business_helpful_link_two_url }}" class="helpful-link" target="_blank">{{ site.countries[page.country].business_helpful_link_two_text }}</a></span>
-        <span><a href="http://{{ site.countries[page.country].business_helpful_link_three_url }}" class="helpful-link" target="_blank">{{ site.countries[page.country].business_helpful_link_three_text }}</a></span>
+        <span><a href="http://{{ site.examples[page.example].business_helpful_link_one_url }}" class="helpful-link" target="_blank">{{ site.examples[page.example].business_helpful_link_one_text }}</a></span>
+        <span><a href="http://{{ site.examples[page.example].business_helpful_link_two_url }}" class="helpful-link" target="_blank">{{ site.examples[page.example].business_helpful_link_two_text }}</a></span>
+        <span><a href="http://{{ site.examples[page.example].business_helpful_link_three_url }}" class="helpful-link" target="_blank">{{ site.examples[page.example].business_helpful_link_three_text }}</a></span>
       </div>
       
-      {% if site.countries[page.country].business_facebook_username %}
-      <h3>{{ site.locales[page.locale].business.follow_us }}</h3>
-      <div class="facebook-box"><iframe src='https://www.facebook.com/v2.5/plugins/page.php?adapt_container_width=true&width=300&hide_cover=false&href=https%3A%2F%2Ffacebook.com%2F{{ site.countries[page.country].business_facebook_username }}%2F&show_facepile=true'></iframe></div>
+      {% if site.examples[page.example].business_facebook_username %}
+      <h3>{{ site.languages[page.language].business.follow_us }}</h3>
+      <div class="facebook-box"><iframe src='https://www.facebook.com/v2.5/plugins/page.php?adapt_container_width=true&width=300&hide_cover=false&href=https%3A%2F%2Ffacebook.com%2F{{ site.examples[page.example].business_facebook_username }}%2F&show_facepile=true'></iframe></div>
       {% endif %}
       
-      {% if site.countries[page.country].business_coupon_title %}
-      <h3>{{ site.locales[page.locale].business.coupon }}</h3>
+      {% if site.examples[page.example].business_coupon_title %}
+      <h3>{{ site.languages[page.language].business.coupon }}</h3>
       <div class="business-coupons"> 
         <div class="individual-coupon" style="padding: 17px; margin-top: 6px;">
-          <div class="title">{{ site.countries[page.country].business_coupon_title }}</div>
-          <div class="description">{{ site.countries[page.country].business_coupon_description }}</div>
-          <div class="expiration">{{ site.countries[page.country].business_coupon_expiration }}</div>
+          <div class="title">{{ site.examples[page.example].business_coupon_title }}</div>
+          <div class="description">{{ site.examples[page.example].business_coupon_description }}</div>
+          <div class="expiration">{{ site.examples[page.example].business_coupon_expiration }}</div>
         </div>
         <div class="clear"></div>
       </div>
       {% endif %}
   
-      <h3>{{ site.locales[page.locale].business.question_or_comment }}</h3>
+      <h3>{{ site.languages[page.language].business.question_or_comment }}</h3>
       <form class="form" id="contact-form">
-        <input placeholder="{{ site.locales[page.locale].business.name }}" type="text">
-        <input placeholder="{{ site.locales[page.locale].email }}" type="email">
-        <textarea placeholder="{{ site.locales[page.locale].business.message }}" rows="5"></textarea>
-        <button type="submit">{{ site.locales[page.locale].business.submit }}</button>
+        <input placeholder="{{ site.languages[page.language].business.name }}" type="text">
+        <input placeholder="{{ site.languages[page.language].email }}" type="email">
+        <textarea placeholder="{{ site.languages[page.language].business.message }}" rows="5"></textarea>
+        <button type="submit">{{ site.languages[page.language].business.submit }}</button>
       </form>
     
     </div>
     <div class="clear"></div>
     
-    <h3 class="ads-container-title">{{ site.locales[page.locale].business.photos }}</h3>
+    <h3 class="ads-container-title">{{ site.languages[page.language].business.photos }}</h3>
     <div class="photo-gallery">
       <div class="active-image">
         <div class="photo-gallery-close">x</div>
@@ -142,57 +142,56 @@
         </div>
       </div>
       <div class="thumbs">
-        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-01.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-01-thumb.jpg">
-        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-02.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-02-thumb.jpg">
-        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-03.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-03-thumb.jpg">
-        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-04.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-04-thumb.jpg">
-        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-05.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-05-thumb.jpg">
-        <img data-src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-06.jpg" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/photo-06-thumb.jpg">
+        <img data-src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-01.jpg" src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-01-thumb.jpg">
+        <img data-src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-02.jpg" src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-02-thumb.jpg">
+        <img data-src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-03.jpg" src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-03-thumb.jpg">
+        <img data-src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-04.jpg" src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-04-thumb.jpg">
+        <img data-src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-05.jpg" src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-05-thumb.jpg">
+        <img data-src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-06.jpg" src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/photo-06-thumb.jpg">
       </div>
     </div>
     <div class="clear"></div>
     
-    <h3 class="ads-container-title">{{ site.locales[page.locale].print_ads }}</h3>
+    <h3 class="ads-container-title">{{ site.languages[page.language].print_ads }}</h3>
     <div id="promos-container">
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-01-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_one }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-01-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_one }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-02-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_two }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-02-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_two }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-03-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_three }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-03-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_three }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-04-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_four }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-04-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_four }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-05-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_five }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-05-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_five }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-06-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_six }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-06-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_six }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="clear"></div>
     </div>
-
     
   </div>
 </div>

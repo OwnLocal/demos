@@ -20,25 +20,25 @@
     </div>
     <ul class="header-links">
       <li class="directory-home">
-        <a class="with-icon" {% if page.home %}href="./"{% else %}href="../"{% endif %}><i class="material-icons">home</i>{{ site.locales[page.locale].directory_home }}</a>
+        <a class="with-icon" {% if page.home %}href="./"{% else %}href="../"{% endif %}><i class="material-icons">home</i>{{ site.languages[page.language].directory_home }}</a>
       </li>
       <li>
-        <a class="with-icon" {% if page.home %}href="./business"{% else %}href="../business"{% endif %}><i class="material-icons">business</i>{{ site.locales[page.locale].businesses }}</a>
+        <a class="with-icon" {% if page.home %}href="./business"{% else %}href="../business"{% endif %}><i class="material-icons">business</i>{{ site.languages[page.language].businesses }}</a>
       </li>
       <li>
-        <a class="with-icon" {% if page.home %}href="./ad"{% else %}href="../ad"{% endif %}><i class="material-icons">picture_in_picture</i>{{ site.locales[page.locale].ads }}</a>
+        <a class="with-icon" {% if page.home %}href="./ad"{% else %}href="../ad"{% endif %}><i class="material-icons">picture_in_picture</i>{{ site.languages[page.language].ads }}</a>
       </li>
       <li>
-        <a class="with-icon"><i class="material-icons">layers</i>{{ site.locales[page.locale].categories }}</a>
+        <a class="with-icon"><i class="material-icons">layers</i>{{ site.languages[page.language].categories }}</a>
       </li>
       <li class="publisher-url open-in-new-tab">
-        <a href="http://{{ site.countries[page.country].publisher_url }}" target="_blank">{{ site.locales[page.locale].back_to }} {{ site.countries[page.country].publisher_url }}</a>
+        <a href="http://{{ site.examples[page.example].publisher_url }}" target="_blank">{{ site.languages[page.language].back_to }} {{ site.examples[page.example].publisher_url }}</a>
       </li>
       <li class="login-url open-in-new-tab">
-        <a><span>{{ site.locales[page.locale].admin_login }}</span></a>
+        <a><span>{{ site.languages[page.language].admin_login }}</span></a>
       </li>
       <li class="add-business">
-        <a class="with-icon"><i class="material-icons">add</i>{{ site.locales[page.locale].add_business }}</a>
+        <a class="with-icon"><i class="material-icons">add</i>{{ site.languages[page.language].add_business }}</a>
       </li>
     </ul>
     <div class="clear"></div>
@@ -47,17 +47,17 @@
     <div id='header' {% if page.home %}class='home'{% endif %}>
       <div class="container">
         <div class="logo-area">
-          <a class="publisher-logo" href="http://{{ site.countries[page.country].publisher_url }}" id="publisher-logo" target="_blank">
-          <div class="vertical-helper"></div><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/logo.png"></a>
-          <div class="directory-home"><a id="directory-home" {% if page.home %}href="./"{% else %}href="../"{% endif %}>{{ site.locales[page.locale].directory }}</a></div>
+          <a class="publisher-logo" href="http://{{ site.examples[page.example].publisher_url }}" id="publisher-logo" target="_blank">
+          <div class="vertical-helper"></div><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/logo.png"></a>
+          <div class="directory-home"><a id="directory-home" {% if page.home %}href="./"{% else %}href="../"{% endif %}>{{ site.languages[page.language].directory }}</a></div>
         </div>
-        <div class="mdl-tooltip" for="publisher-logo"><span>{{ site.locales[page.locale].back_to }} {{ site.countries[page.country].publisher_url }}</span></div>
-        <button class="mdl-button mdl-js-button mdl-button--icon" id="nav-toggle"><i class="material-icons">menu</i></button> <button class="mdl-button mdl-js-button mdl-button--icon" id="search-toggle" title="{{ site.locales[page.locale].search_for_businesses }}"><i class="material-icons">search</i></button>
+        <div class="mdl-tooltip" for="publisher-logo"><span>{{ site.languages[page.language].back_to }} {{ site.examples[page.example].publisher_url }}</span></div>
+        <button class="mdl-button mdl-js-button mdl-button--icon" id="nav-toggle"><i class="material-icons">menu</i></button> <button class="mdl-button mdl-js-button mdl-button--icon" id="search-toggle" title="{{ site.languages[page.language].search_for_businesses }}"><i class="material-icons">search</i></button>
         <div id='header-search'>
           <form action="/businesses" role='search'>
             <div class="mdl-button mdl-js-button mdl-button--icon button close-button">
               <i class="material-icons">close</i>
-            </div><button class="mdl-button mdl-js-button mdl-button--icon" type='submit'><i class="material-icons">search</i></button> <input autofocus='' class='form-control search-form-header' name="q" placeholder="{{ site.locales[page.locale].search_for_businesses }}" type='text'>
+            </div><button class="mdl-button mdl-js-button mdl-button--icon" type='submit'><i class="material-icons">search</i></button> <input autofocus='' class='form-control search-form-header' name="q" placeholder="{{ site.languages[page.language].search_for_businesses }}" type='text'>
           </form>
         </div>
       </div>
@@ -68,9 +68,9 @@
     <div id='footer'>
       <div class="container">
         <div class="links">
-          <a {% if page.home %}href="./"{% else %}href="../"{% endif %}>{{ site.locales[page.locale].home }}</a>|<a>{{ site.locales[page.locale].terms_of_service }}</a>|<a>{{ site.locales[page.locale].privacy_policy }}</a>|<a class="back-to-top">{{ site.locales[page.locale].go_to_top }}</a>
+          <a {% if page.home %}href="./"{% else %}href="../"{% endif %}>{{ site.languages[page.language].home }}</a>|<a>{{ site.languages[page.language].terms_of_service }}</a>|<a>{{ site.languages[page.language].privacy_policy }}</a>|<a class="back-to-top">{{ site.languages[page.language].go_to_top }}</a>
         </div>
-        <div class="copyright">© {{ site.time | date: '%Y' }} <a href="http://{{ site.countries[page.country].publisher_url }}">{{ site.countries[page.country].publisher_name }}</a>. {{ site.locales[page.locale].powered_by }} <a class="bold-link" href="http://ownlocal.com" target="_blank">OwnLocal</a> {{ site.locales[page.locale].footer_text }}.</div>
+        <div class="copyright">© {{ site.time | date: '%Y' }} <a href="http://{{ site.examples[page.example].publisher_url }}">{{ site.examples[page.example].publisher_name }}</a>. {{ site.languages[page.language].powered_by }} <a class="bold-link" href="http://ownlocal.com" target="_blank">OwnLocal</a> {{ site.languages[page.language].footer_text }}.</div>
       </div>
     </div>
   </div>

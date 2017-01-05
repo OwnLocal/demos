@@ -1,9 +1,9 @@
 <div class="home-content" id="content">
   <div class="hero-map">
-    <div id="home-map" style="width:100%; height:100%" ol-widgets-map latitude="{{ site.countries[page.country].publisher_lat }}" longitude="{{ site.countries[page.country].publisher_lon }}" tile-layer="http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}&s=Ga&scale=3" zoom="{{ site.countries[page.country].publisher_zoom }}"></div>
+    <div id="home-map" style="width:100%; height:100%" ol-widgets-map latitude="{{ site.examples[page.example].publisher_lat }}" longitude="{{ site.examples[page.example].publisher_lon }}" tile-layer="http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}&s=Ga&scale=3" zoom="{{ site.examples[page.example].publisher_zoom }}"></div>
     <div class="home-hero-wrapper">
       <div id="home-hero">
-        <h1>{{ site.locales[page.locale].homepage.hero_text }} {{ site.countries[page.country].publisher_city }}</span></h1>
+        <h1>{{ site.languages[page.language].homepage.hero_text }} {{ site.examples[page.example].publisher_city }}</span></h1>
         <div class="hero-to-businesses"></div>
         <div class="home-search">
           <form>
@@ -13,17 +13,17 @@
       </div>
     </div>
     <div class="home-category-shortcuts">
-      <a class="hero-to-content"><i class="material-icons">explore</i>{{ site.locales[page.locale].homepage.explore }}</a>
-      <a><i class="material-icons">local_dining</i>{{ site.locales[page.locale].homepage.food }}</a>
-      <a><i class="material-icons">local_mall</i>{{ site.locales[page.locale].homepage.shopping }}</a>
-      <a><i class="material-icons">build</i>{{ site.locales[page.locale].homepage.utilities }}</a>
-      <a><i class="material-icons">nature</i>{{ site.locales[page.locale].homepage.lawn }}</a>
-      <a><i class="material-icons">directions_car</i>{{ site.locales[page.locale].homepage.auto }}</a>
-      <a><i class="material-icons">local_hospital</i>{{ site.locales[page.locale].homepage.medical }}</a>
-      <a><i class="material-icons">local_mall</i>{{ site.locales[page.locale].homepage.clothing }}</a>
-      <a><i class="material-icons">local_bar</i>{{ site.locales[page.locale].homepage.nightlife }}</a>
-      <a><i class="material-icons">home</i>{{ site.locales[page.locale].homepage.real_estate }}</a>
-      <a><i class="material-icons">more_horiz</i>{{ site.locales[page.locale].homepage.more }}</a>
+      <a class="hero-to-content"><i class="material-icons">explore</i>{{ site.languages[page.language].homepage.explore }}</a>
+      <a><i class="material-icons">local_dining</i>{{ site.languages[page.language].homepage.food }}</a>
+      <a><i class="material-icons">local_mall</i>{{ site.languages[page.language].homepage.shopping }}</a>
+      <a><i class="material-icons">build</i>{{ site.languages[page.language].homepage.utilities }}</a>
+      <a><i class="material-icons">nature</i>{{ site.languages[page.language].homepage.lawn }}</a>
+      <a><i class="material-icons">directions_car</i>{{ site.languages[page.language].homepage.auto }}</a>
+      <a><i class="material-icons">local_hospital</i>{{ site.languages[page.language].homepage.medical }}</a>
+      <a><i class="material-icons">local_mall</i>{{ site.languages[page.language].homepage.clothing }}</a>
+      <a><i class="material-icons">local_bar</i>{{ site.languages[page.language].homepage.nightlife }}</a>
+      <a><i class="material-icons">home</i>{{ site.languages[page.language].homepage.real_estate }}</a>
+      <a><i class="material-icons">more_horiz</i>{{ site.languages[page.language].homepage.more }}</a>
       <div class="clear"></div>
     </div>
   </div>

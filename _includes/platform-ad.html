@@ -1,81 +1,81 @@
 <div class="promo-content" id="content">
   <div class="promo-wrapper">
     <div class="container">
-      <img class="render-type-image" src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad.jpg">
+      <img class="render-type-image" src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad.jpg">
     </div>
   </div>
   <div class="container" id="content-top">
     <div class="promo-info">
-      <p class="promo-date"><span>{{ site.locales[page.locale].ad.date }}:</span> {{ site.countries[page.country].ad_date }}</p>
-      <p class="promo-status valid" id="promo-status-valid">{{ site.locales[page.locale].ad.active_ad }}</p>
-      <div class="mdl-tooltip mdl-tooltip--large" for="promo-status-valid">{{ site.countries[page.country].expires_on_text }}</div>
+      <p class="promo-date"><span>{{ site.languages[page.language].ad.date }}:</span> {{ site.examples[page.example].ad_date }}</p>
+      <p class="promo-status valid" id="promo-status-valid">{{ site.languages[page.language].ad.active_ad }}</p>
+      <div class="mdl-tooltip mdl-tooltip--large" for="promo-status-valid">{{ site.examples[page.example].expires_on_text }}</div>
       <a id="promo-info-popup"><i class="material-icons">more_vert</i></a>
       <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect actions-box" for="promo-info-popup">
-        <li class="mdl-menu__item"><a href="../business">{{ site.locales[page.locale].ad.full_profile }}</a></li>
-        <li class="mdl-menu__item"><a href="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad.pdf" target="_blank">{{ site.locales[page.locale].ad.download }}</a></li>
-        <li class="mdl-menu__item"><a id="promo-cta-share">{{ site.locales[page.locale].share }}</a></li>
+        <li class="mdl-menu__item"><a href="../business">{{ site.languages[page.language].ad.full_profile }}</a></li>
+        <li class="mdl-menu__item"><a href="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad.pdf" target="_blank">{{ site.languages[page.language].ad.download }}</a></li>
+        <li class="mdl-menu__item"><a id="promo-cta-share">{{ site.languages[page.language].share }}</a></li>
       </ul>
       <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect share-box" for="promo-cta-share">
-        <li class="mdl-menu__item" disabled>{{ site.locales[page.locale].ad.share_this_ad_on }}:</li>
+        <li class="mdl-menu__item" disabled>{{ site.languages[page.language].ad.share_this_ad_on }}:</li>
         <li class="mdl-menu__item"><a><i class="material-icons social-icons facebook"></i>Facebook</a></li>
         <li class="mdl-menu__item"><a><i class="material-icons social-icons twitter"></i>Twitter</a></li>
         <li class="mdl-menu__item"><a><i class="material-icons social-icons pinterest"></i>Pinterest</a></li>
-        <li class="mdl-menu__item"><a><i class="material-icons">email</i>{{ site.locales[page.locale].email }}</a></li>
+        <li class="mdl-menu__item"><a><i class="material-icons">email</i>{{ site.languages[page.language].email }}</a></li>
       </ul>
     </div>
-    <h1><a href="../business">{{ site.countries[page.country].business_name }}</a></h1>
-    <p class="category"><a>{{ site.countries[page.country].business_category }}</a> / <a>{{ site.countries[page.country].business_subcategory }}</a></p>
+    <h1><a href="../business">{{ site.examples[page.example].business_name }}</a></h1>
+    <p class="category"><a>{{ site.examples[page.example].business_category }}</a> / <a>{{ site.examples[page.example].business_subcategory }}</a></p>
     <div id="calls-to-action">
-      <a id="cta-call-button" class="call-button no-full" href="tel:{{ site.countries[page.country].business_phone_stripped }}">{{ site.locales[page.locale].call }}</a>
-      <div class="mdl-tooltip" for="cta-call-button">{{ site.countries[page.country].business_phone }}</div>
-      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr={{ site.countries[page.country].business_name }}+{{ site.countries[page.country].business_address_one }}+{{ site.countries[page.country].business_address_two }}" target="_blank">{{ site.locales[page.locale].directions }}</a>
-      <div class="mdl-tooltip" for="cta-directions-button">{{ site.locales[page.locale].directions_tooltip }}</div>
-      <a id="cta-website-button" class="website-button" href="http://{{ site.countries[page.country].business_website }}" target="_blank">{{ site.locales[page.locale].website }}</a>
-      <div class="mdl-tooltip" for="cta-website-button">{{ site.locales[page.locale].website_tooltip }}</div>
+      <a id="cta-call-button" class="call-button no-full" href="tel:{{ site.examples[page.example].business_phone_stripped }}">{{ site.languages[page.language].call }}</a>
+      <div class="mdl-tooltip" for="cta-call-button">{{ site.examples[page.example].business_phone }}</div>
+      <a id="cta-directions-button" class="directions-button" href="https://maps.google.com?daddr={{ site.examples[page.example].business_name }}+{{ site.examples[page.example].business_address_one }}+{{ site.examples[page.example].business_address_two }}" target="_blank">{{ site.languages[page.language].directions }}</a>
+      <div class="mdl-tooltip" for="cta-directions-button">{{ site.languages[page.language].directions_tooltip }}</div>
+      <a id="cta-website-button" class="website-button" href="http://{{ site.examples[page.example].business_website }}" target="_blank">{{ site.languages[page.language].website }}</a>
+      <div class="mdl-tooltip" for="cta-website-button">{{ site.languages[page.language].website_tooltip }}</div>
     </div>
   </div>
   <div class="container">
     <div class="column" id="main-column">
-      <h3 class="promo-text-toggle"><span>{{ site.locales[page.locale].ad.text }}</span></h3>
-      <p class="promo-text">{{ site.countries[page.country].ad_text }}</p>
+      <h3 class="promo-text-toggle"><span>{{ site.languages[page.language].ad.text }}</span></h3>
+      <p class="promo-text">{{ site.examples[page.example].ad_text }}</p>
     </div>
     <div class="clear"></div>
-    <h3 class="ads-container-title">{{ site.locales[page.locale].print_ads }}</h3>
+    <h3 class="ads-container-title">{{ site.languages[page.language].print_ads }}</h3>
     <div id="promos-container">
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-01-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_one }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-01-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_one }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-02-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_two }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-02-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_two }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-03-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_three }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-03-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_three }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-04-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_four }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-04-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_four }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-05-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_five }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-05-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_five }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="promo-card-wrapper">
         <div class="promo-card">
-          <a class="promo-card-inner" href="../ad"><img src="/images/publishers/{{ site.countries[page.country].publisher_folder_name }}/ad-06-thumb.jpg">
-          <p>{{ site.countries[page.country].business_ad_date_six }} | <span class="valid-info">{{ site.locales[page.locale].valid }}</span></p></a>
+          <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-06-thumb.jpg">
+          <p>{{ site.examples[page.example].business_ad_date_six }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
       <div class="clear"></div>
