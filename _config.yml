@@ -516,10 +516,10 @@ examples:
     business_subcategory: Körperpflege
     business_description: "<p>Ständiges Weiterbilden, flexibles und innovatives Arbeiten im Dienste der Schönheit und der Gesunderhaltung der Haut ist unser höchstes Ziel. Buchen Sie jetzt Ihren Termin bei Cosmetic-Institut, Ihrem gesuchten Kosmetikstudio!</p>"
     business_monday_hours: Geschlossen
-    business_tuesday_hours: 8.00 – 18.00 Uhr
-    business_wednesday_hours: 8.00 – 18.00 Uhr
-    business_thursday_hours: 8.00 – 18.00 Uhr
-    business_friday_hours: 8.00 – 18.00 Uhr
+    business_tuesday_hours: 08.00 – 18.00 Uhr
+    business_wednesday_hours: 08.00 – 18.00 Uhr
+    business_thursday_hours: 08.00 – 18.00 Uhr
+    business_friday_hours: 08.00 – 18.00 Uhr
     business_saturday_hours: Geschlossen
     business_sunday_hours: Geschlossen
     business_testimonial_one_text: "Wirklich toll! Sie haben den besten Service und jeder ist sehr freundlich!"
@@ -627,11 +627,11 @@ examples:
     business_category: Auto
     business_subcategory: Autoreparaturwerkstätten
     business_description: "<p>Wir sind ein junges und dynamisches und engagiertes Team. Unsere Mannschaft ist bestens ausgebildet um Ihnen in Sachen Auto ein kompetenter Partner zu sein. Bei uns sind Sie keine Nummer, bei uns stehen Sie als Mensch im Mittelpunkt unseres Wirkens und Handelns. Überzeugen Sie sich selbst. Lassen Sie Auto-Kennerknechtzu Ihrem starken Team werden. Wir freuen uns auf Sie!</p>"
-    business_monday_hours: 7.00 – 18.00 Uhr
-    business_tuesday_hours: 7.00 – 18.00 Uhr
-    business_wednesday_hours: 7.00 – 18.00 Uhr
-    business_thursday_hours: 7.00 – 18.00 Uhr
-    business_friday_hours: 7.00 – 18.00 Uhr
+    business_monday_hours: 07.00 – 18.00 Uhr
+    business_tuesday_hours: 07.00 – 18.00 Uhr
+    business_wednesday_hours: 07.00 – 18.00 Uhr
+    business_thursday_hours: 07.00 – 18.00 Uhr
+    business_friday_hours: 07.00 – 18.00 Uhr
     business_saturday_hours: Geschlossen
     business_sunday_hours: Geschlossen
     business_testimonial_one_text: "Top Leistung. Auch an meinem alten Corsa. Nur zu empfehlen. Ich komme gern wieder. Ihr seid einfach super."
@@ -664,110 +664,43 @@ examples:
     publisher_lat: 47.78173
     publisher_lon: 9.613308
     publisher_zoom: 17
-    business_name: "Cosmetic-Institut Pattensen"
-    business_address_one: Steinstraße 21
-    business_address_two: 30982 Pattensen
-    business_city: Pattensen
+    business_name: "Restle Kochen-Wohnen-Schenken"
+    business_address_one: Hauptstraße 17
+    business_address_two: 88074 Meckenbeuren
+    business_city: Meckenbeuren
     business_state: DE
-    business_lat: 52.2633586
-    business_lon: 9.7616637
-    # business_zoom: 12
-    business_zip: 30982
-    business_phone: +49 5101 15111
-    business_phone_stripped: "+49510115111"
-    business_website: cosmetic-institut.de
-    business_category: Schönheit
-    business_subcategory: Körperpflege
-    business_description: "<p>Ständiges Weiterbilden, flexibles und innovatives Arbeiten im Dienste der Schönheit und der Gesunderhaltung der Haut ist unser höchstes Ziel. Buchen Sie jetzt Ihren Termin bei Cosmetic-Institut, Ihrem gesuchten Kosmetikstudio!</p>"
-    business_monday_hours: Geschlossen
-    business_tuesday_hours: 8 – 18 Uhr
-    business_wednesday_hours: 8 – 18 Uhr
-    business_thursday_hours: 8 – 18 Uhr
-    business_friday_hours: 8 – 18 Uhr
+    business_lat: 47.6992398
+    business_lon: 9.5630517
+    business_zoom: 10
+    business_zip: 88074
+    business_phone: +49 7542 406873
+    business_phone_stripped: "+497542406873"
+    business_website: haushaltswaren-geschenkartikel-eisenwaren-meckenbeuren.de
+    business_category: Einkaufen
+    business_subcategory: Haushaltsgeräte
+    business_description: "<p>Wenn Ihnen ein schönes Zuhause am Herzen liegt, sind bei RESTLE richtig. Vom hochwertigen Tafelgeschirr über edle Gläser, Bestecke, Porzellan, Pfannen und Töpfe bis zu den passenden Textilien - bei uns in Meckenbeuren finden Sie alles, was Wohnen und Haushalt edler, funktionaler und ansprechender macht.</p><p>Wir bieten Ihnen ein großes Sortiment an Ersatzteilen für Ihre Haushalts- und Eisenwaren. Für Ihren speziellen Liebling lohnt sich evtl. eine Ersatzteilbeschaffung oder Reparatur vor Neuanschaffung.</p>"
+    business_monday_hours: 08.30 – 18.00 Uhr
+    business_tuesday_hours: 08.30 – 18.00 Uhr
+    business_wednesday_hours: 08.30 – 18.00 Uhr
+    business_thursday_hours: 08.30 – 18.00 Uhr
+    business_friday_hours: 08.30 – 18.00 Uhr
     business_saturday_hours: Geschlossen
     business_sunday_hours: Geschlossen
-    business_testimonial_one_text: "Wirklich toll! Sie haben den besten Service und jeder ist sehr freundlich!"
-    business_testimonial_one_name: Maria (02.06.16)
-    business_testimonial_two_text: "Freundliches Personal und eine tolle Atmosphäre. Ich werde auf jeden Fall bald wieder kommen!"
-    business_testimonial_two_name: Doris (28.05.16)
-    business_youtube_id: L90CNTvWTfI
-    business_sidengo_username: CosmeticInstitut
-    # business_helpful_link_one_text: Schönheit in Pattensen
-    business_helpful_link_one_url: cosmetic-institut.de/cosmetic-institut-pattensen/auszeit-nehmen.html
-    business_helpful_link_two_text: Körperpflege in Pattensen
-    business_helpful_link_two_url: cosmetic-institut.de/klassische-behandlung/anti-tox.html
-    business_helpful_link_three_text: Spas in Pattensen
-    business_helpful_link_three_url: cosmetic-institut.de/produkte/66days.html
-    business_facebook_username: Cosmetic-Institut-Pattensen-132831263537021
-    # business_coupon_title: 30 Jahre Jubiläumsrabatt
-    # business_coupon_description: "Siehe Website für Details."
-    # business_coupon_expiration: "Läuft aus am: 31.07.16"
-    business_ad_date_one: 30.06.16
+    business_helpful_link_one_text: Haushaltsgeräte in Meckenbeuren
+    business_helpful_link_one_url: haushaltswaren-geschenkartikel-eisenwaren-meckenbeuren.de/79/anfahrt
+    business_helpful_link_two_text: Haushaltsmobiliar in Meckenbeuren
+    business_helpful_link_two_url: haushaltswaren-geschenkartikel-eisenwaren-meckenbeuren.de/48/impressum
+    business_helpful_link_three_text: Geräteläden in Meckenbeuren
+    business_helpful_link_three_url: haushaltswaren-geschenkartikel-eisenwaren-meckenbeuren.de/49/kontakt
+    business_ad_date_one: 12.01.17
     business_ad_date_two: 25.06.16
     business_ad_date_three: 22.06.16
     business_ad_date_four: 19.06.16
     business_ad_date_five: 16.06.16
     business_ad_date_six: 12.06.16
-    ad_date: "30. Juni 2016"
-    expires_on_text: "Diese anzeige läufft <br>bis am 30. Juli 2016"
-    ad_text: "Unser highlight im Juli! 30-Jahre 1986–2016. Nun wird gefeiert! Lassen Sie mit uns die Korken knallen! Viele Highlights, großartige Momente und spannende Aktionen erwarten Sie. LAssen Sie sich überraschen. Feiern Sie mit uns. Wir freuen uns auf Sie! Kirsten Leifheit & Dorios Genschow mit dem gesamten Team. Am 02.07.2016 feiern wir 30 Jahre Cosmetic-Institut Pattensen. Cosmetic-Institut • Steinstraße 21 • 30982 Pattensen • 0 51 01-15111 • www.cosmetic-institut.de"
-
-  de_05:
-    publisher_name: Hannoversche Allgemeine Zeitung
-    publisher_folder_name: de_05
-    publisher_url: haz.de
-    publisher_city: Hannover
-    publisher_state: DE
-    publisher_lat: 52.3613369
-    publisher_lon: 9.7399719
-    publisher_zoom: 16
-    business_name: "Cosmetic-Institut Pattensen"
-    business_address_one: Steinstraße 21
-    business_address_two: 30982 Pattensen
-    business_city: Pattensen
-    business_state: DE
-    business_lat: 52.2633586
-    business_lon: 9.7616637
-    # business_zoom: 12
-    business_zip: 30982
-    business_phone: +49 5101 15111
-    business_phone_stripped: "+49510115111"
-    business_website: cosmetic-institut.de
-    business_category: Schönheit
-    business_subcategory: Körperpflege
-    business_description: "<p>Ständiges Weiterbilden, flexibles und innovatives Arbeiten im Dienste der Schönheit und der Gesunderhaltung der Haut ist unser höchstes Ziel. Buchen Sie jetzt Ihren Termin bei Cosmetic-Institut, Ihrem gesuchten Kosmetikstudio!</p>"
-    business_monday_hours: Geschlossen
-    business_tuesday_hours: 8 – 18 Uhr
-    business_wednesday_hours: 8 – 18 Uhr
-    business_thursday_hours: 8 – 18 Uhr
-    business_friday_hours: 8 – 18 Uhr
-    business_saturday_hours: Geschlossen
-    business_sunday_hours: Geschlossen
-    business_testimonial_one_text: "Wirklich toll! Sie haben den besten Service und jeder ist sehr freundlich!"
-    business_testimonial_one_name: Maria (02.06.16)
-    business_testimonial_two_text: "Freundliches Personal und eine tolle Atmosphäre. Ich werde auf jeden Fall bald wieder kommen!"
-    business_testimonial_two_name: Doris (28.05.16)
-    business_youtube_id: L90CNTvWTfI
-    business_sidengo_username: CosmeticInstitut
-    business_helpful_link_one_text: Schönheit in Pattensen
-    business_helpful_link_one_url: cosmetic-institut.de/cosmetic-institut-pattensen/auszeit-nehmen.html
-    business_helpful_link_two_text: Körperpflege in Pattensen
-    business_helpful_link_two_url: cosmetic-institut.de/klassische-behandlung/anti-tox.html
-    business_helpful_link_three_text: Spas in Pattensen
-    business_helpful_link_three_url: cosmetic-institut.de/produkte/66days.html
-    business_facebook_username: Cosmetic-Institut-Pattensen-132831263537021
-    # business_coupon_title: 30 Jahre Jubiläumsrabatt
-    # business_coupon_description: "Siehe Website für Details."
-    # business_coupon_expiration: "Läuft aus am: 31.07.16"
-    business_ad_date_one: 30.06.16
-    business_ad_date_two: 25.06.16
-    business_ad_date_three: 22.06.16
-    business_ad_date_four: 19.06.16
-    business_ad_date_five: 16.06.16
-    business_ad_date_six: 12.06.16
-    ad_date: "30. Juni 2016"
-    expires_on_text: "Diese anzeige läufft <br>bis am 30. Juli 2016"
-    ad_text: "Unser highlight im Juli! 30-Jahre 1986–2016. Nun wird gefeiert! Lassen Sie mit uns die Korken knallen! Viele Highlights, großartige Momente und spannende Aktionen erwarten Sie. LAssen Sie sich überraschen. Feiern Sie mit uns. Wir freuen uns auf Sie! Kirsten Leifheit & Dorios Genschow mit dem gesamten Team. Am 02.07.2016 feiern wir 30 Jahre Cosmetic-Institut Pattensen. Cosmetic-Institut • Steinstraße 21 • 30982 Pattensen • 0 51 01-15111 • www.cosmetic-institut.de"
+    ad_date: "12. Januar 2017"
+    expires_on_text: "Diese anzeige läufft <br>bis am 12. Januar 2017"
+    ad_text: "cilio PREMIUM Smoothie Maker auch zum Herstellen von Säften, Desserts und Mixgetränken Der Gesundheit zuliebe: täglich 5 Portionen Obst oder Gemüse — leicht mit dem Smoothie Maker 49,95 + 1 Küchen-messer gratis KOCHEN WOHNEN RESTLE SCHENKEN Hauptstraße 17 88074 Meckenbeuren Tel. 0 75 42/40 68 73"
 
   # ÖSTERREICH
   at_01:
