@@ -42,42 +42,54 @@
     <div class="clear"></div>
     <h3 class="ads-container-title">{{ site.languages[page.language].print_ads }}</h3>
     <div id="promos-container">
+      {% if site.examples[page.example].business_ad_date_one %}
       <div class="promo-card-wrapper">
         <div class="promo-card">
           <a class="promo-card-inner" href="../ad"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-01-thumb.jpg">
           <p>{{ site.examples[page.example].business_ad_date_one }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
+      {% endif %}
+      {% if site.examples[page.example].business_ad_date_two %}
       <div class="promo-card-wrapper">
         <div class="promo-card">
           <a class="promo-card-inner"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-02-thumb.jpg">
           <p>{{ site.examples[page.example].business_ad_date_two }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
+      {% endif %}
+      {% if site.examples[page.example].business_ad_date_three %}
       <div class="promo-card-wrapper">
         <div class="promo-card">
           <a class="promo-card-inner"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-03-thumb.jpg">
           <p>{{ site.examples[page.example].business_ad_date_three }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
+      {% endif %}
+      {% if site.examples[page.example].business_ad_date_four %}
       <div class="promo-card-wrapper">
         <div class="promo-card">
           <a class="promo-card-inner"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-04-thumb.jpg">
           <p>{{ site.examples[page.example].business_ad_date_four }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
+      {% endif %}
+      {% if site.examples[page.example].business_ad_date_five %}
       <div class="promo-card-wrapper">
         <div class="promo-card">
           <a class="promo-card-inner"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-05-thumb.jpg">
           <p>{{ site.examples[page.example].business_ad_date_five }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
+      {% endif %}
+      {% if site.examples[page.example].business_ad_date_six %}
       <div class="promo-card-wrapper">
         <div class="promo-card">
           <a class="promo-card-inner"><img src="/images/lf_examples/{{ site.examples[page.example].publisher_folder_name }}/ad-06-thumb.jpg">
           <p>{{ site.examples[page.example].business_ad_date_six }} | <span class="valid-info">{{ site.languages[page.language].valid }}</span></p></a>
         </div>
       </div>
+      {% endif %}
       <div class="clear"></div>
     </div>
   </div>
