@@ -902,9 +902,9 @@ examples:
     business_phone: 050 82 60 61
     business_phone_stripped: "+3250826061"
     business_website: vm-tegels.be
-    business_category: XXXXXXX
-    business_subcategory: XXXXXXXXX
-    business_description: "<p>Uw thuis is een plek om te genieten. En dat begint bij een karaktervolle sfeer, een warm thuisgevoel en duurzaam design. Bij VM tegels vindt u telkens de nieuwste lichting tegels en wandtegels in alle mogelijke vormen die perfect passen in de actuele tijdgeest. Inspireren. Vernieuwen. Dat is onze missie.</p><p>Wij volgen steeds de nieuwste trends in bouwmaterialen en verrassen u graag met ons bijzondere aanbod. Onze toonzaal staat in het teken van beleving. Een uniek gegeven in de regio. De verschillende corners waarmee wij onze showroom ingericht hebben, stralen elk een eigen sfeer uit. Van gezellig landelijk tot strak modern. Het zijn smaakmakers boordevol creatieve ideeën met elk hun eigen, aparte accenten.</p>"
+    business_category: Bouw
+    business_subcategory: Teigen
+    business_description: "<p>Uw thuis is een plek om te genieten. En dat begint bij een karaktervolle sfeer, een warm thuisgevoel en duurzaam design.</p><p>Wij volgen steeds de nieuwste trends in bouwmaterialen en verrassen u graag met ons bijzondere aanbod. Onze toonzaal staat in het teken van beleving. Een uniek gegeven in de regio. De verschillende corners waarmee wij onze showroom ingericht hebben, stralen elk een eigen sfeer uit. Van gezellig landelijk tot strak modern. Het zijn smaakmakers boordevol creatieve ideeën met elk hun eigen, aparte accenten.</p>"
     business_monday_hours: 9u - 18u30
     business_tuesday_hours: 9u - 18u30
     business_wednesday_hours: 9u - 18u30
@@ -912,10 +912,10 @@ examples:
     business_friday_hours: 9u - 18u30
     business_saturday_hours: 9u - 17u
     business_sunday_hours: Gesloten
-    business_testimonial_one_text: "XXXXXX"
-    business_testimonial_one_name: XXXXX (XX/XX/17)
-    business_testimonial_two_text: "XXXXXX"
-    business_testimonial_two_name: XXXXX (XX/XX/17)
+    business_testimonial_one_text: "Blij met de keuze bij VM Tegels."
+    business_testimonial_one_name: Thybo (09.12.16)
+    business_testimonial_two_text: "Prima service... klantvriendelijk... heel tevreden!"
+    business_testimonial_two_name: Ria (08.08.16)
     business_youtube_id: 0oO9QYcre7c
     business_helpful_link_one_text: Vloeren in Oostkamp
     business_helpful_link_one_url: vm-tegels.be/producten/vloer-en-wandtegels
@@ -924,15 +924,15 @@ examples:
     business_helpful_link_three_text: Natuursteen in Oostkamp
     business_helpful_link_three_url: vm-tegels.be/producten/natuursteen
     business_facebook_username: VM-Tegels-296147247066150
-    business_coupon_title: SXXXXX
-    business_coupon_description: "XXXXX"
-    business_coupon_expiration: "XXXXXX"
-    business_ad_date_one: "31. 8. 2016"
-    business_ad_date_two: "26. 8. 2016"
-    business_ad_date_three: "23. 8. 2016"
-    business_ad_date_four: "18. 8. 2016"
-    business_ad_date_five: "16. 8. 2016"
-    business_ad_date_six: "15. 8. 2016"
-    ad_date: "31. srpna 2016"
-    expires_on_text: "Vyprší dne: 30. září 2016."
-    ad_text: "DĚKUJEME všem zaměstnancům za skvěle odvedenou práci. Od 1. 8. 2016 proto pokladním zvyšujeme mzdy o 2 300 Kč měsíčně a vedoucím prodejen a jejich zástupcům o 1 000 Kč měsíčně. Chcete se i vy stát součástí PENNY a čerpat všechny výhody? Přidejte se k nám. Více na www.penny.jobs.cz, nabor@penny.cz"
+    business_coupon_title: "STUNT VERKOOP!"
+    business_coupon_description: "-50% VLOEREN<br> -50% WANDTEGELS<br> -50% NATUURSTEEN<br> -50% TERRASTEGELS"
+    business_coupon_expiration: "Vrijdag 6 - Maandag 9 jan. 2017"
+    business_ad_date_one: "06.01.17"
+    business_ad_date_two: "02.01.17"
+    business_ad_date_three: "28.12.16"
+    business_ad_date_four: "22.12.16"
+    business_ad_date_five: "18.12.16"
+    business_ad_date_six: "17.12.16"
+    ad_date: "6 januari 2017"
+    expires_on_text: "Vyprší dne: 6 januari 2017."
+    ad_text: "SOLDEN SLECHTS 4 DAGEN! STUNT VERKOOP! VLOEREN | WANDTEGELS | NATUURSTEEN | TERRASTEGELS VM TEGELS TRENDSETTER IN TEGELCONCEPTEN www.vm-tegels.be Doorlopend open van 9 tot 18 uur Kortrijksestraat 86, 8020 Oostkamp T 050 82 60 61 Gratis stockage, ook op langere termijn! Gratis geschenk bij aankoop! Gratis jenever-bar -30% -40% -50% -60%* *Met dank aan onze Europese fabrikanten! Vrijdag 6, Zaterdag 7, Zondag 8 en Maandag 9 january 2017"
