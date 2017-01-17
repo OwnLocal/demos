@@ -312,6 +312,77 @@ languages:
       share_this_ad_on: Sdílet tento inzerát na
       text: Text
 
+  # DUTCH
+  nl:
+    directory_home: Directory Home
+    businesses: Bedrijven
+    ads: Advertentie
+    categories: Categorieën
+    back_to: Terug
+    admin_login: Beheerderslogin
+    add_business: Bedrijf Toevoegen
+    directory: Directory
+    search_for_businesses: Zoeken naar bedrijven
+    home: Thuis
+    terms_of_service: Algemene Voorwarden
+    privacy_policy: Privacy
+    go_to_top: Ga naar boven
+    powered_by: Aangedreven door
+    footer_text: <span>– Lokale media helpen met innovatieve <a href="http://ownlocal.com/platform" target="_blank">print naar web</a> en directory software</span>
+    call: Bel
+    directions: Richtingen
+    website: Website
+    share: Delen
+    directions_tooltip: Routebeschrijvingen
+    website_tooltip: Open website in<br>nieuw Tabblad.
+    email: E-Mail
+    print_ads: Printadvertenties
+    valid: Geldig
+    homepage:
+      hero_text: Vind de <strong>beste plaatsen</strong> <span>in
+      suggested_searches: Restaurants,Schoonheidssalon,Hoofdaannemer,Juridische Diensten
+      explore: Onderzoeken
+      food: Eten
+      shopping: Winkelen
+      utilities: Nutzbedrijven
+      lawn: Gazon
+      auto: Auto
+      medical: Medisch
+      clothing: Kleding
+      nightlife: Naachtleven
+      real_estate: Vastgoed
+      more: Meer
+    business:
+      share_tooltip: Deel deze bedrijf<br>op sociale media.
+      share_this_business_on: Deel deze bedrijf op
+      about: Over Ons
+      business_hours: Kantooruren
+      monday: Maandag
+      tuesday: Dinsdag
+      wednesday: Woensdag
+      thursday: Donderdag
+      friday: Vrijdag
+      saturday: Zaterdag
+      sunday: Zondag
+      testimonials: Getuigenis
+      video: Video
+      helpful_links: Handige Links
+      follow_us: Volg ons
+      coupon: Coupon
+      question_or_comment: "Vragen of Opmerkingen?"
+      name: Naam
+      message: Bericht
+      submit: Indienen
+      photos: Fotos
+    ad:
+      date: Datum
+      active_ad: Actief Ad
+      full_profile: Volledige Profiel
+      download: Downloaden
+      share_this_ad_on: Deel deze advertentie op
+      text: Tekst
+
+
 ################################################################################
 
 examples:
@@ -799,6 +870,63 @@ examples:
     business_coupon_title: SUPER VÍKEND
     business_coupon_description: "Mléko trvanlivé -33%!"
     business_coupon_expiration: "Od čtvrtka 8. 9. do nedêle 11. 9."
+    business_ad_date_one: "31. 8. 2016"
+    business_ad_date_two: "26. 8. 2016"
+    business_ad_date_three: "23. 8. 2016"
+    business_ad_date_four: "18. 8. 2016"
+    business_ad_date_five: "16. 8. 2016"
+    business_ad_date_six: "15. 8. 2016"
+    ad_date: "31. srpna 2016"
+    expires_on_text: "Vyprší dne: 30. září 2016."
+    ad_text: "DĚKUJEME všem zaměstnancům za skvěle odvedenou práci. Od 1. 8. 2016 proto pokladním zvyšujeme mzdy o 2 300 Kč měsíčně a vedoucím prodejen a jejich zástupcům o 1 000 Kč měsíčně. Chcete se i vy stát součástí PENNY a čerpat všechny výhody? Přidejte se k nám. Více na www.penny.jobs.cz, nabor@penny.cz"
+
+  # BELGIUM
+  be_01:
+    publisher_name: Krant van West-Vlaanderen
+    publisher_folder_name: be_01
+    publisher_url: kw.knack.be
+    publisher_city: Roeselare
+    publisher_state: BE
+    publisher_lat: 50.9443997
+    publisher_lon: 3.1359984
+    publisher_zoom: 16
+    business_name: "VM Tegels"
+    business_address_one: Kortrijksestraat 86
+    business_address_two: 8020 Oostkamp
+    business_city: Oostkamp
+    business_state: BE
+    business_lat: 51.1507954
+    business_lon: 3.2334495
+    business_zoom: 15
+    business_zip: 8020
+    business_phone: 050 82 60 61
+    business_phone_stripped: "+3250826061"
+    business_website: vm-tegels.be
+    business_category: XXXXXXX
+    business_subcategory: XXXXXXXXX
+    business_description: "<p>Uw thuis is een plek om te genieten. En dat begint bij een karaktervolle sfeer, een warm thuisgevoel en duurzaam design. Bij VM tegels vindt u telkens de nieuwste lichting tegels en wandtegels in alle mogelijke vormen die perfect passen in de actuele tijdgeest. Inspireren. Vernieuwen. Dat is onze missie.</p><p>Wij volgen steeds de nieuwste trends in bouwmaterialen en verrassen u graag met ons bijzondere aanbod. Onze toonzaal staat in het teken van beleving. Een uniek gegeven in de regio. De verschillende corners waarmee wij onze showroom ingericht hebben, stralen elk een eigen sfeer uit. Van gezellig landelijk tot strak modern. Het zijn smaakmakers boordevol creatieve ideeën met elk hun eigen, aparte accenten.</p>"
+    business_monday_hours: 9u - 18u30
+    business_tuesday_hours: 9u - 18u30
+    business_wednesday_hours: 9u - 18u30
+    business_thursday_hours: 9u - 18u30
+    business_friday_hours: 9u - 18u30
+    business_saturday_hours: 9u - 17u
+    business_sunday_hours: Gesloten
+    business_testimonial_one_text: "XXXXXX"
+    business_testimonial_one_name: XXXXX (XX/XX/17)
+    business_testimonial_two_text: "XXXXXX"
+    business_testimonial_two_name: XXXXX (XX/XX/17)
+    business_youtube_id: 0oO9QYcre7c
+    business_helpful_link_one_text: Vloeren in Oostkamp
+    business_helpful_link_one_url: vm-tegels.be/producten/vloer-en-wandtegels
+    business_helpful_link_two_text: Terrastegels in Oostkamp
+    business_helpful_link_two_url: vm-tegels.be/producten/tuin-en-terrastegels
+    business_helpful_link_three_text: Natuursteen in Oostkamp
+    business_helpful_link_three_url: vm-tegels.be/producten/natuursteen
+    business_facebook_username: VM-Tegels-296147247066150
+    business_coupon_title: SXXXXX
+    business_coupon_description: "XXXXX"
+    business_coupon_expiration: "XXXXXX"
     business_ad_date_one: "31. 8. 2016"
     business_ad_date_two: "26. 8. 2016"
     business_ad_date_three: "23. 8. 2016"

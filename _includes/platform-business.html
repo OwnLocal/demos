@@ -87,7 +87,7 @@
       
       {% if site.examples[page.example].business_youtube_id %}
       <h3>{{ site.languages[page.language].business.video }}</h3>
-      <div class="video-wrapper"><iframe src="http://www.youtube.com/embed/{{ site.countries[page.country].business_youtube_id }}?rel=0&amp;showinfo=0" allowfullscreen=""></iframe></div>
+      <div class="video-wrapper"><iframe src="http://www.youtube.com/embed/{{ site.examples[page.example].business_youtube_id }}?rel=0&amp;showinfo=0" allowfullscreen=""></iframe></div>
       {% endif %} 
   
     </div>
