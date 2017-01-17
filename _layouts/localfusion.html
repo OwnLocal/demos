@@ -53,13 +53,15 @@
         </div>
         <div class="mdl-tooltip" for="publisher-logo"><span>{{ site.languages[page.language].back_to }} {{ site.examples[page.example].publisher_url }}</span></div>
         <button class="mdl-button mdl-js-button mdl-button--icon" id="nav-toggle"><i class="material-icons">menu</i></button> <button class="mdl-button mdl-js-button mdl-button--icon" id="search-toggle" title="{{ site.languages[page.language].search_for_businesses }}"><i class="material-icons">search</i></button>
-        <div id='header-search'>
-          <form action="/businesses" role='search'>
-            <div class="mdl-button mdl-js-button mdl-button--icon button close-button">
-              <i class="material-icons">close</i>
-            </div><button class="mdl-button mdl-js-button mdl-button--icon" type='submit'><i class="material-icons">search</i></button> <input autofocus='' class='form-control search-form-header' name="q" placeholder="{{ site.languages[page.language].search_for_businesses }}" type='text'>
-          </form>
+
+        <div class='header-search'>
+          <div class="search-box-wrapper" role='search'>
+            <form action="/businesses">
+              <input autocomplete="off" class="search" id="searchBox" name="query" placeholder="Search for businesses" type="text">
+            </form>
+          </div>
         </div>
+
       </div>
     </div>
     
