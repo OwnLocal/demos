@@ -1,4 +1,4 @@
-* { box-sizing: border-box; outline: 0 none; margin: 0; padding: 0; }
+* { box-sizing: border-box; outline: 0 none; margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(0,0,0,0); }
 html { font-family: sans-serif; -webkit-text-size-adjust: 100%; }
 body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: -apple-system, BlinkMacSystemFont, 'Roboto'; letter-spacing: -0.2px; margin: 0; padding: 0; font-size: 18px; line-height: 2; color: #3C4858; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.3s ease; }
 body.loaded { opacity: 1; }
@@ -12,6 +12,7 @@ h1, h2, h3, h4, h5, h6, p, ul { margin-bottom: 15px; }
 h1 { font-size: 65px; }
 h2 { margin: 0 0 20px; }
 h4 { color: rgba(75,89,102,0.8); text-transform: uppercase; font-size: 14px; font-weight: 600; margin: 20px 0 10px; }
+form { padding-top: 5px; }
 .clear { clear: both; }
 .float--left { float: left; }
 .float--right { float: right; }
@@ -50,12 +51,16 @@ h4 { color: rgba(75,89,102,0.8); text-transform: uppercase; font-size: 14px; fon
 .section h2 .close { display: none; }
 .section h3 { margin: 0 0 20px; }
 .section.social-icons { background: #F9FAFC; }
+.section.social-icons .section-container { padding: 13px 20px 18px; }
 
-.contact-map { position: relative; height: 0; padding: 0 0 50%; margin: 0 0 20px; box-shadow: 0 1px 8px rgba(0,0,0,0.15); }
+.contact-map { position: relative; height: 320px; margin: 0 0 20px; box-shadow: 0 1px 8px rgba(0,0,0,0.15); }
+.contact-map .leaflet-bar { border: 0 none; box-shadow: 0 1px 1px rgba(0,0,0,0.2); transform: scale(0.9); }
+.contact-map .leaflet-bar a { border-bottom: 1px solid rgba(0,0,0,0.05); }
+.contact-map .leaflet-right { display: none; }
 .half-column { width: calc(50% - 40px); padding: 0 0 15px; }
 .half-column p { float: left; width: 100%; margin: 0; font-size: 16px; color: #6B7C93; }
 .half-column span { float: right; }
-.contact-form input, .contact-form textarea { width: 100%; border: 1px solid rgba(0,0,0,0.1); padding: 10px; display: block; margin: 0 0 15px; font-size: 16px; }
+.contact-form input, .contact-form textarea { -webkit-appearance: none; border-radius: 2px; width: 100%; border: 1px solid rgba(0,0,0,0.1); padding: 10px; display: block; margin: 0 0 15px; font-size: 16px; }
 .contact-form button { -webkit-appearance: none; border: 0 none; background: #60A0E7; text-transform: uppercase; padding: 12px 35px; color: white; box-shadow: 0 -2px 2px rgba(0,0,0,0.1) inset; border-radius: 3px; font-size: 17px; font: 16px/1 'Montserrat'; margin-top: 5px; }
 
 .social-icons { text-align: center; }
@@ -86,7 +91,9 @@ body.generic .section.social-icons { display: none; }
   .cta-button i { font-size: 24px; }
   .section-container { padding: 20px 25px; }
   .section h2 { margin-bottom: 15px; }
-  .social-icons { text-align: left; }
-  .social-icons a { margin: 8px 10px 0 0; }
+  .section.social-icons .section-container { padding: 22px 25px; }
+  .section.social-icons { text-align: left; }
+  .section.social-icons a { margin: 8px 10px 0 0; }
   .half-column { width: 100%; padding: 0; }
+  .contact-map { width: calc(100% + 50px); height: 220px; margin: 0 0 5px -25px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
 }
