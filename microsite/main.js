@@ -3,6 +3,7 @@ $(window).load(function() {
   $('body').addClass('loaded');
   if(window.location.href.indexOf("?generic=true") > -1) {
     $("body").addClass("generic");
+    $('.cover-wrapper').css('background-image', '');
   }
 });
 
