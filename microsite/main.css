@@ -74,7 +74,7 @@ form { padding-top: 5px; }
 .offering-item h3 { font-size: 18px; margin: 0; letter-spacing: 0.2px; }
 .offering-item p { font-size: 16px; margin: 0; opacity: 0.7; line-height: 1.5; letter-spacing: -0.2px; }
 
-.contact-map { position: relative; height: 320px; margin: 0 0 20px; box-shadow: 0 1px 8px rgba(0,0,0,0.15); }
+.contact-map { position: relative; height: 320px; margin: 0 0 20px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
 .contact-map .leaflet-bar { border: 0 none; box-shadow: 0 1px 1px rgba(0,0,0,0.2); transform: scale(0.9); }
 .contact-map .leaflet-bar a { border-bottom: 1px solid rgba(0,0,0,0.05); }
 .contact-map .leaflet-right { display: none; }
