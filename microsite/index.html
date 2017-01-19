@@ -16,7 +16,7 @@
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <script src="./main.js"></script>
   </head>
-  <body class="instant-website">
+  <body class="microsite">
     <div class="cover-wrapper" style="background-image: url('https://source.unsplash.com/category/buildings/1600x900');">
       <ul class="navigation">
         <li class="nav-item about"><a data-target="about"><span>About</span></a></li>
@@ -44,68 +44,88 @@
     </div>
     <div class="sections-wrapper">
       <!-- About Section -->
-      <div id="about" class="section about" data-instagram-username="rafapetrocchi">
-        <h2 class="section-title"><span class="title">About</span><span class="close">X</span></h2>
-        <div class="section-content">
-          <p>EF Tire and Auto Repair has been Broward County’s choice for tires and complete auto repair, service and maintenance since 1979. Our staff of ASE certified master technicians are qualified and trained on all vehicle makes and models, and most of our staff members have been with us for over 20 years. That’s over 300 years of combined experience … not just working on cars, but working on cars together, right here in Pompano Beach.</p>
-          <p>From a simple burned out light bulb to a complete engine overhaul or the most complex computerized systems diagnostics, no job is too big or too small and every job is done right, the first time, every time. Unlike probably any other auto repair shop anywhere, every repair and service performed at EF Tire and Auto Repair is double checked for accuracy by a shop foreman upon completion. And, before any vehicle is returned to a customer, it’s double checked for cleanliness. No one works harder to earn your business.</p>
-          <p>EF Tire and Auto Repair also offers all brands of tires at the lowest prices available. We will meet or beat any competitor’s advertised tire price.</p>
-          <p>We honor most extended warranties, provide free estimates, nationwide warranties and free shuttle service. Why go to the dealer, lose your car for days and pay more when EF will save you time and money?</p>
+      <div class="section about">
+        <div class="section-container">
+          <h2><span class="title">About</span><span class="close">X</span></h2>
+          <div class="section-content">
+            <p>EF Tire and Auto Repair has been Broward County’s choice for tires and complete auto repair, service and maintenance since 1979. Our staff of ASE certified master technicians are qualified and trained on all vehicle makes and models, and most of our staff members have been with us for over 20 years. That’s over 300 years of combined experience … not just working on cars, but working on cars together, right here in Pompano Beach.</p>
+            <p>From a simple burned out light bulb to a complete engine overhaul or the most complex computerized systems diagnostics, no job is too big or too small and every job is done right, the first time, every time. Unlike probably any other auto repair shop anywhere, every repair and service performed at EF Tire and Auto Repair is double checked for accuracy by a shop foreman upon completion. And, before any vehicle is returned to a customer, it’s double checked for cleanliness. No one works harder to earn your business.</p>
+            <p>EF Tire and Auto Repair also offers all brands of tires at the lowest prices available. We will meet or beat any competitor’s advertised tire price.</p>
+            <p>We honor most extended warranties, provide free estimates, nationwide warranties and free shuttle service. Why go to the dealer, lose your car for days and pay more when EF will save you time and money?</p>
+          </div>
         </div>
       </div>
-      <div id="services" class="section offerings">
-        <h2 class="section-title"><span class="title">Services</span><span class="close">X</span></h2>
-        <div class="section-content">
-          <h3>Our Bread</h3>
-          <p>Madagascar Bourbon Vanilla, creamy butter, real fruit and Dutch-processed cocoa are just a few of the quality ingredients we use.</p>
-          <p>Our passion for baking doesn’t stop there. Sourdough, brownies, cookies, scones, muffins and other bakery fare are also on the menu. New recipes are always coming together in our kitchen, so you never know what unexpected treat you may be taking home.</p>
-          <h3>Our Coffee</h3>
-          <p>The Breadery began with a small group of good friends and a common love of home baked treats back in 2010. Months went by, recipes were developed, bread was tasted, and tasted, and tasted, and plans were put in place. In 2012 we opened the doors of our retail shop in the Docklands District of Melbourne!</p>
-          <p>Baked from scratch and in small batches, our bread is made fresh daily. We open our doors Monday to Sunday from 6am to 6pm.</p>
-          <p>Great food, friendly staff, good music, and comfortable surroundings are things you can expect to find at Blue Bird Bake Shop. Come by, bring friends, we can’t wait to meet you!</p>
+      <div class="section offerings">
+        <div class="section-container">
+          <h2><span class="title">Services</span><span class="close">X</span></h2>
+          <div class="section-content">
+            <h3>Our Bread</h3>
+            <p>Madagascar Bourbon Vanilla, creamy butter, real fruit and Dutch-processed cocoa are just a few of the quality ingredients we use.</p>
+            <p>Our passion for baking doesn’t stop there. Sourdough, brownies, cookies, scones, muffins and other bakery fare are also on the menu. New recipes are always coming together in our kitchen, so you never know what unexpected treat you may be taking home.</p>
+            <h3>Our Coffee</h3>
+            <p>The Breadery began with a small group of good friends and a common love of home baked treats back in 2010. Months went by, recipes were developed, bread was tasted, and tasted, and tasted, and plans were put in place. In 2012 we opened the doors of our retail shop in the Docklands District of Melbourne!</p>
+            <p>Baked from scratch and in small batches, our bread is made fresh daily. We open our doors Monday to Sunday from 6am to 6pm.</p>
+            <p>Great food, friendly staff, good music, and comfortable surroundings are things you can expect to find at Blue Bird Bake Shop. Come by, bring friends, we can’t wait to meet you!</p>
+          </div>
         </div>
       </div>
-      <div id="contact" class="section contact">
-        <h2 class="section-title"><span class="title">Contact</span><span class="close">X</span></h2>
-        <div class="section-content">
-
-          <p>207 Collins St.<br>Melbourne VIC, Australia<br>+61 3 9639 95</p>
-          
-          <p>Monday 8:00 AM - 6:00 PM
-Tuesday 8:00 AM - 6:00 PM
-Wednesday 8:00 AM - 6:00 PM
-Thursday 8:00 AM - 6:00 PM
-Friday 8:00 AM - 6:00 PM
-Saturday 8:00 AM - 2:00 PM
-Sunday Closed</p>
-          
-          <form class="form ng-pristine ng-valid" id="contact-form" action="/businesses/4ab6c434-35a9-496a-84f2-84f864411c9e/contact" method="post">
-            <div class="contact-form">
-              <input placeholder="Name" type="text">
-              <input placeholder="Email" type="email">
-              <textarea placeholder="Your message." rows="5" name="message"></textarea>
-              <button type="submit">Submit</button>
-            </div>
-          </form>
-
-          <div id="contact-map" style="height: 400px;"></div>
+      <div class="section contact">
+        <div class="section-container">
+          <h2><span class="title">Contact</span><span class="close">X</span></h2>
+          <div id="contact-map" class="contact-map"></div>
           <script>
-          	var contactMap = L.map('contact-map').setView([-37.8153934, 144.96718009999995], 15);  
+          	var contactMap = L.map('contact-map').setView([26.2769, -80.0975], 13);  
           	L.tileLayer('https://igexternal-a.akamaihd.net/map_tile.php?x={x}&y={y}&z={z}&size=512&ppi=250', {
           		maxZoom: 18 }).addTo(contactMap);
-          	L.marker([-37.8153934, 144.96718009999995]).addTo(contactMap);
+          	L.marker([26.2769, -80.0975]).addTo(contactMap);
+          	contactMap.scrollWheelZoom.disable();
           </script>
+
+
+          <div class="section-content">
+            
+            <div class="half-column float--left">
+              <h4>Address</h4>
+              <p>3725 N Federal Hwy<br>Pompano Beach, FL 33064<br>(954) 780-8490</p>
+              <div class="clear"></div>
+              <h4>Business Hours</h4>
+              <p>Monday <span>8:00 AM - 6:00 PM</span></p>
+              <p>Tuesday <span>8:00 AM - 6:00 PM</span></p>
+              <p>Wednesday <span>8:00 AM - 6:00 PM</span></p>
+              <p>Thursday <span>8:00 AM - 6:00 PM</span></p>
+              <p>Friday <span>8:00 AM - 6:00 PM</span></p>
+              <p>Saturday <span>8:00 AM - 6:00 PM</span></p>
+              <p>Sunday <span>8:00 AM - 6:00 PM</span></p>
+              <div class="clear"></div>
+            </div>
+            
+            <div class="half-column float--right">      
+              <h4>Question or comment?</h4>      
+              <form class="form ng-pristine ng-valid" action="/businesses/4ab6c434-35a9-496a-84f2-84f864411c9e/contact" method="post">
+                <div class="contact-form">
+                  <input placeholder="Name" type="text">
+                  <input placeholder="Email" type="email">
+                  <textarea placeholder="Your message." rows="10" name="message"></textarea>
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+            <div class="clear"></div>
+
+          </div>
         </div>
       </div>
 
-      <div class="section social-icons">
-        <!-- Instagram --><a href="https://instagram.com/rafapetrocchi" target="_blank"><svg><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
-        <!-- Facebook --><a href="https://www.facebook.com/raomx/" target="_blank"><svg><path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" /></svg></a>
-        <!-- Twitter --><!--<a><svg><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg></a>-->
-        <!-- LinkedIn --><!--<a><svg><path d="M19,19H16V13.7A1.5,1.5 0 0,0 14.5,12.2A1.5,1.5 0 0,0 13,13.7V19H10V10H13V11.2C13.5,10.36 14.59,9.8 15.5,9.8A3.5,3.5 0 0,1 19,13.3M6.5,8.31C5.5,8.31 4.69,7.5 4.69,6.5A1.81,1.81 0 0,1 6.5,4.69C7.5,4.69 8.31,5.5 8.31,6.5A1.81,1.81 0 0,1 6.5,8.31M8,19H5V10H8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" /></svg></a>-->
-        <!-- Yelp --><!--<a><svg><path d="M10.59,2C11.23,2 11.5,2.27 11.58,2.97L11.79,6.14L12.03,10.29C12.05,10.64 12,11 11.86,11.32C11.64,11.77 11.14,11.89 10.73,11.58C10.5,11.39 10.31,11.14 10.15,10.87L6.42,4.55C6.06,3.94 6.17,3.54 6.77,3.16C7.5,2.68 9.73,2 10.59,2M14.83,14.85L15.09,14.91L18.95,16.31C19.61,16.55 19.79,16.92 19.5,17.57C19.06,18.7 18.34,19.66 17.42,20.45C16.96,20.85 16.5,20.78 16.21,20.28L13.94,16.32C13.55,15.61 14.03,14.8 14.83,14.85M4.5,14C4.5,13.26 4.5,12.55 4.75,11.87C4.97,11.2 5.33,11 6,11.27L9.63,12.81C10.09,13 10.35,13.32 10.33,13.84C10.3,14.36 9.97,14.58 9.53,14.73L5.85,15.94C5.15,16.17 4.79,15.96 4.64,15.25C4.55,14.83 4.47,14.4 4.5,14M11.97,21C11.95,21.81 11.6,22.12 10.81,22C9.77,21.8 8.81,21.4 7.96,20.76C7.54,20.44 7.45,19.95 7.76,19.53L10.47,15.97C10.7,15.67 11.03,15.6 11.39,15.74C11.77,15.88 11.97,16.18 11.97,16.59V21M14.45,13.32C13.73,13.33 13.23,12.5 13.64,11.91C14.47,10.67 15.35,9.46 16.23,8.26C16.5,7.85 16.94,7.82 17.31,8.16C18.24,9 18.91,10 19.29,11.22C19.43,11.67 19.25,12.08 18.83,12.2L15.09,13.17L14.45,13.32Z" /></svg></a>-->
-        <!-- Email --><a href="mailto:rao@rao.mx" target="_blank"><svg><path d="M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M20,18H4V8L12,13L20,8V18M20,6L12,11L4,6V6H20V6Z" /></svg></a>
-        <!-- WhatsApp --><!--<a><svg><path d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.88,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.18 11.2,12.87C12.11,13.75 12.91,14.04 13.15,14.17C13.39,14.31 13.54,14.29 13.69,14.13L14.5,13.19C14.69,12.94 14.85,13 15.08,13.08L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" /></svg></a>-->        
+        <div class="section social-icons">
+          <div class="section-container">
+          <!-- Instagram --><a target="_blank"><svg><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></a>
+          <!-- Facebook --><a target="_blank"><svg><path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" /></svg></a>
+          <!-- Twitter --><!--<a><svg><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg></a>-->
+          <!-- LinkedIn --><!--<a><svg><path d="M19,19H16V13.7A1.5,1.5 0 0,0 14.5,12.2A1.5,1.5 0 0,0 13,13.7V19H10V10H13V11.2C13.5,10.36 14.59,9.8 15.5,9.8A3.5,3.5 0 0,1 19,13.3M6.5,8.31C5.5,8.31 4.69,7.5 4.69,6.5A1.81,1.81 0 0,1 6.5,4.69C7.5,4.69 8.31,5.5 8.31,6.5A1.81,1.81 0 0,1 6.5,8.31M8,19H5V10H8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" /></svg></a>-->
+          <!-- Yelp --><!--<a><svg><path d="M10.59,2C11.23,2 11.5,2.27 11.58,2.97L11.79,6.14L12.03,10.29C12.05,10.64 12,11 11.86,11.32C11.64,11.77 11.14,11.89 10.73,11.58C10.5,11.39 10.31,11.14 10.15,10.87L6.42,4.55C6.06,3.94 6.17,3.54 6.77,3.16C7.5,2.68 9.73,2 10.59,2M14.83,14.85L15.09,14.91L18.95,16.31C19.61,16.55 19.79,16.92 19.5,17.57C19.06,18.7 18.34,19.66 17.42,20.45C16.96,20.85 16.5,20.78 16.21,20.28L13.94,16.32C13.55,15.61 14.03,14.8 14.83,14.85M4.5,14C4.5,13.26 4.5,12.55 4.75,11.87C4.97,11.2 5.33,11 6,11.27L9.63,12.81C10.09,13 10.35,13.32 10.33,13.84C10.3,14.36 9.97,14.58 9.53,14.73L5.85,15.94C5.15,16.17 4.79,15.96 4.64,15.25C4.55,14.83 4.47,14.4 4.5,14M11.97,21C11.95,21.81 11.6,22.12 10.81,22C9.77,21.8 8.81,21.4 7.96,20.76C7.54,20.44 7.45,19.95 7.76,19.53L10.47,15.97C10.7,15.67 11.03,15.6 11.39,15.74C11.77,15.88 11.97,16.18 11.97,16.59V21M14.45,13.32C13.73,13.33 13.23,12.5 13.64,11.91C14.47,10.67 15.35,9.46 16.23,8.26C16.5,7.85 16.94,7.82 17.31,8.16C18.24,9 18.91,10 19.29,11.22C19.43,11.67 19.25,12.08 18.83,12.2L15.09,13.17L14.45,13.32Z" /></svg></a>-->
+          <!-- Email --><a target="_blank"><svg><path d="M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M20,18H4V8L12,13L20,8V18M20,6L12,11L4,6V6H20V6Z" /></svg></a>
+          <!-- WhatsApp --><!--<a><svg><path d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.88,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.18 11.2,12.87C12.11,13.75 12.91,14.04 13.15,14.17C13.39,14.31 13.54,14.29 13.69,14.13L14.5,13.19C14.69,12.94 14.85,13 15.08,13.08L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" /></svg></a>-->        
+          </div>
       </div>
 
 
