@@ -41,16 +41,16 @@ form { padding-top: 5px; }
 .slogan.subcategory-slogan { display: none; }
 .card-address { margin: 0; padding: 0 0 30px; color: rgba(75,89,102,0.6); font: 15px/1.5 'Merriweather'; }
 
-.cta-container { position: relative; font-size: 0; }
-.cta-button { position: relative; color: #8492A6; display: inline-block; text-transform: uppercase; font-family: 'Montserrat'; line-height: 1; padding: 15px 0; margin: 0; letter-spacing: 1px; font-size: 11px; width: 110px; transition: all 0.3s ease; }
+.cta-container { position: relative; font-size: 0; margin: 0 -40px; }
+.cta-button { position: relative; color: #8492A6; display: inline-block; text-transform: uppercase; font-family: 'Montserrat'; line-height: 1; padding: 15px 0; margin: 0; letter-spacing: 1px; font-size: 11px; width: 100px; transition: all 0.3s ease; }
 .cta-button i { font-size: 30px; display: block; margin: 0 0 10px; }
 .cta-button:hover { color: #3C4858; }
 .cta-button-call { display: none; }
-.cta-separator { display: none; width: 1px; height: 64px; background: rgba(0,0,0,0.075); position: relative; top: 10px; margin: 0 15px; }
+.cta-separator { display: inline-block; width: 1px; height: 64px; background: rgba(0,0,0,0.075); position: relative; top: 10px; margin: 0 20px; }
 
 .section { border-bottom: 1px solid rgba(0,0,0,0.05); }
-.section-container { max-width: 800px; margin: 0 auto; padding: 40px 20px 30px; }
-.section h2 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; }
+.section-container { max-width: 800px; margin: 0 auto; padding: 30px 20px 30px; }
+.section h2 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
 .section h2 .close { display: none; }
 .section h3 { margin: 0 0 20px; font-weight: 500; }
 .section.social-icons { background: #F9FAFC; }
@@ -68,6 +68,11 @@ form { padding-top: 5px; }
 .photo-gallery .thumbs::-webkit-scrollbar-thumb { background: rgba(75, 89, 102, 0.2); }
 .photo-gallery .thumbnail { position: relative; width: 120px; height: 90px; overflow: hidden; display: inline-block; margin-right: 20px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); }
 .photo-gallery .thumbs img { position: absolute; top: 50%; left: 50%; width: auto; height: 100%; max-width: none; min-width: 100%; cursor: pointer; cursor: -webkit-zoom-in; opacity: 0.9; transform: translate(-50%, -50%); transition: all 0.3s ease; }
+
+.offering-item { padding: 20px 0; border-top: 1px solid rgba(0,0,0,0.05); }
+.offering-item:first-child { border-top: 0 none; padding-top: 0; }
+.offering-item h3 { font-size: 18px; margin: 0; letter-spacing: 0.2px; }
+.offering-item p { font-size: 16px; margin: 0; opacity: 0.7; line-height: 1.5; letter-spacing: -0.2px; }
 
 .contact-map { position: relative; height: 320px; margin: 0 0 20px; box-shadow: 0 1px 8px rgba(0,0,0,0.15); }
 .contact-map .leaflet-bar { border: 0 none; box-shadow: 0 1px 1px rgba(0,0,0,0.2); transform: scale(0.9); }
@@ -87,6 +92,7 @@ form { padding-top: 5px; }
 body.generic .logo h1 { display: block; }
 body.generic .logo img { display: none; }
 body.generic .cta-button.non-default-cta { display: none; }
+body.generic .cta-separator { display: none; }
 body.generic .slogan.custom-slogan { display: none; }
 body.generic .slogan.subcategory-slogan { display: block; }
 body.generic .section.about { display: none; }
@@ -100,10 +106,11 @@ body.generic .business-hours { display: none; }
   .cover-card { width: calc(100% - 40px); margin: 25px auto; padding: 30px; }
   .slogan { font-size: 18px; line-height: 1.3; padding-bottom: 20px; }
   .card-address { padding-bottom: 15px; }
-  .cta-container { margin: 0 -30px -5px; padding: 0; }
-  .cta-button { font-size: 10px; width: 90px; }
+  .cta-container { margin: 5px -30px -5px; padding: 15px 0 0; border-top: 1px solid #F8F8F8; }
+  .cta-button { font-size: 10px; width: 90px; padding: 0; }
   .cta-button i { font-size: 24px; }
   .cta-button-call { display: inline-block; }
+  .cta-separator { display: block; width: auto; height: 1px; margin: 10px 0 30px; background: #F8F8F8; }
   .section-container { padding: 20px 25px; }
   .section h2 { margin-bottom: 15px; }
   .photo-gallery .thumbs { padding: 10px 0; }
