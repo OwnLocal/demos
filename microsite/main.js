@@ -17,8 +17,10 @@ $(document).on('click', '.go-to-top', function(){
   return false;
 });
 
-// Show go to top
+
 $(document).ready(function() {
+  
+  // Show go to top
  	$(window).on("scroll", function () {
     if ($(this).scrollTop() > 100) {
       $(".go-to-top").show();
@@ -27,4 +29,29 @@ $(document).ready(function() {
       $(".go-to-top").hide();
     }
   });
+
+  // Photo gallery
+  $(".photo-gallery .thumbs img").on("click", function(){
+    $('.active-image').show();
+    $('.active-image img').attr('src', $(this).attr('data-src').replace('.thumbs', 'large'));
+    $('body').addClass('overflow--hidden');
+  });
+  $(".photo-gallery .photo-gallery-close").on("click", function(){
+    $('.active-image').hide();
+    $('body').removeClass('overflow--hidden');
+  });
+  $(".active-image").on("click", function(){
+    $(this).hide();
+    $('body').removeClass('overflow--hidden');
+  });
+
 });
+
+// Close with ESC
+$(document).keyup(function(e) {
+  if (e.keyCode === 27) {
+    $('body').removeClass('overflow--hidden');
+    $('.photo-gallery .active-image').hide();
+  }
+});
+
