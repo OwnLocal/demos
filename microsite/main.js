@@ -8,7 +8,7 @@ $(window).load(function() {
 });
 
 // Go to content from hero
-$(document).on('click', '.nav-item a, .cta-container a', function() {
+$(document).on('click', '.nav-item a, .cta-container a, .navigation a', function() {
   $("html, body").animate({
     scrollTop: $('.section.' + $(this).attr('data-target')).offset().top
   }, 500);

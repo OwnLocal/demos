@@ -5,8 +5,8 @@
   <meta content="ie=edge" http-equiv="x-ua-compatible">
   <title>EF Tire & Auto Repair</title>
   <meta content="" name="description">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Slab:300,400|Open+Sans:300,400,600,700|Merriweather:300,300i,400,400i|Lora|Montserrat:400,700|Sorts+Mill+Goudy|Varela+Round|Material+Icons' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400|Merriweather:400|Montserrat:400|Material+Icons' rel='stylesheet' type='text/css'>
   <link href="./favicon.png" rel="shortcut icon">
   <link href="./apple-touch-icon.png" rel="apple-touch-icon-precomposed">
   <link href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" rel="stylesheet">
@@ -17,18 +17,41 @@
   <script src="./main.js"></script>
 </head>
 <body class="microsite" data-directory-url="http://mylocal.sun-sentinel.com/pompano-beach-fl/auto/auto-repair-and-maintenance/ef-tire-and-auto-repair-954-780-8490">
+  <!-- if business description OR business offerings -->
+  <div class="navigation">
+    <a data-target="about">About</a>
+    <a data-target="offerings">Offerings</a>    
+    <a data-target="contact">Contact</a>
+  </div>
+  <!-- endif -->
   <div class="cover-wrapper" style="background-image: url('https://images.unsplash.com/photo-1469389335181-2198b4caa734?dpr=2&auto=format&fit=crop&w=1500&h=1126&q=80&cs=tinysrgb&crop=');">
     <div class="table">
       <div class="table-cell">
         <div class="cover-card">
           <a class="logo">
-          <h1>EF Tire & Auto Repair</h1><img src="https://s3.amazonaws.com/media.sidengo.com/uploads/logo_image/filepicker/QZxO8YHFSJ6pGVAgL9l8_eftire_logo.png"></a>
-          <h2 class="slogan custom-slogan">Experience the Difference Experience Makes!</h2>
-          <h2 class="slogan subcategory-slogan">Auto Repair And Maintenance in Ft. Lauderdale.</h2>
-          <h3 class="card-address">3725 N Federal Hwy, Pompano Beach, FL 33064</h3>
+            <!-- if business logo -->
+            <img src="https://s3.amazonaws.com/media.sidengo.com/uploads/logo_image/filepicker/QZxO8YHFSJ6pGVAgL9l8_eftire_logo.png">
+            <!-- else -->
+            <h1>EF Tire & Auto Repair</h1>
+            <!-- end if -->
+          </a>
+          <!-- if busines slogan -->
+          <h2 class="slogan">Experience the Difference Experience Makes!</h2>
+          <!-- end if -->
+          <h3 class="card-address">3725 N Federal Hwy<br>Pompano Beach, FL 33064</h3>
           <div class="cta-container">
-            <a class="cta-button cta-button-about non-default-cta" data-target="about"><i class="material-icons">info_outline</i>About</a> <a class="cta-button cta-button-offerings non-default-cta" data-target="offerings"><i class="material-icons">list</i>Services</a>
-            <div class="cta-separator"></div><a class="cta-button cta-button-contact" data-target="contact"><i class="material-icons">email</i>Contact</a> <a class="cta-button cta-button-call" href="tel:+19547808490"><i class="material-icons">call</i>Call</a> <a class="cta-button cta-button-direction" href="https://maps.google.com?daddr=EF%20Tire%20&%20Auto%20Repair+3725%20N%20Federal%20Hwy+Pompano%20Beach+FL+33064" target="_blank"><i class="material-icons">directions</i>Directions</a>
+            <!-- if business description -->
+            <a class="cta-button cta-button-about non-default-cta" data-target="about"><i class="material-icons">info_outline</i>About</a>
+            <!-- end if -->
+            <!-- if business offerings -->
+            <a class="cta-button cta-button-offerings non-default-cta" data-target="offerings"><i class="material-icons">list</i>Services</a>
+            <!-- endif -->
+            <!-- if business description OR business offerings -->
+            <div class="cta-separator"></div>
+            <!-- endif -->
+            <a class="cta-button cta-button-contact" data-target="contact"><i class="material-icons">email</i>Contact</a>
+            <a class="cta-button cta-button-call" href="tel:+19547808490"><i class="material-icons">call</i>Call</a>
+            <a class="cta-button cta-button-direction" href="https://maps.google.com?daddr=EF%20Tire%20&%20Auto%20Repair+3725%20N%20Federal%20Hwy+Pompano%20Beach+FL+33064" target="_blank"><i class="material-icons">directions</i>Directions</a>
           </div>
         </div>
       </div>
@@ -38,7 +61,7 @@
     <i class="material-icons">vertical_align_top</i>
   </div>
   <div class="sections-wrapper">
-    <!-- About Section -->
+    <!-- if business description -->
     <div class="section about">
       <div class="section-container">
         <h2><span class="title">About</span><span class="close">X</span></h2>
@@ -63,6 +86,8 @@
         </div>
       </div>
     </div>
+    <!-- endif -->
+    <!-- if business offerings -->
     <div class="section offerings">
       <div class="section-container">
         <h2><span class="title">Services</span><span class="close">X</span></h2>
@@ -163,6 +188,7 @@
         </div>
       </div>
     </div>
+    <!-- end if -->
     <div class="section contact">
       <div class="section-container">
         <h2><span class="title">Contact</span><span class="close">X</span></h2>
@@ -183,6 +209,7 @@
               (954) 780-8490</p>
               <div class="clear"></div>
             </div>
+            <!-- if business hours -->
             <div class="business-hours">
               <h4>Business Hours</h4>
               <p>Monday <span>8:00 AM - 6:00 PM</span></p>
@@ -194,7 +221,9 @@
               <p>Sunday <span>8:00 AM - 6:00 PM</span></p>
               <div class="clear"></div>
             </div>
+            <!-- end if -->
           </div>
+          <!-- if business email -->
           <div class="half-column float--right business-contact-form">
             <h4>Question or comment?</h4>
             <form action="/businesses/4ab6c434-35a9-496a-84f2-84f864411c9e/contact" class="form ng-pristine ng-valid" method="post">
@@ -204,6 +233,7 @@
               </div>
             </form>
           </div>
+          <!-- end if-->
           <div class="clear"></div>
         </div>
       </div>
