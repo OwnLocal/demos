@@ -41,10 +41,11 @@ form { padding-top: 5px; }
 .slogan.subcategory-slogan { display: none; }
 .card-address { margin: 0; padding: 0 0 30px; color: rgba(75,89,102,0.6); font: 15px/1.5 'Merriweather'; }
 
-.cta-container { position: relative; margin: 0 0 -40px; padding: 0 0 30px; font-size: 0; }
-.cta-button { position: relative; color: #8492A6; display: inline-block; text-transform: uppercase; font-family: 'Montserrat'; line-height: 1; padding: 15px; margin: 0; letter-spacing: 1px; font-size: 11px; width: 110px; transition: all 0.3s ease; }
+.cta-container { position: relative; font-size: 0; }
+.cta-button { position: relative; color: #8492A6; display: inline-block; text-transform: uppercase; font-family: 'Montserrat'; line-height: 1; padding: 15px 0; margin: 0; letter-spacing: 1px; font-size: 11px; width: 110px; transition: all 0.3s ease; }
 .cta-button i { font-size: 30px; display: block; margin: 0 0 10px; }
 .cta-button:hover { color: #3C4858; }
+.cta-button-call { display: none; }
 .cta-separator { display: none; width: 1px; height: 64px; background: rgba(0,0,0,0.075); position: relative; top: 10px; margin: 0 15px; }
 
 .section { border-bottom: 1px solid rgba(0,0,0,0.05); }
@@ -86,9 +87,6 @@ form { padding-top: 5px; }
 body.generic .logo h1 { display: block; }
 body.generic .logo img { display: none; }
 body.generic .cta-button.non-default-cta { display: none; }
-body.generic .cta-button-contact { width: auto; font-size: 16px; border: 2px solid #8492A6; padding: 15px 40px; margin: 5px 0 15px; transition: all 0.3s ease; opacity: 0.8; }
-body.generic .cta-button-contact:hover { background: #8492A6; color: white; }
-body.generic .cta-button-contact i { display: none; }
 body.generic .slogan.custom-slogan { display: none; }
 body.generic .slogan.subcategory-slogan { display: block; }
 body.generic .section.about { display: none; }
@@ -106,6 +104,7 @@ body.generic .business-contact-form { display: none; }
   .cta-container { margin: 0 -30px -5px; padding: 0; }
   .cta-button { font-size: 10px; width: 90px; }
   .cta-button i { font-size: 24px; }
+  .cta-button-call { display: inline-block; }
   .section-container { padding: 20px 25px; }
   .section h2 { margin-bottom: 15px; }
   .photo-gallery .thumbs { padding: 10px 0; }
