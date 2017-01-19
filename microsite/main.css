@@ -21,15 +21,14 @@ h4 { color: rgba(75,89,102,0.8); text-transform: uppercase; font-size: 14px; fon
 .table { display: table; width: 100%; height: 100%; }
 .table-cell { display: table-cell; vertical-align: middle; }
 
-.cover-wrapper { position: relative; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: center center; text-align: center; }
+.cover-wrapper { position: relative; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: center center; text-align: center; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
 .cover-wrapper:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; background: #04c; mix-blend-mode: screen; opacity: 0.3; }
 
-.navigation { position: absolute; z-index: 100; top: 0; left: 0; width: 100%; list-style: none; font-size: 15px; line-height: 60px; background: white; box-shadow: 0 0 1px rgba(0,0,0,0.1); display: none; }
-.navigation li { display: inline-block; margin: 0 15px; text-transform: uppercase; }
-.navigation li a { color: #999999; font-weight: 500; }
-.navigation li a:hover span { border-bottom-color: inherit; }
-
 .cover-card { position: relative; background: white; width: calc(100% - 100px); margin: 0 auto; max-width: 600px; padding: 40px; box-shadow: 0 0 8px rgba(0,0,0,0.05); z-index: 100; }
+
+.go-to-top { display: none; position: fixed; bottom: 25px; right: 25px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); border-radius: 2px; padding: 10px; background: white; opacity: 0.9; cursor: pointer; transition: all 0.3s ease; }
+.go-to-top:hover { opacity: 1; }
+.go-to-top i { display: block; font-size: 30px; color: #6B7C93; opacity: 0.8; }
 
 .logo { display: inline-block; padding: 0 0 30px; max-width: 300px; cursor: default; pointer-events: none; }
 .logo h1 { display: none; text-transform: uppercase; color: #4B5966; font-weight: bold; font-size: 36px; line-height: 1; letter-spacing: -0.7px; margin: 0; }
@@ -87,5 +86,7 @@ body.generic .section.social-icons { display: none; }
   .cta-button i { font-size: 24px; }
   .section-container { padding: 20px 25px; }
   .section h2 { margin-bottom: 15px; }
+  .social-icons { text-align: left; }
+  .social-icons a { margin: 8px 10px 0 0; }
   .half-column { width: 100%; padding: 0; }
 }
