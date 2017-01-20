@@ -8,7 +8,7 @@ $(window).load(function() {
 });
 
 // Go to content from hero
-$(document).on('click', '.nav-item a, .cta-container a, .navigation a', function() {
+$(document).on('click', '.nav-item a, .cta-container a', function() {
   $("html, body").animate({
     scrollTop: $('.section.' + $(this).attr('data-target')).offset().top
   }, 500);
@@ -20,6 +20,11 @@ $(document).on('click', '.go-to-top', function() {
     scrollTop: 0
   }, 500);
   return false;
+});
+
+// Promo CTA
+$(document).on('click', '.promo-cta a', function() {
+  $('.sections-wrapper').addClass('promo-cta-on');
 });
 
 $(document).ready(function() {
@@ -52,5 +57,6 @@ $(document).keyup(function(e) {
   if (e.keyCode === 27) {
     $('body').removeClass('overflow--hidden');
     $('.photo-gallery .active-image').hide();
+    $('.sections-wrapper').removeClass('promo-cta-on');
   }
 });
