@@ -26,6 +26,9 @@ $(document).on('click', '.go-to-top', function() {
 $(document).on('click', '.promo-ctas a', function() {
   $('.section.' + $(this).attr('data-target')).addClass('promo-cta-on');
 });
+$(document).on('click', '.section h2 .close', function() {
+  $('.section').removeClass('promo-cta-on');
+});
 
 $(document).ready(function() {
   // Show go to top

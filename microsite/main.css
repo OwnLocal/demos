@@ -24,7 +24,7 @@ form { padding-top: 5px; }
 .table { display: table; width: 100%; height: 100%; }
 .table-cell { display: table-cell; vertical-align: middle; }
 
-.cover-wrapper { position: relative; width: 100%; height: 100%; background-image: url('https://source.unsplash.com/category/buildings/1600x900'); background-repeat: no-repeat; background-size: cover; background-position: center center; text-align: center; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+.cover-wrapper { position: relative; width: 100%; height: 100%; background-image: url('https://source.unsplash.com/category/buildings/1600x900'); background-repeat: no-repeat; background-size: cover; background-position: center center; text-align: center; }
 .cover-wrapper:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; background: #04c; mix-blend-mode: screen; opacity: 0.3; }
 
 .cover-card { position: relative; background: white; background: linear-gradient(#fff, rgba(255,255,255,0.975)); width: calc(100% - 100px); margin: 0 auto; max-width: 600px; padding: 55px 40px 40px; box-shadow: 0 1px 8px rgba(0,0,0,0.05); z-index: 100; }
@@ -107,7 +107,7 @@ form { padding-top: 5px; }
 /* How unedited businesses look */
 body.generic .logo h1 { display: block; }
 body.generic .logo img { display: none; }
-body.generic .cta-button.non-default-cta { display: none; }
+body.generic .non-default-cta { display: none; }
 body.generic .cta-separator { display: none; }
 body.generic .slogan { display: none; }
 body.generic .section.about { display: none; }
@@ -164,9 +164,20 @@ body.generic .business-contact-form { display: none; }
   .promo-ctas a { color: white; display: inline-block; font-size: 13px; line-height: 1; letter-spacing: 0; padding: 8px 10px; transition: all 0.3s ease; }
   .promo-ctas a span { border-bottom: 2px solid transparent; }
   .promo-ctas a:hover span { border-bottom-color: white; }
-  .section { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 1000; }
+  .section { display: none; overflow-x: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 1000; font-size: 15px; line-height: 1.7; color: rgba(42, 46, 53, 0.7); -webkit-overflow-scrolling: touch; }
   .section.promo-cta-on { display: block; background: white; }
-  .section-container { padding: 15px; }
-  .section h2 { line-height: 1; }
-  .go-to-top { z-index: 10000; bottom: 15px; right: 15px; }
+  .section-container { padding: 60px 15px 15px; }
+  .section h2 { position: fixed; width: 100%; line-height: 1; padding: 15px; top: 0; left: 0; background: rgba(255,255,255,0.97); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04); font-size: 15px; color: #4B5966; z-index: 100; font-weight: 500; letter-spacing: normal; }
+  .section h2 .close { display: block; position: absolute; top: 0; right: 12px; padding: 0 15px; font-size: 24px; font-weight: normal; text-transform: lowercase; line-height: 40px; cursor: pointer; opacity: 0.8; transition: all 0.3s ease; }
+  .section h2 .close:hover { opacity: 1; }
+  .offering-item { padding: 15px 0; }
+  .offering-item h3 { font-size: 15px; }
+  .offering-item p { font-size: 13px; }
+  .half-column p { font-size: inherit; }
+  .go-to-top { display: none; opacity: 0; pointer-events: none; }
+  .photo-gallery .photo-gallery-close { display: none; }
+  .contact-map { margin: -15px -15px -3px; width: auto; height: 100px; }
+  h4 { font-size: 13px; margin-bottom: 5px; }
+  ::-webkit-scrollbar { -webkit-appearance: none; width: 12px; height: 12px; background: #f6f7f8; border-radius: 100px; overflow: hidden; border: 2px solid white; }
+  ::-webkit-scrollbar-thumb { background: rgba(75, 89, 102, 0.2); border-radius: 100px; border: 2px solid white; }  
 }
