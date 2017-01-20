@@ -150,7 +150,7 @@ body.generic .business-contact-form { display: none; }
   .cta-button { width: 80px; }
 }
 
-/* Width < 301px */
+/* PROMO Width < 301px */
 @media screen and (max-width: 300px) {
   .cover-wrapper:after { background: linear-gradient(rgba(75, 89, 102, 0.4), rgba(75, 89, 102, 0.7)); mix-blend-mode: normal; opacity: 0.8; }
   .cover-card { position: absolute; width: 100%; height: 100%; margin: 0; padding: 0; top: 0; overflow: hidden; background: transparent; box-shadow: 0 0 0 transparent; text-align: left; }
@@ -180,4 +180,12 @@ body.generic .business-contact-form { display: none; }
   h4 { font-size: 13px; margin-bottom: 5px; }
   ::-webkit-scrollbar { -webkit-appearance: none; width: 12px; height: 12px; background: #f6f7f8; border-radius: 100px; overflow: hidden; border: 2px solid white; }
   ::-webkit-scrollbar-thumb { background: rgba(75, 89, 102, 0.2); border-radius: 100px; border: 2px solid white; }  
+}
+
+/* PROMO Width < 301px AND Height > 500px */
+@media screen and (max-width: 300px) and (min-height: 400px) {
+  .logo { top: 25px; padding: 15px; }
+  .logo h1 { font-size: 32px; }
+  .logo img { max-height: 160px; }
+  .slogan { font-size: 32px; }
 }
