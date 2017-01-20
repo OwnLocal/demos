@@ -27,9 +27,6 @@ form { padding-top: 5px; }
 .cover-wrapper { position: relative; width: 100%; height: 100%; background-image: url('https://source.unsplash.com/category/buildings/1600x900'); background-repeat: no-repeat; background-size: cover; background-position: center center; text-align: center; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
 .cover-wrapper:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; background: #04c; mix-blend-mode: screen; opacity: 0.3; }
 
-.navigation { display: none; position: fixed; text-align: center; top: 0; left: 0; z-index: 1000; line-height: 40px; background: white; width: 100%; box-shadow: 0 1px 1px rgba(0,0,0,0.05); }
-.navigation a { color: #4b5966; opacity: 0.8; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 0 10px; }
-
 .cover-card { position: relative; background: white; width: calc(100% - 100px); margin: 0 auto; max-width: 600px; padding: 40px; box-shadow: 0 0 8px rgba(0,0,0,0.05); z-index: 100; }
 
 .go-to-top { display: none; position: fixed; bottom: 25px; right: 25px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); border-radius: 2px; padding: 10px; background: white; opacity: 0.9; cursor: pointer; transition: all 0.3s ease; z-index: 1000; }
@@ -37,15 +34,17 @@ form { padding-top: 5px; }
 .go-to-top i { display: block; font-size: 30px; color: #6B7C93; opacity: 0.8; }
 
 .logo { display: inline-block; padding: 0 0 30px; max-width: 300px; cursor: default; pointer-events: none; }
-.logo h1 { display: none; text-transform: uppercase; color: #4B5966; font-weight: bold; font-size: 40px; line-height: 1; letter-spacing: -0.7px; margin: 0 -100px; opacity: 0.9; }
+.logo h1 { display: none; text-transform: uppercase; color: #4B5966; font-weight: bold; font-size: 36px; line-height: 1; letter-spacing: -0.7px; margin: 0; }
 .logo img { max-width: 100%; max-height: 160px; }
-.slogan { font: 300 33px/1.1 'Roboto';color: rgba(75,89,102,0.9); margin: 0 auto; max-width: 500px; padding: 0 0 30px; letter-spacing: -0.1px; display: block; }
+.slogan { font-size: 26px; font-weight: 400; color: rgba(75,89,102,0.8); margin: 0 auto; max-width: 400px; padding: 0 0 30px; line-height: 1.1; letter-spacing: -0.1px; font-family: 'Varela Round'; }
+.slogan.custom-slogan { display: block; }
+.slogan.subcategory-slogan { display: none; }
 .card-address { margin: 0; padding: 0 0 30px; color: rgba(75,89,102,0.6); font: 15px/1.5 'Merriweather'; }
 
 .cta-container { position: relative; font-size: 0; margin: 0 -40px; }
 .cta-button { position: relative; color: #8492A6; display: inline-block; text-transform: uppercase; font-family: 'Montserrat'; line-height: 1; padding: 15px 0; margin: 0; letter-spacing: 1px; font-size: 11px; width: 100px; transition: all 0.3s ease; }
 .cta-button i { font-size: 30px; display: block; margin: 0 0 10px; }
-.cta-button:hover { color: rgba(75,89,102,0.8); }
+.cta-button:hover { color: #3C4858; }
 .cta-button-call { display: none; }
 .cta-separator { display: inline-block; width: 1px; height: 64px; background: rgba(0,0,0,0.075); position: relative; top: 10px; margin: 0 20px; }
 
@@ -94,7 +93,8 @@ body.generic .logo h1 { display: block; }
 body.generic .logo img { display: none; }
 body.generic .cta-button.non-default-cta { display: none; }
 body.generic .cta-separator { display: none; }
-body.generic .slogan { display: none; }
+body.generic .slogan.custom-slogan { display: none; }
+body.generic .slogan.subcategory-slogan { display: block; }
 body.generic .section.about { display: none; }
 body.generic .section.offerings { display: none; }
 body.generic .section.social-icons { display: none; }
@@ -104,16 +104,13 @@ body.generic .business-hours { display: none; }
 @media screen and (max-width: 700px) {
   body { font-size: 16px; }
   .cover-card { width: calc(100% - 40px); margin: 25px auto; padding: 30px; }
-  .logo h1 { margin: 0; font-size: 34px; }
-  .logo img { max-height: 100px; }
-  .slogan { font-size: 24px; line-height: 1.3; padding-bottom: 30px; }
-  .card-address { padding-bottom: 30px; }
-  .cta-container { margin: 0 -30px -5px; padding: 20px 0 0; border-top: 1px solid #F8F8F8; }
+  .slogan { font-size: 18px; line-height: 1.3; padding-bottom: 20px; }
+  .card-address { padding-bottom: 15px; }
+  .cta-container { margin: 5px -30px -5px; padding: 15px 0 0; border-top: 1px solid #F8F8F8; }
   .cta-button { font-size: 10px; width: 90px; padding: 0; }
   .cta-button i { font-size: 24px; }
-  .cta-button.non-default-cta { display: none; }
   .cta-button-call { display: inline-block; }
-  .cta-separator { display: none }
+  .cta-separator { display: block; width: auto; height: 1px; margin: 10px 0 30px; background: #F8F8F8; }
   .section-container { padding: 20px 25px; }
   .section h2 { margin-bottom: 15px; }
   .photo-gallery .thumbs { padding: 10px 0; }
