@@ -44,16 +44,16 @@ form { padding-top: 5px; }
 .card-address { margin: 0; padding: 0 0 25px; color: rgba(75,89,102,0.6); font: 15px/1.5 'Merriweather'; }
 
 .cta-container { position: relative; font-size: 0; margin: 0 -40px; }
-.cta-button { position: relative; color: #8492A6; display: inline-block; text-transform: uppercase; font-family: 'Montserrat'; line-height: 1; padding: 15px 0; margin: 0; letter-spacing: 1px; font-size: 11px; width: 100px; transition: all 0.3s ease; }
+.cta-button { position: relative; color: #8492A6; display: inline-block; text-transform: uppercase; font-family: 'Montserrat'; line-height: 1; padding: 15px 0; margin: 0; letter-spacing: 1px; font-size: 11px; width: 110px; transition: all 0.3s ease; }
 .cta-button i { font-size: 30px; display: block; margin: 0 0 10px; }
 .cta-button:hover { color: rgba(75,89,102,0.8); }
 
-.section { border-bottom: 1px solid rgba(0,0,0,0.05); }
+.section { border-bottom: 1px solid #F9FAFC; }
+.section:nth-child(even) { background: #F9FAFC; background: rgba(249, 250, 252, 0.8); }
 .section-container { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
 .section h2 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
 .section h2 .close { display: none; }
 .section h3 { margin: 0 0 20px; font-weight: 500; }
-.section.social-icons { background: #F9FAFC; }
 .section.social-icons .section-container { padding: 13px 20px 18px; }
 
 .photo-gallery { padding: 0; position: relative; display: block; width: 100%; font-size: 0; }
@@ -71,7 +71,7 @@ form { padding-top: 5px; }
 
 .offering-item { padding: 20px 0; border-top: 1px solid rgba(0,0,0,0.05); }
 .offering-item:first-child { border-top: 0 none; padding-top: 0; }
-.offering-item h3 { font-size: 18px; margin: 0; letter-spacing: 0.2px; }
+.offering-item h3 { font-size: 18px; margin: 0 0 5px; letter-spacing: 0.2px; line-height: 1.5; }
 .offering-item p { font-size: 16px; margin: 0; opacity: 0.7; line-height: 1.5; letter-spacing: -0.2px; }
 
 .contact-map { position: relative; height: 320px; margin: 0 0 20px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
@@ -124,10 +124,10 @@ body.generic .business-contact-form { display: none; }
   .cover-card { width: calc(100% - 40px); margin: 25px auto; padding: 30px; }
   .logo { padding-bottom: 25px; }
   .logo h1 { margin: 0; font-size: 34px; }
-  .logo img { max-height: 100px; }
+  .logo img { max-height: 100px; margin: 0 0 -5px; }
   .slogan { font-size: 24px; font-weight: 400; padding-bottom: 25px; }
   .card-address { padding-bottom: 25px; font-size: 13px; }
-  .cta-container { margin: 0 -30px -5px; padding: 20px 0 0; border-top: 1px solid #F8F8F8; }
+  .cta-container { margin: 0 -30px -5px; padding: 20px 0 0; border-top: 1px solid #F7F7F7; }
   .cta-button { font-size: 10px; width: 90px; padding: 0; }
   .cta-button i { font-size: 24px; }
   .section-container { padding: 20px 25px; }
