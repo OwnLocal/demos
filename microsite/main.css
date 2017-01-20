@@ -27,10 +27,11 @@ form { padding-top: 5px; }
 .cover-wrapper { position: relative; width: 100%; height: 100%; background-image: url('https://source.unsplash.com/category/buildings/1600x900'); background-repeat: no-repeat; background-size: cover; background-position: center center; text-align: center; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
 .cover-wrapper:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; background: #04c; mix-blend-mode: screen; opacity: 0.3; }
 
-.navigation { display: none; position: fixed; text-align: center; top: 0; left: 0; z-index: 1000; line-height: 40px; background: white; width: 100%; box-shadow: 0 1px 1px rgba(0,0,0,0.05); }
-.navigation a { color: #4b5966; opacity: 0.8; font-weight: 600; font-size: 14px; text-transform: uppercase; padding: 0 10px; }
+.navigation { display: none; position: fixed; top: 0; left: 0; z-index: 1000; line-height: 40px; background: white; width: 100%; box-shadow: 0 1px 1px rgba(0,0,0,0.05); font-family: 'Montserrat'; font-size: 14px; text-transform: uppercase; }
+.navigation .title { color: #4B5966; display: inline-block; padding: 0 0 0 20px; }
+.navigation a { color: #6B7C93; padding: 0 0 0 20px; }
 
-.cover-card { position: relative; background: white; width: calc(100% - 100px); margin: 0 auto; max-width: 600px; padding: 55px 40px 40px; box-shadow: 0 0 8px rgba(0,0,0,0.05); z-index: 100; }
+.cover-card { position: relative; background: white; background: linear-gradient(#fff, rgba(255,255,255,0.95)); width: calc(100% - 100px); margin: 0 auto; max-width: 600px; padding: 55px 40px 40px; box-shadow: 0 1px 8px rgba(0,0,0,0.05); z-index: 100; }
 
 .go-to-top { display: none; position: fixed; bottom: 25px; right: 25px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); border-radius: 2px; padding: 10px; background: white; opacity: 0.9; cursor: pointer; transition: all 0.3s ease; z-index: 1000; }
 .go-to-top:hover { opacity: 1; }
@@ -50,7 +51,7 @@ form { padding-top: 5px; }
 .cta-separator { display: inline-block; width: 1px; height: 64px; background: rgba(0,0,0,0.075); position: relative; top: 10px; margin: 0 20px; }
 
 .section { border-bottom: 1px solid rgba(0,0,0,0.05); }
-.section-container { max-width: 800px; margin: 0 auto; padding: 30px 20px 30px; }
+.section-container { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
 .section h2 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
 .section h2 .close { display: none; }
 .section h3 { margin: 0 0 20px; font-weight: 500; }
