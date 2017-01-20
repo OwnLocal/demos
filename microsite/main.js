@@ -23,8 +23,8 @@ $(document).on('click', '.go-to-top', function() {
 });
 
 // Promo CTA
-$(document).on('click', '.promo-cta a', function() {
-  $('.sections-wrapper').addClass('promo-cta-on');
+$(document).on('click', '.promo-ctas a', function() {
+  $('.section.' + $(this).attr('data-target')).addClass('promo-cta-on');
 });
 
 $(document).ready(function() {
@@ -57,6 +57,6 @@ $(document).keyup(function(e) {
   if (e.keyCode === 27) {
     $('body').removeClass('overflow--hidden');
     $('.photo-gallery .active-image').hide();
-    $('.sections-wrapper').removeClass('promo-cta-on');
+    $('.section').removeClass('promo-cta-on');
   }
 });

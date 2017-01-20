@@ -41,7 +41,11 @@
             <!-- endif -->
             <a class="cta-button cta-button-contact" data-target="contact"><i class="material-icons">email</i>Contact</a>
           </div>
-          <div class="promo-cta"><a>Learn More</a></div>
+          <div class="promo-ctas">
+            <a data-target="about"><span>About</span></a>
+            <a data-target="offerings"><span>Services</span></a>
+            <a data-target="contact" style="background: white; color: #4b5966; margin-left: 8px;"><span>Contact</span></a>
+          </div>
         </div>
       </div>
     </div>
@@ -181,7 +185,7 @@
     <div class="section contact">
       <div class="section-container">
         <h2><span class="title">Contact</span><span class="close">X</span></h2>
-        <div class="contact-map" id="contact-map"></div>
+        <div class="contact-map" id="contact-map" style="background-image: url('https://external-atl3-1.xx.fbcdn.net/static_map.php?size=400x250&zoom=15&markers=26.2769%2C-80.0975&scale=2')"></div>
         <script>
             var contactMap = L.map('contact-map').setView([26.2769, -80.0975], 13);  
             L.tileLayer('https://igexternal-a.akamaihd.net/map_tile.php?x={x}&y={y}&z={z}&size=512&ppi=250', {

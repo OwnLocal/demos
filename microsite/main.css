@@ -44,7 +44,7 @@ form { padding-top: 5px; }
 .cta-button i { font-size: 30px; display: block; margin: 0 0 10px; }
 .cta-button:hover { color: rgba(75,89,102,0.8); }
 
-.promo-cta { display: none; }
+.promo-ctas { display: none; }
 
 .section { border-bottom: 1px solid #F9FAFC; }
 .section:nth-child(even) { background: #F9FAFC; background: rgba(249, 250, 252, 0.8); }
@@ -136,7 +136,8 @@ body.generic .business-contact-form { display: none; }
   .section.social-icons { text-align: left; }
   .section.social-icons a { margin: 8px 10px 0 0; }
   .half-column { width: 100%; padding: 0; }
-  .contact-map { width: calc(100% + 50px); height: 225px; margin: 20px 0 5px -25px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .contact-map { pointer-events: none; background-position: center; background-size: cover; width: calc(100% + 50px); height: 225px; margin: 20px 0 5px -25px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .contact-map * { display: none; }
 }
 
 /* Width < 351px */
@@ -156,13 +157,15 @@ body.generic .business-contact-form { display: none; }
   .logo { position: absolute; top: 15px; left: 0; padding: 10px 15px; background: white; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
   .logo h1 { max-width: 220px; font-size: 20px; }
   .logo img { max-width: 200px; max-height: 40px; }
-  .slogan { position: absolute; bottom: 60px; left: 0; font: bold 24px/1.1 'Roboto'; color: white; padding: 15px; }
+  .slogan { position: absolute; bottom: 55px; left: 0; font: bold 24px/1.1 'Roboto'; color: white; padding: 20px 15px 18px; }
   .card-address { display: none; }
   .cta-container { display: none; }
-  .promo-cta { display: block; position: absolute; bottom: 20px; left: 15px; font-family: 'Montserrat'; font-weight: 400; font-size: 0; text-transform: uppercase; }
-  .promo-cta a { color: white; padding: 10px 12px; display: inline-block; font-size: 14px; line-height: 1; margin-right: 5px; letter-spacing: 0; background: white; color: rgba(75, 89, 102, 0.8); }
-  .sections-wrapper { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 1000; }
-  .sections-wrapper.promo-cta-on { display: block; }
+  .promo-ctas { width: 100%; display: block; position: absolute; bottom: 0; left: 0; padding: 15px 5px; font-family: 'Montserrat'; font-weight: 400; font-size: 0; text-transform: uppercase; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  .promo-ctas a { color: white; display: inline-block; font-size: 13px; line-height: 1; letter-spacing: 0; padding: 8px 10px; transition: all 0.3s ease; }
+  .promo-ctas a span { border-bottom: 2px solid transparent; }
+  .promo-ctas a:hover span { border-bottom-color: white; }
+  .section { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 1000; }
+  .section.promo-cta-on { display: block; background: white; }
   .section-container { padding: 15px; }
   .section h2 { line-height: 1; }
   .go-to-top { z-index: 10000; bottom: 15px; right: 15px; }
