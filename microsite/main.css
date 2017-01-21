@@ -79,29 +79,17 @@ form { padding-top: 5px; }
 .half-column { width: calc(50% - 40px); padding: 0 0 15px; }
 .half-column p { float: left; width: 100%; margin: 0; font-size: 16px; color: #6B7C93; }
 .half-column span { float: right; }
-.contact-form input, .contact-form textarea { -webkit-appearance: none; border-radius: 2px; width: 100%; border: 1px solid rgba(0,0,0,0.1); padding: 10px; display: block; margin: 0 0 15px; font-size: 16px; }
-.contact-form button { -webkit-appearance: none; border: 0 none; background: #60A0E7; text-transform: uppercase; padding: 12px 35px; color: white; box-shadow: 0 -2px 2px rgba(0,0,0,0.1) inset; border-radius: 3px; font-size: 17px; font: 16px/1 'Montserrat'; margin-top: 5px; }
 
-.section.contact .cta-button { position: relative;
-    padding: 0 15px 0 40px;
-    line-height: 36px;
-    width: auto;
-    color: rgba(107, 124, 147, 0.6);
-    font-size: 13px;
-    letter-spacing: 0.2px;
-    margin: 20px 10px 10px 0;
-    border-radius: 5px;
-    border: 1px solid rgba(107, 124, 147, 0.4); }
-.section.contact .cta-button i {     display: inline-block;
-    font-size: 18px;
-    position: absolute;
-    left: 12px;
-    margin: 0;
-    top: 0;
-    line-height: 35px; }
+.section.contact .cta-button { position: relative; padding: 0 15px 0 40px; line-height: 36px; width: auto; color: rgba(107, 124, 147, 0.6); font-size: 13px; letter-spacing: 0.2px; margin: 20px 10px 10px 0; border-radius: 5px; border: 1px solid rgba(107, 124, 147, 0.4); }
+.section.contact .cta-button i { display: inline-block; font-size: 18px; position: absolute; left: 12px; margin: 0; top: 0; line-height: 35px; }
+
+.contact-form input, .contact-form textarea { -webkit-appearance: none; border-radius: 2px; width: 100%; border: 1px solid rgba(0,0,0,0.1); padding: 10px; display: block; margin: 0 0 15px; font-size: 16px; }
+.contact-form button { -webkit-appearance: none; border: 0 none; background: #60A0E7; text-transform: uppercase; padding: 12px 35px; color: white; box-shadow: 0 -2px 0 rgba(0,0,0,0.12) inset, 0 0 2px rgba(0,0,0,0.08), 0 4px 6px rgba(0,0,0,0.08), 0 12px 16px rgba(0,0,0,0.08); border-radius: 5px; font-size: 17px; font: 16px/1 'Montserrat'; margin-top: 5px; cursor: pointer; transition: all 0.3s ease; }
+.contact-form button:hover { box-shadow: 0 -2px 0 rgba(0,0,0,0.12) inset, 0 0 2px rgba(0,0,0,0.08), 0 12px 16px rgba(0,0,0,0.08), 0 16px 32px rgba(0,0,0,0.08), 0 24px 36px rgba(0,0,0,0.08); transform: translateY(-1px); }
 
 .social-icons { text-align: center; }
-.social-icons a { display: inline-block; padding: 6px; margin: 8px 8px 0; background: #C0CCDA; border-radius: 100%; margin-top: 20px; }
+.social-icons a { display: inline-block; padding: 6px; margin: 8px 8px 0; background: #C0CCDA; border-radius: 100%; margin-top: 20px; transition: all 0.3s ease; }
+.social-icons a:hover { background: #8492A6; }
 .social-icons a svg { display: block; width: 24px; height: 24px; fill: white; transform: scale(0.75); }
 
 /* How unedited businesses look */
