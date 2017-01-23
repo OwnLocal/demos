@@ -80,7 +80,8 @@ form { padding-top: 5px; }
 .half-column p { float: left; width: 100%; margin: 0; font-size: 16px; color: #6B7C93; }
 .half-column span { float: right; }
 
-.section.contact .cta-button { position: relative; padding: 0 15px 0 40px; line-height: 36px; width: auto; color: rgba(107, 124, 147, 0.6); font-size: 13px; letter-spacing: 0.2px; margin: 20px 10px 10px 0; border-radius: 5px; border: 1px solid rgba(107, 124, 147, 0.4); }
+.section.contact .cta-button { position: relative; padding: 0 15px 0 40px; line-height: 36px; width: auto; color: #A6B0BE; font-size: 13px; letter-spacing: 0.2px; margin: 20px 10px 10px 0; border-radius: 5px; border: 1px solid #A6B0BE; transition: all 0.3s ease; }
+.section.contact .cta-button:hover { color: rgba(107, 124, 147, 0.9); border: 1px solid rgba(107, 124, 147, 0.8); }
 .section.contact .cta-button i { display: inline-block; font-size: 18px; position: absolute; left: 12px; margin: 0; top: 0; line-height: 35px; }
 
 .contact-form input, .contact-form textarea { -webkit-appearance: none; border-radius: 2px; width: 100%; border: 1px solid rgba(0,0,0,0.1); padding: 10px; display: block; margin: 0 0 15px; font-size: 16px; }
@@ -125,7 +126,6 @@ body.generic .business-contact-form { display: none; }
   .section.social-icons a { margin: 8px 10px 0 0; }
   .half-column { width: 100%; padding: 0; }
   .contact-map { pointer-events: none; background-position: center; background-size: cover; width: calc(100% + 50px); height: 225px; margin: 20px 0 5px -25px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-  .contact-map * { display: none; }
 }
 
 /* Width < 351px */
@@ -145,7 +145,7 @@ body.generic .business-contact-form { display: none; }
   .logo { position: absolute; top: 15px; left: 0; padding: 10px 15px; background: white; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
   .logo h1 { max-width: 220px; font-size: 20px; }
   .logo img { max-width: 200px; max-height: 40px; }
-  .slogan { position: absolute; bottom: 55px; left: 0; font: bold 24px/1.1 'Roboto'; color: white; padding: 20px 15px 18px; }
+  .slogan { position: absolute; bottom: 55px; left: 0; font: 500 23px/1.1 'Roboto'; color: white; padding: 20px 15px 18px; }
   .card-address { display: none; }
   .cta-container { display: none; }
   .promo-ctas { width: 100%; display: block; position: absolute; bottom: 0; left: 0; padding: 15px 5px; font-family: 'Montserrat'; font-weight: 400; font-size: 0; text-transform: uppercase; border-top: 1px solid rgba(255, 255, 255, 0.1); }
@@ -165,6 +165,7 @@ body.generic .business-contact-form { display: none; }
   .go-to-top { display: none; opacity: 0; pointer-events: none; }
   .photo-gallery .photo-gallery-close { display: none; }
   .contact-map { margin: -15px -15px -3px; width: auto; height: 100px; }
+  .contact-map * { display: none; }
   h4 { font-size: 13px; margin-bottom: 5px; }
   ::-webkit-scrollbar { -webkit-appearance: none; width: 12px; height: 12px; background: #f6f7f8; border-radius: 100px; overflow: hidden; border: 2px solid white; }
   ::-webkit-scrollbar-thumb { background: rgba(75, 89, 102, 0.2); border-radius: 100px; border: 2px solid white; }  
