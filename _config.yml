@@ -503,6 +503,54 @@ examples:
     expires_on_text: "Este anuncio está vigente <br>hasta el 30 de septiembre, 2016."
     ad_text: "Barbacoa de arrachera – Ave. San Jerónimo 1106 Colonia Miravalle. Reserva +52 (81) 8347 9205 @lanacionalmx"
 
+  mx_02:
+    publisher_name: Reforma
+    publisher_folder_name: mx_02
+    publisher_url: reforma.com
+    publisher_city: Ciudad de México
+    publisher_state: DF
+    publisher_lat: 19.390519
+    publisher_lon: -99.4238064
+    publisher_zoom: 15
+    business_name: Bensire
+    business_address_one: Av. Vasco de Quiroga #3800-404
+    business_address_two: Ciudad de México, DF 05109
+    business_city: Ciudad de México
+    business_state: DF
+    business_lat: 19.362504
+    business_lon: -99.271552
+    business_zoom: 15
+    business_zip: 05109
+    business_phone: +52 55 5259 7777
+    business_phone_stripped: "+525552597777"
+    business_website: bensire.com
+    business_category: Hogar
+    business_subcategory: Muebles de hogar
+    business_description: "<p>Bensire es una empresa de alfombras de gama alta que produce sus propias colecciones de alfombras, utilizando diseños creados por diseñadores de Bensire de países como México, Reino Unido, Estados Unidos, Alemania y Nepal.</p><p>Tejeremos todas nuestras colecciones en nuestros telares en Nepal, Afganistán, Irán, India, Turquía y Pakistán.</p>"
+    business_monday_hours: 11:00 AM - 8:00 PM
+    business_tuesday_hours: 11:00 AM - 8:00 PM
+    business_wednesday_hours: 11:00 AM - 8:00 PM
+    business_thursday_hours: 11:00 AM - 8:00 PM
+    business_friday_hours: 11:00 AM - 8:00 PM
+    business_saturday_hours: 11:00 AM - 8:00 PM
+    business_sunday_hours: 11:00 AM - 8:00 PM
+    business_helpful_link_one_text: Muebles de hogar en Ciudad de México DF
+    business_helpful_link_one_url: bensire.com/portfolio/
+    business_helpful_link_two_text: Hotelería en Ciudad de México DF
+    business_helpful_link_two_url: bensire.com/hoteleria-y-proyectos/
+    business_helpful_link_three_text: Decoraciones en Ciudad de México DF
+    business_helpful_link_three_url: bensire.com/decoraciones/
+    business_facebook_username: BensireCarpets
+    business_ad_date_one: "26/01/17"
+    business_ad_date_two: "24/01/17"
+    business_ad_date_three: "22/01/17"
+    business_ad_date_four: "18/01/17"
+    business_ad_date_five: "16/01/17"
+    business_ad_date_six: "10/01/17"
+    ad_date: "26 de enero, 2017"
+    expires_on_text: "Este anuncio está vigente <br>hasta el 26 de enero, 2017."
+    ad_text: "BENSIRE CARPET DESIGN STUDIO Abstract Collection Bensire.com 5259 7777 Centro Comercial Santa Fe piso intermedio frente a Zara"
+
   # EL SALVADOR
   sv_01:
     publisher_name: El Diario de Hoy
