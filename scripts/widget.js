@@ -9,27 +9,28 @@ var type = getUrlParameter('type') || 'standard',
     customCss = '',
     adcentric = getUrlParameter('adcentric') || 'false',
     defaultView = (adcentric === 'true') ? 'ads' : 'businesses',
-    featuredLevelDisplay = (minFeaturedLevel == '0') ? 'None' : 'Level ' + minFeaturedLevel;
+    featuredLevelDisplay = (minFeaturedLevel == '0') ? 'None' : 'Level ' + minFeaturedLevel,
+    adStartDate = getUrlParameter('days_ago') || '30';
 
 function updateBrowserURL() {
   var publisherOrPartner = (type === 'secure') ? '&partner=' + partner : '&publisher=' + publisher;
-  window.history.replaceState(null, null, '?type=' + type + publisherOrPartner + '&width=' + width + '&height=' + height + '&adcentric=' + adcentric + '&min-featured-level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory);
+  window.history.replaceState(null, null, '?type=' + type + publisherOrPartner + '&width=' + width + '&height=' + height + '&adcentric=' + adcentric + '&min-featured-level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&days_ago=' + adStartDate);
 };
 
 function updateIframeSrc() {
-  $('.ownlocal-widget.standard iframe').attr('src', 'http://' + publisher + '/embed?adcentric=' + adcentric + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&custom_css=' + customCss);
+  $('.ownlocal-widget.standard iframe').attr('src', 'http://' + publisher + '/embed?adcentric=' + adcentric + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&custom_css=' + customCss + '&days_ago=' + adStartDate);
 };
 
 function updateSecureIframeSrc() {
-  $('.ownlocal-widget.secure iframe').attr('src', 'https://widget.secure.ownlocal.com/embed/' + partner + '?adcentric=' + adcentric + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&custom_css=' + customCss);
+  $('.ownlocal-widget.secure iframe').attr('src', 'https://widget.secure.ownlocal.com/embed/' + partner + '?adcentric=' + adcentric + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&custom_css=' + customCss + '&days_ago=' + adStartDate);
 };
 
 function updateEmbedCode() {
-  $('.code').html('&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" data-active="' + defaultView + '" src="http://' + publisher + '/embed.js?h=' + height + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code').html('&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" data-active="' + defaultView + '" src="http://' + publisher + '/embed.js?h=' + height + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&days_ago=' + adStartDate + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
 function updateSecureEmbedCode() {
-  $('.code.secure').html('&lt;var id="ownlocal"&gt;&lt;script async id="ownlocal-script" data-active="' + defaultView + '" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&?h=' + height + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code.secure').html('&lt;var id="ownlocal"&gt;&lt;script async id="ownlocal-script" data-active="' + defaultView + '" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&?h=' + height + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&days_ago=' + adStartDate + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
 function updateAllSrcAndUrls() {
@@ -84,6 +85,14 @@ $(document).ready(function() {
   // set minimum featured level display
   $('#min-featured-level .selection').html(featuredLevelDisplay);
   $('.min-featured-level-' + minFeaturedLevel + '-button').addClass('active');
+
+  // set minimum featured level display
+  $('#min-featured-level .selection').html(featuredLevelDisplay);
+  $('.min-featured-level-' + minFeaturedLevel + '-button').addClass('active');
+
+  // set ad start date display
+  $('#ad-start-date .selection').html("All active ads");
+  $(adStartDate + '-days-ago-button').addClass('active');
 
   $('.dropdown').on('click', function(){
     $(this).toggleClass('active');
@@ -171,6 +180,13 @@ $(document).ready(function() {
     $('.dropdown.default-view-dropdown .button').not(this).removeClass('active');
     updateAllSrcAndUrls();
   });
+
+  $('.ad-start-date').on('click', function() {
+    adStartDate = this.dataset.selection;
+    $('#ad-start-date .selection').html(this.dataset.display);
+    $('.dropdown.ad-start-date-dropdown .button').not(this).removeClass('active');
+    updateAllSrcAndUrls();
+  })
 
   $('.min-featured-level').on('click', function() {
     minFeaturedLevel = this.dataset.featured;
