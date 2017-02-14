@@ -43,7 +43,7 @@ form { padding-top: 5px; }
 .hero-box button.sign-up { background: #60A0E7; color: white; }
 .hero-box button:hover { transform: translateY(-2px); }
 
-.devices-wrapper { position: absolute; width: 1024px; height: 630px; top: 50%; left: 50%; margin: -305px 0 0 -40px; transform: scale(0.95); z-index: 100; }
+.devices-wrapper { position: absolute; width: 1024px; height: 630px; top: 50%; left: 50%; margin: -305px 0 0 -40px; -ms-transform: scale(0.95); transform: scale(0.95);  z-index: 100; }
 .device { background: linear-gradient(rgb(247, 251, 254) 0%, rgb(221, 226, 232) 100%); box-shadow: rgb(255, 255, 255) 0px 4px 7px 1px inset, rgba(187, 200, 225, 0.34902) 0px -5px 20px inset, rgba(40, 39, 66, 0.137255) 0px 2px 6px, rgba(40, 39, 66, 0.0588235) 0px 10px 20px, rgba(0, 0, 0, 0.14902) 0px 36px 79px -1px; position: relative; display: inline-block; overflow: hidden; position: absolute; top: 35px; }
 .device-header { position: absolute; background: white; z-index: 100; background: white; overflow: hidden; pointer-events: none; }
 .device.no-device-header .device-header { display: none; }
@@ -69,10 +69,29 @@ form { padding-top: 5px; }
 .mask iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: hidden; border: 0 none; }
 
 
+/* Width < 1064px */
+@media screen and (max-width: 1064px) {
+  .hero-box { left: 40px; margin-left: 0; }
+}
+
+/* Width < 1000px */
+@media screen and (max-width: 1000px) {
+  .hero { height: auto; min-height: auto; min-height: initial; padding: 50px 20px; margin: 0 0 60px; }
+  .hero-box { position: relative; top: auto; margin: 0 auto; width: 100%; max-width: 560px; left: 0; text-align: center; }
+  .hero-box h1 { font-size: 60px; margin: 0 0 20px; }
+  .hero-box p { margin: 0 auto 20px; font-size: 17px; max-width: 600px; }
+  .hero-box button { margin: 0 10px; }
+  .devices-wrapper { position: relative; right: auto; left: 50%; margin: -110px 0 -220px -512px; -ms-transform: scale(0.5); transform: scale(0.5); }
+}
+
 /* Width < 701px */
 @media screen and (max-width: 700px) {
+  .devices-wrapper { -ms-transform: scale(0.32); transform: scale(0.32); margin: -175px 0 -295px -512px; }
   .header .logo img { max-width: 150px; }
   .header .media-kit-home { font-size: 16px; }
+  .hero { padding: 40px 20px; }
+  .hero-box h1 { font-size: 36px; }
+  .hero-box button { padding: 14px 15px; font-size: 14px; min-width: 130px; }
 }
 
 /* Width < 350px */
