@@ -76,23 +76,23 @@ form { padding-top: 5px; }
 
 /* Width < 1000px */
 @media screen and (max-width: 1000px) {
-  .hero { height: auto; min-height: auto; min-height: initial; padding: 50px 20px; margin: 0 0 60px; }
+  .hero { height: auto; min-height: auto; min-height: initial; padding: 440px 20px 50px; margin: 0 0 60px; }
   .hero-box { position: relative; top: auto; margin: 0 auto; width: 100%; max-width: 560px; left: 0; text-align: center; }
-  .hero-box h1 { font-size: 60px; margin: 0 0 20px; padding: 0 0 400px; }
+  .hero-box h1 { font-size: 60px; line-height: 1.1; margin: 0 0 20px; }
   .hero-box p { margin: 0 auto 40px; font-size: 17px; max-width: 600px; }
   .hero-box button { margin: 0 10px; }
-  .devices-wrapper { top: auto; right: auto; left: 50%; margin: -665px 0 0 -512px; -ms-transform: scale(0.5); transform: scale(0.5); }
+  .devices-wrapper { top: 0; right: auto; left: 50%; margin: -100px 0 0 -512px; -ms-transform: scale(0.6); transform: scale(0.6); }
 }
 
 /* Width < 701px */
 @media screen and (max-width: 700px) {
-  .devices-wrapper { -ms-transform: scale(0.33); transform: scale(0.33); margin-top: -590px; }
   .header .logo img { max-width: 150px; }
   .header .media-kit-home { font-size: 16px; }
-  .hero { padding: 30px 20px; }
-  .hero-box h1 { font-size: 36px; line-height: 1.1; padding: 0 0 230px; }
-  .hero-box p { margin-bottom: 30px; }
+  .hero { padding: 265px 20px 30px; }
+  .hero-box h1 { font-size: 36px; }
+  .hero-box p { margin-bottom: 25px; }
   .hero-box button { padding: 14px 15px; font-size: 14px; min-width: 130px; }
+  .devices-wrapper { -ms-transform: scale(0.33); transform: scale(0.33); margin-top: -185px; }
 }
 
 /* Width < 350px */
