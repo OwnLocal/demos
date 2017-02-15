@@ -89,13 +89,17 @@ form { padding-top: 5px; }
   .header .logo img { max-width: 150px; }
   .header .media-kit-home { font-size: 16px; }
   .hero { padding: 275px 20px 20px; }
-  .hero-box h1 { font-size: 34px; }
-  .hero-box p { margin-bottom: 25px; font-size: 16px; }
+  .hero-box { max-width: 310px; }
+  .hero-box h1 { font-size: 30px; }
+  .hero-box p { margin-bottom: 25px; font-size: 15px; }
   .hero-box button { padding: 14px 15px; font-size: 14px; min-width: 130px; }
   .devices-wrapper { -ms-transform: scale(0.33); transform: scale(0.33); margin-top: -180px; }
 }
 
 /* Width < 350px */
 @media screen and (max-width: 350px) {
+  .hero-box h1 { font-size: 26px; }
+  .hero-box p { font-size: 14px; }
+  .hero-box button { min-width: 120px; margin: 0 7px; font-size: 13px; padding: 13px; }
   .header .logo img { max-width: 100px; }
 }
