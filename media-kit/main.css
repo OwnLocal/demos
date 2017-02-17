@@ -86,24 +86,25 @@ form { padding-top: 5px; }
 .stat .number { font-size: 48px; line-height: 1; margin: 0 0 15px; }
 .stat .label { font-size: 17px; line-height: 1; opacity: 0.8; }
 
-.offerings { margin-top: 50px; text-align: left; }
-.offering { padding: 0; margin: 0 0 1px; background: white; box-shadow: 0 1px 5px rgba(0,0,0,0.05); font-size: 17px; line-height: 1.8;  margin: 0 0 50px; overflow: hidden; }
-.offering .left { float: left; background: black; color: white; padding: 120px 30px 50px; width: 400px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+.offerings { margin: 50px 0 -20px; text-align: left; }
+.offering { position: relative; padding: 0; margin: 0 0 1px; background: white; box-shadow: 0 1px 5px rgba(0,0,0,0.05); font-size: 17px; line-height: 1.8;  margin: 0 0 50px; overflow: hidden; }
+.offering .left { background: black; color: white; padding: 30px; width: 400px; box-shadow: 0 0 5px rgba(0,0,0,0.1); position: relative; z-index: 0; position: absolute; top: 0; left: 0; height: 100%; }
+.offering .left:before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(transparent,white); z-index: -10; opacity: 0.1; }
 .offering:nth-child(1) .left { background: #74E4D7; }
 .offering:nth-child(2) .left { background: #A695F9; }
 .offering:nth-child(3) .left { background: #F5B7D4; }
 .offering .left i { color: white; display: block; margin: 0 0 30px; font-size: 50px; line-height: 1; }
-.offering .left .title { font-weight: normal; line-height: 0.9; font-size: 54px; font-weight: bold; margin: 0; }
+.offering .left .title { font-weight: normal; line-height: 1; font-size: 54px; font-weight: bold; margin: 0; }
 .offering .left .title span { display: block; }
 .offering .left .description { opacity: 0.9; font-size: 20px; line-height: 1.5; margin: 30px 0 0; }
-.offering .right { float: left; width: calc(100% - 400px); padding: 30px; }
-.offering .sub-offering { padding: 0 0 20px 60px; position: relative; }
+.offering .right { padding: 30px 30px 0 430px; }
+.offering .sub-offering { padding: 0 0 0 60px; position: relative; }
 .offering .sub-offering:before { content: "\E5CA"; position: absolute; top: 5px; left: 0; font-family: 'Material Icons'; box-shadow: 0 1px 2px rgba(0,0,0,0.2); width: 30px; height: 30px; text-align: center; line-height: 30px; color: inherit; border-radius: 100%; }
 .offering:nth-child(1) .sub-offering:before { color: #74E4D7; }
 .offering:nth-child(2) .sub-offering:before { color: #A695F9; }
 .offering:nth-child(3) .sub-offering:before { color: #F5B7D4; }
-.offering .right .title { font-weight: 500; font-size: 24px; margin: 0 0 10px; }
-.offering .right p { opacity: 0.9; margin: 0 0 20px; font-size: 17px; }
+.offering .right .title { font-weight: 500; font-size: 24px; margin: 0 0 5px; line-height: 42px; }
+.offering .right p { opacity: 0.9; margin: 0 0 30px; font-size: 17px; }
 
 
 /* Width < 1064px */
@@ -127,6 +128,11 @@ form { padding-top: 5px; }
   .stat { padding: 0 0 30px; }
   .stat .number { font-size: 30px; }
   .stat .label { font-size: 14px; }
+  .offering .left { width: 300px; }
+  .offering .left i { margin: 0 0 20px; }
+  .offering .left .title { font-size: 40px; }
+  .offering .left .description { margin-top: 20px; font-size: 17px; }
+  .offering .right { padding-left: 330px; }
 }
 
 /* Width < 661px */
@@ -149,6 +155,12 @@ form { padding-top: 5px; }
   .stats { float: none; width: 100%; margin-top: 30px; margin-bottom: -10px; }
   .stats h3 { font-size: 24px; }
   .stat { padding: 0 0 30px; width: 100%; }
+  .offering { margin: 0 0 20px; }
+  .offering .left { width: 100%; position: relative; height: auto; }
+  .offering .right { padding: 20px 20px 0; }
+  .offering .sub-offering { padding: 0; }
+  .offering .right .title { line-height: 45px; padding: 0 0 0 50px; font-size: 20px; }
+  .offering .right p { font-size: 15px; }
 }
 
 /* Width < 350px */
