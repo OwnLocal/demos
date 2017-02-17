@@ -61,9 +61,9 @@ form { padding-top: 5px; }
 .laptop:before, .laptop:after { content: ''; position: absolute; border-radius: 3px 3px 0 0; width: calc(100% + 200px); height: 10px; background: linear-gradient(90deg,#f6fafd 0,#dde2e9 6%,#f6fafd 15%,#f6fafd 42%,#e6e6e6 0,#f6fafd 45%,#f6fafd 53%,#e6e6e6 56%,#f6fafd 0,#f6fafd 85%,#dde2e9 94%,#f6fafd); left: -100px; bottom: -5px; }
 .laptop:after { height: 6px; bottom: -11px; border-radius: 0 0 40px 40px; background: #dde2e9; box-shadow: inset 0 -25px 10px -20px rgba(0,0,0,.5); }
 .laptop .mask { height: 100%; width: 100%; overflow: hidden; border-radius: 8px; box-shadow: -1px 1px 4px rgba(107,124,147,.45); background: #fff; }
-.device-logo { display: inline-block; border: 0 none; padding: 0 10px 0 0; border: 0 none; position: relative; height: 38px; opacity: 0.8; width: auto; max-width: calc(100% - 80px); white-space: nowrap; box-sizing: border-box; }
+.device-logo { display: inline-block; border: 0 none; padding: 0 10px 0 0; border: 0 none; position: relative; height: 40px; line-height: 40px; opacity: 0.8; width: auto; max-width: calc(100% - 80px); white-space: nowrap; box-sizing: border-box; }
 .device-logo img { width: auto; height: auto; max-height: calc(100% - 20px); max-width: 90px; border: 0 none; background: transparent; opacity: 0.9; }
-.device-logo:after { content: 'Directory'; border-left: 1px solid rgba(0, 0, 0, 0.05); width: auto; height: 40px; white-space: nowrap; font-weight: 300; display: inline-block; position: absolute; top: 0; color: rgba(75, 89, 102, 0.8); font-size: 12px; line-height: 40px; padding-left: 14px; margin-left: 10px; }
+.device-logo:after { content: 'Directory'; border-left: 1px solid rgba(0, 0, 0, 0.05); width: auto; height: 40px; white-space: nowrap; font-weight: 300; display: inline-block; position: absolute; top: 0; color: rgba(75, 89, 102, 0.8); font-size: 12px; line-height: 38px; padding-left: 14px; margin-left: 10px; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
 .mask img { width: 100%; display: block; position: relative; }
 .mask iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: hidden; border: 0 none; }
 
