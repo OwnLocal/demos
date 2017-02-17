@@ -97,7 +97,7 @@ form { padding-top: 5px; }
 .offering .left i { color: white; display: block; margin: 0 0 30px; font-size: 50px; line-height: 1; }
 .offering .left .title { font-weight: normal; line-height: 1; font-size: 54px; font-weight: bold; margin: 0; }
 .offering .left .title span { display: block; }
-.offering .left .description { opacity: 0.9; font-size: 20px; line-height: 1.5; margin: 30px 0 0; }
+.offering .left .description { opacity: 0.9; font-size: 18px; line-height: 1.5; margin: 30px 0 0; }
 .offering .right { padding: 30px 30px 0 430px; }
 .offering .sub-offering { padding: 0 0 0 60px; position: relative; }
 .offering .sub-offering:before { content: "\E5CA"; position: absolute; top: 5px; left: 0; font-family: 'Material Icons'; box-shadow: 0 1px 2px rgba(0,0,0,0.2); width: 30px; height: 30px; text-align: center; line-height: 30px; color: inherit; border-radius: 100%; }
@@ -105,7 +105,7 @@ form { padding-top: 5px; }
 .offering:nth-child(2) .sub-offering:before { color: #A695F9; }
 .offering:nth-child(3) .sub-offering:before { color: #F5B7D4; color: #FFCD94; }
 .offering .right .title { font-weight: 500; font-size: 24px; margin: 0 0 5px; line-height: 42px; }
-.offering .right p { opacity: 0.9; margin: 0 0 30px; font-size: 17px; }
+.offering .right p { opacity: 0.9; margin: 0 0 30px; font-size: 16px; }
 
 
 /* Width < 1064px */
