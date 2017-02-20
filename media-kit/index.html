@@ -174,23 +174,21 @@
       <div class="container">
         <h2>Section title goes here.</h2>
         <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis est sed leo venenatis finibus praesent mauris lectus.</p>
-        <form style="text-align: left;">
-          <br>
-          * Name:<br>
-          <input type="text" name="name"><br>
-          * Email:<br>
-          <input type="email" name="email"><br>
-          Business Name:<br>
-          <input type="text" name="business_name"><br>
-          Phone Number:<br>
-          <input type="text" name="name"><br>
-          Business objectives:<br>
-          <textarea rows="6"></textarea><br>
-          Contact Preference:<br>
-          <input type="radio" name="contact_preference" value="call" checked> Call<br>
-          <input type="radio" name="contact_preference" value="email"> Email<br>
-          <input type="submit" value="Submit">
-        </form>
+        <div class="form">
+          <form>
+            <h3>Basic Information</h3>
+            <input type="text" name="name" class="styled" placeholder="First name">
+            <input type="text" name="name" class="styled" placeholder="Last name">
+            <input type="email" name="email" class="styled" placeholder="Email address">
+            <input type="text" name="business_name" class="styled" placeholder="Business name">
+            <input type="tel" name="phone" class="styled" placeholder="Phone number">
+            <textarea rows="6" class="styled" placeholder="Business objectives"></textarea>
+            <div class="label">Contact Preference</div>
+            <input type="radio" name="contact_preference" value="call" checked><span>Call</span>
+            <input type="radio" name="contact_preference" value="email"><span>Email</span><br>
+            <input type="submit" value="Submit">
+          </form>                        
+        </div>
       </div>
     </div>
   
@@ -198,7 +196,7 @@
       <div class="container">
         <h2>Section title goes here.</h2>
         <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis est sed leo venenatis finibus praesent mauris lectus.</p>
-        <div class="device laptop" style="height: 525px;">
+        <div class="device laptop" style="height: 515px;">
           <div class="device-header">
             <div class="device-logo">
               <img src="./logo.png">
