@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   if ( getUrlParameter('website') === undefined ) {
-    var website = 'local.tennessean.com';
+    var website = 'mylocal.statesman.com';
   } else { 
     var website = getUrlParameter('website');
   };
