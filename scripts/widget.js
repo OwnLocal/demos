@@ -1,8 +1,8 @@
 var type = getUrlParameter('type') || 'standard',
-    publisher = getUrlParameter('publisher') || 'mylocal.statesman.com',
-    partner = getUrlParameter('partner') || 'be65ee41-1997-4ab3-8f12-0b0f5a183ef2',
+    publisher = getUrlParameter('publisher') || 'businessdirectory.triblive.com',
+    partner = getUrlParameter('partner') || '8a63c00e-a9d0-48f4-a570-8263c4e1cca3',
     width = getUrlParameter('width') || '300',
-    height = getUrlParameter('height') || '600',
+    height = getUrlParameter('height') || '250',
     minFeaturedLevel = getUrlParameter('min-featured-level') || '0',
     category = getUrlParameter('category') || 'all',
     subcategory = getUrlParameter('subcategory') || 'all',
@@ -13,24 +13,24 @@ var type = getUrlParameter('type') || 'standard',
     adStartDate = getUrlParameter('days_ago') || '30';
 
 function updateBrowserURL() {
-  var publisherOrPartner = (type === 'secure') ? '&partner=' + partner : '&publisher=' + publisher;
-  window.history.replaceState(null, null, '?type=' + type + publisherOrPartner + '&width=' + width + '&height=' + height + '&adcentric=' + adcentric + '&min-featured-level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&days_ago=' + adStartDate);
+  var publisherOrPartner = (type === 'secure') ? '?partner=' + partner : '?publisher=' + publisher;
+  window.history.replaceState(null, null, publisherOrPartner + '&width=' + width + '&height=' + height);
 };
 
 function updateIframeSrc() {
-  $('.ownlocal-widget.standard iframe').attr('src', 'http://' + publisher + '/embed?adcentric=' + adcentric + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&custom_css=' + customCss + '&days_ago=' + adStartDate);
+  $('.ownlocal-widget.standard iframe').attr('src', 'https://' + publisher + '/embed');
 };
 
 function updateSecureIframeSrc() {
-  $('.ownlocal-widget.secure iframe').attr('src', 'https://widget.secure.ownlocal.com/embed/' + partner + '?adcentric=' + adcentric + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&custom_css=' + customCss + '&days_ago=' + adStartDate);
+  $('.ownlocal-widget.secure iframe').attr('src', 'https://widget.secure.ownlocal.com/embed/' + partner);
 };
 
 function updateEmbedCode() {
-  $('.code').html('&lt;var id="ownlocal"&gt;&lt;script id="ownlocal-script" data-active="' + defaultView + '" src="http://' + publisher + '/embed.js?h=' + height + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&days_ago=' + adStartDate + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code').html('&lt;var id="ownlocal" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script id="ownlocal-script" src="https://' + publisher + '/embed.js?h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
 function updateSecureEmbedCode() {
-  $('.code.secure').html('&lt;var id="ownlocal"&gt;&lt;script async id="ownlocal-script" data-active="' + defaultView + '" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&?h=' + height + '&min_featured_level=' + minFeaturedLevel + '&category=' + category + '&subcategory=' + subcategory + '&days_ago=' + adStartDate + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code.secure').html('&lt;var id="ownlocal" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script async id="ownlocal-script" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
 function updateAllSrcAndUrls() {
@@ -56,10 +56,7 @@ $(document).ready(function() {
   if (window.location.href.indexOf("?") < 0) {
     updateBrowserURL();
   }
-
-  $('#category').val(category);
-  $('#subcategory').val(subcategory);
-
+  
   updateIframeSrc();
   updateSecureIframeSrc();
 
@@ -106,7 +103,7 @@ $(document).ready(function() {
     width = this.dataset.width;
     height = this.dataset.height;
     $('.ownlocal-widget').css("width", width).css("height", height);
-    $('#ownlocal').css("width", "auto");
+    $('#ownlocal').css("width", width);
     $(this).addClass('active');
     $('.dropdown.widget-size-dropdown .button').not(this).removeClass('active');
     $('input#custom-width').val(width);
