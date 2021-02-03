@@ -20,11 +20,22 @@ title: Platform Widget
         </ul>
       </div>
     </div>
+    
+    <div class="block">
+      <div class="label">Show Listings</div>
+      <div id="show-listings" class="dropdown show-listings-dropdown">
+        <div class="selection"></div>
+        <ul>
+          <li data-selection="true" class="button listings-true-button">True</li>
+          <li data-selection="false" class="button listings-false-button">False</li>
+        </ul>
+      </div>
+    </div>
 
     <div class="block standard">
-      <div class="label">Platform URL</div> 
+      <div class="label">Platform URL</div>
       <div class="input-wrapper">
-        <input id="platform-url" type="text" placeholder="businessdirectory.triblive.com/" spellcheck="false">
+        <input id="platform-url" type="text" placeholder="local.waterloochronicle.ca" spellcheck="false">
       </div>
     </div>
 
@@ -59,14 +70,7 @@ title: Platform Widget
 <div class="outer-wrapper">
   <div class="widget-wrapper">
     <div class="widget-wrapper-inner">
-      <div id="ownlocal">
-        <div class="ownlocal-widget standard">
-          <iframe src="" tabindex="-1"></iframe>
-        </div>
-        <div class="ownlocal-widget secure">
-          <iframe src="" tabindex="-1"></iframe>
-        </div>
-      </div>
+      <div id="widget-holder"></div>
       <div class="code standard" readonly="readonly" contenteditable="true" onclick="document.execCommand('selectAll',false,null)" spellcheck="false"></div>
       <div class="code secure" readonly="readonly" contenteditable="true" onclick="document.execCommand('selectAll',false,null)" spellcheck="false"></div>
     </div>
