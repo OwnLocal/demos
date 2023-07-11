@@ -1,15 +1,19 @@
 var type = getUrlParameter('type') || 'standard',
     publisher = getUrlParameter('publisher') || 'atlas.secure.ownlocal.com',
+    title = getUrlParameter('title') || '';
     partner = getUrlParameter('partner') || '61d6777a-9740-44b9-b849-c03490182dbf',
     width = getUrlParameter('width') || '300',
     height = getUrlParameter('height') || '250',
-    listings = getUrlParameter('listings') || 'false';
-    maxListings = getUrlParameter('max-listings') || 6;
-    filterCategory = getUrlParameter('filter-category') || '';
-    filterSubcategory = getUrlParameter('filter-subcategory') || '';
-    minFeaturedLevel = getUrlParameter('min-featured-level') || 0;
-    daysAgo = getUrlParameter('days-ago') || 30;
-    showLogo = getUrlParameter('logo') || 'true';
+    listings = getUrlParameter('listings') || 'true';
+    filterCategory = getUrlParameter('categoryId') || 'all';
+    filterCategoryName = getUrlParameter('categoryName') || 'all';
+    minFeaturedLevel = getUrlParameter('minFeaturedLevel') || 0;
+    backgroundColor = getUrlParameter('backgroundColor') || '7b94ff';
+    showIcon = getUrlParameter('showIcon') || "true";
+    showLogo = getUrlParameter('showLogo') || "true";
+    showLocation = getUrlParameter('showLocation') || "true";
+    showPhone = getUrlParameter('showPhone') || "false";
+    // daysAgo = getUrlParameter('days-ago') || 30;
 
 function updateBrowserURL() {
   var publisherOrPartner = (type === 'secure') ? '?partner=' + partner : '?publisher=' + publisher;
@@ -20,27 +24,31 @@ function updateBrowserURL() {
     '&listings=' + listings +
     '&width=' + width+
     '&height=' + height +
-    "&maxListings=" + maxListings +
-    "&category=" + filterCategory +
-    "&subcategory=" + filterSubcategory +
+    "&categoryId=" + filterCategory +
     "&minFeaturedLevel=" + minFeaturedLevel +
-    "&daysAgo=" + daysAgo +
-    "&showLogo=" + showLogo 
+    "&backgroundColor=" + backgroundColor +
+    "&title=" + title +
+    "&showLocation=" + showLocation +
+    "&showPhone=" + showPhone +
+    "&categoryName=" + filterCategoryName +
+    "&showIcon=" + showIcon +
+    "&showLogo=" + showLogo
+    // "&daysAgo=" + daysAgo +
   );
 };
 
 function updateEmbedCode() {
-  $('.code').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-max-listings="' + maxListings + '" data-category="' + filterCategory + '" data-subcategory="' + filterSubcategory + '" data-min-featured-level="' + minFeaturedLevel + '" data-days-ago="' + daysAgo + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script id="ownlocal-script" src="http://' + publisher + '/embed.js?h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-category-id="' + filterCategory + '" data-min-featured-level="' + minFeaturedLevel + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script id="ownlocal-script" src="http://' + publisher + '/embed.js?h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
 function updateSecureEmbedCode() {
-  $('.code.secure').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-max-listings="' + maxListings + '" data-category="' + filterCategory + '" data-subcategory="' + filterSubcategory + '" data-min-featured-level="' + minFeaturedLevel + '" data-days-ago="' + daysAgo + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script async id="ownlocal-script" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code.secure').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-category-id="' + filterCategory + '" data-min-featured-level="' + minFeaturedLevel + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script async id="ownlocal-script" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
 function updateWidget() {
   $('#widget-holder').html('');
   setTimeout(function(){
-    $('#widget-holder').html('<var id="ownlocal" data-listings="' + listings + '" data-max-listings="' + maxListings + '" data-category="' + filterCategory + '" data-subcategory="' + filterSubcategory + '" data-min-featured-level="' + minFeaturedLevel + '" data-days-ago="' + daysAgo + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"><script id="ownlocal-script" src="http://' + publisher + '/embed.js?h=' + height + '"></script></var>');
+    $('#widget-holder').html('<var id="ownlocal" data-listings="' + listings + '" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-category-id="' + filterCategory + '" data-min-featured-level="' + minFeaturedLevel + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"><script id="ownlocal-script" src="http://' + publisher + '/embed.js?h=' + height + '"></script></var>');
   }, 1000);
 }
 
@@ -64,13 +72,19 @@ $(document).ready(function() {
   updateWidget();
     
   $('#platform-url').val(publisher);
+  $("#title").val(title)
   $('#partner-uuid').val(partner);
   $('#custom-width').val(width);
   $('#custom-height').val(height);
   $('#show-listings').val(listings);
-  $('#max-number-listings').val(maxListings)
   $('#min-featured-level').val(minFeaturedLevel)
-  $('#days-ago').val(daysAgo)
+  $("#background-color").val("#"+backgroundColor)
+  $('#show-icon').prop("checked", showIcon == "true");
+  $('#show-logo').prop("checked", showLogo == "true");
+  $('#show-location').prop("checked", showLocation == "true");
+  $('#show-phone').prop("checked", showPhone == "true");
+  // $('#show-logo').val(showLogo);
+  // $('#days-ago').val(daysAgo)
 
   // set widget type display
   $('#widget-type .selection').html(titlecase(type));
@@ -80,12 +94,22 @@ $(document).ready(function() {
   // Listings
   $('#show-listings .selection').html(titlecase(listings));
 
+  // Category
+  $('#filter-category .selection').html(titlecase(filterCategoryName));
+
   $('.dropdown').on('click', function(){
     $(this).toggleClass('active');
     $('.dropdown').not(this).removeClass('active');
   });
   $('.outer-wrapper, input').on('click', function(){
     $('.dropdown').removeClass('active');
+  });
+
+  $('input#title').on('keydown', function(e){
+    if(e.keyCode == 13){
+      title = $(this).val();
+      updateAllSrcAndUrls();
+    }
   });
 
   $('input#platform-url').on('keydown', function(e){
@@ -132,25 +156,13 @@ $(document).ready(function() {
     updateAllSrcAndUrls();
   });
 
-  $('.categories-real-state-button, .categories-food-button').on('click', function(){
+  $('.category-id-button').on('click', function(){
     filterCategory = this.dataset.selection;
-    $('#filter-category .selection').html(titlecase(filterCategory));
+    filterCategoryName = this.dataset.category;
+
+    $('#filter-category .selection').html(titlecase(filterCategoryName));
     $('.dropdown.filter-category-dropdown .button').not(this).removeClass('active');
     updateAllSrcAndUrls();
-  });
-
-  $('.subcategories-real-state-button, .subcategories-food-button').on('click', function(){
-    filterSubcategory = this.dataset.selection;
-    $('#filter-subcategory .selection').html(titlecase(filterSubcategory));
-    $('.dropdown.filter-subcategory-dropdown .button').not(this).removeClass('active');
-    updateAllSrcAndUrls();
-  });
-
-  $('input#max-number-listings').on('keydown', function(e){
-    if(e.keyCode == 13){
-      maxListings = $(this).val();
-      updateAllSrcAndUrls();
-    }
   });
 
   $('input#min-featured-level').on('keydown', function(e){
@@ -160,17 +172,35 @@ $(document).ready(function() {
     }
   });
 
-  $('input#days-ago').on('keydown', function(e){
-    if(e.keyCode == 13){
-      daysAgo = $(this).val();
-      updateAllSrcAndUrls();
-    }
+  $('input#background-color').on('change', function(e){
+    backgroundColor = $(this).val().replace("#", "");
+    updateAllSrcAndUrls();
   });
 
-  $('.logo-true-button, .logo-false-button').on('click', function(){
-    showLogo = this.dataset.selection;
-    $('#show-logo .selection').html(titlecase(showLogo));
-    $('.dropdown.show-logo-dropdown .button').not(this).removeClass('active');
+  // $('input#days-ago').on('keydown', function(e){
+  //   if(e.keyCode == 13){
+  //     daysAgo = $(this).val();
+  //     updateAllSrcAndUrls();
+  //   }
+  // });
+
+  $('#show-icon').on('change', function(){
+    showIcon = $("#show-icon").is(":checked");
+    updateAllSrcAndUrls();
+  });
+
+  $('#show-logo').on('change', function(){
+    showLogo = $("#show-logo").is(":checked");
+    updateAllSrcAndUrls();
+  });
+
+  $('#show-location').on('change', function(){
+    showLocation = $("#show-location").is(":checked");
+    updateAllSrcAndUrls();
+  });
+
+  $('#show-phone').on('change', function(){
+    showPhone = $("#show-phone").is(":checked");
     updateAllSrcAndUrls();
   });
 

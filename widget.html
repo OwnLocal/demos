@@ -6,11 +6,11 @@ title: Platform Widget
 
 <div class="options-sidebar">
   <div class="header">
-    <a href="/" class="logo" tabindex="-1" data-text="Widget"><i class="pixel-tree"></i><span>Demos</span></a>
+    <a href="/" class="logo" tabindex="-1" data-text="Widget"><i class="pixel-tree"></i><span>Builder</span></a>
   </div>
   <div class="options-sidebar-wrapper">
 
-    <div class="block">
+    <!-- <div class="block">
       <div class="label">Widget Type</div>
       <div id="widget-type" class="dropdown widget-type-dropdown">
         <div class="selection"></div>
@@ -19,9 +19,9 @@ title: Platform Widget
           <li data-selection="secure" class="button secure-widget-button">Partner UUID</li>
         </ul>
       </div>
-    </div>
+    </div> -->
     
-    <div class="block">
+    <!-- <div class="block">
       <div class="label">Show Listings</div>
       <div id="show-listings" class="dropdown show-listings-dropdown">
         <div class="selection"></div>
@@ -30,6 +30,28 @@ title: Platform Widget
           <li data-selection="false" class="button listings-false-button">False</li>
         </ul>
       </div>
+    </div> -->
+
+    <div class="group-items">
+      <label class="label-group">Required</label>
+    </div>
+
+    <div class="block standard">
+      <div class="label">Directory URL</div>
+      <div class="input-wrapper">
+        <input id="platform-url" type="text" placeholder="atlas.secure.ownlocal.com" spellcheck="false">
+      </div>
+    </div>
+
+    <div class="group-items">
+      <label class="label-group">Advertisers</label>
+    </div>
+
+    <div class="block standard">
+      <div class="label">Min Featured Level</div>
+      <div class="input-wrapper">
+        <input id="min-featured-level" type="number" min="0" max="4" spellcheck="false">
+      </div>
     </div>
 
     <div class="block">
@@ -37,87 +59,60 @@ title: Platform Widget
       <div id="filter-category" class="dropdown filter-category-dropdown">
         <div class="selection"></div>
         <ul>
-          <li data-selection="Real State" class="button categories-real-state-button">Agriculture</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Arts and Entertainment</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Auto</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Beauty and Wellness</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Communication</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Community</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Construction</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Education</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Finance</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Food and Beverage</li>
-          <li data-selection="Real State" class="button categories-real-state-button">House and Home</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Insurance</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Legal</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Manufacturing</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Medical</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Nightlife</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Pets and Animals</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Philanthropy</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Photo and Video</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Public Services</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Real Estate</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Recreation</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Religion</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Services</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Shop Local</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Shopping</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Technical</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Transportation</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Travel</li>
-          <li data-selection="Real State" class="button categories-real-state-button">Utilities</li>
+          <li data-selection="all" data-category="All" class="button category-id-button">All</li>
+          <li data-selection="44" data-category="Agriculture" class="button category-id-button">Agriculture</li>
+          <li data-selection="35" data-category="Arts and Entertainment" class="button category-id-button">Arts and Entertainment</li>
+          <li data-selection="40" data-category="Auto" class="button category-id-button">Auto</li>
+          <li data-selection="41" data-category="Beauty and Wellness" class="button category-id-button">Beauty and Wellness</li>
+          <li data-selection="29" data-category="Communication" class="button category-id-button">Communication</li>
+          <li data-selection="30" data-category="Community" class="button category-id-button">Community</li>
+          <li data-selection="56" data-category="Construction" class="button category-id-button">Construction</li>
+          <li data-selection="54" data-category="Education" class="button category-id-button">Education</li>
+          <li data-selection="32" data-category="Finance" class="button category-id-button">Finance</li>
+          <li data-selection="63" data-category="Food and Beverage" class="button category-id-button">Food and Beverage</li>
+          <li data-selection="33" data-category="House and Home" class="button category-id-button">House and Home</li>
+          <li data-selection="58" data-category="Insurance" class="button category-id-button">Insurance</li>
+          <li data-selection="42" data-category="Legal" class="button category-id-button">Legal</li>
+          <li data-selection="50" data-category="Manufacturing" class="button category-id-button">Manufacturing</li>
+          <li data-selection="43" data-category="Medical" class="button category-id-button">Medical</li>
+          <li data-selection="62" data-category="Nightlife" class="button category-id-button">Nightlife</li>
+          <li data-selection="59" data-category="Pets and Animals" class="button category-id-button">Pets and Animals</li>
+          <li data-selection="64" data-category="Philanthropy" class="button category-id-button">Philanthropy</li>
+          <li data-selection="53" data-category="Photo and Video" class="button category-id-button">Photo and Video</li>
+          <li data-selection="65" data-category="Public Services" class="button category-id-button">Public Services</li>
+          <li data-selection="36" data-category="Real Estate" class="button category-id-button">Real Estate</li>
+          <li data-selection="55" data-category="Recreation" class="button category-id-button">Recreation</li>
+          <li data-selection="66" data-category="Religion" class="button category-id-button">Religion</li>
+          <li data-selection="37" data-category="Services" class="button category-id-button">Services</li>
+          <li data-selection="67" data-category="Shop Local" class="button category-id-button">Shop Local</li>
+          <li data-selection="38" data-category="Shopping" class="button category-id-button">Shopping</li>
+          <li data-selection="47" data-category="Technical" class="button category-id-button">Technical</li>
+          <li data-selection="45" data-category="Transportation" class="button category-id-button">Transportation</li>
+          <li data-selection="39" data-category="Travel" class="button category-id-button">Travel</li>
+          <li data-selection="48" data-category="Utilities" class="button category-id-button">Utilities</li>
         </ul>
       </div>
     </div>
 
-    <div class="block">
-      <div class="label">SubCategories</div>
-      <div id="filter-subcategory" class="dropdown filter-subcategory-dropdown">
-        <div class="selection"></div>
-        <ul>
-          <li data-selection="Real State" class="button subcategories-real-state-button">Real State</li>
-          <li data-selection="Food" class="button subcategories-food-button">Food</li>
-        </ul>
+
+    <div class="group-items">
+      <label class="label-group">Widget</label>
+    </div>
+
+    <div class="block standard">
+      <div class="label">Title</div>
+      <div class="input-wrapper">
+        <input id="title" type="text" placeholder="Trending businesses" spellcheck="false">
       </div>
     </div>
 
     <div class="block standard">
-      <div class="label">Min Featured Level</div>
+      <div class="label">Background Color</div>
       <div class="input-wrapper">
-        <input id="min-featured-level" type="number" placeholder="0" spellcheck="false">
+        <input id="background-color" type="color">
       </div>
     </div>
-
-
-    <div class="block standard">
-      <div class="label">Max. number of listings</div>
-      <div class="input-wrapper">
-        <input id="max-number-listings" type="number" placeholder="6" spellcheck="false">
-      </div>
-    </div>
-
-    <div class="block standard">
-      <div class="label">Created Ago</div>
-      <div class="input-wrapper">
-        <input id="days-ago" type="number" placeholder="30" spellcheck="false">
-      </div>
-    </div>
-
-    <div class="block standard">
-      <div class="label">Platform URL</div>
-      <div class="input-wrapper">
-        <input id="platform-url" type="text" placeholder="atlas.secure.ownlocal.com" spellcheck="false">
-      </div>
-    </div>
-
-    <div class="block secure">
-      <div class="label">Partner UUID</div>
-      <div class="input-wrapper">
-        <input id="partner-uuid" type="text" placeholder="8a63c00e-a9d0-48f4-a570-8263c4e1cca3" spellcheck="false">
-      </div>
-    </div>
-
+    
     <div class="block">
       <div class="twins">
         <div class="twin">
@@ -136,14 +131,50 @@ title: Platform Widget
       </div>
     </div>
 
-    <div class="block">
-      <div class="label">Show Logo</div>
+    <div class="block secure">
+      <div class="label">Partner UUID</div>
+      <div class="input-wrapper">
+        <input id="partner-uuid" type="text" placeholder="8a63c00e-a9d0-48f4-a570-8263c4e1cca3" spellcheck="false">
+      </div>
+    </div>
+
+
+    <!-- <div class="block">
+      <div class="label">Businesses' logos</div>
       <div id="show-logo" class="dropdown show-logo-dropdown">
         <div class="selection"></div>
         <ul>
           <li data-selection="true" class="button logo-true-button">True</li>
           <li data-selection="false" class="button logo-false-button">False</li>
         </ul>
+      </div>
+    </div> -->
+
+    <div class="block in-line">
+      <div class="label">Header Icon</div>
+      <div class="input-wrapper no-bg">
+        <input id="show-icon" type="checkbox">
+      </div>
+    </div>
+
+    <div class="block in-line">
+      <div class="label">Businesses' logos</div>
+      <div class="input-wrapper no-bg">
+        <input id="show-logo" type="checkbox">
+      </div>
+    </div>
+
+    <div class="block in-line">
+      <div class="label">Location Info</div>
+      <div class="input-wrapper no-bg">
+        <input id="show-location" type="checkbox">
+      </div>
+    </div>
+
+    <div class="block in-line">
+      <div class="label">Phone</div>
+      <div class="input-wrapper no-bg">
+        <input id="show-phone" type="checkbox">
       </div>
     </div>
 
