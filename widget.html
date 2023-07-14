@@ -47,12 +47,17 @@ title: Platform Widget
       <label class="label-group">Advertisers</label>
     </div>
 
-    <div class="block standard">
-      <div class="label">Min Featured Level</div>
-      <div class="input-wrapper">
-        <input id="min-featured-level" type="number" min="0" max="4" spellcheck="false">
+    <!-- <div class="block">
+      <div class="label">Show advertisers from</div>
+      <div id="filter-activity" class="dropdown filter-activity-dropdown">
+        <div class="selection"></div>
+        <ul>
+          <li data-selection="last_three_month" data-activity="Last 3 months" class="button activity-button">Last 3 months</li>
+          <li data-selection="this_month" data-activity="This month" class="button activity-button">This month</li>
+          <li data-selection="this_week" data-activity="This week" class="button activity-button">This week</li>
+          <li data-selection="latest_issue" data-activity="Latest issue" class="button activity-button">Latest issue</li>
       </div>
-    </div>
+    </div> -->
 
     <div class="block">
       <div class="label">Categories</div>
@@ -94,6 +99,12 @@ title: Platform Widget
       </div>
     </div>
 
+    <div class="block in-line">
+      <div class="label">Show only Featured Advertisers</div>
+      <div class="input-wrapper no-bg">
+        <input id="show-feature-level" type="checkbox">
+      </div>
+    </div>
 
     <div class="group-items">
       <label class="label-group">Widget</label>
@@ -176,6 +187,11 @@ title: Platform Widget
       <div class="input-wrapper no-bg">
         <input id="show-phone" type="checkbox">
       </div>
+    </div>
+
+    <div class="block in-line">
+        <button id="apply-button" class="submit-button" type="checkbox">Apply</button>
+        <button id="reset-button" class="submit-button" type="checkbox">Reset</button>
     </div>
 
   </div>

@@ -54,3 +54,6 @@ button:hover { background: #568FCF; }
 .instructions { font-size: 14px; }
 #toggle { margin-bottom: 15px; }
 #advanced-options { display: none; }
+
+button.submit-button { min-width: 20px; }
+button.submit-button { min-width: 20px; }

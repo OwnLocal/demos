@@ -12,7 +12,10 @@ var type = getUrlParameter('type') || 'standard',
     showIcon = getUrlParameter('showIcon') || "true";
     showLogo = getUrlParameter('showLogo') || "true";
     showLocation = getUrlParameter('showLocation') || "true";
+    filterFeatureLevel = getUrlParameter('filterFeatureLevel') || "false";
     showPhone = getUrlParameter('showPhone') || "false";
+    filterActivity = getUrlParameter('activity') || "last_three_month";
+    filterActivityName = getUrlParameter('activityName') || "Last 3 months";
     // daysAgo = getUrlParameter('days-ago') || 30;
 
 function updateBrowserURL() {
@@ -25,12 +28,15 @@ function updateBrowserURL() {
     '&width=' + width+
     '&height=' + height +
     "&categoryId=" + filterCategory +
+    "&categoryName=" + filterCategoryName +
+    "&activity=" + filterActivity +
+    "&activityName=" + filterActivityName +
     "&minFeaturedLevel=" + minFeaturedLevel +
     "&backgroundColor=" + backgroundColor +
     "&title=" + title +
     "&showLocation=" + showLocation +
+    "&filterFeatureLevel=" + filterFeatureLevel +
     "&showPhone=" + showPhone +
-    "&categoryName=" + filterCategoryName +
     "&showIcon=" + showIcon +
     "&showLogo=" + showLogo
     // "&daysAgo=" + daysAgo +
@@ -38,17 +44,17 @@ function updateBrowserURL() {
 };
 
 function updateEmbedCode() {
-  $('.code').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-category-id="' + filterCategory + '" data-min-featured-level="' + minFeaturedLevel + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script id="ownlocal-script" src="https://' + publisher + '/embed.js?h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script id="ownlocal-script" src="http://' + publisher + '/embed.js?h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
 function updateSecureEmbedCode() {
-  $('.code.secure').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-category-id="' + filterCategory + '" data-min-featured-level="' + minFeaturedLevel + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script async id="ownlocal-script" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code.secure').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script async id="ownlocal-script" src="http://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
 function updateWidget() {
   $('#widget-holder').html('');
   setTimeout(function(){
-    $('#widget-holder').html('<var id="ownlocal" data-listings="' + listings + '" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-category-id="' + filterCategory + '" data-min-featured-level="' + minFeaturedLevel + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"><script id="ownlocal-script" src="https://' + publisher + '/embed.js?h=' + height + '"></script></var>');
+    $('#widget-holder').html('<var id="ownlocal" data-listings="' + listings + '" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"><script id="ownlocal-script" src="http://' + publisher + '/embed.js?h=' + height + '"></script></var>');
   }, 1000);
 }
 
@@ -83,6 +89,8 @@ $(document).ready(function() {
   $('#show-logo').prop("checked", showLogo == "true");
   $('#show-location').prop("checked", showLocation == "true");
   $('#show-phone').prop("checked", showPhone == "true");
+  $('#filter-feature-level').prop("checked", filterFeatureLevel == "true");
+
   // $('#show-logo').val(showLogo);
   // $('#days-ago').val(daysAgo)
 
@@ -96,6 +104,9 @@ $(document).ready(function() {
 
   // Category
   $('#filter-category .selection').html(titlecase(filterCategoryName));
+
+  // Activity
+  $('#filter-activity .selection').html(titlecase(filterActivityName));
 
   $('.dropdown').on('click', function(){
     $(this).toggleClass('active');
@@ -126,14 +137,18 @@ $(document).ready(function() {
     }
   });
 
-  $('input#custom-width').on('change', function(){
-    width = $(this).val();
-    updateAllSrcAndUrls();
+  $('input#custom-width').on('keydown', function(){
+    if(e.keyCode == 13){
+      width = $(this).val();
+      updateAllSrcAndUrls();
+    }
   });
 
-  $('input#custom-height').on('change', function(){
-    height = $(this).val();
-    updateAllSrcAndUrls();
+  $('input#custom-height').on('keydown', function(){
+    if(e.keyCode == 13){
+      height = $(this).val();
+      updateAllSrcAndUrls();
+    }
   });
 
   $('.dropdown .button').on('click', function(){
@@ -165,12 +180,21 @@ $(document).ready(function() {
     updateAllSrcAndUrls();
   });
 
-  $('input#min-featured-level').on('keydown', function(e){
-    if(e.keyCode == 13){
-      minFeaturedLevel = $(this).val();
-      updateAllSrcAndUrls();
-    }
+  $('.activity-button').on('click', function(){
+    filterActivity = this.dataset.selection;
+    filterActivityName = this.dataset.activity;
+
+    $('#filter-activity .selection').html(titlecase(filterActivityName));
+    $('.dropdown.filter-activity-dropdown .button').not(this).removeClass('active');
+    updateAllSrcAndUrls();
   });
+
+  // $('input#min-featured-level').on('keydown', function(e){
+  //   if(e.keyCode == 13){
+  //     minFeaturedLevel = $(this).val();
+  //     updateAllSrcAndUrls();
+  //   }
+  // });
 
   $('input#background-color').on('change', function(e){
     backgroundColor = $(this).val().replace("#", "");
@@ -201,6 +225,48 @@ $(document).ready(function() {
 
   $('#show-phone').on('change', function(){
     showPhone = $("#show-phone").is(":checked");
+    updateAllSrcAndUrls();
+  });
+
+  $('#show-feature-level').on('change', function(){
+    filterFeatureLevel = $("#show-feature-level").is(":checked");
+    updateAllSrcAndUrls();
+  });
+
+  $('#apply-button').on('click', function(){
+    title = $("#title").val();
+    backgroundColor = $("#background-color").val().replace("#", "");
+    width = $("#custom-width").val();
+    height = $("#custom-height").val();
+    updateAllSrcAndUrls();
+  });
+
+  $('#reset-button').on('click', function(){
+    title = ""
+    backgroundColor = "7b94ff"
+    width = "300"
+    height = "250"
+    filterCategory = "all"
+    filterCategoryName = "all"
+    showIcon = "true"
+    showLogo = "true"
+    showLocation = "true"
+    filterFeatureLevel = "false"
+    showPhone = "false"
+    filterActivity = "last_three_month"
+    filterActivityName = "Last 3 months"
+
+    $("#title").val("");
+    $("#background-color").val("#7b94ff");
+    $("#custom-width").val("300");
+    $("#custom-height").val("250");
+    $('#filter-category .selection').html(titlecase(filterCategoryName));
+    $('#show-icon').prop("checked", true);
+    $('#show-logo').prop("checked", true);
+    $('#show-location').prop("checked", true);
+    $('#show-phone').prop("checked", false);
+    $('#filter-feature-level').prop("checked", false);
+    $('#filter-activity .selection').html(titlecase(filterActivityName));
     updateAllSrcAndUrls();
   });
 
