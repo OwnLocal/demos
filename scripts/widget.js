@@ -1,7 +1,8 @@
-var type = getUrlParameter('type') || 'standard',
+var type = getUrlParameter('type') || 'secure',
     publisher = getUrlParameter('publisher') || 'atlas.secure.ownlocal.com',
+    publisherName = getUrlParameter('publisher_name'),
     title = getUrlParameter('title') || '';
-    partner = getUrlParameter('partner') || '61d6777a-9740-44b9-b849-c03490182dbf',
+    partner = getUrlParameter('partner') || 'c7d0d373-7218-4439-97b4-b46587f3afba',
     width = getUrlParameter('width') || '300',
     height = getUrlParameter('height') || '250',
     listings = getUrlParameter('listings') || 'true';
@@ -9,17 +10,20 @@ var type = getUrlParameter('type') || 'standard',
     filterCategoryName = getUrlParameter('categoryName') || 'all';
     minFeaturedLevel = getUrlParameter('minFeaturedLevel') || 0;
     backgroundColor = getUrlParameter('backgroundColor') || '7b94ff';
+    backgroundOpacity = getUrlParameter('backgroundOpacity') || "FF";
     showIcon = getUrlParameter('showIcon') || "true";
     showLogo = getUrlParameter('showLogo') || "true";
     showLocation = getUrlParameter('showLocation') || "true";
     filterFeatureLevel = getUrlParameter('filterFeatureLevel') || "false";
     showPhone = getUrlParameter('showPhone') || "false";
-    filterActivity = getUrlParameter('activity') || "last_three_month";
-    filterActivityName = getUrlParameter('activityName') || "Last 3 months";
+    filterActivity = getUrlParameter('activity') || "all";
+    filterActivityName = getUrlParameter('activityName') || "All";
+    widget_url = "widget.secure.ownlocal.com"
     // daysAgo = getUrlParameter('days-ago') || 30;
 
 function updateBrowserURL() {
   var publisherOrPartner = (type === 'secure') ? '?partner=' + partner : '?publisher=' + publisher;
+  widget_url = (type == 'secure') ? widget_url : publisher
   window.history.replaceState(
     null,
     null,
@@ -33,6 +37,7 @@ function updateBrowserURL() {
     "&activityName=" + filterActivityName +
     "&minFeaturedLevel=" + minFeaturedLevel +
     "&backgroundColor=" + backgroundColor +
+    "&backgroundOpacity=" + backgroundOpacity +
     "&title=" + title +
     "&showLocation=" + showLocation +
     "&filterFeatureLevel=" + filterFeatureLevel +
@@ -44,17 +49,17 @@ function updateBrowserURL() {
 };
 
 function updateEmbedCode() {
-  $('.code').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script id="ownlocal-script" src="https://' + publisher + '/embed.js?h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor + backgroundOpacity +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script id="ownlocal-script" src="https://' + widget_url + '/embed.js?h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
 function updateSecureEmbedCode() {
-  $('.code.secure').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script async id="ownlocal-script" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
+  $('.code.secure').html('&lt;var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor + backgroundOpacity  +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"&gt;&lt;script async id="ownlocal-script" src="https://widget.secure.ownlocal.com/embed.js?uuid=' + partner  + '&h=' + height + '"&gt;&lt;/script&gt;&lt;/var&gt;');
 };
 
 function updateWidget() {
   $('#widget-holder').html('');
   setTimeout(function(){
-    $('#widget-holder').html('<var id="ownlocal" data-listings="' + listings + '" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"><script id="ownlocal-script" src="https://' + publisher + '/embed.js?h=' + height + '"></script></var>');
+    $('#widget-holder').html('<var id="ownlocal" data-listings="' + listings + '" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor + backgroundOpacity  +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"><script id="ownlocal-script" src="http://' + widget_url + '/embed.js?uuid=' + partner  + '?h=' + height + '"></script></var>');
   }, 1000);
 }
 
@@ -69,12 +74,115 @@ function titlecase(word) {
   return word[0].toUpperCase() + word.slice(1);
 }
 
+function convertOpacityToHex(percentage) {
+  switch (percentage) {
+    case "0":
+      return "00"
+    case "5":
+      return "0C"
+    case "10":
+      return "19"
+    case "15":
+      return "26"
+    case "20":
+      return "33"
+    case "25":
+      return "3F"
+    case "30":
+      return "4C"
+    case "35":
+      return "59"
+    case "40":
+      return "66"
+    case "45":
+      return "72"
+    case "50":
+      return "7F"
+    case "55":
+      return "8C"
+    case "60":
+      return "99"
+    case "65":
+      return "A5"
+    case "70":
+      return "B2"
+    case "75":
+      return "BF"
+    case "80":
+      return "CC"
+    case "85":
+      return "D8"
+    case "90":
+      return "E5"
+    case "95":
+      return "F2"
+    case "100":
+      return "FF"
+    default:
+      break;
+  }
+}
+
+function convertOpacityToNum(hex) {
+  switch (hex) {
+    case "00":
+      return "0"
+    case "0C":
+      return "5"
+    case "19":
+      return "10"
+    case "26":
+      return "15"
+    case "33":
+      return "20"
+    case "3F":
+      return "25"
+    case "4C":
+      return "30"
+    case "59":
+      return "35"
+    case "66":
+      return "40"
+    case "72":
+      return "45"
+    case "7F":
+      return "50"
+    case "8C":
+      return "55"
+    case "99":
+      return "60"
+    case "A5":
+      return "65"
+    case "B2":
+      return "70"
+    case "BF":
+      return "75"
+    case "CC":
+      return "80"
+    case "D8":
+      return "85"
+    case "E5":
+      return "90"
+    case "F2":
+      return "95"
+    case "FF":
+      return "100"
+    default:
+      break;
+  }
+}
+
 $(document).ready(function() {
 
   if (window.location.href.indexOf("?") < 0) {
     updateBrowserURL();
   }
   
+  if(publisherName) {
+    $("#publisher-info").show();
+    $("#publisher-info-name").html(publisherName);
+  }
+
   updateWidget();
     
   $('#platform-url').val(publisher);
@@ -85,6 +193,7 @@ $(document).ready(function() {
   $('#show-listings').val(listings);
   $('#min-featured-level').val(minFeaturedLevel)
   $("#background-color").val("#"+backgroundColor)
+  $("#background-opacity").val(convertOpacityToNum(backgroundOpacity))
   $('#show-icon').prop("checked", showIcon == "true");
   $('#show-logo').prop("checked", showLogo == "true");
   $('#show-location').prop("checked", showLocation == "true");
@@ -156,6 +265,8 @@ $(document).ready(function() {
     $(this).addClass('active');
   });
 
+  $('body').removeClass('standard-widget secure-widget').addClass(type + '-widget');
+
   $('.standard-widget-button, .secure-widget-button').on('click', function(){
     type = this.dataset.selection;
     $('body').removeClass('standard-widget secure-widget').addClass(type + '-widget');
@@ -201,6 +312,12 @@ $(document).ready(function() {
     updateAllSrcAndUrls();
   });
 
+
+  $('input#background-opacity').on('change', function(e){
+    backgroundOpacity = convertOpacityToHex($(this).val());
+    updateAllSrcAndUrls();
+  });
+
   // $('input#days-ago').on('keydown', function(e){
   //   if(e.keyCode == 13){
   //     daysAgo = $(this).val();
@@ -236,6 +353,7 @@ $(document).ready(function() {
   $('#apply-button').on('click', function(){
     title = $("#title").val();
     backgroundColor = $("#background-color").val().replace("#", "");
+    backgroundOpacity = convertOpacityToHex($("#background-opacity").val());
     width = $("#custom-width").val();
     height = $("#custom-height").val();
     updateAllSrcAndUrls();
@@ -253,11 +371,13 @@ $(document).ready(function() {
     showLocation = "true"
     filterFeatureLevel = "false"
     showPhone = "false"
-    filterActivity = "last_three_month"
-    filterActivityName = "Last 3 months"
+    filterActivity = "all"
+    filterActivityName = "All"
+    backgroundOpacity = "ff"
 
     $("#title").val("");
     $("#background-color").val("#7b94ff");
+    $("#background-opacity").val("100")
     $("#custom-width").val("300");
     $("#custom-height").val("250");
     $('#filter-category .selection').html(titlecase(filterCategoryName));

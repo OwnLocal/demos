@@ -32,7 +32,7 @@ title: Platform Widget
       </div>
     </div> -->
 
-    <div class="group-items">
+    <!-- <div class="group-items">
       <label class="label-group">Required</label>
     </div>
 
@@ -41,23 +41,34 @@ title: Platform Widget
       <div class="input-wrapper">
         <input id="platform-url" type="text" placeholder="atlas.secure.ownlocal.com" spellcheck="false">
       </div>
+    </div> -->
+
+    <div id="publisher-info" class="mb-25">
+      <div class="group-items">
+        <label class="label-group">Publisher</label>
+      </div>
+      <div class="block">
+        <div id="publisher-info-name" class="label"></div>
+      </div>
     </div>
+
 
     <div class="group-items">
       <label class="label-group">Advertisers</label>
     </div>
 
-    <!-- <div class="block">
+    <div class="block">
       <div class="label">Show advertisers from</div>
       <div id="filter-activity" class="dropdown filter-activity-dropdown">
         <div class="selection"></div>
         <ul>
+          <li data-selection="all" data-activity="All" class="button activity-button">All</li>
           <li data-selection="last_three_month" data-activity="Last 3 months" class="button activity-button">Last 3 months</li>
           <li data-selection="this_month" data-activity="This month" class="button activity-button">This month</li>
           <li data-selection="this_week" data-activity="This week" class="button activity-button">This week</li>
           <li data-selection="latest_issue" data-activity="Latest issue" class="button activity-button">Latest issue</li>
       </div>
-    </div> -->
+    </div>
 
     <div class="block">
       <div class="label">Categories</div>
@@ -99,7 +110,7 @@ title: Platform Widget
       </div>
     </div>
 
-    <div class="block in-line">
+    <div class="block in-line mb-25">
       <div class="label">Show only Featured Advertisers</div>
       <div class="input-wrapper no-bg">
         <input id="show-feature-level" type="checkbox">
@@ -110,20 +121,27 @@ title: Platform Widget
       <label class="label-group">Widget</label>
     </div>
 
-    <div class="block standard">
+    <div class="block">
       <div class="label">Title</div>
       <div class="input-wrapper">
         <input id="title" type="text" placeholder="Trending businesses" spellcheck="false">
       </div>
     </div>
 
-    <div class="block standard">
+    <div class="block">
       <div class="label">Background Color</div>
       <div class="input-wrapper">
-        <input id="background-color" type="color">
+        <input id="background-color" type="color" >
       </div>
     </div>
-    
+
+    <div class="block">
+      <div class="label">Background opacity</div>
+      <div class="input-wrapper">
+        <input id="background-opacity" type="range" step="5">
+      </div>
+    </div>
+
     <div class="block">
       <div class="twins">
         <div class="twin">
@@ -142,12 +160,12 @@ title: Platform Widget
       </div>
     </div>
 
-    <div class="block secure">
+    <!-- <div class="block secure">
       <div class="label">Partner UUID</div>
       <div class="input-wrapper">
         <input id="partner-uuid" type="text" placeholder="8a63c00e-a9d0-48f4-a570-8263c4e1cca3" spellcheck="false">
       </div>
-    </div>
+    </div> -->
 
 
     <!-- <div class="block">
@@ -201,7 +219,7 @@ title: Platform Widget
   <div class="widget-wrapper">
     <div class="widget-wrapper-inner">
       <div id="widget-holder"></div>
-      <div class="code standard" readonly="readonly" contenteditable="true" onclick="document.execCommand('selectAll',false,null)" spellcheck="false"></div>
+      <!-- <div class="code standard" readonly="readonly" contenteditable="true" onclick="document.execCommand('selectAll',false,null)" spellcheck="false"></div> -->
       <div class="code secure" readonly="readonly" contenteditable="true" onclick="document.execCommand('selectAll',false,null)" spellcheck="false"></div>
     </div>
   </div>
