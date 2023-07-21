@@ -8,7 +8,6 @@ var type = getUrlParameter('type') || 'secure',
     listings = getUrlParameter('listings') || 'true';
     filterCategory = getUrlParameter('categoryId') || 'all';
     filterCategoryName = getUrlParameter('categoryName') || 'all';
-    minFeaturedLevel = getUrlParameter('minFeaturedLevel') || 0;
     backgroundColor = getUrlParameter('backgroundColor') || '7b94ff';
     backgroundOpacity = getUrlParameter('backgroundOpacity') || "FF";
     showIcon = getUrlParameter('showIcon') || "true";
@@ -18,6 +17,7 @@ var type = getUrlParameter('type') || 'secure',
     showPhone = getUrlParameter('showPhone') || "false";
     filterActivity = getUrlParameter('activity') || "all";
     filterActivityName = getUrlParameter('activityName') || "All";
+    originalParent = getUrlParameter('original_parent');
     widget_url = "widget.secure.ownlocal.com"
     // daysAgo = getUrlParameter('days-ago') || 30;
 
@@ -35,7 +35,6 @@ function updateBrowserURL() {
     "&categoryName=" + filterCategoryName +
     "&activity=" + filterActivity +
     "&activityName=" + filterActivityName +
-    "&minFeaturedLevel=" + minFeaturedLevel +
     "&backgroundColor=" + backgroundColor +
     "&backgroundOpacity=" + backgroundOpacity +
     "&title=" + title +
@@ -43,6 +42,7 @@ function updateBrowserURL() {
     "&filterFeatureLevel=" + filterFeatureLevel +
     "&showPhone=" + showPhone +
     "&showIcon=" + showIcon +
+    "&originalParent=" + originalParent +
     "&showLogo=" + showLogo
     // "&daysAgo=" + daysAgo +
   );
@@ -59,7 +59,7 @@ function updateSecureEmbedCode() {
 function updateWidget() {
   $('#widget-holder').html('');
   setTimeout(function(){
-    $('#widget-holder').html('<var id="ownlocal" data-listings="' + listings + '" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor + backgroundOpacity  +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"><script id="ownlocal-script" src="https://' + widget_url + '/embed.js?uuid=' + partner  + '?h=' + height + '"></script></var>');
+    $('#widget-holder').html('<var id="ownlocal" data-listings="' + listings +'" data-title="'+ title +'" data-show-icon="'+ showIcon +'" data-background-color="'+ backgroundColor + backgroundOpacity  +'" data-filter-feature-level="' + filterFeatureLevel + '" data-filter-activity="' + filterActivity + '" data-category-id="' + filterCategory + '" data-show-phone="' + showPhone + '" data-show-location="' + showLocation + '" data-show-logo="' + showLogo + '" style="width: ' + width + 'px; margin: 0 auto; display: block;"><script id="ownlocal-script" src="https://' + widget_url + '/embed.js?uuid=' + partner  + '?h=' + height + '"></script></var>');
   }, 1000);
 }
 
@@ -191,7 +191,6 @@ $(document).ready(function() {
   $('#custom-width').val(width);
   $('#custom-height').val(height);
   $('#show-listings').val(listings);
-  $('#min-featured-level').val(minFeaturedLevel)
   $("#background-color").val("#"+backgroundColor)
   $("#background-opacity").val(convertOpacityToNum(backgroundOpacity))
   $('#show-icon').prop("checked", showIcon == "true");
@@ -345,8 +344,8 @@ $(document).ready(function() {
     updateAllSrcAndUrls();
   });
 
-  $('#show-feature-level').on('change', function(){
-    filterFeatureLevel = $("#show-feature-level").is(":checked");
+  $('#filter-feature-level').on('change', function(){
+    filterFeatureLevel = $("#filter-feature-level").is(":checked");
     updateAllSrcAndUrls();
   });
 
